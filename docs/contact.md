@@ -1,7 +1,7 @@
 
 layout: page
 title: "My Contct"
-permalink: /about/contact/
+permalink: /contact/
 
 
 Email: akhileshmoghe@persistent.com
