@@ -4,6 +4,7 @@ main:
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "About"
     url: https://mmistakes.github.io/minimal-mistakes/about/
+    description: About Me, Who am I, What I do...
   - title: "Posts"
     url: https://akhileshmoghe.github.io/_posts/
   - title: "Collections"
