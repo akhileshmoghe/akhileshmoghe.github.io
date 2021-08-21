@@ -31,7 +31,8 @@ github_username:  jekyll
 
 # Build settings
 # theme: minima
-theme: leap-day
+theme: minimal-mistakes-jekyll
+# theme: leap-day
 plugins:
   - jekyll-feed
 
