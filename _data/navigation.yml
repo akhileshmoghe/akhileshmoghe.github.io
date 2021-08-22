@@ -4,9 +4,9 @@ main:
     url: https://mmistakes.github.io/minimal-mistakes/about/
     description: About Me, Who am I, What I do...
   - title: "Categories"
-    url: /category-archive/
+    url: /categories/
   - title: "Tags"
-    url: /tag-archive/
+    url: /tags/
   - title: "Collections"
     url: /collection-archive/
   - title: "Years-wise"
