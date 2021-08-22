@@ -5,7 +5,7 @@ date:   2021-08-21 12:33:22 +0530
 categories: jekyll update
 toc: true
 toc_label: "Contents"
-toc_icon: "cog"
+toc_icon: "file-alt"
 toc_sticky : true
 ---
 
