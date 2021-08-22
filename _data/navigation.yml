@@ -13,5 +13,5 @@ main:
     url: /collection-archive/
   - title: "Years-wise"
     url: /year-archive/
-  - title: "Sitemap"
-    url: /sitemap/
+  # - title: "Sitemap"
+  #   url: /sitemap/
