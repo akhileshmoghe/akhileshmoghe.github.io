@@ -10,9 +10,9 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-theme                    : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+# theme                    : "minimal-mistakes-jekyll"
+remote_theme             : "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin    : "dark" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -25,9 +25,9 @@ url                      : "https://akhileshmoghe.github.io" # the base hostname
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "akhileshmoghe/akhileshmoghe.github.io" # GitHub username/repo-name
 teaser                   : "/assets/images/teaser.jpg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/Akhilesh_Moghe_012246.jpeg" # path of logo image to display in the masthead
+logo                     : "/assets/images/IoT.jpg" # path of logo image to display in the masthead
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -103,7 +103,7 @@ analytics:
 author:
   name             : "Akhilesh Moghe"
   avatar           : "/assets/images/Akhilesh_Moghe_012246.jpeg" # path of avatar image
-  bio              : "I am an **amazing** person."
+  bio              : "I am an **IoT Developer**."
   location         : "Pune, India"
   email            : "akhileshmoghe@live.com"
   links:
@@ -288,3 +288,5 @@ defaults:
       comments: # true
       share: true
       related: true
+
+theme: jekyll-theme-hacker
