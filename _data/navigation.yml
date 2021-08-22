@@ -1,13 +1,15 @@
 # main links
 main:
-  # - title: "Quick-Start Guide"
-  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "About"
     url: https://mmistakes.github.io/minimal-mistakes/about/
     description: About Me, Who am I, What I do...
-  - title: "Posts"
-    url: https://akhileshmoghe.github.io/_posts/
+  - title: "Categories"
+    url: /category-archive/
+  - title: "Tags"
+    url: /tag-archive/
   - title: "Collections"
     url: /collection-archive/
+  - title: "Years-wise"
+    url: /year-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
