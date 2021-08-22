@@ -15,7 +15,8 @@ tags:
   - Moghe
 ---
 
-{% post_url 2021-08-21-welcome-to-jekyll.markdown %}
+
+{% post_url 2021-08-21-welcome-akhilesh.md %}
 
 
 # Introduction
