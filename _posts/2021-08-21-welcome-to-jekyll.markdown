@@ -2,7 +2,7 @@
 layout: single
 title:  "Welcome to Jekyll!"
 date:   2021-08-21 12:33:22 +0530
-categories: jekyll update
+categories: jekyll IoT
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
