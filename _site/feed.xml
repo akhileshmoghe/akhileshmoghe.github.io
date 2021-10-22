@@ -1,17 +1,393 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://akhileshmoghe.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://akhileshmoghe.github.io/" rel="alternate" type="text/html" /><updated>2021-08-21T14:33:09+05:30</updated><id>https://akhileshmoghe.github.io/feed.xml</id><title type="html">IoT is Everything</title><subtitle>An Aspiring IoT Lead, Architect, Project Manager</subtitle><author><name>Akhilesh Moghe</name><email>akhileshmoghe@live.com</email></author><entry><title type="html">Welcome to Jekyll!</title><link href="https://akhileshmoghe.github.io/jekyll/update/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2021-08-21T12:33:22+05:30</published><updated>2021-08-21T12:33:22+05:30</updated><id>https://akhileshmoghe.github.io/jekyll/update/welcome-to-jekyll</id><content type="html" xml:base="https://akhileshmoghe.github.io/jekyll/update/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-22T12:27:39+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Every THING is Internet of Things</title><subtitle>A Journey in the direction of ---&gt; IoT ---&gt; Edge ---&gt; Cloud ---&gt; DevOps ---&gt; ML ---&gt; AI
+</subtitle><author><name>Akhilesh Moghe</name><email>akhileshmoghe@live.com</email></author><entry><title type="html">Container Security</title><link href="http://localhost:4000/containers/docker/kubernetes/devops/2021/10/07/Container-Security.html" rel="alternate" type="text/html" title="Container Security" /><published>2021-10-07T12:33:22+05:30</published><updated>2021-10-07T12:33:22+05:30</updated><id>http://localhost:4000/containers/docker/kubernetes/devops/2021/10/07/Container-Security</id><content type="html" xml:base="http://localhost:4000/containers/docker/kubernetes/devops/2021/10/07/Container-Security.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
-&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+&lt;h2 id=&quot;threats-and-risks-areas&quot;&gt;Threats and Risks Areas:&lt;/h2&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;image-development&quot;&gt;Image Development:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Careless approach:
+    &lt;ul&gt;
+      &lt;li&gt;Installing components, applications without security safeguards or with default configs.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Sensitive Data in DockerFiles:
+    &lt;ul&gt;
+      &lt;li&gt;Password hardcoding&lt;/li&gt;
+      &lt;li&gt;Default passwords&lt;/li&gt;
+      &lt;li&gt;SSH encryption keys (specifically private part of keys)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Unreliable third-party source of Base Images:
+    &lt;ul&gt;
+      &lt;li&gt;Embedded Malwares:
+        &lt;ul&gt;
+          &lt;li&gt;Owner added Malware in image with malicious intents&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Non-updated Images:
+    &lt;ul&gt;
+      &lt;li&gt;Images not being maintained with Vulnerability patches&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Unreliable source of package installations:
+    &lt;ul&gt;
+      &lt;li&gt;ppa repositories&lt;/li&gt;
+      &lt;li&gt;Cascaded dependencies&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;h3 id=&quot;code-repository&quot;&gt;Code Repository:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Open-source unmaintained repositories/projects&lt;/li&gt;
+  &lt;li&gt;Cascaded dependencies project repositories&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;h3 id=&quot;image-registries-hub&quot;&gt;Image Registries Hub:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Unsecured Public Registry&lt;/li&gt;
+  &lt;li&gt;Local unsecured registry setup&lt;/li&gt;
+  &lt;li&gt;Misconfigured security controls on registries&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;kubernetesdocker-apis-abuse&quot;&gt;Kubernetes/Docker APIs Abuse:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Vulnerabilities in Kubernetes or Docker APIs itself.
+    &lt;ul&gt;
+      &lt;li&gt;CVE-2017-1002101 allows containers that use subPath volume mounts to access files or directories outside of the volume, including the host’s file system.&lt;/li&gt;
+      &lt;li&gt;CVE-2017-1002102 allows containers using secret, configMap, or projected or downwardAPI volume to trigger deletion of arbitrary files and directories on the nodes where they are running.&lt;/li&gt;
+      &lt;li&gt;CVE-2018-1002105, proxy request handling in kube-apiserver, can leave vulnerable TCP connections open to abuse.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Unrestricted Accesses:
+    &lt;ul&gt;
+      &lt;li&gt;Admin accesses missuses.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Unauthorized Accesses&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>Akhilesh Moghe</name><email>akhileshmoghe@live.com</email></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;h3 id=&quot;applications-and-ports&quot;&gt;Applications and Ports:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Misconfigured Applications and Ports
+    &lt;ul&gt;
+      &lt;li&gt;May give-out sensitive information&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Application Exploitation with:
+    &lt;ul&gt;
+      &lt;li&gt;SQL injection&lt;/li&gt;
+      &lt;li&gt;cross-site scripting&lt;/li&gt;
+      &lt;li&gt;remote file inclusion&lt;/li&gt;
+      &lt;li&gt;brute-force attacks.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;API Abuse with misconfigured/Exposed ports&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;best-practises&quot;&gt;Best Practises:&lt;/h2&gt;
+&lt;h3 id=&quot;use-of-user-namespaces-in-linux&quot;&gt;Use of User Namespaces in Linux:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;when enabled, allows for &lt;u&gt;container isolation by limiting container access to system resources&lt;/u&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;run-applications-as-regular-users-in-containers-also&quot;&gt;Run Applications as regular users in containers also:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Setting applications to run as regular users can stop privilege escalation attacks from accessing the critical parts of the container.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;selinuxapparmor&quot;&gt;SELinux/AppArmor:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mandatory access control (MAC) tools such as SELinux (Security-Enhanced Linux) and AppArmor can help prevent attacks that compromise application and system services by &lt;u&gt;limiting access to files and network resources&lt;/u&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;minimize-use-of-third-party-unmaintained-unverifiable-installs&quot;&gt;Minimize use of third-party, unmaintained, unverifiable installs:&lt;/h3&gt;
+
+&lt;h3 id=&quot;mount-root-file-system-as-read-only-on-host&quot;&gt;Mount Root File System as Read-Only on Host:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;will restrict write access for applications, limiting the chances of an attacker being able to introduce malicious elements to the container.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;scan-repository-images-for-new-vulnerabilities-being-reported&quot;&gt;Scan Repository Images for new Vulnerabilities being reported:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;When building an image in your CI pipeline, image scanning must be a requirement for a passing build run.&lt;/li&gt;
+  &lt;li&gt;Scanners:
+    &lt;ul&gt;
+      &lt;li&gt;Many scanners check only installed operating system packages. Others may also scan installed runtime libraries for some programming languages. Some may also provide additional binary fingerprinting or other testing of file contents.&lt;/li&gt;
+      &lt;li&gt;Make sure your scanner offers a compatible API or tool that you can plug into your CI pipeline and provides the data you need to evaluate your criteria for failing a build.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;determine acceptable levels of risk for allowing a build to pass such as any vulnerability below a certain severity - or alternatively, failing builds with fixable vulnerabilities above a certain severity.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;runtime-image-scanning&quot;&gt;Runtime Image Scanning:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Runtime scanning is more important, both for any third-party image you may use and for your own images, which may contain &lt;strong&gt;newly discovered security vulnerabilities&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;You can use custom or third-party &lt;a href=&quot;https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/&quot;&gt;&lt;u&gt;admission controllers&lt;/u&gt;&lt;/a&gt; in Kubernetes clusters &lt;u&gt;to prevent the scheduling of insecure container images&lt;/u&gt;.&lt;/li&gt;
+  &lt;li&gt;While some scanners support storing &lt;strong&gt;scan output in a database or cache&lt;/strong&gt;, users will have to weigh their tolerance for outdated information &lt;strong&gt;against the latency introduced by performing a real-time scan for each image pull&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;deploy-firewall&quot;&gt;Deploy Firewall:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Using the integrated firewall for the Docker virtual network, especially for TCP API control, can filter external attacks.&lt;/li&gt;
+  &lt;li&gt;Use of Application firewalls.&lt;/li&gt;
+  &lt;li&gt;Allow only required network ingress.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;use-of-static-analysis-tools-for-containers&quot;&gt;Use of static analysis tools for containers:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://quay.github.io/clair/&quot;&gt;&lt;u&gt;Clair&lt;/u&gt;&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Prevents vulnerability with Static analysis on containers&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;disable-sockets&quot;&gt;Disable Sockets:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;UNIX socket is a two-way communication mechanism that allows the host to communicate with the containers.&lt;/li&gt;
+  &lt;li&gt;Disabling this socket can thwart attacks that exploit it — for example, an attacker abusing the API from inside a container.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;use-of-differentdistributed-databases-for-applications&quot;&gt;Use of Different/Distributed Databases for applications:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Reduces the attack vector&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;regular-updates-to-host-os-and-kernel&quot;&gt;Regular updates to Host OS and Kernel:&lt;/h3&gt;
+
+&lt;h3 id=&quot;limit-administrative-accesses-to-buildci-infrastructure&quot;&gt;Limit Administrative accesses to Build/CI infrastructure:&lt;/h3&gt;
+
+&lt;h3 id=&quot;remove-package-installers-such-as-apt-yum-even-shells-if-possible&quot;&gt;Remove Package Installers such as APT, YUM, even shells if possible:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;This might reduce attack vector, as in any compromised container, attacker will not be able to install malicious software, packages.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/GoogleContainerTools/distroless&quot;&gt;&lt;u&gt;Google Distroless&lt;/u&gt;&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;“Distroless” images contain only your application and its runtime dependencies. They do not contain package managers, shells or any other programs you would expect to find in a standard Linux distribution.&lt;/li&gt;
+      &lt;li&gt;Restricting what’s in your runtime container to precisely what’s necessary for your app is a best practice.&lt;/li&gt;
+      &lt;li&gt;Distroless images are very small.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Keeping the image as minimal as possible has the added bonus of reducing the probability of encountering zero-day vulnerabilities – which will need patching – and keeping the image smaller, which makes storing and pulling it faster.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;use-of-signed-and-verifiable-container-images&quot;&gt;Use of Signed and Verifiable Container Images:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;With image signing, the &lt;u&gt;registry generates a __checksum__&lt;/u&gt; of a tagged image’s contents and then uses a &lt;strong&gt;private cryptographic key&lt;/strong&gt; to create an encrypted signature with the image metadata.&lt;/li&gt;
+  &lt;li&gt;Clients could still pull and run the image without verifying the signature, but runtimes in secure environments should support image verification requirements.&lt;/li&gt;
+  &lt;li&gt;&lt;u&gt;Image verification uses the __public key counterpart__ of the signing key to decrypt&lt;/u&gt; the contents of the image signature, which can then be compared to the pulled image to ensure the image’s contents have not been modified.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/sigstore/cosign&quot;&gt;&lt;u&gt;cosign&lt;/u&gt;&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Container Signing, Verification and Storage in an OCI registry.&lt;/li&gt;
+      &lt;li&gt;Cosign aims to make signatures invisible infrastructure.&lt;/li&gt;
+      &lt;li&gt;Cosign supports:
+        &lt;ul&gt;
+          &lt;li&gt;Hardware and KMS signing&lt;/li&gt;
+          &lt;li&gt;Bring-your-own PKI&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/sigstore/cosign/blob/main/USAGE.md&quot;&gt;&lt;u&gt;Detailed Usage of cosign&lt;/u&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;avoid-installing&quot;&gt;Avoid installing:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Restricting the image to required binaries, libraries, and configuration files provides the best protection.&lt;/li&gt;
+  &lt;li&gt;&lt;u&gt;Package managers&lt;/u&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;apt, yum, apk&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;u&gt;Network tools and clients&lt;/u&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;wget, curl, netcat, ssh.&lt;/li&gt;
+      &lt;li&gt;If you normally use curl to download, say, a configuration file, make the contents into a &lt;u&gt;__Kubernetes ConfigMap__&lt;/u&gt; instead.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;u&gt;Unix shells&lt;/u&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;sh, bash.&lt;/li&gt;
+      &lt;li&gt;Note that removing shells also prevents the use of shell scripts at runtime. Instead, &lt;strong&gt;use a compiled language when possible&lt;/strong&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;u&gt;Compilers and debuggers&lt;/u&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;These should be used only in build and development containers, but never in production containers.&lt;/li&gt;
+      &lt;li&gt;Kubernetes also currently (as of version 1.16) has alpha support for &lt;a href=&quot;https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/&quot;&gt;&lt;u&gt;ephemeral containers&lt;/u&gt;&lt;/a&gt;, which can be placed in an existing pod to facilitate debugging.
+        &lt;ul&gt;
+          &lt;li&gt;If you install these tools in your production images to perform application debugging.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;build-vs-runtime-containers-should-be-different&quot;&gt;Build vs Runtime Containers should be different:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;build tools you use to generate and compile your applications can be exploited when run on production systems.&lt;/li&gt;
+  &lt;li&gt;Containers should be treated as temporary, ephemeral entities.&lt;/li&gt;
+  &lt;li&gt;Never plan on “patching” or altering a running container.&lt;/li&gt;
+  &lt;li&gt;Build a new image and replace the outdated container deployments.&lt;/li&gt;
+  &lt;li&gt;Use multi-stage Dockerfiles to keep software compilation out of runtime images.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;never-bake-any-secrets-into-your-images-even-if-the-images-are-for-internal-use&quot;&gt;Never bake any secrets into your images, even if the images are for internal use:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;TLS certificate keys&lt;/li&gt;
+  &lt;li&gt;cloud provider credentials&lt;/li&gt;
+  &lt;li&gt;SSH private keys&lt;/li&gt;
+  &lt;li&gt;database/user passwords&lt;/li&gt;
+  &lt;li&gt;Supplying sensitive data only at runtime also enables you to use the same image in different runtime environments, which should use different credentials.&lt;/li&gt;
+  &lt;li&gt;It also simplifies updating expired or revoked secrets without rebuilding the image.&lt;/li&gt;
+  &lt;li&gt;As an alternative to baked-in secrets, &lt;u&gt;supply secrets to Kubernetes pods as&lt;/u&gt; &lt;strong&gt;&lt;em&gt;Kubernetes secrets&lt;/em&gt;&lt;/strong&gt;, or use another secret management system.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;image-registry-and-controls&quot;&gt;Image Registry and Controls:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Registries which support using &lt;strong&gt;&lt;em&gt;immutable tags on images&lt;/em&gt;&lt;/strong&gt;, &lt;u&gt;preventing the same tag from being reused on multiple versions&lt;/u&gt; of a repository’s image, enforce &lt;strong&gt;&lt;em&gt;deterministic image runtimes&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Many audited certifications and site reliability teams require the ability to know exactly which version of a given image, and therefore of an application, is deployed at a given time, a situation which is impossible when every image pull uses the latest tag.&lt;/li&gt;
+  &lt;li&gt;Kubernetes does not offer native support for using &lt;strong&gt;&lt;em&gt;secure image pull&lt;/em&gt;&lt;/strong&gt; options. You will need to deploy a &lt;a href=&quot;https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/&quot;&gt;&lt;u&gt;Kubernetes admission controller&lt;/u&gt;&lt;/a&gt; that can &lt;u&gt;verify that pods use trusted registries&lt;/u&gt;.&lt;/li&gt;
+  &lt;li&gt;For signed image support, the controller would need to be able to verify the image’s signature.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;maintainability-vulnerability-management&quot;&gt;Maintainability: Vulnerability Management:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Generate your own policies and procedures for handling image security and vulnerability management. Start by defining your criteria for what constitutes an unsafe image, using metrics such as:
+    &lt;ul&gt;
+      &lt;li&gt;vulnerability &lt;strong&gt;&lt;em&gt;severity&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;number&lt;/em&gt;&lt;/strong&gt; of vulnerabilities&lt;/li&gt;
+      &lt;li&gt;whether those vulnerabilities have &lt;strong&gt;&lt;em&gt;patches or fixes available&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;whether the vulnerabilities impact __*misconfigured deployments&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Set a &lt;strong&gt;&lt;em&gt;deadline&lt;/em&gt;&lt;/strong&gt; for building replacement images and deploying those to production.
+    &lt;ul&gt;
+      &lt;li&gt;Should the deadlines vary by vulnerability severity?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Decide if you want to block the scheduling of containers from existing images when a new vulnerability is discovered? You will also need to define procedures to handle containers with these vulnerable images that are already running in production.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References:&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.trendmicro.com/vinfo/us/security/news/security-technology/container-security-examining-potential-threats-to-the-container-environment&quot;&gt;Container Security: Examining Potential Threats to the Container Environment&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://cloud.redhat.com/blog/container-image-security-beyond-vulnerability-scanning&quot;&gt;Container Image Security: Beyond Vulnerability Scanning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;/assets/docs/container-and-kubernetes-security-eval-guide-v3.pdf&quot;&gt;StackRox: Container and Kubernetes Security Eval Guide.pdf&lt;/a&gt;&lt;/p&gt;</content><author><name>Akhilesh Moghe</name></author><category term="Containers" /><category term="Docker" /><category term="Kubernetes" /><category term="DevOps" /><category term="Containers" /><category term="Docker" /><category term="Kubernetes" /><category term="DevOps" /><summary type="html">Introduction Threats and Risks Areas: Image Development: Careless approach: Installing components, applications without security safeguards or with default configs. Sensitive Data in DockerFiles: Password hardcoding Default passwords SSH encryption keys (specifically private part of keys) Unreliable third-party source of Base Images: Embedded Malwares: Owner added Malware in image with malicious intents Non-updated Images: Images not being maintained with Vulnerability patches Unreliable source of package installations: ppa repositories Cascaded dependencies Code Repository: Open-source unmaintained repositories/projects Cascaded dependencies project repositories Image Registries Hub: Unsecured Public Registry Local unsecured registry setup Misconfigured security controls on registries Kubernetes/Docker APIs Abuse: Vulnerabilities in Kubernetes or Docker APIs itself. CVE-2017-1002101 allows containers that use subPath volume mounts to access files or directories outside of the volume, including the host’s file system. CVE-2017-1002102 allows containers using secret, configMap, or projected or downwardAPI volume to trigger deletion of arbitrary files and directories on the nodes where they are running. CVE-2018-1002105, proxy request handling in kube-apiserver, can leave vulnerable TCP connections open to abuse. Unrestricted Accesses: Admin accesses missuses. Unauthorized Accesses Applications and Ports: Misconfigured Applications and Ports May give-out sensitive information Application Exploitation with: SQL injection cross-site scripting remote file inclusion brute-force attacks. API Abuse with misconfigured/Exposed ports Best Practises: Use of User Namespaces in Linux: when enabled, allows for container isolation by limiting container access to system resources. Run Applications as regular users in containers also: Setting applications to run as regular users can stop privilege escalation attacks from accessing the critical parts of the container. SELinux/AppArmor: Mandatory access control (MAC) tools such as SELinux (Security-Enhanced Linux) and AppArmor can help prevent attacks that compromise application and system services by limiting access to files and network resources. Minimize use of third-party, unmaintained, unverifiable installs: Mount Root File System as Read-Only on Host: will restrict write access for applications, limiting the chances of an attacker being able to introduce malicious elements to the container. Scan Repository Images for new Vulnerabilities being reported: When building an image in your CI pipeline, image scanning must be a requirement for a passing build run. Scanners: Many scanners check only installed operating system packages. Others may also scan installed runtime libraries for some programming languages. Some may also provide additional binary fingerprinting or other testing of file contents. Make sure your scanner offers a compatible API or tool that you can plug into your CI pipeline and provides the data you need to evaluate your criteria for failing a build. determine acceptable levels of risk for allowing a build to pass such as any vulnerability below a certain severity - or alternatively, failing builds with fixable vulnerabilities above a certain severity. Runtime Image Scanning: Runtime scanning is more important, both for any third-party image you may use and for your own images, which may contain newly discovered security vulnerabilities. You can use custom or third-party admission controllers in Kubernetes clusters to prevent the scheduling of insecure container images. While some scanners support storing scan output in a database or cache, users will have to weigh their tolerance for outdated information against the latency introduced by performing a real-time scan for each image pull. Deploy Firewall: Using the integrated firewall for the Docker virtual network, especially for TCP API control, can filter external attacks. Use of Application firewalls. Allow only required network ingress. Use of static analysis tools for containers: Clair Prevents vulnerability with Static analysis on containers Disable Sockets: UNIX socket is a two-way communication mechanism that allows the host to communicate with the containers. Disabling this socket can thwart attacks that exploit it — for example, an attacker abusing the API from inside a container. Use of Different/Distributed Databases for applications: Reduces the attack vector Regular updates to Host OS and Kernel: Limit Administrative accesses to Build/CI infrastructure: Remove Package Installers such as APT, YUM, even shells if possible: This might reduce attack vector, as in any compromised container, attacker will not be able to install malicious software, packages. Google Distroless “Distroless” images contain only your application and its runtime dependencies. They do not contain package managers, shells or any other programs you would expect to find in a standard Linux distribution. Restricting what’s in your runtime container to precisely what’s necessary for your app is a best practice. Distroless images are very small. Keeping the image as minimal as possible has the added bonus of reducing the probability of encountering zero-day vulnerabilities – which will need patching – and keeping the image smaller, which makes storing and pulling it faster. Use of Signed and Verifiable Container Images: With image signing, the registry generates a __checksum__ of a tagged image’s contents and then uses a private cryptographic key to create an encrypted signature with the image metadata. Clients could still pull and run the image without verifying the signature, but runtimes in secure environments should support image verification requirements. Image verification uses the __public key counterpart__ of the signing key to decrypt the contents of the image signature, which can then be compared to the pulled image to ensure the image’s contents have not been modified. cosign Container Signing, Verification and Storage in an OCI registry. Cosign aims to make signatures invisible infrastructure. Cosign supports: Hardware and KMS signing Bring-your-own PKI Detailed Usage of cosign Avoid installing: Restricting the image to required binaries, libraries, and configuration files provides the best protection. Package managers: apt, yum, apk Network tools and clients: wget, curl, netcat, ssh. If you normally use curl to download, say, a configuration file, make the contents into a __Kubernetes ConfigMap__ instead. Unix shells: sh, bash. Note that removing shells also prevents the use of shell scripts at runtime. Instead, use a compiled language when possible. Compilers and debuggers: These should be used only in build and development containers, but never in production containers. Kubernetes also currently (as of version 1.16) has alpha support for ephemeral containers, which can be placed in an existing pod to facilitate debugging. If you install these tools in your production images to perform application debugging. Build vs Runtime Containers should be different: build tools you use to generate and compile your applications can be exploited when run on production systems. Containers should be treated as temporary, ephemeral entities. Never plan on “patching” or altering a running container. Build a new image and replace the outdated container deployments. Use multi-stage Dockerfiles to keep software compilation out of runtime images. Never bake any secrets into your images, even if the images are for internal use: TLS certificate keys cloud provider credentials SSH private keys database/user passwords Supplying sensitive data only at runtime also enables you to use the same image in different runtime environments, which should use different credentials. It also simplifies updating expired or revoked secrets without rebuilding the image. As an alternative to baked-in secrets, supply secrets to Kubernetes pods as Kubernetes secrets, or use another secret management system. Image Registry and Controls: Registries which support using immutable tags on images, preventing the same tag from being reused on multiple versions of a repository’s image, enforce deterministic image runtimes. Many audited certifications and site reliability teams require the ability to know exactly which version of a given image, and therefore of an application, is deployed at a given time, a situation which is impossible when every image pull uses the latest tag. Kubernetes does not offer native support for using secure image pull options. You will need to deploy a Kubernetes admission controller that can verify that pods use trusted registries. For signed image support, the controller would need to be able to verify the image’s signature. Maintainability: Vulnerability Management: Generate your own policies and procedures for handling image security and vulnerability management. Start by defining your criteria for what constitutes an unsafe image, using metrics such as: vulnerability severity number of vulnerabilities whether those vulnerabilities have patches or fixes available whether the vulnerabilities impact __*misconfigured deployments Set a deadline for building replacement images and deploying those to production. Should the deadlines vary by vulnerability severity? Decide if you want to block the scheduling of containers from existing images when a new vulnerability is discovered? You will also need to define procedures to handle containers with these vulnerable images that are already running in production. References: Container Security: Examining Potential Threats to the Container Environment Container Image Security: Beyond Vulnerability Scanning StackRox: Container and Kubernetes Security Eval Guide.pdf</summary></entry><entry><title type="html">Extend EC2 EBS Volume size without downtime</title><link href="http://localhost:4000/aws/ec2/ebs/2021/06/30/Extend-EC2-EBS-Volume-size-without-downtime.html" rel="alternate" type="text/html" title="Extend EC2 EBS Volume size without downtime" /><published>2021-06-30T12:33:22+05:30</published><updated>2021-06-30T12:33:22+05:30</updated><id>http://localhost:4000/aws/ec2/ebs/2021/06/30/Extend-EC2-EBS-Volume-size-without-downtime</id><content type="html" xml:base="http://localhost:4000/aws/ec2/ebs/2021/06/30/Extend-EC2-EBS-Volume-size-without-downtime.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;It’s a very common scenario when you run out of space on an running EC2 instance. And you need to increase the volume of that running instance without shutting it down. This post is all about the same scenario.&lt;/p&gt;
+
+&lt;h2 id=&quot;modify-ebs-volume&quot;&gt;Modify EBS Volume:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Login to your AWS console&lt;/li&gt;
+  &lt;li&gt;Choose “EC2” from the services list&lt;/li&gt;
+  &lt;li&gt;Click on “Volumes” under ELASTIC BLOCK STORE menu (on the left)&lt;/li&gt;
+  &lt;li&gt;Choose the volume that you want to resize, right-click on “Modify Volume”&lt;/li&gt;
+  &lt;li&gt;You’ll see an option window like this one:&lt;/li&gt;
+  &lt;li&gt;Set the new size for your EBS volume (in this case i extended an 8GB volume to 20GB)&lt;/li&gt;
+  &lt;li&gt;Click on modify.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/Extend_EC2_EBS_Volume_size.png&quot; alt=&quot;Modify EBS Volume&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SSH to the EC2 instance where the EBS we’ve just extended is attached to.&lt;/li&gt;
+  &lt;li&gt;Type the following command to list our block devices:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ubuntu@ip-172-31-6-183:~$ lsblk
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+loop0     7:0    0 32.3M  1 loop /snap/snapd/11588
+loop2     7:2    0 55.5M  1 loop /snap/core18/1997 
+loop3     7:3    0 33.3M  1 loop /snap/amazon-ssm-agent/3552 
+loop4     7:4    0 32.3M  1 loop /snap/snapd/12398 
+loop5     7:5    0 55.5M  1 loop /snap/core18/2074 
+xvda    202:0    0  150G  0 disk  
+└─xvda1 202:1    0  150G  0 part / 
+ubuntu@ip-172-31-6-183:~$ 
+
+ubuntu@ip-172-31-6-183:~$ lsblk 
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT 
+loop0     7:0    0 32.3M  1 loop /snap/snapd/11588 
+loop2     7:2    0 55.5M  1 loop /snap/core18/1997 
+loop3     7:3    0 33.3M  1 loop /snap/amazon-ssm-agent/3552 
+loop4     7:4    0 32.3M  1 loop /snap/snapd/12398 
+loop5     7:5    0 55.5M  1 loop /snap/core18/2074 
+xvda    202:0    0  200G  0 disk  
+└─xvda1 202:1    0  150G  0 part / 
+ubuntu@ip-172-31-6-183:~$
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;As you can see size of the root volume reflects the new size, 200GB, the size of the partition reflects the original size, 150 GB, and must be extended before you can extend the file system.&lt;/li&gt;
+  &lt;li&gt;To do so, type the following command:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Be careful, there is a space between device name and partition number! 
+
+ubuntu@ip-172-31-6-183:~$ sudo growpart /dev/xvda 1 
+CHANGED: partition=1 start=2048 old: size=314570719 end=314572767 new: size=419428319,end=419430367 
+ubuntu@ip-172-31-6-183:~$ 
+
+ubuntu@ip-172-31-6-183:~$ lsblk 
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT 
+loop0     7:0    0 32.3M  1 loop /snap/snapd/11588 
+loop2     7:2    0 55.5M  1 loop /snap/core18/1997 
+loop3     7:3    0 33.3M  1 loop /snap/amazon-ssm-agent/3552 
+loop4     7:4    0 32.3M  1 loop /snap/snapd/12398 
+loop5     7:5    0 55.5M  1 loop /snap/core18/2074 
+xvda    202:0    0  200G  0 disk  
+└─xvda1 202:1    0  200G  0 part / 
+ubuntu@ip-172-31-6-183:~$
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Extend the filesystem itself.&lt;/li&gt;
+  &lt;li&gt;Confirm File System type with:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ubuntu@ip-172-31-6-183:~$ df -Th 
+Filesystem     Type            Size    Used    Avail    Use%    Mounted on 
+udev               devtmpfs   16G     0          16G      0%        /dev 
+tmpfs              tmpfs         3.2G    824K   3.2G     1%        /run 
+/dev/xvda1     ext4      146G  128G   18G  88% / 
+tmpfs          tmpfs      16G   88K   16G   1% /dev/shm 
+tmpfs          tmpfs     5.0M     0  5.0M   0% /run/lock 
+tmpfs          tmpfs      16G     0   16G   0% /sys/fs/cgroup 
+/dev/loop0     squashfs   33M   33M     0 100% /snap/snapd/11588 
+/dev/loop2     squashfs   56M   56M     0 100% /snap/core18/1997 
+/dev/loop3     squashfs   34M   34M     0 100% /snap/amazon-ssm-agent/3552 
+/dev/loop5     squashfs   56M   56M     0 100% /snap/core18/2074 
+/dev/loop4     squashfs   33M   33M     0 100% /snap/snapd/12398 
+tmpfs          tmpfs     3.2G     0  3.2G   0% /run/user/1000 
+ubuntu@ip-172-31-6-183:~$
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If your filesystem is an ext2, ext3, or ext4, type:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ubuntu@ip-172-31-6-183:~$ sudo resize2fs /dev/xvda1  
+resize2fs 1.44.1 (24-Mar-2018) 
+Filesystem at /dev/xvda1 is mounted on /; on-line resizing required 
+old_desc_blocks = 19, new_desc_blocks = 25 
+The filesystem on /dev/xvda1 is now 52428539 (4k) blocks long. 
+
+ubuntu@ip-172-31-6-183:~$
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If your filesystem is an XFS, then type:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[ec2-user ~]$ sudo xfs_growfs /dev/xvda1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Finally we can check our extended filesystem by typing:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ubuntu@ip-172-31-6-183:~$ df -Th 
+Filesystem     Type      Size  Used Avail Use% Mounted on 
+udev           devtmpfs   16G     0   16G   0% /dev 
+tmpfs          tmpfs     3.2G  824K  3.2G   1% /run 
+/dev/xvda1     ext4      194G  128G   67G  66% / 
+tmpfs          tmpfs      16G   88K   16G   1% /dev/shm 
+tmpfs          tmpfs     5.0M     0  5.0M   0% /run/lock 
+tmpfs          tmpfs      16G     0   16G   0% /sys/fs/cgroup 
+/dev/loop0     squashfs   33M   33M     0 100% /snap/snapd/11588 
+/dev/loop2     squashfs   56M   56M     0 100% /snap/core18/1997 
+/dev/loop3     squashfs   34M   34M     0 100% /snap/amazon-ssm-agent/3552 
+/dev/loop5     squashfs   56M   56M     0 100% /snap/core18/2074 
+/dev/loop4     squashfs   33M   33M     0 100% /snap/snapd/12398 
+tmpfs          tmpfs     3.2G     0  3.2G   0% /run/user/1000 
+ubuntu@ip-172-31-6-183:~$
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;h2 id=&quot;references&quot;&gt;References:&lt;/h2&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/geekculture/tutorial-how-to-extend-aws-ebs-volumes-with-no-downtime-ec7d9e82426e&quot;&gt;Tutorial: How to Extend AWS EBS Volumes with No Downtime&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html?icmpid=docs_ec2_console&quot;&gt;Extend a Linux file system after resizing a volume&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="AWS" /><category term="EC2" /><category term="EBS" /><category term="AWS" /><category term="EC2" /><category term="EBS" /><summary type="html">Introduction It’s a very common scenario when you run out of space on an running EC2 instance. And you need to increase the volume of that running instance without shutting it down. This post is all about the same scenario. Modify EBS Volume: Login to your AWS console Choose “EC2” from the services list Click on “Volumes” under ELASTIC BLOCK STORE menu (on the left) Choose the volume that you want to resize, right-click on “Modify Volume” You’ll see an option window like this one: Set the new size for your EBS volume (in this case i extended an 8GB volume to 20GB) Click on modify. SSH to the EC2 instance where the EBS we’ve just extended is attached to. Type the following command to list our block devices: ubuntu@ip-172-31-6-183:~$ lsblk NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT loop0 7:0 0 32.3M 1 loop /snap/snapd/11588 loop2 7:2 0 55.5M 1 loop /snap/core18/1997 loop3 7:3 0 33.3M 1 loop /snap/amazon-ssm-agent/3552 loop4 7:4 0 32.3M 1 loop /snap/snapd/12398 loop5 7:5 0 55.5M 1 loop /snap/core18/2074 xvda 202:0 0 150G 0 disk └─xvda1 202:1 0 150G 0 part / ubuntu@ip-172-31-6-183:~$ ubuntu@ip-172-31-6-183:~$ lsblk NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT loop0 7:0 0 32.3M 1 loop /snap/snapd/11588 loop2 7:2 0 55.5M 1 loop /snap/core18/1997 loop3 7:3 0 33.3M 1 loop /snap/amazon-ssm-agent/3552 loop4 7:4 0 32.3M 1 loop /snap/snapd/12398 loop5 7:5 0 55.5M 1 loop /snap/core18/2074 xvda 202:0 0 200G 0 disk └─xvda1 202:1 0 150G 0 part / ubuntu@ip-172-31-6-183:~$ As you can see size of the root volume reflects the new size, 200GB, the size of the partition reflects the original size, 150 GB, and must be extended before you can extend the file system. To do so, type the following command: Be careful, there is a space between device name and partition number! ubuntu@ip-172-31-6-183:~$ sudo growpart /dev/xvda 1 CHANGED: partition=1 start=2048 old: size=314570719 end=314572767 new: size=419428319,end=419430367 ubuntu@ip-172-31-6-183:~$ ubuntu@ip-172-31-6-183:~$ lsblk NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT loop0 7:0 0 32.3M 1 loop /snap/snapd/11588 loop2 7:2 0 55.5M 1 loop /snap/core18/1997 loop3 7:3 0 33.3M 1 loop /snap/amazon-ssm-agent/3552 loop4 7:4 0 32.3M 1 loop /snap/snapd/12398 loop5 7:5 0 55.5M 1 loop /snap/core18/2074 xvda 202:0 0 200G 0 disk └─xvda1 202:1 0 200G 0 part / ubuntu@ip-172-31-6-183:~$ Extend the filesystem itself. Confirm File System type with: ubuntu@ip-172-31-6-183:~$ df -Th Filesystem Type Size Used Avail Use% Mounted on udev devtmpfs 16G 0 16G 0% /dev tmpfs tmpfs 3.2G 824K 3.2G 1% /run /dev/xvda1 ext4 146G 128G 18G 88% / tmpfs tmpfs 16G 88K 16G 1% /dev/shm tmpfs tmpfs 5.0M 0 5.0M 0% /run/lock tmpfs tmpfs 16G 0 16G 0% /sys/fs/cgroup /dev/loop0 squashfs 33M 33M 0 100% /snap/snapd/11588 /dev/loop2 squashfs 56M 56M 0 100% /snap/core18/1997 /dev/loop3 squashfs 34M 34M 0 100% /snap/amazon-ssm-agent/3552 /dev/loop5 squashfs 56M 56M 0 100% /snap/core18/2074 /dev/loop4 squashfs 33M 33M 0 100% /snap/snapd/12398 tmpfs tmpfs 3.2G 0 3.2G 0% /run/user/1000 ubuntu@ip-172-31-6-183:~$ If your filesystem is an ext2, ext3, or ext4, type: ubuntu@ip-172-31-6-183:~$ sudo resize2fs /dev/xvda1 resize2fs 1.44.1 (24-Mar-2018) Filesystem at /dev/xvda1 is mounted on /; on-line resizing required old_desc_blocks = 19, new_desc_blocks = 25 The filesystem on /dev/xvda1 is now 52428539 (4k) blocks long. ubuntu@ip-172-31-6-183:~$ If your filesystem is an XFS, then type: [ec2-user ~]$ sudo xfs_growfs /dev/xvda1 Finally we can check our extended filesystem by typing: ubuntu@ip-172-31-6-183:~$ df -Th Filesystem Type Size Used Avail Use% Mounted on udev devtmpfs 16G 0 16G 0% /dev tmpfs tmpfs 3.2G 824K 3.2G 1% /run /dev/xvda1 ext4 194G 128G 67G 66% / tmpfs tmpfs 16G 88K 16G 1% /dev/shm tmpfs tmpfs 5.0M 0 5.0M 0% /run/lock tmpfs tmpfs 16G 0 16G 0% /sys/fs/cgroup /dev/loop0 squashfs 33M 33M 0 100% /snap/snapd/11588 /dev/loop2 squashfs 56M 56M 0 100% /snap/core18/1997 /dev/loop3 squashfs 34M 34M 0 100% /snap/amazon-ssm-agent/3552 /dev/loop5 squashfs 56M 56M 0 100% /snap/core18/2074 /dev/loop4 squashfs 33M 33M 0 100% /snap/snapd/12398 tmpfs tmpfs 3.2G 0 3.2G 0% /run/user/1000 ubuntu@ip-172-31-6-183:~$ References: Tutorial: How to Extend AWS EBS Volumes with No Downtime Extend a Linux file system after resizing a volume</summary></entry></feed>

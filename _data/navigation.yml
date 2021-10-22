@@ -1,17 +1,76 @@
-# main links
-main:
-  - title: "About"
-    url: /about/
-    description: About Me, Who am I, What I do...
-  - title: "Categories"
-    # url: /categories/
-    url: /category-archive/
-  - title: "Tags"
-    # url: /tags/
-    url: /tag-archive/
-  - title: "Collections"
-    url: /collection-archive/
-  - title: "Years-wise"
-    url: /year-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+header:
+  - titles:
+      en      : &EN       Archive
+    url: /archive.html
+    
+  - titles:
+      en      : &EN       CV
+    url: /cv.html
+
+  - titles:
+      en      : &EN       About Me
+    url: /about.html
+    
+docs-en:
+  - title:      Start
+    children:
+      - title:  Quick Start
+        url:    /docs/en/quick-start
+      - title:  Structure
+        url:    /docs/en/structure
+  - title:      Customization
+    children:
+      - title:  Configuration
+        url:    /docs/en/configuration
+      - title:  Navigation
+        url:    /docs/en/navigation
+
+docs-hz:
+  - title:      Start-hz
+    children:
+      - title:  Quick Start
+        url:    /docs/en/quick-start
+      - title:  Structure
+        url:    /docs/en/structure
+  - title:      Customization
+    children:
+      - title:  Configuration-hz
+        url:    /docs/en/configuration
+      - title:  Navigation
+        url:    /docs/en/navigation
+  - title:      Start-hz
+    children:
+      - title:  Quick Start
+        url:    /docs/en/quick-start
+      - title:  Structure
+        url:    /docs/en/structure
+  - title:      Customization
+    children:
+      - title:  Configuration-hz
+        url:    /docs/en/configuration
+      - title:  Navigation
+        url:    /docs/en/navigation
+  - title:      Start-hz
+    children:
+      - title:  Quick Start
+        url:    /docs/en/quick-start
+      - title:  Structure
+        url:    /docs/en/structure
+  - title:      Customization
+    children:
+      - title:  Configuration-hz
+        url:    /docs/en/configuration
+      - title:  Navigation
+        url:    /docs/en/navigation
+  - title:      Start-hz
+    children:
+      - title:  Quick Start
+        url:    /docs/en/quick-start
+      - title:  Structure
+        url:    /docs/en/structure
+  - title:      Customization
+    children:
+      - title:  Configuration-hz
+        url:    /docs/en/configuration
+      - title:  Navigation
+        url:    /docs/en/navigation
