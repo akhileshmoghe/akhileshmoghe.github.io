@@ -1,0 +1,94 @@
+I"%<h2 id="introduction">Introduction</h2>
+
+<h2 id="why-edge-compute">Why Edge Compute?</h2>
+<h3 id="latency">Latency:</h3>
+<ul>
+  <li>IoT systems generate huge data from sensors.</li>
+  <li>Sending all these raw data every time to cloud is a costly affair in terms of money, latency and many more.</li>
+  <li>The round time for sending data from IoT devices to cloud and receiving back the inference data/command from cloud usually take 100s of milliseconds.</li>
+  <li>There are many real-life use-cases, where this much of latency is not acceptable, usually in these cases inference needs to happen under few milliseconds.</li>
+</ul>
+
+<h3 id="fast-response-time">Fast Response Time:</h3>
+<ul>
+  <li>Decisions can be made locally on devices with the stream of data arriving.</li>
+  <li>With local decision-making capability, there’s no round trip of data.</li>
+  <li>Resulting in Fast Response.</li>
+</ul>
+
+<h3 id="data-privacy">Data Privacy:</h3>
+<ul>
+  <li>In many industries such as Healthcare, Industrial, Government Organizations, customers do not want to send data to public cloud or outside their data centers for data privacy and safety concerns.</li>
+  <li>Also, regulations like <strong><em>HIPAA</em></strong>, <strong><em>GDPR</em></strong> mandates the data privacy and security, which is a strong motive behind keeping data on-premises servers.</li>
+  <li>Though data privacy, safety and security can be addressed in cloud infrastructures with Multitenancy and similar practices, it may not be acceptable to all customers.</li>
+</ul>
+
+<h3 id="bandwidth">Bandwidth:</h3>
+<ul>
+  <li>As the data generated and frequency increases, the data to be synced will increase.</li>
+  <li>This definitely results in increased bandwidth consumption.</li>
+  <li>There may be restrictions on Network Bandwidth allocation per device or network.</li>
+</ul>
+
+<h3 id="cost">Cost:</h3>
+<ul>
+  <li>IoT systems generate huge data from sensors.</li>
+  <li>Sending all these raw data every time to cloud is costly affair in terms of money, latency and many more.</li>
+</ul>
+
+<h3 id="pre-processing">Pre-processing:</h3>
+<ul>
+  <li>IoT systems generate huge data from sensors.</li>
+  <li>Sending all these raw data every time to cloud is costly affair in terms of money, latency and many more.</li>
+  <li>So usually, the raw IoT sensors data is pre-processed, transformed, fine grained before sending it over to data centers.</li>
+  <li>Many of the IoT devices, do not have that much of compute capability, e.g., MCUs, in these scenarios, data pre-processing can be done on the Edge devices before cloud.</li>
+  <li>Edge devices can also act as a translation bridge between different protocols, e.g., Industrial protocols like CAN Bus, Modbus, OPC-UA are not directly compatible with cloud data storage protocols like JSON. Edge devices can handle these protocol translations.</li>
+</ul>
+
+<h3 id="no-direct-connectivity-gateway-kind-of-functionality">No direct connectivity, Gateway kind of functionality:</h3>
+<ul>
+  <li>In many scenarios, IoT devices will not be directly exposed to the internet.</li>
+  <li>IoT devices are only connecting to the gateway devices, which provide them local connectivity, but no internet access.</li>
+  <li>In such scenarios, IoT devices needs to send data to gateway i.e., Edge devices.</li>
+  <li>And Edge device then sends data to cloud.</li>
+  <li>In these cases, Routers or the mobiles acting as hotspots can be Edge devices.</li>
+</ul>
+
+<h3 id="on-premise-ai-ml-inference-scenarios">On-premise AI, ML Inference scenarios:</h3>
+<ul>
+  <li>Allows you to deploy models built and trained in the cloud and run them on edge devices.</li>
+  <li>Edge computing uses this model to process data locally and respond to the event rapidly.</li>
+</ul>
+
+<h3 id="intermittent-connectivity">Intermittent Connectivity:</h3>
+<ul>
+  <li>No one can guarantee continuous internet access.</li>
+  <li>There will be many situations of intermittent connectivity.</li>
+  <li>Though internet connectivity is intermittent, we can have local uninterrupted connectivity to IoT devices.</li>
+  <li>Having Edge processing, we can have AI, ML inferences on Edge devices, without bothering about internet cloud connectivity.</li>
+</ul>
+
+<h2 id="iot-architecture-limitations">IoT Architecture Limitations:</h2>
+<h3 id="todays-iot-approach">Today’s IoT Approach:</h3>
+<ul>
+  <li>In today’s prevailing IoT architecture, sensor data is transmitted over a wide area network to be centralized, processed and analyzed — which creates an additional supply of enriched data.</li>
+  <li>These data and analytical models are intended to trigger actions either on the thing itself, in upstream business systems, or in other platforms that can use the data outside of the original context.</li>
+</ul>
+
+<h3 id="challenges-in-iot-approach">Challenges in IoT Approach:</h3>
+<ul>
+  <li>IoT approach is unsustainable in the long term, due to:
+    <ul>
+      <li>the number of device connections,</li>
+      <li>volume of data,</li>
+      <li>latency across different locations and networks,</li>
+      <li>and the asynchronous nature of many connections between data flow and analytical cloud services.</li>
+      <li>In addition, today’s heterogeneous networks are unable to manage the massive growth anticipated in the number of endpoints and the data volume.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>These challenges have created a pressing need to move information and analytical models closer to the source of data, in order to provide compute capability inside an environment where connectivity and response times can be controlled.
+That’s where Edge Computing comes into picture.</p>
+
+:ET
