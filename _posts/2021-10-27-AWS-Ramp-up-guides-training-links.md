@@ -1,6 +1,6 @@
 ---
 title:  "AWS Training Links and Ramp Up Guides"
-date:   2021-10-23 12:33:22 +0530
+date:   2021-10-27 12:33:22 +0530
 categories:
   - IoT
   - Cloud
