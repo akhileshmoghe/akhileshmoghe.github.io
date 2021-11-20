@@ -1,5 +1,662 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-27T11:02:47+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Every THING is Internet of Things</title><subtitle>A Journey in the direction of ---&gt; IoT ---&gt; Edge ---&gt; Cloud ---&gt; DevOps ---&gt; ML ---&gt; AI
-</subtitle><author><name>Akhilesh Moghe</name><email>akhileshmoghe@live.com</email></author><entry><title type="html">Why IoT Edge Computing?</title><link href="http://localhost:4000/iot/cloud/edge%20computing/edge/2021/10/23/Why-Edge-Computing.html" rel="alternate" type="text/html" title="Why IoT Edge Computing?" /><published>2021-10-23T12:33:22+05:30</published><updated>2021-10-23T12:33:22+05:30</updated><id>http://localhost:4000/iot/cloud/edge%20computing/edge/2021/10/23/Why-Edge-Computing</id><content type="html" xml:base="http://localhost:4000/iot/cloud/edge%20computing/edge/2021/10/23/Why-Edge-Computing.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-20T10:24:10+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Every THING is Internet of Things</title><subtitle>A Journey in the direction of ---&gt; IoT ---&gt; Edge ---&gt; Cloud ---&gt; DevOps ---&gt; ML ---&gt; AI
+</subtitle><author><name>Akhilesh Moghe</name><email>akhileshmoghe@live.com</email></author><entry><title type="html">AWS Greengrass Service V2: a Service to build, deploy and manage IoT applications on Edge Devices</title><link href="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/12/AWS-Greengrass.html" rel="alternate" type="text/html" title="AWS Greengrass Service V2: a Service to build, deploy and manage IoT applications on Edge Devices" /><published>2021-11-12T12:33:22+05:30</published><updated>2021-11-12T12:33:22+05:30</updated><id>http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/12/AWS-Greengrass</id><content type="html" xml:base="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/12/AWS-Greengrass.html">&lt;p&gt;This write-up will only focus on AWS Sagemaker ML service with respect to ML model deployment to Edge devices and Cloud.&lt;/p&gt;
+
+&lt;h2 id=&quot;ml-inference-on-greengrass-devices&quot;&gt;ML Inference on Greengrass devices&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;ML models can be trained using &lt;strong&gt;&lt;em&gt;&lt;u&gt;AWS Sagemaker&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; or custom ml trainining ways. Models are stored in &lt;strong&gt;&lt;em&gt;&lt;u&gt;AWS S3&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; for deployment to Greengrass devices.&lt;/li&gt;
+  &lt;li&gt;ML models are deployed as artifacts in your components to perform inference on your core devices.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ml-components&quot;&gt;ML Components&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;AWS provides following Machine Learning components that can be deployed to edge devices to perform Machine Learning Inference.&lt;/li&gt;
+  &lt;li&gt;ML models can be trained using &lt;strong&gt;&lt;em&gt;&lt;u&gt;AWS Sagemaker&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; or custom ml trainining ways. Models are stored in &lt;strong&gt;&lt;em&gt;&lt;u&gt;AWS S3&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; for deployment to Greengrass devices.&lt;/li&gt;
+  &lt;li&gt;AWS-provided machine learning components are broadly categorized as follows:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;Model component&lt;/em&gt;&lt;/strong&gt; — Contains machine learning models as &lt;em&gt;&lt;u&gt;Greengrass artifacts&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;Runtime component&lt;/em&gt;&lt;/strong&gt; — Contains the &lt;em&gt;&lt;u&gt;script&lt;/u&gt;&lt;/em&gt; that installs the machine learning framework and its dependencies on the Greengrass core device.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;Inference component&lt;/em&gt;&lt;/strong&gt; — Contains the &lt;em&gt;&lt;u&gt;inference code&lt;/u&gt;&lt;/em&gt; and includes &lt;em&gt;&lt;u&gt;component dependencies&lt;/u&gt;&lt;/em&gt; to install the machine learning framework and download pre-trained machine learning models.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;To perform custom machine learning inference with &lt;em&gt;&lt;u&gt;your own models&lt;/u&gt;&lt;/em&gt; that are stored in &lt;strong&gt;&lt;em&gt;&lt;u&gt;Amazon S3&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, or to use a &lt;em&gt;&lt;u&gt;different machine learning framework&lt;/u&gt;&lt;/em&gt;, you can use the recipes of the following public components as templates to create custom machine learning components.
+    &lt;ul&gt;
+      &lt;li&gt;Further Reference:
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://docs.aws.amazon.com/greengrass/v2/developerguide/ml-customization.html&quot;&gt;Customize your machine learning components&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;AWS provided ML model components:
+    &lt;ul&gt;
+      &lt;li&gt;SageMaker Edge Manager&lt;/li&gt;
+      &lt;li&gt;DLR image classification&lt;/li&gt;
+      &lt;li&gt;DLR object detection&lt;/li&gt;
+      &lt;li&gt;DLR image classification model store&lt;/li&gt;
+      &lt;li&gt;DLR object detection model store&lt;/li&gt;
+      &lt;li&gt;DLR installer&lt;/li&gt;
+      &lt;li&gt;TensorFlow Lite image classification&lt;/li&gt;
+      &lt;li&gt;TensorFlow Lite object detection&lt;/li&gt;
+      &lt;li&gt;TensorFlow Lite image classification model store&lt;/li&gt;
+      &lt;li&gt;TensorFlow Lite object detection model store&lt;/li&gt;
+      &lt;li&gt;TensorFlow Lite installer&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;aws-sagemaker-edge-manager-agent&quot;&gt;AWS SageMaker Edge Manager agent&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;With SageMaker Edge Manager, you can use Amazon SageMaker Neo-compiled models directly on your core device.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/on-premise%20cloud/cloud/aws/edge%20iot/ml/2021/11/11/AWS-SageMaker.html&quot;&gt;AWS SageMaker Edge Manager&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;further-references&quot;&gt;Further References&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/aws-samples/greengrass-v2-docker-ros-demo&quot;&gt;ROS2 Docker Sample Application with AWS IoT Greengrass 2.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><summary type="html">This write-up will only focus on AWS Sagemaker ML service with respect to ML model deployment to Edge devices and Cloud. ML Inference on Greengrass devices ML models can be trained using AWS Sagemaker or custom ml trainining ways. Models are stored in AWS S3 for deployment to Greengrass devices. ML models are deployed as artifacts in your components to perform inference on your core devices. ML Components AWS provides following Machine Learning components that can be deployed to edge devices to perform Machine Learning Inference. ML models can be trained using AWS Sagemaker or custom ml trainining ways. Models are stored in AWS S3 for deployment to Greengrass devices. AWS-provided machine learning components are broadly categorized as follows: Model component — Contains machine learning models as Greengrass artifacts. Runtime component — Contains the script that installs the machine learning framework and its dependencies on the Greengrass core device. Inference component — Contains the inference code and includes component dependencies to install the machine learning framework and download pre-trained machine learning models. To perform custom machine learning inference with your own models that are stored in Amazon S3, or to use a different machine learning framework, you can use the recipes of the following public components as templates to create custom machine learning components. Further Reference: Customize your machine learning components AWS provided ML model components: SageMaker Edge Manager DLR image classification DLR object detection DLR image classification model store DLR object detection model store DLR installer TensorFlow Lite image classification TensorFlow Lite object detection TensorFlow Lite image classification model store TensorFlow Lite object detection model store TensorFlow Lite installer AWS SageMaker Edge Manager agent With SageMaker Edge Manager, you can use Amazon SageMaker Neo-compiled models directly on your core device. AWS SageMaker Edge Manager Further References ROS2 Docker Sample Application with AWS IoT Greengrass 2.0</summary></entry><entry><title type="html">AWS Sagemaker Machine Learning Service, Sagemaker Neo, Sagemaker Edge Manager</title><link href="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/ml/2021/11/11/AWS-SageMaker.html" rel="alternate" type="text/html" title="AWS Sagemaker Machine Learning Service, Sagemaker Neo, Sagemaker Edge Manager" /><published>2021-11-11T12:33:22+05:30</published><updated>2021-11-11T12:33:22+05:30</updated><id>http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/ml/2021/11/11/AWS-SageMaker</id><content type="html" xml:base="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/ml/2021/11/11/AWS-SageMaker.html">&lt;p&gt;This write-up will only focus on AWS Sagemaker ML service with respect to ML model deployment to Edge devices and Cloud.&lt;/p&gt;
+
+&lt;h2 id=&quot;aws-sagemaker-neo&quot;&gt;AWS Sagemaker Neo&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Amazon SageMaker Neo enables developers to optimize machine learning (ML) models for inference on SageMaker in the cloud and supported devices at the edge for the specific underlying hardware.&lt;/li&gt;
+  &lt;li&gt;Optimizes machine learning models for inference on cloud instances and edge devices to run faster with no loss in accuracy.&lt;/li&gt;
+  &lt;li&gt;Amazon SageMaker &lt;strong&gt;&lt;em&gt;&lt;u&gt;Neo runtime&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; is supported on &lt;em&gt;&lt;u&gt;Android&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;iOS&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;Linux&lt;/u&gt;&lt;/em&gt;, and &lt;em&gt;&lt;u&gt;Windows&lt;/u&gt;&lt;/em&gt; operating systems.&lt;/li&gt;
+  &lt;li&gt;Sagemaker neo can optimize the ML model to run on &lt;em&gt;&lt;u&gt;target hardware platform&lt;/u&gt;&lt;/em&gt; of Edge devices based on processors from &lt;em&gt;&lt;u&gt;Ambarella&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;Apple&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;ARM&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;Intel&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;MediaTek&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;Nvidia&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;NXP&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;Qualcomm&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;RockChip&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;Texas Instruments&lt;/u&gt;&lt;/em&gt;, or &lt;em&gt;&lt;u&gt;Xilinx&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Compiles it into an &lt;em&gt;&lt;u&gt;executable&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;For inference in the cloud, SageMaker Neo speeds up inference and saves cost by creating &lt;em&gt;&lt;u&gt;an inference optimized container&lt;/u&gt;&lt;/em&gt; that include &lt;em&gt;&lt;u&gt;MXNet&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;PyTorch&lt;/u&gt;&lt;/em&gt;, and &lt;em&gt;&lt;u&gt;TensorFlow&lt;/u&gt;&lt;/em&gt; integrated with Neo runtime for SageMaker hosting.&lt;/li&gt;
+  &lt;li&gt;Amazon SageMaker Neo supports optimization for a model from the framework-specific format of &lt;em&gt;&lt;u&gt;DarkNet&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;Keras&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;MXNet&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;PyTorch&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;TensorFlow&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;TensorFlow-Lite&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;ONNX&lt;/u&gt;&lt;/em&gt;, or &lt;em&gt;&lt;u&gt;XGBoost&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Amazon SageMaker &lt;em&gt;&lt;u&gt;Neo runtime&lt;/u&gt;&lt;/em&gt; occupies 1MB of storage and 2MB of memory, which is many times smaller than the storage and memory footprint of a framework, while providing a simple common &lt;em&gt;&lt;u&gt;API to run a compiled model&lt;/u&gt;&lt;/em&gt; originating in any framework.&lt;/li&gt;
+  &lt;li&gt;Amazon SageMaker Neo takes advantage of partner-provided &lt;u&gt;accelerator libraries&lt;/u&gt; to deliver the best available performance for a deep learning model on heterogeneous hardware platforms with a &lt;u&gt;hardware accelerator&lt;/u&gt; as well as a CPU. Acceleration libraries such as &lt;em&gt;&lt;u&gt;Ambarella CV Tools&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;Nvidia Tensor RT&lt;/u&gt;&lt;/em&gt;, and &lt;em&gt;&lt;u&gt;Texas Instruments TIDL&lt;/u&gt;&lt;/em&gt; each support a specific set of functions and operators. SageMaker Neo automatically partitions your model so that the part with operators supported by the accelerator can run on the accelerator while the rest of the model runs on the CPU.&lt;/li&gt;
+  &lt;li&gt;Amazon SageMaker Neo now compiles models for Amazon SageMaker &lt;strong&gt;&lt;em&gt;&lt;u&gt;INF1 instance&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; targets. SageMaker hosting provides a managed service for inference on the INF1 instances, which are based on the &lt;strong&gt;&lt;em&gt;&lt;u&gt;AWS Inferentia chip&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/sagemaker/neo/&quot;&gt;Amazon SageMaker Neo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;aws-sagemaker-edge-manager&quot;&gt;AWS Sagemaker Edge Manager&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;AWS Sagemaker Edge Manager consists of a Service running in AWS cloud and an Agent running on Edge devices.&lt;/li&gt;
+  &lt;li&gt;Sagemaker Edge Manager deploys a ML model &lt;em&gt;&lt;u&gt;optimized&lt;/u&gt;&lt;/em&gt; with &lt;em&gt;&lt;u&gt;SageMaker Neo&lt;/u&gt;&lt;/em&gt; automatically so you don’t need to have Neo runtime installed on your devices in order to take advantage of the model optimizations.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;agent&quot;&gt;Agent&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Use the agent to &lt;em&gt;&lt;u&gt;make predictions&lt;/u&gt;&lt;/em&gt; with models loaded onto your edge devices.&lt;/li&gt;
+  &lt;li&gt;The agent also &lt;em&gt;&lt;u&gt;collects model metrics&lt;/u&gt; and *&lt;u&gt;captures data&lt;/u&gt;&lt;/em&gt; at specific intervals.&lt;/li&gt;
+  &lt;li&gt;Sample data is stored in your &lt;strong&gt;&lt;em&gt;&lt;u&gt;Amazon S3&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; bucket.&lt;/li&gt;
+  &lt;li&gt;2 methods of installing and deploying the Edge Manager agent onto your edge devices:
+    &lt;ul&gt;
+      &lt;li&gt;Download the &lt;em&gt;&lt;u&gt;agent as a binary&lt;/u&gt;&lt;/em&gt; from the Amazon S3 release bucket.&lt;/li&gt;
+      &lt;li&gt;Use the &lt;strong&gt;&lt;em&gt;&lt;u&gt;AWS IoT Greengrass V2&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; console or the &lt;strong&gt;&lt;em&gt;&lt;u&gt;AWS CLI&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; to deploy aws.greengrass.SageMakerEdgeManager.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;monitoring-deployments-across-fleets&quot;&gt;Monitoring deployments across fleets&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;SageMaker Edge Manager also &lt;em&gt;&lt;u&gt;collects prediction data and sends&lt;/u&gt;&lt;/em&gt; a sample of the data to the cloud for monitoring, labeling, and retraining.&lt;/li&gt;
+  &lt;li&gt;All data can be viewed in the &lt;strong&gt;&lt;em&gt;&lt;u&gt;SageMaker Edge Manager dashboard&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; which reports on the operation of deployed models.&lt;/li&gt;
+  &lt;li&gt;The dashboard is useful to understand the performance of models running on each device across your fleet, understand overall fleet health and identify problematic models and particular devices.&lt;/li&gt;
+  &lt;li&gt;If quality declines are detected, you can quickly spot them in the dashboard and also configure alerts through &lt;strong&gt;&lt;em&gt;&lt;u&gt;Amazon CloudWatch&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;signed-and-verifiable-ml-deployments&quot;&gt;Signed and Verifiable ML deployments&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;SageMaker Edge Manager also &lt;em&gt;&lt;u&gt;cryptographically signs your models&lt;/u&gt;&lt;/em&gt; so you can verify that it was not tampered with as it moves from the cloud to edge devices.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;integration-with-device-applications&quot;&gt;Integration with device applications&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;SageMaker Edge Manager &lt;em&gt;&lt;u&gt;supports&lt;/u&gt;&lt;/em&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;gRPC&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, an open source &lt;em&gt;&lt;u&gt;remote procedure call&lt;/u&gt;&lt;/em&gt;, which allows you to integrate SageMaker Edge Manager with your existing edge applications through APIs in common programming languages, such as Android Java, C# / .NET, Dart, Go, Java, Kotlin/JVM, Node.js, Objective-C, PHP, Python, Ruby, and Web.&lt;/li&gt;
+  &lt;li&gt;Manages models separately from the rest of the application, so that updates to the model and the application are independent.
+    &lt;h3 id=&quot;multiple-ml-models-serve-on-edge-devices&quot;&gt;Multiple ML models serve on edge devices&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ML applications usually require hosting and running multiple models concurrently on a device.&lt;/li&gt;
+  &lt;li&gt;SageMaker Edge Manager will soon allow you to write &lt;em&gt;simple application logic&lt;/em&gt; to send one or more queries (i.e. load/unload models, run inference) &lt;em&gt;&lt;u&gt;independently to multiple models&lt;/u&gt;&lt;/em&gt; and &lt;em&gt;&lt;u&gt;rebalance hardware resource utilization&lt;/u&gt;&lt;/em&gt; when you add or update a model.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;model-registry-and-lifecycle&quot;&gt;Model Registry and Lifecycle&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;SageMaker Edge Manager will soon be able to automate the build-train-deploy workflow from cloud to edge devices in Amazon SageMaker Edge Manager, and trace the lifecycle of each model.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=zS0Q3bdsLiU&amp;amp;t=3s&amp;amp;ab_channel=AmazonWebServices&quot;&gt;Sagemaker Edge Manager YouTube&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.aws.amazon.com/sagemaker/latest/dg/edge.html&quot;&gt;Developer Guide: SageMaker Edge Manager&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.aws.amazon.com/sagemaker/latest/dg/edge-device-fleet-about.html&quot;&gt;Developer Guide: Edge Manager Agent&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://sagemaker-examples.readthedocs.io/en/latest/sagemaker_edge_manager/sagemaker_edge_example/sagemaker_edge_example.html?highlight=edge&quot;&gt;SageMaker Edge Manager Example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;aws-outpost-and-aws-sagemaker-edge-manager&quot;&gt;AWS Outpost and AWS Sagemaker Edge Manager&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/machine-learning/machine-learning-at-the-edge-with-aws-outposts-and-amazon-sagemaker/&quot;&gt;Machine Learning at the Edge with AWS Outposts and Amazon SageMaker&lt;/a&gt;
+  &lt;img src=&quot;/assets/images/aws/aws-outpost-sagemaker-edge-manager.png&quot; alt=&quot;aws-outpost-sagemaker-edge-manager&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><category term="ML" /><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><category term="ML" /><summary type="html">This write-up will only focus on AWS Sagemaker ML service with respect to ML model deployment to Edge devices and Cloud. AWS Sagemaker Neo Amazon SageMaker Neo enables developers to optimize machine learning (ML) models for inference on SageMaker in the cloud and supported devices at the edge for the specific underlying hardware. Optimizes machine learning models for inference on cloud instances and edge devices to run faster with no loss in accuracy. Amazon SageMaker Neo runtime is supported on Android, iOS, Linux, and Windows operating systems. Sagemaker neo can optimize the ML model to run on target hardware platform of Edge devices based on processors from Ambarella, Apple, ARM, Intel, MediaTek, Nvidia, NXP, Qualcomm, RockChip, Texas Instruments, or Xilinx. Compiles it into an executable. For inference in the cloud, SageMaker Neo speeds up inference and saves cost by creating an inference optimized container that include MXNet, PyTorch, and TensorFlow integrated with Neo runtime for SageMaker hosting. Amazon SageMaker Neo supports optimization for a model from the framework-specific format of DarkNet, Keras, MXNet, PyTorch, TensorFlow, TensorFlow-Lite, ONNX, or XGBoost. Amazon SageMaker Neo runtime occupies 1MB of storage and 2MB of memory, which is many times smaller than the storage and memory footprint of a framework, while providing a simple common API to run a compiled model originating in any framework. Amazon SageMaker Neo takes advantage of partner-provided accelerator libraries to deliver the best available performance for a deep learning model on heterogeneous hardware platforms with a hardware accelerator as well as a CPU. Acceleration libraries such as Ambarella CV Tools, Nvidia Tensor RT, and Texas Instruments TIDL each support a specific set of functions and operators. SageMaker Neo automatically partitions your model so that the part with operators supported by the accelerator can run on the accelerator while the rest of the model runs on the CPU. Amazon SageMaker Neo now compiles models for Amazon SageMaker INF1 instance targets. SageMaker hosting provides a managed service for inference on the INF1 instances, which are based on the AWS Inferentia chip. References Amazon SageMaker Neo AWS Sagemaker Edge Manager AWS Sagemaker Edge Manager consists of a Service running in AWS cloud and an Agent running on Edge devices. Sagemaker Edge Manager deploys a ML model optimized with SageMaker Neo automatically so you don’t need to have Neo runtime installed on your devices in order to take advantage of the model optimizations. Agent Use the agent to make predictions with models loaded onto your edge devices. The agent also collects model metrics and *captures data at specific intervals. Sample data is stored in your Amazon S3 bucket. 2 methods of installing and deploying the Edge Manager agent onto your edge devices: Download the agent as a binary from the Amazon S3 release bucket. Use the AWS IoT Greengrass V2 console or the AWS CLI to deploy aws.greengrass.SageMakerEdgeManager. Monitoring deployments across fleets SageMaker Edge Manager also collects prediction data and sends a sample of the data to the cloud for monitoring, labeling, and retraining. All data can be viewed in the SageMaker Edge Manager dashboard which reports on the operation of deployed models. The dashboard is useful to understand the performance of models running on each device across your fleet, understand overall fleet health and identify problematic models and particular devices. If quality declines are detected, you can quickly spot them in the dashboard and also configure alerts through Amazon CloudWatch. Signed and Verifiable ML deployments SageMaker Edge Manager also cryptographically signs your models so you can verify that it was not tampered with as it moves from the cloud to edge devices. Integration with device applications SageMaker Edge Manager supports gRPC, an open source remote procedure call, which allows you to integrate SageMaker Edge Manager with your existing edge applications through APIs in common programming languages, such as Android Java, C# / .NET, Dart, Go, Java, Kotlin/JVM, Node.js, Objective-C, PHP, Python, Ruby, and Web. Manages models separately from the rest of the application, so that updates to the model and the application are independent. Multiple ML models serve on edge devices ML applications usually require hosting and running multiple models concurrently on a device. SageMaker Edge Manager will soon allow you to write simple application logic to send one or more queries (i.e. load/unload models, run inference) independently to multiple models and rebalance hardware resource utilization when you add or update a model. Model Registry and Lifecycle SageMaker Edge Manager will soon be able to automate the build-train-deploy workflow from cloud to edge devices in Amazon SageMaker Edge Manager, and trace the lifecycle of each model. Reference Sagemaker Edge Manager YouTube Developer Guide: SageMaker Edge Manager Developer Guide: Edge Manager Agent SageMaker Edge Manager Example AWS Outpost and AWS Sagemaker Edge Manager Machine Learning at the Edge with AWS Outposts and Amazon SageMaker</summary></entry><entry><title type="html">AWS cloud services extended to on-premise data centres with AWS Outpost</title><link href="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/10/AWS-Outpost.html" rel="alternate" type="text/html" title="AWS cloud services extended to on-premise data centres with AWS Outpost" /><published>2021-11-10T12:33:22+05:30</published><updated>2021-11-10T12:33:22+05:30</updated><id>http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/10/AWS-Outpost</id><content type="html" xml:base="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/10/AWS-Outpost.html">&lt;h1 id=&quot;aws-outpost&quot;&gt;AWS Outpost&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;AWS Outposts is a &lt;em&gt;&lt;u&gt;fully managed service&lt;/u&gt;&lt;/em&gt; that extends same AWS infrastructure, AWS services, APIs, and tools to virtually any datacenter or &lt;em&gt;&lt;u&gt;on-premises&lt;/u&gt;&lt;/em&gt; facility for a consistent hybrid experience.&lt;/li&gt;
+  &lt;li&gt;Ideal for workloads that require &lt;strong&gt;&lt;em&gt;&lt;u&gt;low latency&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; access to on-premises systems, &lt;strong&gt;&lt;em&gt;&lt;u&gt;local data processing&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, or &lt;strong&gt;&lt;em&gt;&lt;u&gt;local data storage&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;AWS compute, storage, database, and other services run locally on Outposts, and you can access the full range of AWS services available in the Region to build, manage, and scale your on-premises applications using familiar AWS services and tools.&lt;/li&gt;
+  &lt;li&gt;Outposts are connected to the nearest AWS Region.&lt;/li&gt;
+  &lt;li&gt;We can run following AWS Resources on AWS Outposts on premises:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Amazon EC2 instances&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Amazon EBS volumes&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Amazon EKS nodes&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Amazon ECS clusters&lt;/strong&gt; (container-based services)&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Amazon RDS DB&lt;/strong&gt; instances (database services)&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Amazon EMR clusters&lt;/strong&gt; (analytics services)&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Amazon S3&lt;/strong&gt; for AWS Outposts will be available in 2020 for local object storage on Outposts.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;AWS Outposts allows you to securely store and process customer data that needs to remain on premises or in countries where there is no AWS region.&lt;/li&gt;
+  &lt;li&gt;With AWS Outposts, we do not need to manage different APIs, manual software updates, and purchase of third-party hardware and support.&lt;/li&gt;
+  &lt;li&gt;AWS Outposts is fully managed and supported by AWS. &lt;em&gt;&lt;u&gt;Outpost is delivered, installed, monitored, patched, and updated by AWS&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;AWS Outposts address low latency application requirements and local data processing requirements.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;aws-outposts-compute--storage&quot;&gt;AWS Outposts Compute &amp;amp; Storage&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Choose from pre-validated configurations with mix of EC2, EBS, S3 capacity.&lt;/li&gt;
+  &lt;li&gt;Or contact AWS to customize configurations to meet your needs.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;compute&quot;&gt;Compute&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;General purpose&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; (M5/M5d):
+    &lt;ul&gt;
+      &lt;li&gt;a balance of compute, memory, and network resources&lt;/li&gt;
+      &lt;li&gt;can be used for general-purpose workloads, &lt;em&gt;&lt;u&gt;web and application servers&lt;/u&gt;, *&lt;u&gt;backend servers for enterprise applications&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;gaming servers&lt;/u&gt;&lt;/em&gt;, and &lt;em&gt;&lt;u&gt;caching fleets&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Compute optimized&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; (C5/C5d):
+    &lt;ul&gt;
+      &lt;li&gt;suited for compute intensive applications such as &lt;em&gt;&lt;u&gt;batch processing&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;media transcoding&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;high performance web servers&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;high performance computing (HPC)&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;scientific modeling&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;dedicated gaming servers&lt;/u&gt;&lt;/em&gt; and &lt;em&gt;&lt;u&gt;ad server engines&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;machine learning inference&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Memory optimized&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; (R5/R5d):
+    &lt;ul&gt;
+      &lt;li&gt;to deliver fast performance for workloads that &lt;em&gt;&lt;u&gt;process large data sets&lt;/u&gt;&lt;/em&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;in memory&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+      &lt;li&gt;suited for memory intensive applications such as &lt;em&gt;&lt;u&gt;high-performance databases&lt;/u&gt;&lt;/em&gt;, distributed web scale &lt;em&gt;&lt;u&gt;in-memory caches&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;mid-size in-memory databases&lt;/u&gt;&lt;/em&gt;, real- time &lt;em&gt;&lt;u&gt;big data analytics&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Graphics optimized&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; (G4dn):
+    &lt;ul&gt;
+      &lt;li&gt;To accelerate &lt;em&gt;&lt;u&gt;machine learning inference&lt;/u&gt;&lt;/em&gt;.
+        &lt;ul&gt;
+          &lt;li&gt;For machine learning inference for applications like &lt;em&gt;&lt;u&gt;adding metadata to an image&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;object detection&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;recommender systems&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;automated speech recognition&lt;/u&gt;&lt;/em&gt;, and &lt;em&gt;&lt;u&gt;language translation&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;&lt;u&gt;graphics-intensive workloads&lt;/u&gt;&lt;/em&gt;:
+        &lt;ul&gt;
+          &lt;li&gt;For building and running graphics-intensive applications, such as &lt;em&gt;&lt;u&gt;remote graphics workstations&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;video transcoding&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;photo-realistic design&lt;/u&gt;&lt;/em&gt;, and &lt;em&gt;&lt;u&gt;game streaming&lt;/u&gt;&lt;/em&gt; in the cloud.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;I/O optimized&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; (I3en):
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Non-Volatile Memory Express (NVMe) SSD&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; instance storage optimized for &lt;em&gt;&lt;u&gt;low latency&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;high random I/O performance&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;high sequential disk throughput&lt;/u&gt;&lt;/em&gt;, and offers the lowest price per GB of SSD instance storage on Amazon EC2.&lt;/li&gt;
+      &lt;li&gt;Suited for &lt;em&gt;&lt;u&gt;NoSQL databases&lt;/u&gt;&lt;/em&gt; (Cassandra, MongoDB, Redis), &lt;em&gt;&lt;u&gt;in-memory databases&lt;/u&gt;&lt;/em&gt; (Aerospike), &lt;em&gt;&lt;u&gt;scale-out transactional databases&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;distributed file systems&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;data warehousing&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;Elasticsearch&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;analytics workloads&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;storage&quot;&gt;Storage&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Amazon EBS&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;local instance storage&lt;/em&gt;&lt;/strong&gt; - that gets vanished when EC2 instance is stopped.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;Elastic Block Store (EBS)&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;&lt;u&gt;gp2 volumes&lt;/u&gt;&lt;/em&gt; for &lt;em&gt;&lt;u&gt;persistent&lt;/u&gt;&lt;/em&gt; block storage.&lt;/li&gt;
+      &lt;li&gt;snapshot and restore capabilities&lt;/li&gt;
+      &lt;li&gt;lets you &lt;a href=&quot;/_posts/2021-06-30-Extend-EC2-EBS-Volume-size-without-downtime.md&quot;&gt;increase volume size without any performance impact&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;All EBS volumes and snapshots on Outposts are &lt;em&gt;&lt;u&gt;fully encrypted&lt;/u&gt;&lt;/em&gt; by default.&lt;/li&gt;
+      &lt;li&gt;EBS is offered in tiers of 11 TB, 33 TB, and 55 TB.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Amazon S3&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;Store, Retrieve Data on Outpost&lt;/li&gt;
+      &lt;li&gt;Secure Data&lt;/li&gt;
+      &lt;li&gt;Control Access&lt;/li&gt;
+      &lt;li&gt;Tags, Reports&lt;/li&gt;
+      &lt;li&gt;S3 APIs&lt;/li&gt;
+      &lt;li&gt;Add 26 TB, 48 TB, 96 TB, 240 TB, or 380 TB of S3 storage capacity&lt;/li&gt;
+      &lt;li&gt;Create &lt;em&gt;&lt;u&gt;up to 100 buckets per AWS account&lt;/u&gt;&lt;/em&gt; on each Outpost&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Amazon EBS Snapshot&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;a point-in-time copy of your EBS volumes.&lt;/li&gt;
+      &lt;li&gt;Snapshots of EBS volumes on your Outpost are stored on Amazon S3 &lt;em&gt;&lt;u&gt;in the Region&lt;/u&gt;&lt;/em&gt;
+        &lt;ul&gt;
+          &lt;li&gt;in the region means in nearest cloud region? and not on local Outpost S3 storage?
+            &lt;ul&gt;
+              &lt;li&gt;If you have S3 provisioned on your Outpost, then you can store EBS snapshot on Outpost S3 itself, it’s called &lt;em&gt;&lt;u&gt;EBS Local Snapshot&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;use EBS Local Snapshots on Outposts for &lt;strong&gt;&lt;em&gt;&lt;u&gt;disaster recovery&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;&lt;u&gt;back up&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+      &lt;li&gt;Secure and protect data on EBS storage using &lt;em&gt;&lt;u&gt;resource-level&lt;/u&gt;&lt;/em&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;IAM policies&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;migration&quot;&gt;Migration&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/cloudendure-migration/&quot;&gt;CloudEndure Migration&lt;/a&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;allows customers to migrate workloads onto AWS Outposts from physical, virtual, or cloud-based sources, from on-premises locations, public AWS Regions, and other clouds to Outposts.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;using EBS Local Snapshots on Outposts:
+    &lt;ul&gt;
+      &lt;li&gt;migrate workloads from any source directly onto Outposts, or from one Outpost to another, without requiring the EBS snapshot data to go through the region.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/cloudendure-disaster-recovery/&quot;&gt;CloudEndure Disaster Recovery&lt;/a&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;business continuity solution for physical, virtual, and cloud-based workloads onto AWS Outposts.&lt;/li&gt;
+      &lt;li&gt;you can replicate and recover:
+        &lt;ul&gt;
+          &lt;li&gt;from on-premises to Outposts&lt;/li&gt;
+          &lt;li&gt;from AWS Regions onto Outposts&lt;/li&gt;
+          &lt;li&gt;from Outposts into AWS Regions&lt;/li&gt;
+          &lt;li&gt;and between two Outposts.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;CloudEndure Disaster Recovery improves resilience, enabling &lt;em&gt;&lt;u&gt;recovery point objectives (RPOs)&lt;/u&gt;&lt;/em&gt; of seconds and &lt;em&gt;&lt;u&gt;recovery time objectives&lt;/u&gt;&lt;/em&gt; (RTOs) of minutes.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;networking&quot;&gt;Networking&lt;/h2&gt;
+&lt;h3 id=&quot;extended-vpc&quot;&gt;Extended VPC&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Extend your existing &lt;strong&gt;&lt;em&gt;Amazon VPC&lt;/em&gt;&lt;/strong&gt; to your Outpost in your on premises location.&lt;/li&gt;
+  &lt;li&gt;Create a &lt;strong&gt;&lt;em&gt;subnet&lt;/em&gt;&lt;/strong&gt; in your &lt;em&gt;&lt;u&gt;regional VPC&lt;/u&gt;&lt;/em&gt; and associate it with an Outpost just as you associate subnets with an Availability Zone in an AWS Region.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;&lt;u&gt;Instances in Outpost subnets communicate with other instances in the AWS Region using&lt;/u&gt;&lt;/em&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;private IP addresses&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, all &lt;em&gt;&lt;u&gt;within the same VPC&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;local-gateway&quot;&gt;Local Gateway&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Each Outpost provides a new &lt;strong&gt;&lt;em&gt;local gateway (LGW)&lt;/em&gt;&lt;/strong&gt; that allows you to &lt;em&gt;&lt;u&gt;connect your Outpost resources with your on premises networks&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;LGW enables &lt;em&gt;&lt;u&gt;low latency connectivity&lt;/u&gt;&lt;/em&gt; between the Outpost and any local data sources, end users, local machinery and equipment, or local databases.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;load-balancer&quot;&gt;Load Balancer&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;You can provision an &lt;strong&gt;&lt;em&gt;&lt;u&gt;Application Load Balancer (ALB)&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; to automatically &lt;em&gt;&lt;u&gt;distribute incoming HTTP(S) traffic&lt;/u&gt;&lt;/em&gt; across &lt;em&gt;&lt;u&gt;multiple targets&lt;/u&gt;&lt;/em&gt; on your Outposts, such as &lt;em&gt;&lt;u&gt;Amazon EC2 instances, containers, and IP addresses&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;ALB on Outposts is &lt;em&gt;&lt;u&gt;fully managed&lt;/u&gt;&lt;/em&gt;, operates in a &lt;em&gt;&lt;u&gt;single subnet&lt;/u&gt;&lt;/em&gt;, and &lt;em&gt;&lt;u&gt;scales automatically&lt;/u&gt;&lt;/em&gt; up to the capacity available on the Outposts rack to meet varying levels of application load without manual intervention.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;private-connection-to-aws-cloud&quot;&gt;Private Connection to AWS Cloud&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;With AWS Outposts Private Connectivity, you can establish a service link &lt;strong&gt;&lt;em&gt;&lt;u&gt;VPN connection&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; &amp;lt;/u&amp;gt;from your Outposts to the AWS Region over&amp;lt;/u&amp;gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;AWS Direct Connect&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Minimizes public internet exposure&lt;/li&gt;
+  &lt;li&gt;Removes the need for special firewall configurations.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;aws-services-on-outposts&quot;&gt;AWS Services on Outposts:&lt;/h2&gt;
+&lt;h3 id=&quot;containers&quot;&gt;Containers&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Amazon ECS&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;Scalable, High-performance &lt;em&gt;&lt;u&gt;container orchestration service&lt;/u&gt;&lt;/em&gt;, supports &lt;em&gt;&lt;u&gt;Docker containers&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;run and scale containerized applications.&lt;/li&gt;
+      &lt;li&gt;ECS eliminates the need for:
+        &lt;ul&gt;
+          &lt;li&gt;Install and Operate your own container orchestration software&lt;/li&gt;
+          &lt;li&gt;Manage and Scale a cluster of virtual machines&lt;/li&gt;
+          &lt;li&gt;Schedule containers on those virtual machines&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;With simple &lt;em&gt;&lt;u&gt;API calls&lt;/u&gt;&lt;/em&gt;, you can &lt;u&gt;launch and stop&lt;/u&gt; Docker-enabled applications and &lt;em&gt;&lt;u&gt;query the complete state of your application&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Amazon EKS&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;Managed Service to run Kubernetes.&lt;/li&gt;
+      &lt;li&gt;Used to run Containerized applications.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;&lt;u&gt;AWS ECS vs AWS EKS&lt;/u&gt;&lt;/em&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;/assets/docs/Amazon-ECS-vs-Amazon-EKS.pdf&quot;&gt;Amazon ECS vs Amazon EKS: making sense of AWS container services&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;databases&quot;&gt;Databases&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Amazon RDS (Relational Database Service) &lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;supports &lt;em&gt;&lt;u&gt;Microsoft SQL Server&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;MySQL&lt;/u&gt;&lt;/em&gt;, and &lt;em&gt;&lt;u&gt;PostgreSQL&lt;/u&gt;&lt;/em&gt; database engines.&lt;/li&gt;
+      &lt;li&gt;Amazon RDS provides cost-efficient and resizable capacity while automating time-consuming administration tasks including infrastructure provisioning, database setup, patching, and backups.&lt;/li&gt;
+      &lt;li&gt;fully managed databases on premises&lt;/li&gt;
+      &lt;li&gt;Amazon RDS can be managed using AWS Management Console, APIs, and CLI as if in cloud.&lt;/li&gt;
+      &lt;li&gt;Amazon RDS enables low-cost, high-availability hybrid deployments, with disaster recovery back to the AWS Region, read replica bursting to Amazon RDS in the cloud, and long-term archival in Amazon Simple Storage Service (Amazon S3) in the cloud.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Amazon ElastiCache&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;Fully managed &lt;em&gt;&lt;u&gt;in-memory data store&lt;/u&gt;&lt;/em&gt;, compatible with &lt;em&gt;&lt;u&gt;Redis&lt;/u&gt;&lt;/em&gt; or &lt;em&gt;&lt;u&gt;Memcached&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Optimized for real-time applications with &lt;em&gt;&lt;u&gt;sub-millisecond latency&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+      &lt;li&gt;Amazon ElastiCache on Outposts enables real-time use cases like &lt;em&gt;&lt;u&gt;Caching&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;Session Stores&lt;/u&gt;&lt;/em&gt;, Gaming, Geospatial Services, &lt;em&gt;&lt;u&gt;Real-Time Analytics&lt;/u&gt;&lt;/em&gt;, and &lt;em&gt;&lt;u&gt;Queuing&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;data-analytics&quot;&gt;Data Analytics&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Amazon EMR&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;Deploys secure and managed EMR clusters.&lt;/li&gt;
+      &lt;li&gt;Deploys latest versions of &lt;strong&gt;&lt;em&gt;&lt;u&gt;Apache Spark&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;&lt;u&gt;Apache Hive&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, and &lt;strong&gt;&lt;em&gt;&lt;u&gt;Presto&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; to access critical on premises data sources and systems for big data analytics.&lt;/li&gt;
+      &lt;li&gt;Use the EMR console, SDK, or CLI to specify the subnet associated with your Outpost to launch EMR clusters.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;upgrades-to-outpost-services&quot;&gt;Upgrades to Outpost Services&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;AWS services running locally on Outposts will be upgraded automatically to the latest version as and when available.&lt;/li&gt;
+  &lt;li&gt;Amazon RDS like services also patch both OS and database engines within scheduled maintenance windows with minimum downtime.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;access-to-cloud-hosted-regional-services&quot;&gt;Access to Cloud hosted Regional Services&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;We can &lt;em&gt;&lt;u&gt;extend&lt;/u&gt;&lt;/em&gt; our &lt;strong&gt;&lt;em&gt;Amazon Virtual Private Cloud(VPC)&lt;/em&gt;&lt;/strong&gt; on premises and &lt;em&gt;&lt;u&gt;run some AWS services locally on Outposts and also connect to a broad range of services available in the local AWS Region&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;We can access all regional AWS services in your private VPC environment, for example, through Interface Endpoints, Gateway Endpoints, or their regional public endpoints.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;aws-tools&quot;&gt;AWS Tools:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;With AWS Outposts, customers &lt;em&gt;&lt;u&gt;can access AWS tools&lt;/u&gt;&lt;/em&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;running in the region&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; such as, &lt;em&gt;&lt;u&gt;AWS CloudFormation, Amazon CloudWatch, AWS CloudTrail, Elastic BeanStalk, Cloud 9,&lt;/u&gt;&lt;/em&gt; and others to run and &lt;em&gt;&lt;u&gt;manage workloads&lt;/u&gt;&lt;/em&gt; on AWS Outposts the same way they do in the cloud.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;aws-resource-access-manager&quot;&gt;AWS Resource Access Manager&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;AWS Resource Access Manager (RAM)&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; lets customers share access to Outposts resources – EC2 instances, EBS volumes, S3 capacity, subnets, and local gateways (LGWs) – across multiple accounts under the same AWS organization.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;further-readings&quot;&gt;Further Readings&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://d1.awsstatic.com/Solutions/Outposts%20Manufacturing%20Solution%20Brief%20US%20Letter%20AWS%2009.30.20%20FINAL.pdf&quot;&gt;AWS Outpost with AWS Greengrass Sample Architecture&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://d1.awsstatic.com/re19/AWS19-0029%20Outpost%20Solution%20Brief_v7%20Final.pdf&quot;&gt;AWS Outpost Healthcare Sample Architecture&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://d1.awsstatic.com/product-marketing/Outposts/AWS%20HCLS%20eBook.pdf&quot;&gt;Cloud at the Edge for Healthcare and Life Sciences&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Yet To Read:&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/containers/deploying-containerized-application-on-aws-outposts-with-amazon-eks/&quot;&gt;Deploying Containerized Application on AWS Outposts with Amazon EKS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/compute/building-modern-applications-with-amazon-eks-on-amazon-outposts/&quot;&gt;Building Modern Applications with Amazon EKS on Amazon Outposts&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/networking-and-content-delivery/configuring-an-application-load-balancer-on-aws-outposts/&quot;&gt;Configuring an Application Load Balancer on AWS Outposts&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/compute/managing-your-aws-outposts-capacity-using-amazon-cloudwatch-and-aws-lambda/&quot;&gt;Managing your AWS Outposts capacity using Amazon CloudWatch and AWS Lambda&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/storage/run-applications-on-premises-and-access-s3-objects-from-aws-outposts/&quot;&gt;Run applications on premises and access Amazon S3 objects from AWS Outposts&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/networking-and-content-delivery/introducing-aws-outposts-private-connectivity/&quot;&gt;Introducing AWS Outposts private connectivity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><summary type="html">AWS Outpost AWS Outposts is a fully managed service that extends same AWS infrastructure, AWS services, APIs, and tools to virtually any datacenter or on-premises facility for a consistent hybrid experience. Ideal for workloads that require low latency access to on-premises systems, local data processing, or local data storage. AWS compute, storage, database, and other services run locally on Outposts, and you can access the full range of AWS services available in the Region to build, manage, and scale your on-premises applications using familiar AWS services and tools. Outposts are connected to the nearest AWS Region. We can run following AWS Resources on AWS Outposts on premises: Amazon EC2 instances Amazon EBS volumes Amazon EKS nodes Amazon ECS clusters (container-based services) Amazon RDS DB instances (database services) Amazon EMR clusters (analytics services) Amazon S3 for AWS Outposts will be available in 2020 for local object storage on Outposts. AWS Outposts allows you to securely store and process customer data that needs to remain on premises or in countries where there is no AWS region. With AWS Outposts, we do not need to manage different APIs, manual software updates, and purchase of third-party hardware and support. AWS Outposts is fully managed and supported by AWS. Outpost is delivered, installed, monitored, patched, and updated by AWS. AWS Outposts address low latency application requirements and local data processing requirements. AWS Outposts Compute &amp;amp; Storage Choose from pre-validated configurations with mix of EC2, EBS, S3 capacity. Or contact AWS to customize configurations to meet your needs. Compute General purpose (M5/M5d): a balance of compute, memory, and network resources can be used for general-purpose workloads, web and application servers, *backend servers for enterprise applications, gaming servers, and caching fleets. Compute optimized (C5/C5d): suited for compute intensive applications such as batch processing, media transcoding, high performance web servers, high performance computing (HPC), scientific modeling, dedicated gaming servers and ad server engines, machine learning inference. Memory optimized (R5/R5d): to deliver fast performance for workloads that process large data sets in memory. suited for memory intensive applications such as high-performance databases, distributed web scale in-memory caches, mid-size in-memory databases, real- time big data analytics. Graphics optimized (G4dn): To accelerate machine learning inference. For machine learning inference for applications like adding metadata to an image, object detection, recommender systems, automated speech recognition, and language translation. graphics-intensive workloads: For building and running graphics-intensive applications, such as remote graphics workstations, video transcoding, photo-realistic design, and game streaming in the cloud. I/O optimized (I3en): Non-Volatile Memory Express (NVMe) SSD instance storage optimized for low latency, high random I/O performance, high sequential disk throughput, and offers the lowest price per GB of SSD instance storage on Amazon EC2. Suited for NoSQL databases (Cassandra, MongoDB, Redis), in-memory databases (Aerospike), scale-out transactional databases, distributed file systems, data warehousing, Elasticsearch, analytics workloads. Storage Amazon EBS: local instance storage - that gets vanished when EC2 instance is stopped. Elastic Block Store (EBS) gp2 volumes for persistent block storage. snapshot and restore capabilities lets you increase volume size without any performance impact. All EBS volumes and snapshots on Outposts are fully encrypted by default. EBS is offered in tiers of 11 TB, 33 TB, and 55 TB. Amazon S3: Store, Retrieve Data on Outpost Secure Data Control Access Tags, Reports S3 APIs Add 26 TB, 48 TB, 96 TB, 240 TB, or 380 TB of S3 storage capacity Create up to 100 buckets per AWS account on each Outpost Amazon EBS Snapshot: a point-in-time copy of your EBS volumes. Snapshots of EBS volumes on your Outpost are stored on Amazon S3 in the Region in the region means in nearest cloud region? and not on local Outpost S3 storage? If you have S3 provisioned on your Outpost, then you can store EBS snapshot on Outpost S3 itself, it’s called EBS Local Snapshot. use EBS Local Snapshots on Outposts for disaster recovery and back up. Secure and protect data on EBS storage using resource-level IAM policies. Migration CloudEndure Migration: allows customers to migrate workloads onto AWS Outposts from physical, virtual, or cloud-based sources, from on-premises locations, public AWS Regions, and other clouds to Outposts. using EBS Local Snapshots on Outposts: migrate workloads from any source directly onto Outposts, or from one Outpost to another, without requiring the EBS snapshot data to go through the region. CloudEndure Disaster Recovery: business continuity solution for physical, virtual, and cloud-based workloads onto AWS Outposts. you can replicate and recover: from on-premises to Outposts from AWS Regions onto Outposts from Outposts into AWS Regions and between two Outposts. CloudEndure Disaster Recovery improves resilience, enabling recovery point objectives (RPOs) of seconds and recovery time objectives (RTOs) of minutes. Networking Extended VPC Extend your existing Amazon VPC to your Outpost in your on premises location. Create a subnet in your regional VPC and associate it with an Outpost just as you associate subnets with an Availability Zone in an AWS Region. Instances in Outpost subnets communicate with other instances in the AWS Region using private IP addresses, all within the same VPC. Local Gateway Each Outpost provides a new local gateway (LGW) that allows you to connect your Outpost resources with your on premises networks. LGW enables low latency connectivity between the Outpost and any local data sources, end users, local machinery and equipment, or local databases. Load Balancer You can provision an Application Load Balancer (ALB) to automatically distribute incoming HTTP(S) traffic across multiple targets on your Outposts, such as Amazon EC2 instances, containers, and IP addresses. ALB on Outposts is fully managed, operates in a single subnet, and scales automatically up to the capacity available on the Outposts rack to meet varying levels of application load without manual intervention. Private Connection to AWS Cloud With AWS Outposts Private Connectivity, you can establish a service link VPN connection &amp;lt;/u&amp;gt;from your Outposts to the AWS Region over&amp;lt;/u&amp;gt; AWS Direct Connect. Minimizes public internet exposure Removes the need for special firewall configurations. AWS Services on Outposts: Containers Amazon ECS: Scalable, High-performance container orchestration service, supports Docker containers run and scale containerized applications. ECS eliminates the need for: Install and Operate your own container orchestration software Manage and Scale a cluster of virtual machines Schedule containers on those virtual machines With simple API calls, you can launch and stop Docker-enabled applications and query the complete state of your application. Amazon EKS: Managed Service to run Kubernetes. Used to run Containerized applications. AWS ECS vs AWS EKS: Amazon ECS vs Amazon EKS: making sense of AWS container services Databases Amazon RDS (Relational Database Service) : supports Microsoft SQL Server, MySQL, and PostgreSQL database engines. Amazon RDS provides cost-efficient and resizable capacity while automating time-consuming administration tasks including infrastructure provisioning, database setup, patching, and backups. fully managed databases on premises Amazon RDS can be managed using AWS Management Console, APIs, and CLI as if in cloud. Amazon RDS enables low-cost, high-availability hybrid deployments, with disaster recovery back to the AWS Region, read replica bursting to Amazon RDS in the cloud, and long-term archival in Amazon Simple Storage Service (Amazon S3) in the cloud. Amazon ElastiCache: Fully managed in-memory data store, compatible with Redis or Memcached Optimized for real-time applications with sub-millisecond latency. Amazon ElastiCache on Outposts enables real-time use cases like Caching, Session Stores, Gaming, Geospatial Services, Real-Time Analytics, and Queuing. Data Analytics Amazon EMR: Deploys secure and managed EMR clusters. Deploys latest versions of Apache Spark, Apache Hive, and Presto to access critical on premises data sources and systems for big data analytics. Use the EMR console, SDK, or CLI to specify the subnet associated with your Outpost to launch EMR clusters. Upgrades to Outpost Services AWS services running locally on Outposts will be upgraded automatically to the latest version as and when available. Amazon RDS like services also patch both OS and database engines within scheduled maintenance windows with minimum downtime. Access to Cloud hosted Regional Services We can extend our Amazon Virtual Private Cloud(VPC) on premises and run some AWS services locally on Outposts and also connect to a broad range of services available in the local AWS Region. We can access all regional AWS services in your private VPC environment, for example, through Interface Endpoints, Gateway Endpoints, or their regional public endpoints. AWS Tools: With AWS Outposts, customers can access AWS tools running in the region such as, AWS CloudFormation, Amazon CloudWatch, AWS CloudTrail, Elastic BeanStalk, Cloud 9, and others to run and manage workloads on AWS Outposts the same way they do in the cloud. AWS Resource Access Manager AWS Resource Access Manager (RAM) lets customers share access to Outposts resources – EC2 instances, EBS volumes, S3 capacity, subnets, and local gateways (LGWs) – across multiple accounts under the same AWS organization. Further Readings AWS Outpost with AWS Greengrass Sample Architecture AWS Outpost Healthcare Sample Architecture Cloud at the Edge for Healthcare and Life Sciences Yet To Read: Deploying Containerized Application on AWS Outposts with Amazon EKS Building Modern Applications with Amazon EKS on Amazon Outposts Configuring an Application Load Balancer on AWS Outposts Managing your AWS Outposts capacity using Amazon CloudWatch and AWS Lambda Run applications on premises and access Amazon S3 objects from AWS Outposts Introducing AWS Outposts private connectivity</summary></entry><entry><title type="html">MQTT Protocol</title><link href="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/10/MQTT.html" rel="alternate" type="text/html" title="MQTT Protocol" /><published>2021-11-10T12:33:22+05:30</published><updated>2021-11-10T12:33:22+05:30</updated><id>http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/10/MQTT</id><content type="html" xml:base="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/10/MQTT.html">&lt;h1 id=&quot;mqtt-protocol&quot;&gt;MQTT Protocol&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;MQTT = Message Queuing Telemetry Transport
+  Telemetry = Tele-Metering = Remote Measurements&lt;/li&gt;
+  &lt;li&gt;Originally Developed by IBM, now Open Sourced.&lt;/li&gt;
+  &lt;li&gt;Though MQ stands for ‘Message Queuing’, actually there’s NO Messages being Queued.&lt;/li&gt;
+  &lt;li&gt;It’s a &lt;strong&gt;&lt;em&gt;&lt;u&gt;Publish/Subscribe&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; mechanism.
+    &lt;ul&gt;
+      &lt;li&gt;Sensor Devices Publish data to the Topics/Servers/Brokers.&lt;/li&gt;
+      &lt;li&gt;Topics are subscribed by other devices such as mobile devices those are looking for data from Sensors.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;&lt;u&gt;Low Bandwidth Protocol&lt;/u&gt;&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Messages being sent by devices are very small in bytes.&lt;/li&gt;
+      &lt;li&gt;e.g. Temperature sensor sending 100 degree reading.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Small Code Footprint
+    &lt;ul&gt;
+      &lt;li&gt;The code used for this is very small.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Used in:
+    &lt;ul&gt;
+      &lt;li&gt;Facebook Messenger for iOS and Android&lt;/li&gt;
+      &lt;li&gt;PubNub&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;mqtt-ports&quot;&gt;MQTT Ports&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Protocol: TCP/IP&lt;/li&gt;
+  &lt;li&gt;Ports:
+    &lt;ul&gt;
+      &lt;li&gt;1883 - non-encrypted communication&lt;/li&gt;
+      &lt;li&gt;8883 - encrypted communication&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;maximum-payload-size&quot;&gt;Maximum Payload Size&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;MQTT Protocol Max Payload - 256 MBs&lt;/li&gt;
+  &lt;li&gt;AWS IoT MQTT Max Payload - 128 KBs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;quality-of-service&quot;&gt;Quality of Service&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Levels:&lt;br /&gt;
+    &lt;strong&gt;&lt;em&gt;&lt;u&gt;0 = At Most Once&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; (Best effort, No Ack)&lt;br /&gt;
+      - Sender does not store messages, neither the receiver sends any acknowledgement.&lt;br /&gt;
+      - This method requires only one message and once the message is sent to the broker by the client it is deleted from the message queue.&lt;br /&gt;
+      - Therefore QoS 0 nullifies the chances of duplicate messages, which is why it is also known as the &lt;strong&gt;&lt;em&gt;&lt;u&gt;fire and forget&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; method.&lt;br /&gt;
+      - It provides a minimal and most &lt;strong&gt;&lt;em&gt;&lt;u&gt;unreliable&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; message transmission level that offers the &lt;strong&gt;&lt;em&gt;&lt;u&gt;fastest delivery effort&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;br /&gt;
+      &lt;img src=&quot;/assets/images/mqtt/mqtt-qos-0.png&quot; alt=&quot;mqtt-qos-0&quot; /&gt;&lt;br /&gt;
+&lt;br /&gt;
+    &lt;strong&gt;&lt;em&gt;&lt;u&gt;1 = At Least Once&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; (Acknowledged, Retransmitted if Ack not received)&lt;br /&gt;
+      - Using QoS 1, the delivery of a message is guaranteed (at least once, but the &lt;em&gt;&lt;u&gt;message may be sent more than once&lt;/u&gt;&lt;/em&gt; , if necessary).&lt;br /&gt;
+      - This method needs two messages.&lt;br /&gt;
+      - Here, the sender sends a message and waits to receive &lt;em&gt;&lt;u&gt;an acknowledgment&lt;/u&gt;&lt;/em&gt; (&lt;strong&gt;&lt;em&gt;&lt;u&gt;PUBACK&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; message).&lt;br /&gt;
+      - If it receives an acknowledgment from the client then it deletes the message from the outward-bound queue.&lt;br /&gt;
+      - In case, it does not receive a PUBACK message, it resends the message with the &lt;em&gt;&lt;u&gt;duplicate flag (DUP flag) enabled&lt;/u&gt;&lt;/em&gt;.&lt;br /&gt;
+      &lt;img src=&quot;/assets/images/mqtt/mqtt-qos-1.png&quot; alt=&quot;mqtt-qos-1&quot; /&gt;&lt;br /&gt;
+&lt;br /&gt;
+    &lt;strong&gt;&lt;em&gt;&lt;u&gt;2 = Exactly Once&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
+      - The QoS 2 level setting guarantees exactly-once delivery of a message.&lt;br /&gt;
+      - This is the &lt;em&gt;&lt;u&gt;slowest&lt;/u&gt;&lt;/em&gt; of all the levels and needs four messages.&lt;br /&gt;
+      - In this level, the &lt;em&gt;&lt;u&gt;sender&lt;/u&gt;&lt;/em&gt; sends a message (&lt;strong&gt;&lt;em&gt;&lt;u&gt;PUBLISH&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;) and waits for an &lt;em&gt;&lt;u&gt;acknowledgment&lt;/u&gt;&lt;/em&gt; (&lt;strong&gt;&lt;em&gt;&lt;u&gt;PUBREC&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; message).&lt;br /&gt;
+      - The &lt;em&gt;&lt;u&gt;receiver&lt;/u&gt;&lt;/em&gt; also sends a PUBREC message.&lt;br /&gt;
+      - If the &lt;em&gt;&lt;u&gt;sender&lt;/u&gt;&lt;/em&gt; of the message fails to receive an acknowledgment (PUBREC), it sends the message again with the &lt;em&gt;&lt;u&gt;DUP flag enabled&lt;/u&gt;&lt;/em&gt;.&lt;br /&gt;
+      - Upon receiving the acknowledgment message PUBREC, the &lt;em&gt;&lt;u&gt;sender&lt;/u&gt;&lt;/em&gt; transmits the &lt;em&gt;&lt;u&gt;message release message&lt;/u&gt;&lt;/em&gt; (&lt;strong&gt;&lt;em&gt;&lt;u&gt;PUBREL&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;).&lt;br /&gt;
+      - If the &lt;em&gt;&lt;u&gt;receiver&lt;/u&gt;&lt;/em&gt; does not receive the PUBREL message it resends the PUBREC message.&lt;br /&gt;
+      - Once the &lt;em&gt;&lt;u&gt;receiver&lt;/u&gt;&lt;/em&gt; receives the PUBREL message, It forwards the message to all the subscribing clients.&lt;br /&gt;
+      - Note: &lt;em&gt;&lt;u&gt;For Sender Broker is the receiver and for Receiver Broker is the sender&lt;/u&gt;&lt;/em&gt;.&lt;br /&gt;
+      - Thereafter the &lt;em&gt;&lt;u&gt;receiver&lt;/u&gt;&lt;/em&gt; sends &lt;em&gt;&lt;u&gt;a publish complete&lt;/u&gt;&lt;/em&gt; (&lt;strong&gt;&lt;em&gt;&lt;u&gt;PUBCOMP&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;) message.&lt;br /&gt;
+      - In case the &lt;em&gt;&lt;u&gt;sender&lt;/u&gt;&lt;/em&gt; does not receive the PUBCOMP message, it resends the PUBREL message.&lt;br /&gt;
+      - Once the sending client receives the PUBCOMP message, the transmission process is marked as completed and the message
+can be deleted from the outbound queue.&lt;br /&gt;
+  &lt;img src=&quot;/assets/images/mqtt/mqtt-qos-2.png&quot; alt=&quot;mqtt-qos-2&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;these messages are same as used in WiFi communication.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;retained-messages&quot;&gt;Retained Messages&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Server keeps messages even after sending it to all Subscribers.&lt;/li&gt;
+  &lt;li&gt;New Subscribers get the retained messages.
+    &lt;ul&gt;
+      &lt;li&gt;We had seen this behavior in PubNub, where last message Published to Channel was retained till the next message is Published to that channel.&lt;/li&gt;
+      &lt;li&gt;This Last message was available to new subscriber.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;&lt;u&gt;Only One Message&lt;/u&gt;&lt;/em&gt; is retained per Topic.&lt;/li&gt;
+      &lt;li&gt;Usecase:
+        &lt;ul&gt;
+          &lt;li&gt;Sensor periodically sending a message on a topic. New subscriber will get the last state of the sensor with Retained message.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Reference: &lt;a href=&quot;/assets/docs/mqtt/MQTT_Retained_Messages_Explained.pdf&quot;&gt;MQTT Retained Messages Explained&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;clean-session-and-durable-session&quot;&gt;Clean Session and Durable Session&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;&lt;u&gt;Clean Session&lt;/u&gt;&lt;/em&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;Clean Session Flag = 1	[Optional]&lt;/li&gt;
+      &lt;li&gt;All of the client’s subscriptions are removed when it disconnects from the server.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;&lt;u&gt;Durable Session&lt;/u&gt;&lt;/em&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;Clean Session Flag = 0	[Optional]&lt;/li&gt;
+      &lt;li&gt;The client’s subscriptions remain in effect after any disconnection.&lt;/li&gt;
+      &lt;li&gt;In this event, subsequent messages that arrive carrying a High QoS designation are stored for delivery after the connection is reestablished.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;retained-messages-clean-session-and-qos-inter-related-behavior&quot;&gt;Retained messages, Clean Session and QoS inter-related behavior&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/mqtt/RetainedMessages_CleanSession_QoS.png&quot; alt=&quot;Retained messages, Clean Session and QoS inter-related behavior&quot; /&gt;
+  Reference: &lt;a href=&quot;http://www.steves-internet-guide.com/mqtt-retained-messages-example/&quot;&gt;MQTT Retained Messages Explained&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;wills&quot;&gt;Wills&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;A Will or a Message is informed by client with server that should be published to a specific Topic or Topics in the event of an unexpected disconnection.&lt;/li&gt;
+  &lt;li&gt;A Will is an alarm or security settings where system when a remote sensor has lost contact with the network.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;keep-alive-messages&quot;&gt;Keep Alive Messages&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Periodically sent&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;topic-trees-strings&quot;&gt;Topic Trees, Strings&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Topics are organized Hierarchically into Topic Trees, using the ‘/’ character to create subtopics in the Topic String.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;&lt;u&gt;Topic String&lt;/u&gt;&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;A character string that identifies the Topic of a publish/subscribe message.&lt;/li&gt;
+      &lt;li&gt;Topic strings can contain either of two Wildcards:&lt;/li&gt;
+      &lt;li&gt;These &lt;strong&gt;&lt;em&gt;&lt;u&gt;WildCards&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; Allows subscribers to match patterns within strings defined by message publishers&lt;/li&gt;
+      &lt;li&gt;Wildcard: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#&lt;/code&gt;:
+        &lt;ul&gt;
+          &lt;li&gt;Multilevel&lt;/li&gt;
+          &lt;li&gt;used to match any number of levels within a Topic.
+            &lt;ul&gt;
+              &lt;li&gt;e.g. subscribers to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;truck/contents/#&lt;/code&gt; receive all messages that are designated for the topics:&lt;/li&gt;
+              &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;truck/contents&lt;/code&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;truck/contents/rfid&lt;/code&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Wildcard: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt;:
+        &lt;ul&gt;
+          &lt;li&gt;Single Level&lt;/li&gt;
+          &lt;li&gt;used to match Just ONE Topic Level.
+            &lt;ul&gt;
+              &lt;li&gt;e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;truck/+&lt;/code&gt; &lt;u&gt;matches&lt;/u&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;truck/contents&lt;/code&gt; &lt;em&gt;&lt;u&gt;but not&lt;/u&gt;&lt;/em&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;truck/contents/rfid&lt;/code&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;mqtt-brokers-comparison&quot;&gt;MQTT Brokers Comparison&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/assets/docs/mqtt/Stress-Testing-MQTT-Brokers.pdf&quot;&gt;Stress-Testing MQTT Brokers: A Comparative Analysis of Performance Measurements:&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Tested Borkers:
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://mosquitto.org/&quot;&gt;&lt;em&gt;&lt;u&gt;Mosquitto&lt;/u&gt;&lt;/em&gt;&lt;/a&gt; - &lt;a href=&quot;https://www.bevywise.com/mqtt-broker/&quot;&gt;&lt;em&gt;&lt;u&gt;Bevywise MQTT Route&lt;/u&gt;&lt;/em&gt;&lt;/a&gt; - &lt;a href=&quot;https://activemq.apache.org/&quot;&gt;&lt;em&gt;&lt;u&gt;ActiveMQ&lt;/u&gt;&lt;/em&gt;&lt;/a&gt; - &lt;a href=&quot;https://www.hivemq.com/&quot;&gt;&lt;em&gt;&lt;u&gt;HiveMQ CE&lt;/u&gt;&lt;/em&gt;&lt;/a&gt; - &lt;a href=&quot;https://vernemq.com/&quot;&gt;&lt;em&gt;&lt;u&gt;VerneMQ&lt;/u&gt;&lt;/em&gt;&lt;/a&gt; - &lt;a href=&quot;https://www.emqx.io/&quot;&gt;&lt;em&gt;&lt;u&gt;EMQ X&lt;/u&gt;&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Mosquitto&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; outperforms the other considered solutions in most metrics;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;ActiveMQ&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; is the best performing one in terms of &lt;em&gt;&lt;u&gt;Scalability&lt;/u&gt;&lt;/em&gt; due to its multi-threaded implementation.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Bevywise MQTT Route&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; has promising results for &lt;em&gt;&lt;u&gt;resource-constrained&lt;/u&gt;&lt;/em&gt; scenarios.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;ActiveMQ&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; scales well in distributed/multi-core environment to beat all other brokers’ performance.&lt;/li&gt;
+      &lt;li&gt;If the hardware is &lt;em&gt;&lt;u&gt;resource-constrained&lt;/u&gt;&lt;/em&gt; (CPU/Memory/IO/Performance), then &lt;strong&gt;&lt;em&gt;&lt;u&gt;Mosquitto&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;em&gt;&lt;u&gt;Bevywise MQTT Route&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; can be taken as better choices.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;running-mqtt-broker-in-containerized-mode&quot;&gt;Running MQTT broker in Containerized mode&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/_/eclipse-mosquitto?tab=description&quot;&gt;eclipse-mosquitto&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Maintained by: the Eclipse Foundation&lt;/li&gt;
+      &lt;li&gt;Supported architectures: (more info) amd64, arm32v6, arm64v8, i386, ppc64le, s390x&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><summary type="html">MQTT Protocol MQTT = Message Queuing Telemetry Transport Telemetry = Tele-Metering = Remote Measurements Originally Developed by IBM, now Open Sourced. Though MQ stands for ‘Message Queuing’, actually there’s NO Messages being Queued. It’s a Publish/Subscribe mechanism. Sensor Devices Publish data to the Topics/Servers/Brokers. Topics are subscribed by other devices such as mobile devices those are looking for data from Sensors. Low Bandwidth Protocol Messages being sent by devices are very small in bytes. e.g. Temperature sensor sending 100 degree reading. Small Code Footprint The code used for this is very small. Used in: Facebook Messenger for iOS and Android PubNub MQTT Ports Protocol: TCP/IP Ports: 1883 - non-encrypted communication 8883 - encrypted communication Maximum Payload Size MQTT Protocol Max Payload - 256 MBs AWS IoT MQTT Max Payload - 128 KBs Quality of Service Levels: 0 = At Most Once (Best effort, No Ack) - Sender does not store messages, neither the receiver sends any acknowledgement. - This method requires only one message and once the message is sent to the broker by the client it is deleted from the message queue. - Therefore QoS 0 nullifies the chances of duplicate messages, which is why it is also known as the fire and forget method. - It provides a minimal and most unreliable message transmission level that offers the fastest delivery effort. 1 = At Least Once (Acknowledged, Retransmitted if Ack not received) - Using QoS 1, the delivery of a message is guaranteed (at least once, but the message may be sent more than once , if necessary). - This method needs two messages. - Here, the sender sends a message and waits to receive an acknowledgment (PUBACK message). - If it receives an acknowledgment from the client then it deletes the message from the outward-bound queue. - In case, it does not receive a PUBACK message, it resends the message with the duplicate flag (DUP flag) enabled. 2 = Exactly Once - The QoS 2 level setting guarantees exactly-once delivery of a message. - This is the slowest of all the levels and needs four messages. - In this level, the sender sends a message (PUBLISH) and waits for an acknowledgment (PUBREC message). - The receiver also sends a PUBREC message. - If the sender of the message fails to receive an acknowledgment (PUBREC), it sends the message again with the DUP flag enabled. - Upon receiving the acknowledgment message PUBREC, the sender transmits the message release message (PUBREL). - If the receiver does not receive the PUBREL message it resends the PUBREC message. - Once the receiver receives the PUBREL message, It forwards the message to all the subscribing clients. - Note: For Sender Broker is the receiver and for Receiver Broker is the sender. - Thereafter the receiver sends a publish complete (PUBCOMP) message. - In case the sender does not receive the PUBCOMP message, it resends the PUBREL message. - Once the sending client receives the PUBCOMP message, the transmission process is marked as completed and the message can be deleted from the outbound queue. these messages are same as used in WiFi communication. Retained Messages Server keeps messages even after sending it to all Subscribers. New Subscribers get the retained messages. We had seen this behavior in PubNub, where last message Published to Channel was retained till the next message is Published to that channel. This Last message was available to new subscriber. Only One Message is retained per Topic. Usecase: Sensor periodically sending a message on a topic. New subscriber will get the last state of the sensor with Retained message. Reference: MQTT Retained Messages Explained Clean Session and Durable Session Clean Session: Clean Session Flag = 1 [Optional] All of the client’s subscriptions are removed when it disconnects from the server. Durable Session: Clean Session Flag = 0 [Optional] The client’s subscriptions remain in effect after any disconnection. In this event, subsequent messages that arrive carrying a High QoS designation are stored for delivery after the connection is reestablished. Retained messages, Clean Session and QoS inter-related behavior Reference: MQTT Retained Messages Explained Wills A Will or a Message is informed by client with server that should be published to a specific Topic or Topics in the event of an unexpected disconnection. A Will is an alarm or security settings where system when a remote sensor has lost contact with the network. Keep Alive Messages Periodically sent Topic Trees, Strings Topics are organized Hierarchically into Topic Trees, using the ‘/’ character to create subtopics in the Topic String. Topic String A character string that identifies the Topic of a publish/subscribe message. Topic strings can contain either of two Wildcards: These WildCards Allows subscribers to match patterns within strings defined by message publishers Wildcard: #: Multilevel used to match any number of levels within a Topic. e.g. subscribers to truck/contents/# receive all messages that are designated for the topics: truck/contents truck/contents/rfid Wildcard: +: Single Level used to match Just ONE Topic Level. e.g. truck/+ matches truck/contents but not truck/contents/rfid MQTT Brokers Comparison Stress-Testing MQTT Brokers: A Comparative Analysis of Performance Measurements: Tested Borkers: Mosquitto - Bevywise MQTT Route - ActiveMQ - HiveMQ CE - VerneMQ - EMQ X Mosquitto outperforms the other considered solutions in most metrics; ActiveMQ is the best performing one in terms of Scalability due to its multi-threaded implementation. Bevywise MQTT Route has promising results for resource-constrained scenarios. ActiveMQ scales well in distributed/multi-core environment to beat all other brokers’ performance. If the hardware is resource-constrained (CPU/Memory/IO/Performance), then Mosquitto or Bevywise MQTT Route can be taken as better choices. Running MQTT broker in Containerized mode eclipse-mosquitto Maintained by: the Eclipse Foundation Supported architectures: (more info) amd64, arm32v6, arm64v8, i386, ppc64le, s390x</summary></entry><entry><title type="html">AWS Training Links and Ramp Up Guides</title><link href="http://localhost:4000/iot/cloud/aws/2021/10/27/AWS-Ramp-up-guides-training-links.html" rel="alternate" type="text/html" title="AWS Training Links and Ramp Up Guides" /><published>2021-10-27T12:33:22+05:30</published><updated>2021-10-27T12:33:22+05:30</updated><id>http://localhost:4000/iot/cloud/aws/2021/10/27/AWS-Ramp-up-guides-training-links</id><content type="html" xml:base="http://localhost:4000/iot/cloud/aws/2021/10/27/AWS-Ramp-up-guides-training-links.html">&lt;h3 id=&quot;aws-training-links&quot;&gt;AWS Training Links&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;/assets/docs/Ramp-Up_Guide_IoT.pdf&quot;&gt;AWS IoT Ramp-up Guide&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;/assets/docs/Ramp-Up_Guide_CloudPractitioner.pdf&quot;&gt;AWS Cloud Practictioner Ramp-up Guide&lt;/a&gt;&lt;/p&gt;</content><author><name>Akhilesh Moghe</name></author><category term="IoT" /><category term="Cloud" /><category term="AWS" /><category term="IoT" /><category term="Cloud" /><category term="AWS" /><summary type="html">AWS Training Links AWS IoT Ramp-up Guide AWS Cloud Practictioner Ramp-up Guide</summary></entry><entry><title type="html">AWS IoT Sitewise Edge</title><link href="http://localhost:4000/iot/cloud/aws%20iot/edge%20iot/2021/10/27/AWS-IoT-Sitewise-Edge.html" rel="alternate" type="text/html" title="AWS IoT Sitewise Edge" /><published>2021-10-27T12:33:22+05:30</published><updated>2021-10-27T12:33:22+05:30</updated><id>http://localhost:4000/iot/cloud/aws%20iot/edge%20iot/2021/10/27/AWS-IoT-Sitewise-Edge</id><content type="html" xml:base="http://localhost:4000/iot/cloud/aws%20iot/edge%20iot/2021/10/27/AWS-IoT-Sitewise-Edge.html">&lt;h1 id=&quot;aws-iot-sitewise&quot;&gt;AWS IoT Sitewise:&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;AWS IoT SiteWise is a managed service that simplifies collecting, organizing, and analyzing industrial equipment data.
+&lt;img src=&quot;/assets/images/aws/aws-iot-sitewise-edge.png&quot; alt=&quot;AWS IoT Sitewise Overview&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;features&quot;&gt;Features:&lt;/h2&gt;
+&lt;h3 id=&quot;assets-modeling&quot;&gt;Assets Modeling:&lt;/h3&gt;
+
+&lt;h3 id=&quot;assets-metrics&quot;&gt;Assets Metrics:&lt;/h3&gt;
+
+&lt;h3 id=&quot;sitewise-edge&quot;&gt;SiteWise Edge:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;SiteWise Edge software runs on on-premises servers, industrial gateways, computers, AWS Outposts and AWS Snow Family devices.&lt;/li&gt;
+  &lt;li&gt;SiteWise Edge can collect-organize-process-monitor industrial equipment data locally before sending it to AWS cloud.&lt;/li&gt;
+  &lt;li&gt;SiteWise Edge uses AWS IoT Greengrass, which provides a local software runtime environment for edge devices to help build, deploy and manage applications.&lt;/li&gt;
+  &lt;li&gt;SiteWise Edge software automates the process of securely connecting to and reading data from your industrial equipment and onsite data servers or historian databases.&lt;/li&gt;
+  &lt;li&gt;SiteWise Edge collects this data using multiple industrial protocols including OPC-UA, Modbus TCP and EtherNet/IP, which are provided as pre-packaged connectors that run on AWS IoT Greengrass.&lt;/li&gt;
+  &lt;li&gt;Once data is collected, with Sitewise Edge you can filter data streams by sampling or comparing against a specified criterion (e.g. air temperature above a user specified threshold).
+    &lt;ul&gt;
+      &lt;li&gt;Greengrass can also filter data with multiple lambda functions or components.&lt;/li&gt;
+      &lt;li&gt;What does SiteWise filters that’s different than what can be done with Greengrass, or SiteWise has some specific filtering mechanisms that are ready to use?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Once the data is processed, you can send the data to AWS IoT SiteWise in the cloud and for longer term storage and analysis in your industrial data lake you can send to other AWS Cloud services such as Amazon S3 and Amazon Timestream.&lt;/li&gt;
+  &lt;li&gt;local applications can call AWS IoT SiteWise query APIs on the SiteWise Edge software to read asset time series data, and computed transforms and metrics.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;data-ingestion&quot;&gt;Data Ingestion:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;AWS IoT SiteWise supports other data ingestion methods, including the MQTT protocol via integration with AWS IoT Core, then use the AWS IoT Core Rules Engine to route messages to AWS IoT SiteWise.&lt;/li&gt;
+  &lt;li&gt;Edge or Cloud Applications can send data to AWS IoT SiteWise using REST APIs also.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;gateway-management&quot;&gt;Gateway Management:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Configure and Monitor Edge Gateways(~that run SiteWise Edge software) across all facilities and view a consolidated list of active gateways, through the console or using APIs. You can also monitor the health of gateways remotely.&lt;/li&gt;
+  &lt;li&gt;Gateway metrics about health, status, performance can also be viewed in AWS CloudWatch Matrics console.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;sitewise-monitor&quot;&gt;SiteWise Monitor:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;AWS IoT SiteWise includes the ability to create &lt;strong&gt;&lt;em&gt;no-code&lt;/em&gt;&lt;/strong&gt;, &lt;em&gt;&lt;u&gt;fully-managed&lt;/u&gt;&lt;/em&gt; web applications using SiteWise Monitor for visualizing and interacting with operational data from devices and equipment connected to AWS IoT.&lt;/li&gt;
+  &lt;li&gt;Discover and display Asset data, computed metrics + historical time series data ingested and modeled in AWS IoT SiteWise.&lt;/li&gt;
+  &lt;li&gt;Visualize these data as charts, threshold these charts.&lt;/li&gt;
+  &lt;li&gt;Integrate Single-Sign-On with SiteWise Monitor.&lt;/li&gt;
+  &lt;li&gt;Administrators can create one or more web applications to share data, accesses across organizations, users.&lt;/li&gt;
+  &lt;li&gt;SiteWise Monitor web applications can also be deployed locally on SiteWise Edge software to visualize equipment data locally in case of intermittent connectivity.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;alarms&quot;&gt;Alarms:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;You can define, setup and update alarm rule and notifications for equipment performance issues on any asset data property using AWS IoT SiteWise Console, Monitor or SDKs.&lt;/li&gt;
+  &lt;li&gt;You can configure Email, SMS notifications and Severity of alarms.&lt;/li&gt;
+  &lt;li&gt;can also configure additional actions to other AWS services including AWS Lambda, Amazon Simple Queue Service (SQS), and Amazon Simple Notification Service (SNS), to be executed when an alarm triggers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;extensibility&quot;&gt;Extensibility:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Custom edge and cloud applications can use query APIs to easily retrieve asset data and computed metrics from the AWS IoT SiteWise &lt;strong&gt;&lt;em&gt;time series data store&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;use a publish/subscribe interface to consume a near real-time stream of structured IoT data.&lt;/li&gt;
+  &lt;li&gt;Custom edge applications can also call the same AWS IoT SiteWise query APIs on the SiteWise Edge software running on-premises to retrieve asset data and metrics, without relying on connectivity to the cloud.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="IoT" /><category term="Cloud" /><category term="AWS IoT" /><category term="Edge IoT" /><category term="IoT" /><category term="Cloud" /><category term="AWS IoT" /><category term="Edge IoT" /><summary type="html">AWS IoT Sitewise: AWS IoT SiteWise is a managed service that simplifies collecting, organizing, and analyzing industrial equipment data. Features: Assets Modeling: Assets Metrics: SiteWise Edge: SiteWise Edge software runs on on-premises servers, industrial gateways, computers, AWS Outposts and AWS Snow Family devices. SiteWise Edge can collect-organize-process-monitor industrial equipment data locally before sending it to AWS cloud. SiteWise Edge uses AWS IoT Greengrass, which provides a local software runtime environment for edge devices to help build, deploy and manage applications. SiteWise Edge software automates the process of securely connecting to and reading data from your industrial equipment and onsite data servers or historian databases. SiteWise Edge collects this data using multiple industrial protocols including OPC-UA, Modbus TCP and EtherNet/IP, which are provided as pre-packaged connectors that run on AWS IoT Greengrass. Once data is collected, with Sitewise Edge you can filter data streams by sampling or comparing against a specified criterion (e.g. air temperature above a user specified threshold). Greengrass can also filter data with multiple lambda functions or components. What does SiteWise filters that’s different than what can be done with Greengrass, or SiteWise has some specific filtering mechanisms that are ready to use? Once the data is processed, you can send the data to AWS IoT SiteWise in the cloud and for longer term storage and analysis in your industrial data lake you can send to other AWS Cloud services such as Amazon S3 and Amazon Timestream. local applications can call AWS IoT SiteWise query APIs on the SiteWise Edge software to read asset time series data, and computed transforms and metrics. Data Ingestion: AWS IoT SiteWise supports other data ingestion methods, including the MQTT protocol via integration with AWS IoT Core, then use the AWS IoT Core Rules Engine to route messages to AWS IoT SiteWise. Edge or Cloud Applications can send data to AWS IoT SiteWise using REST APIs also. Gateway Management: Configure and Monitor Edge Gateways(~that run SiteWise Edge software) across all facilities and view a consolidated list of active gateways, through the console or using APIs. You can also monitor the health of gateways remotely. Gateway metrics about health, status, performance can also be viewed in AWS CloudWatch Matrics console. SiteWise Monitor: AWS IoT SiteWise includes the ability to create no-code, fully-managed web applications using SiteWise Monitor for visualizing and interacting with operational data from devices and equipment connected to AWS IoT. Discover and display Asset data, computed metrics + historical time series data ingested and modeled in AWS IoT SiteWise. Visualize these data as charts, threshold these charts. Integrate Single-Sign-On with SiteWise Monitor. Administrators can create one or more web applications to share data, accesses across organizations, users. SiteWise Monitor web applications can also be deployed locally on SiteWise Edge software to visualize equipment data locally in case of intermittent connectivity. Alarms: You can define, setup and update alarm rule and notifications for equipment performance issues on any asset data property using AWS IoT SiteWise Console, Monitor or SDKs. You can configure Email, SMS notifications and Severity of alarms. can also configure additional actions to other AWS services including AWS Lambda, Amazon Simple Queue Service (SQS), and Amazon Simple Notification Service (SNS), to be executed when an alarm triggers. Extensibility: Custom edge and cloud applications can use query APIs to easily retrieve asset data and computed metrics from the AWS IoT SiteWise time series data store use a publish/subscribe interface to consume a near real-time stream of structured IoT data. Custom edge applications can also call the same AWS IoT SiteWise query APIs on the SiteWise Edge software running on-premises to retrieve asset data and metrics, without relying on connectivity to the cloud.</summary></entry><entry><title type="html">Why IoT Edge Computing?</title><link href="http://localhost:4000/iot/cloud/edge%20computing/edge/2021/10/23/Why-Edge-Computing.html" rel="alternate" type="text/html" title="Why IoT Edge Computing?" /><published>2021-10-23T12:33:22+05:30</published><updated>2021-10-23T12:33:22+05:30</updated><id>http://localhost:4000/iot/cloud/edge%20computing/edge/2021/10/23/Why-Edge-Computing</id><content type="html" xml:base="http://localhost:4000/iot/cloud/edge%20computing/edge/2021/10/23/Why-Edge-Computing.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;This article highlights the key factors that will drive the need of Edge Compute in ever growing field of IoT.&lt;/p&gt;
 
 &lt;h2 id=&quot;why-edge-compute&quot;&gt;Why Edge Compute?&lt;/h2&gt;
@@ -91,9 +748,7 @@
 &lt;/ul&gt;
 
 &lt;p&gt;These challenges have created a pressing need to move information and analytical models closer to the source of data, in order to provide compute capability inside an environment where connectivity and response times can be controlled.
-That’s where Edge Computing comes into picture.&lt;/p&gt;</content><author><name>Akhilesh Moghe</name></author><category term="IoT" /><category term="Cloud" /><category term="Edge Computing" /><category term="Edge" /><category term="IoT" /><category term="Cloud" /><category term="Edge Computing" /><category term="Edge" /><summary type="html">Introduction This article highlights the key factors that will drive the need of Edge Compute in ever growing field of IoT. Why Edge Compute? Latency: IoT systems generate huge data from sensors. Sending all these raw data every time to cloud is a costly affair in terms of money, latency and many more. The round time for sending data from IoT devices to cloud and receiving back the inference data/command from cloud usually take 100s of milliseconds. There are many real-life use-cases, where this much of latency is not acceptable, usually in these cases inference needs to happen under few milliseconds. Fast Response Time: Decisions can be made locally on devices with the stream of data arriving. With local decision-making capability, there’s no round trip of data. Resulting in Fast Response. Data Privacy: In many industries such as Healthcare, Industrial, Government Organizations, customers do not want to send data to public cloud or outside their data centers for data privacy and safety concerns. Also, regulations like HIPAA, GDPR mandates the data privacy and security, which is a strong motive behind keeping data on-premises servers. Though data privacy, safety and security can be addressed in cloud infrastructures with Multitenancy and similar practices, it may not be acceptable to all customers. Bandwidth: As the data generated and frequency increases, the data to be synced will increase. This definitely results in increased bandwidth consumption. There may be restrictions on Network Bandwidth allocation per device or network. Cost: IoT systems generate huge data from sensors. Sending all these raw data every time to cloud is costly affair in terms of money, latency and many more. Pre-processing: IoT systems generate huge data from sensors. Sending all these raw data every time to cloud is costly affair in terms of money, latency and many more. So usually, the raw IoT sensors data is pre-processed, transformed, fine grained before sending it over to data centers. Many of the IoT devices, do not have that much of compute capability, e.g., MCUs, in these scenarios, data pre-processing can be done on the Edge devices before cloud. Edge devices can also act as a translation bridge between different protocols, e.g., Industrial protocols like CAN Bus, Modbus, OPC-UA are not directly compatible with cloud data storage protocols like JSON. Edge devices can handle these protocol translations. No direct connectivity, Gateway kind of functionality: In many scenarios, IoT devices will not be directly exposed to the internet. IoT devices are only connecting to the gateway devices, which provide them local connectivity, but no internet access. In such scenarios, IoT devices needs to send data to gateway i.e., Edge devices. And Edge device then sends data to cloud. In these cases, Routers or the mobiles acting as hotspots can be Edge devices. On-premise AI, ML Inference scenarios: Allows you to deploy models built and trained in the cloud and run them on edge devices. Edge computing uses this model to process data locally and respond to the event rapidly. Intermittent Connectivity: No one can guarantee continuous internet access. There will be many situations of intermittent connectivity. Though internet connectivity is intermittent, we can have local uninterrupted connectivity to IoT devices. Having Edge processing, we can have AI, ML inferences on Edge devices, without bothering about internet cloud connectivity. IoT Architecture Limitations: Today’s IoT Approach: In today’s prevailing IoT architecture, sensor data is transmitted over a wide area network to be centralized, processed and analyzed — which creates an additional supply of enriched data. These data and analytical models are intended to trigger actions either on the thing itself, in upstream business systems, or in other platforms that can use the data outside of the original context. Challenges in IoT Approach: IoT approach is unsustainable in the long term, due to: the number of device connections, volume of data, latency across different locations and networks, and the asynchronous nature of many connections between data flow and analytical cloud services. In addition, today’s heterogeneous networks are unable to manage the massive growth anticipated in the number of endpoints and the data volume. These challenges have created a pressing need to move information and analytical models closer to the source of data, in order to provide compute capability inside an environment where connectivity and response times can be controlled. That’s where Edge Computing comes into picture.</summary></entry><entry><title type="html">AWS Training Links and Ramp Up Guides</title><link href="http://localhost:4000/iot/cloud/aws/2021/10/23/AWS-Ramp-up-guides-training-links.html" rel="alternate" type="text/html" title="AWS Training Links and Ramp Up Guides" /><published>2021-10-23T12:33:22+05:30</published><updated>2021-10-23T12:33:22+05:30</updated><id>http://localhost:4000/iot/cloud/aws/2021/10/23/AWS-Ramp-up-guides-training-links</id><content type="html" xml:base="http://localhost:4000/iot/cloud/aws/2021/10/23/AWS-Ramp-up-guides-training-links.html">&lt;h3 id=&quot;aws-training-links&quot;&gt;AWS Training Links&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;/assets/docs/Ramp-Up_Guide_IoT.pdf&quot;&gt;AWS IoT Ramp-up Guide&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;/assets/docs/Ramp-Up_Guide_CloudPractitioner.pdf&quot;&gt;AWS Cloud Practictioner Ramp-up Guide&lt;/a&gt;&lt;/p&gt;</content><author><name>Akhilesh Moghe</name></author><category term="IoT" /><category term="Cloud" /><category term="AWS" /><category term="IoT" /><category term="Cloud" /><category term="AWS" /><summary type="html">AWS Training Links AWS IoT Ramp-up Guide AWS Cloud Practictioner Ramp-up Guide</summary></entry><entry><title type="html">Container Security</title><link href="http://localhost:4000/containers/docker/kubernetes/devops/2021/10/07/Container-Security.html" rel="alternate" type="text/html" title="Container Security" /><published>2021-10-07T12:33:22+05:30</published><updated>2021-10-07T12:33:22+05:30</updated><id>http://localhost:4000/containers/docker/kubernetes/devops/2021/10/07/Container-Security</id><content type="html" xml:base="http://localhost:4000/containers/docker/kubernetes/devops/2021/10/07/Container-Security.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+That’s where Edge Computing comes into picture.&lt;/p&gt;</content><author><name>Akhilesh Moghe</name></author><category term="IoT" /><category term="Cloud" /><category term="Edge Computing" /><category term="Edge" /><category term="IoT" /><category term="Cloud" /><category term="Edge Computing" /><category term="Edge" /><summary type="html">Introduction This article highlights the key factors that will drive the need of Edge Compute in ever growing field of IoT. Why Edge Compute? Latency: IoT systems generate huge data from sensors. Sending all these raw data every time to cloud is a costly affair in terms of money, latency and many more. The round time for sending data from IoT devices to cloud and receiving back the inference data/command from cloud usually take 100s of milliseconds. There are many real-life use-cases, where this much of latency is not acceptable, usually in these cases inference needs to happen under few milliseconds. Fast Response Time: Decisions can be made locally on devices with the stream of data arriving. With local decision-making capability, there’s no round trip of data. Resulting in Fast Response. Data Privacy: In many industries such as Healthcare, Industrial, Government Organizations, customers do not want to send data to public cloud or outside their data centers for data privacy and safety concerns. Also, regulations like HIPAA, GDPR mandates the data privacy and security, which is a strong motive behind keeping data on-premises servers. Though data privacy, safety and security can be addressed in cloud infrastructures with Multitenancy and similar practices, it may not be acceptable to all customers. Bandwidth: As the data generated and frequency increases, the data to be synced will increase. This definitely results in increased bandwidth consumption. There may be restrictions on Network Bandwidth allocation per device or network. Cost: IoT systems generate huge data from sensors. Sending all these raw data every time to cloud is costly affair in terms of money, latency and many more. Pre-processing: IoT systems generate huge data from sensors. Sending all these raw data every time to cloud is costly affair in terms of money, latency and many more. So usually, the raw IoT sensors data is pre-processed, transformed, fine grained before sending it over to data centers. Many of the IoT devices, do not have that much of compute capability, e.g., MCUs, in these scenarios, data pre-processing can be done on the Edge devices before cloud. Edge devices can also act as a translation bridge between different protocols, e.g., Industrial protocols like CAN Bus, Modbus, OPC-UA are not directly compatible with cloud data storage protocols like JSON. Edge devices can handle these protocol translations. No direct connectivity, Gateway kind of functionality: In many scenarios, IoT devices will not be directly exposed to the internet. IoT devices are only connecting to the gateway devices, which provide them local connectivity, but no internet access. In such scenarios, IoT devices needs to send data to gateway i.e., Edge devices. And Edge device then sends data to cloud. In these cases, Routers or the mobiles acting as hotspots can be Edge devices. On-premise AI, ML Inference scenarios: Allows you to deploy models built and trained in the cloud and run them on edge devices. Edge computing uses this model to process data locally and respond to the event rapidly. Intermittent Connectivity: No one can guarantee continuous internet access. There will be many situations of intermittent connectivity. Though internet connectivity is intermittent, we can have local uninterrupted connectivity to IoT devices. Having Edge processing, we can have AI, ML inferences on Edge devices, without bothering about internet cloud connectivity. IoT Architecture Limitations: Today’s IoT Approach: In today’s prevailing IoT architecture, sensor data is transmitted over a wide area network to be centralized, processed and analyzed — which creates an additional supply of enriched data. These data and analytical models are intended to trigger actions either on the thing itself, in upstream business systems, or in other platforms that can use the data outside of the original context. Challenges in IoT Approach: IoT approach is unsustainable in the long term, due to: the number of device connections, volume of data, latency across different locations and networks, and the asynchronous nature of many connections between data flow and analytical cloud services. In addition, today’s heterogeneous networks are unable to manage the massive growth anticipated in the number of endpoints and the data volume. These challenges have created a pressing need to move information and analytical models closer to the source of data, in order to provide compute capability inside an environment where connectivity and response times can be controlled. That’s where Edge Computing comes into picture.</summary></entry><entry><title type="html">Container Security</title><link href="http://localhost:4000/containers/docker/kubernetes/devops/2021/10/07/Container-Security.html" rel="alternate" type="text/html" title="Container Security" /><published>2021-10-07T12:33:22+05:30</published><updated>2021-10-07T12:33:22+05:30</updated><id>http://localhost:4000/containers/docker/kubernetes/devops/2021/10/07/Container-Security</id><content type="html" xml:base="http://localhost:4000/containers/docker/kubernetes/devops/2021/10/07/Container-Security.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;h2 id=&quot;threats-and-risks-areas&quot;&gt;Threats and Risks Areas:&lt;/h2&gt;
 
@@ -484,4 +1139,238 @@ ubuntu@ip-172-31-6-183:~$
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://medium.com/geekculture/tutorial-how-to-extend-aws-ebs-volumes-with-no-downtime-ec7d9e82426e&quot;&gt;Tutorial: How to Extend AWS EBS Volumes with No Downtime&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html?icmpid=docs_ec2_console&quot;&gt;Extend a Linux file system after resizing a volume&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="AWS" /><category term="EC2" /><category term="EBS" /><category term="AWS" /><category term="EC2" /><category term="EBS" /><summary type="html">Introduction It’s a very common scenario when you run out of space on an running EC2 instance. And you need to increase the volume of that running instance without shutting it down. This post is all about the same scenario. Modify EBS Volume: Login to your AWS console Choose “EC2” from the services list Click on “Volumes” under ELASTIC BLOCK STORE menu (on the left) Choose the volume that you want to resize, right-click on “Modify Volume” You’ll see an option window like this one: Set the new size for your EBS volume (in this case i extended an 8GB volume to 20GB) Click on modify. SSH to the EC2 instance where the EBS we’ve just extended is attached to. Type the following command to list our block devices: ubuntu@ip-172-31-6-183:~$ lsblk NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT loop0 7:0 0 32.3M 1 loop /snap/snapd/11588 loop2 7:2 0 55.5M 1 loop /snap/core18/1997 loop3 7:3 0 33.3M 1 loop /snap/amazon-ssm-agent/3552 loop4 7:4 0 32.3M 1 loop /snap/snapd/12398 loop5 7:5 0 55.5M 1 loop /snap/core18/2074 xvda 202:0 0 150G 0 disk └─xvda1 202:1 0 150G 0 part / ubuntu@ip-172-31-6-183:~$ ubuntu@ip-172-31-6-183:~$ lsblk NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT loop0 7:0 0 32.3M 1 loop /snap/snapd/11588 loop2 7:2 0 55.5M 1 loop /snap/core18/1997 loop3 7:3 0 33.3M 1 loop /snap/amazon-ssm-agent/3552 loop4 7:4 0 32.3M 1 loop /snap/snapd/12398 loop5 7:5 0 55.5M 1 loop /snap/core18/2074 xvda 202:0 0 200G 0 disk └─xvda1 202:1 0 150G 0 part / ubuntu@ip-172-31-6-183:~$ As you can see size of the root volume reflects the new size, 200GB, the size of the partition reflects the original size, 150 GB, and must be extended before you can extend the file system. To do so, type the following command: Be careful, there is a space between device name and partition number! ubuntu@ip-172-31-6-183:~$ sudo growpart /dev/xvda 1 CHANGED: partition=1 start=2048 old: size=314570719 end=314572767 new: size=419428319,end=419430367 ubuntu@ip-172-31-6-183:~$ ubuntu@ip-172-31-6-183:~$ lsblk NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT loop0 7:0 0 32.3M 1 loop /snap/snapd/11588 loop2 7:2 0 55.5M 1 loop /snap/core18/1997 loop3 7:3 0 33.3M 1 loop /snap/amazon-ssm-agent/3552 loop4 7:4 0 32.3M 1 loop /snap/snapd/12398 loop5 7:5 0 55.5M 1 loop /snap/core18/2074 xvda 202:0 0 200G 0 disk └─xvda1 202:1 0 200G 0 part / ubuntu@ip-172-31-6-183:~$ Extend the filesystem itself. Confirm File System type with: ubuntu@ip-172-31-6-183:~$ df -Th Filesystem Type Size Used Avail Use% Mounted on udev devtmpfs 16G 0 16G 0% /dev tmpfs tmpfs 3.2G 824K 3.2G 1% /run /dev/xvda1 ext4 146G 128G 18G 88% / tmpfs tmpfs 16G 88K 16G 1% /dev/shm tmpfs tmpfs 5.0M 0 5.0M 0% /run/lock tmpfs tmpfs 16G 0 16G 0% /sys/fs/cgroup /dev/loop0 squashfs 33M 33M 0 100% /snap/snapd/11588 /dev/loop2 squashfs 56M 56M 0 100% /snap/core18/1997 /dev/loop3 squashfs 34M 34M 0 100% /snap/amazon-ssm-agent/3552 /dev/loop5 squashfs 56M 56M 0 100% /snap/core18/2074 /dev/loop4 squashfs 33M 33M 0 100% /snap/snapd/12398 tmpfs tmpfs 3.2G 0 3.2G 0% /run/user/1000 ubuntu@ip-172-31-6-183:~$ If your filesystem is an ext2, ext3, or ext4, type: ubuntu@ip-172-31-6-183:~$ sudo resize2fs /dev/xvda1 resize2fs 1.44.1 (24-Mar-2018) Filesystem at /dev/xvda1 is mounted on /; on-line resizing required old_desc_blocks = 19, new_desc_blocks = 25 The filesystem on /dev/xvda1 is now 52428539 (4k) blocks long. ubuntu@ip-172-31-6-183:~$ If your filesystem is an XFS, then type: [ec2-user ~]$ sudo xfs_growfs /dev/xvda1 Finally we can check our extended filesystem by typing: ubuntu@ip-172-31-6-183:~$ df -Th Filesystem Type Size Used Avail Use% Mounted on udev devtmpfs 16G 0 16G 0% /dev tmpfs tmpfs 3.2G 824K 3.2G 1% /run /dev/xvda1 ext4 194G 128G 67G 66% / tmpfs tmpfs 16G 88K 16G 1% /dev/shm tmpfs tmpfs 5.0M 0 5.0M 0% /run/lock tmpfs tmpfs 16G 0 16G 0% /sys/fs/cgroup /dev/loop0 squashfs 33M 33M 0 100% /snap/snapd/11588 /dev/loop2 squashfs 56M 56M 0 100% /snap/core18/1997 /dev/loop3 squashfs 34M 34M 0 100% /snap/amazon-ssm-agent/3552 /dev/loop5 squashfs 56M 56M 0 100% /snap/core18/2074 /dev/loop4 squashfs 33M 33M 0 100% /snap/snapd/12398 tmpfs tmpfs 3.2G 0 3.2G 0% /run/user/1000 ubuntu@ip-172-31-6-183:~$ References: Tutorial: How to Extend AWS EBS Volumes with No Downtime Extend a Linux file system after resizing a volume</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="AWS" /><category term="EC2" /><category term="EBS" /><category term="AWS" /><category term="EC2" /><category term="EBS" /><summary type="html">Introduction It’s a very common scenario when you run out of space on an running EC2 instance. And you need to increase the volume of that running instance without shutting it down. This post is all about the same scenario. Modify EBS Volume: Login to your AWS console Choose “EC2” from the services list Click on “Volumes” under ELASTIC BLOCK STORE menu (on the left) Choose the volume that you want to resize, right-click on “Modify Volume” You’ll see an option window like this one: Set the new size for your EBS volume (in this case i extended an 8GB volume to 20GB) Click on modify. SSH to the EC2 instance where the EBS we’ve just extended is attached to. Type the following command to list our block devices: ubuntu@ip-172-31-6-183:~$ lsblk NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT loop0 7:0 0 32.3M 1 loop /snap/snapd/11588 loop2 7:2 0 55.5M 1 loop /snap/core18/1997 loop3 7:3 0 33.3M 1 loop /snap/amazon-ssm-agent/3552 loop4 7:4 0 32.3M 1 loop /snap/snapd/12398 loop5 7:5 0 55.5M 1 loop /snap/core18/2074 xvda 202:0 0 150G 0 disk └─xvda1 202:1 0 150G 0 part / ubuntu@ip-172-31-6-183:~$ ubuntu@ip-172-31-6-183:~$ lsblk NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT loop0 7:0 0 32.3M 1 loop /snap/snapd/11588 loop2 7:2 0 55.5M 1 loop /snap/core18/1997 loop3 7:3 0 33.3M 1 loop /snap/amazon-ssm-agent/3552 loop4 7:4 0 32.3M 1 loop /snap/snapd/12398 loop5 7:5 0 55.5M 1 loop /snap/core18/2074 xvda 202:0 0 200G 0 disk └─xvda1 202:1 0 150G 0 part / ubuntu@ip-172-31-6-183:~$ As you can see size of the root volume reflects the new size, 200GB, the size of the partition reflects the original size, 150 GB, and must be extended before you can extend the file system. To do so, type the following command: Be careful, there is a space between device name and partition number! ubuntu@ip-172-31-6-183:~$ sudo growpart /dev/xvda 1 CHANGED: partition=1 start=2048 old: size=314570719 end=314572767 new: size=419428319,end=419430367 ubuntu@ip-172-31-6-183:~$ ubuntu@ip-172-31-6-183:~$ lsblk NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT loop0 7:0 0 32.3M 1 loop /snap/snapd/11588 loop2 7:2 0 55.5M 1 loop /snap/core18/1997 loop3 7:3 0 33.3M 1 loop /snap/amazon-ssm-agent/3552 loop4 7:4 0 32.3M 1 loop /snap/snapd/12398 loop5 7:5 0 55.5M 1 loop /snap/core18/2074 xvda 202:0 0 200G 0 disk └─xvda1 202:1 0 200G 0 part / ubuntu@ip-172-31-6-183:~$ Extend the filesystem itself. Confirm File System type with: ubuntu@ip-172-31-6-183:~$ df -Th Filesystem Type Size Used Avail Use% Mounted on udev devtmpfs 16G 0 16G 0% /dev tmpfs tmpfs 3.2G 824K 3.2G 1% /run /dev/xvda1 ext4 146G 128G 18G 88% / tmpfs tmpfs 16G 88K 16G 1% /dev/shm tmpfs tmpfs 5.0M 0 5.0M 0% /run/lock tmpfs tmpfs 16G 0 16G 0% /sys/fs/cgroup /dev/loop0 squashfs 33M 33M 0 100% /snap/snapd/11588 /dev/loop2 squashfs 56M 56M 0 100% /snap/core18/1997 /dev/loop3 squashfs 34M 34M 0 100% /snap/amazon-ssm-agent/3552 /dev/loop5 squashfs 56M 56M 0 100% /snap/core18/2074 /dev/loop4 squashfs 33M 33M 0 100% /snap/snapd/12398 tmpfs tmpfs 3.2G 0 3.2G 0% /run/user/1000 ubuntu@ip-172-31-6-183:~$ If your filesystem is an ext2, ext3, or ext4, type: ubuntu@ip-172-31-6-183:~$ sudo resize2fs /dev/xvda1 resize2fs 1.44.1 (24-Mar-2018) Filesystem at /dev/xvda1 is mounted on /; on-line resizing required old_desc_blocks = 19, new_desc_blocks = 25 The filesystem on /dev/xvda1 is now 52428539 (4k) blocks long. ubuntu@ip-172-31-6-183:~$ If your filesystem is an XFS, then type: [ec2-user ~]$ sudo xfs_growfs /dev/xvda1 Finally we can check our extended filesystem by typing: ubuntu@ip-172-31-6-183:~$ df -Th Filesystem Type Size Used Avail Use% Mounted on udev devtmpfs 16G 0 16G 0% /dev tmpfs tmpfs 3.2G 824K 3.2G 1% /run /dev/xvda1 ext4 194G 128G 67G 66% / tmpfs tmpfs 16G 88K 16G 1% /dev/shm tmpfs tmpfs 5.0M 0 5.0M 0% /run/lock tmpfs tmpfs 16G 0 16G 0% /sys/fs/cgroup /dev/loop0 squashfs 33M 33M 0 100% /snap/snapd/11588 /dev/loop2 squashfs 56M 56M 0 100% /snap/core18/1997 /dev/loop3 squashfs 34M 34M 0 100% /snap/amazon-ssm-agent/3552 /dev/loop5 squashfs 56M 56M 0 100% /snap/core18/2074 /dev/loop4 squashfs 33M 33M 0 100% /snap/snapd/12398 tmpfs tmpfs 3.2G 0 3.2G 0% /run/user/1000 ubuntu@ip-172-31-6-183:~$ References: Tutorial: How to Extend AWS EBS Volumes with No Downtime Extend a Linux file system after resizing a volume</summary></entry><entry><title type="html">SSL TLS Explained</title><link href="http://localhost:4000/security/ssl/tls/https/2020/03/26/SSL-TLS-Explained.html" rel="alternate" type="text/html" title="SSL TLS Explained" /><published>2020-03-26T12:33:22+05:30</published><updated>2020-03-26T12:33:22+05:30</updated><id>http://localhost:4000/security/ssl/tls/https/2020/03/26/SSL-TLS-Explained</id><content type="html" xml:base="http://localhost:4000/security/ssl/tls/https/2020/03/26/SSL-TLS-Explained.html">&lt;h2 id=&quot;history&quot;&gt;History:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;First SSL prototypes came from Netscape when they were developing the first versions of their flagship browser, Netscape Navigator.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;SSL version 3&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; (SSLv3) was an enhanced protocol which &lt;u&gt;still works today&lt;/u&gt; and is widely supported. The protocol has been standardized, with a new name in order to avoid legal issues; the new name is &lt;strong&gt;&lt;em&gt;&lt;u&gt;TLS&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Three versions of TLS have been produced so far, each with its dedicated RFC: TLS 1.0, TLS 1.1 and TLS 1.2.
+    &lt;ul&gt;
+      &lt;li&gt;SSLv3 is then 3.0&lt;/li&gt;
+      &lt;li&gt;while the TLS versions are, respectively, 3.1, 3.2 and 3.3.&lt;/li&gt;
+      &lt;li&gt;Thus, TLS 1.0 is sometimes called SSL 3.1. (SSL 3.0 and TLS 1.0 differ by only some minute details.)&lt;/li&gt;
+      &lt;li&gt;TLS 1.1 and 1.2 are not yet widely supported&lt;/li&gt;
+      &lt;li&gt;SSLv3 and TLS 1.0 are supported “everywhere” (even IE 6.0 knows them).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;context&quot;&gt;Context&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;SSL aims at providing a secure bidirectional tunnel for arbitrary data.
+    &lt;h3 id=&quot;tcp-in-brief&quot;&gt;TCP in brief:&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;TCP is the well-known protocol for sending data over the Internet.&lt;/li&gt;
+  &lt;li&gt;TCP works over the IP “packets” and provides a bidirectional tunnel for bytes; it works for every byte values and sends them into two streams which can operate simultaneously.&lt;/li&gt;
+  &lt;li&gt;TCP handles the hard work of splitting the data into packets, acknowledging them, reassembling them back into their right order, while removing duplicates and reemitting lost packets.&lt;/li&gt;
+  &lt;li&gt;From the point of view of the application which uses TCP, there are just two streams, and the packets are invisible; in particular, the streams are not split into “messages” (it is up to the application to take its own encoding rules if it wishes to have messages, and that’s precisely what HTTP does).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;why-ssltls&quot;&gt;Why SSL/TLS:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;TCP is reliable in the presence of “accidents”, i.e. transmission errors due to flaky hardware, network congestion, people with smartphones who walk out the range of a given base station, and other non-malicious events.&lt;/li&gt;
+  &lt;li&gt;However, an ill-intentioned individual (the “attacker”) with some access to the transport medium could read all the transmitted data and/or alter it intentionally, and TCP does not protect against that.&lt;/li&gt;
+  &lt;li&gt;Hence SSL.&lt;/li&gt;
+  &lt;li&gt;SSL assumes that it works over a TCP-like protocol, which provides a reliable stream;&lt;/li&gt;
+  &lt;li&gt;SSL does not implement reemission of lost packets and things like that. The attacker is supposed to be in power to disrupt communication completely in an unavoidable way (for instance, he can cut the cables)&lt;/li&gt;
+  &lt;li&gt;so SSL’s job is to:
+    &lt;ul&gt;
+      &lt;li&gt;detect alterations (the attacker must not be able to alter the data silently);&lt;/li&gt;
+      &lt;li&gt;ensure data confidentiality (the attacker must not gain knowledge of the exchanged data).&lt;/li&gt;
+      &lt;li&gt;SSL fulfills these goals to a large (but not absolute) extent.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;record-protocol&quot;&gt;Record Protocol:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;SSL is layered and the &lt;u&gt;bottom layer&lt;/u&gt; is the &lt;strong&gt;&lt;em&gt;record protocol&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Whatever data is sent in an SSL tunnel is split into records.&lt;/li&gt;
+  &lt;li&gt;Over the wire (the underlying TCP socket or TCP-like medium), a record looks like this:&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HH V1:V2 L1:L2 data&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;&lt;u&gt;HH&lt;/u&gt;&lt;/em&gt; is a &lt;em&gt;single byte&lt;/em&gt; which indicates &lt;u&gt;the type of data&lt;/u&gt; in the record.
+        &lt;ul&gt;
+          &lt;li&gt;Four types are defined:
+            &lt;ul&gt;
+              &lt;li&gt;&lt;strong&gt;&lt;em&gt;change_cipher_spec&lt;/em&gt;&lt;/strong&gt; (20)&lt;/li&gt;
+              &lt;li&gt;&lt;strong&gt;&lt;em&gt;alert&lt;/em&gt;&lt;/strong&gt; (21)&lt;/li&gt;
+              &lt;li&gt;&lt;strong&gt;&lt;em&gt;handshake&lt;/em&gt;&lt;/strong&gt; (22)&lt;/li&gt;
+              &lt;li&gt;&lt;strong&gt;&lt;em&gt;application_data&lt;/em&gt;&lt;/strong&gt; (23)&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;&lt;u&gt;V1: V2&lt;/u&gt;&lt;/em&gt; is the &lt;strong&gt;&lt;em&gt;protocol version&lt;/em&gt;&lt;/strong&gt;, over &lt;em&gt;two bytes&lt;/em&gt;.
+For all versions currently defined,
+        &lt;ul&gt;
+          &lt;li&gt;&lt;u&gt;V1 has value 0x03&lt;/u&gt;, while &lt;u&gt;V2 has value 0x00&lt;/u&gt; for &lt;strong&gt;&lt;em&gt;SSLv3&lt;/em&gt;&lt;/strong&gt;,&lt;/li&gt;
+          &lt;li&gt;0x01 for TLS 1.0&lt;/li&gt;
+          &lt;li&gt;0x02 for TLS 1.1&lt;/li&gt;
+          &lt;li&gt;0x03 for TLS 1.2&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;&lt;u&gt;L1: L2&lt;/u&gt;&lt;/em&gt; is the &lt;strong&gt;&lt;em&gt;length of data&lt;/em&gt;&lt;/strong&gt;, in &lt;em&gt;bytes&lt;/em&gt; (big-endian convention is used: the length is 256*L1+L2).
+        &lt;ul&gt;
+          &lt;li&gt;The &lt;u&gt;total length of data cannot exceed 18432 bytes&lt;/u&gt;, but in practice, it cannot even reach that value.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;So a record has a &lt;em&gt;&lt;u&gt;five-byte header&lt;/u&gt;&lt;/em&gt;, followed by at most &lt;em&gt;&lt;u&gt;18 kB of data&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;The data is where &lt;em&gt;&lt;u&gt;symmetric encryption&lt;/u&gt;&lt;/em&gt; and &lt;em&gt;&lt;u&gt;integrity checks&lt;/u&gt;&lt;/em&gt; are applied.&lt;/li&gt;
+  &lt;li&gt;When a record is emitted, both sender and receiver are supposed to agree on which cryptographic algorithms are currently applied, and with which keys; this agreement is obtained through the &lt;em&gt;handshake protocol&lt;/em&gt;. &lt;em&gt;&lt;u&gt;Compression&lt;/u&gt;&lt;/em&gt;, if any, is also applied at that point.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;record-protocol-works-like-this&quot;&gt;Record protocol works like this:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Initially, there are some bytes to transfer; these are application data or some other kind of bytes. This &lt;em&gt;&lt;u&gt;payload consists of at most 16384 bytes&lt;/u&gt;&lt;/em&gt;, but possibly less (a payload of length 0 is legal, but it turns out that Internet Explorer 6.0 does not like that at all).&lt;/li&gt;
+  &lt;li&gt;The &lt;em&gt;&lt;u&gt;payload is then compressed&lt;/u&gt;&lt;/em&gt; with whatever compression algorithm is currently agreed upon.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;u&gt;Compression is *stateful* and thus may depend upon the contents of previous records.&lt;/u&gt;&lt;/li&gt;
+      &lt;li&gt;In practice, compression is either “null” (no compression at all) or “Deflate” (RFC 3749),
+        &lt;ul&gt;
+          &lt;li&gt;the latter being currently courteously but firmly shown the exit door in the Web context, due to the recent CRIME attack.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Compression aims at shortening data, but it must necessarily expand it slightly in some unfavorable situations (due to the pigeonhole principle).&lt;/li&gt;
+      &lt;li&gt;SSL allows for an expansion of at most 1024 bytes. Of course, null compression never expands (but never shortens either); Deflate will expand by at most 10 bytes if the implementation is any good.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The compressed payload is then protected against alterations and &lt;em&gt;&lt;u&gt;encrypted&lt;/u&gt;&lt;/em&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;If the current encryption-and-integrity algorithms are “null”, then this step is a no-operation.&lt;/li&gt;
+      &lt;li&gt;Otherwise, a MAC is appended, then some padding (depending on the encryption algorithm), and the result is encrypted.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;These steps again induce some expansion, which the SSL standard limits to 1024 extra bytes (combined with the maximum expansion from the compression step, this brings us to the 18432 bytes, to which we must add the 5-byte header).&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;The MAC is, usually, &lt;strong&gt;&lt;em&gt;&lt;u&gt;HMAC&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; with one of the usual hash functions (mostly &lt;em&gt;&lt;u&gt;MD5, SHA-1 or SHA-256&lt;/u&gt;&lt;/em&gt;)(with SSLv3, this is not the “true” HMAC but something very similar and, to the best of our knowledge, as secure as HMAC).&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;Encryption&lt;/em&gt;&lt;/strong&gt; will use either a &lt;em&gt;&lt;u&gt;block cipher in CBC mode&lt;/u&gt;&lt;/em&gt;, or the &lt;em&gt;&lt;u&gt;RC4 stream cipher&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+      &lt;li&gt;Crucially, the MAC is first computed and appended to the data, and the result is encrypted.
+        &lt;ul&gt;
+          &lt;li&gt;This is MAC-then-encrypt and it is actually not a very good idea. The MAC is computed over the concatenation of the (compressed) payload and a sequence number, so that an industrious attacker may not swap records.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;handshake&quot;&gt;Handshake:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;The handshake is a protocol which is played within the record protocol.&lt;/li&gt;
+  &lt;li&gt;Its goal is to &lt;em&gt;&lt;u&gt;establish the algorithms and keys which are to be used for the records&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;It consists of messages. Each handshake message begins with a &lt;em&gt;&lt;u&gt;four-byte header&lt;/u&gt;&lt;/em&gt;,
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;&lt;u&gt;one byte&lt;/u&gt;&lt;/em&gt; which describes the &lt;strong&gt;&lt;em&gt;message type&lt;/em&gt;&lt;/strong&gt;,&lt;/li&gt;
+      &lt;li&gt;then &lt;em&gt;&lt;u&gt;three bytes&lt;/u&gt;&lt;/em&gt; for the &lt;strong&gt;&lt;em&gt;message length&lt;/em&gt;&lt;/strong&gt; (big-endian convention).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The successive handshake messages are then sent with records tagged with the “handshake” type (the first byte of the header of each record has value 22).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Initially, client and server “agree upon” &lt;em&gt;&lt;u&gt;null encryption with no MAC&lt;/u&gt;&lt;/em&gt; and &lt;em&gt;&lt;u&gt;null compression&lt;/u&gt;&lt;/em&gt;. This means that the record they will first send will be sent as &lt;em&gt;&lt;u&gt;cleartext and unprotected&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;full-handshake&quot;&gt;Full Handshake:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;The full handshake looks like this: 
+&lt;img src=&quot;/assets/images/TLS-Handshake.png&quot; alt=&quot;TLS-Handshake&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;ClientHello&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;The first message of a handshake is a &lt;strong&gt;&lt;em&gt;&lt;u&gt;ClientHello&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.
+        &lt;ul&gt;
+          &lt;li&gt;It is the message by which the client states its intention to do some SSL.
+(Note that “client” is a symbolic role; it means “the party which speaks first”.)&lt;/li&gt;
+          &lt;li&gt;The ClientHello message contains:&lt;/li&gt;
+          &lt;li&gt;the &lt;strong&gt;&lt;em&gt;maximum protocol version&lt;/em&gt;&lt;/strong&gt; that the client wishes to support;&lt;/li&gt;
+          &lt;li&gt;the &lt;strong&gt;&lt;em&gt;client random&lt;/em&gt;&lt;/strong&gt; (32 bytes, out of which 28 are supposed to be generated with a &lt;em&gt;&lt;u&gt;cryptographically strong number generator&lt;/u&gt;&lt;/em&gt;);&lt;/li&gt;
+          &lt;li&gt;the &lt;strong&gt;&lt;em&gt;session ID&lt;/em&gt;&lt;/strong&gt; (in case the client wants to resume a session in an abbreviated handshake, see below);&lt;/li&gt;
+          &lt;li&gt;the list of &lt;strong&gt;&lt;em&gt;cipher suites&lt;/em&gt;&lt;/strong&gt; that the client knows of, &lt;em&gt;&lt;u&gt;ordered by client preference&lt;/u&gt;&lt;/em&gt;;&lt;/li&gt;
+          &lt;li&gt;the list of &lt;strong&gt;&lt;em&gt;compression algorithms&lt;/em&gt;&lt;/strong&gt; that the client knows of, &lt;em&gt;&lt;u&gt;ordered by client preference&lt;/u&gt;&lt;/em&gt;;&lt;/li&gt;
+          &lt;li&gt;some optional extensions.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;ServerHello&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;The server responds to the &lt;em&gt;&lt;u&gt;ClientHello&lt;/u&gt;&lt;/em&gt; with a &lt;strong&gt;&lt;em&gt;&lt;u&gt;ServerHello&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; which contains:
+        &lt;ul&gt;
+          &lt;li&gt;the &lt;strong&gt;&lt;em&gt;protocol version&lt;/em&gt;&lt;/strong&gt; that the client and server will use;&lt;/li&gt;
+          &lt;li&gt;the &lt;strong&gt;&lt;em&gt;server random&lt;/em&gt;&lt;/strong&gt; (32 bytes, with 28 random bytes);&lt;/li&gt;
+          &lt;li&gt;the &lt;strong&gt;&lt;em&gt;session ID&lt;/em&gt;&lt;/strong&gt; for this connection;&lt;/li&gt;
+          &lt;li&gt;the &lt;strong&gt;&lt;em&gt;cipher suite&lt;/em&gt;&lt;/strong&gt; that will be used;&lt;/li&gt;
+          &lt;li&gt;the &lt;strong&gt;&lt;em&gt;compression algorithm&lt;/em&gt;&lt;/strong&gt; that will be used;&lt;/li&gt;
+          &lt;li&gt;optionally, some extensions.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Besides &lt;em&gt;&lt;u&gt;ClientHello&lt;/u&gt;&lt;/em&gt; and &lt;em&gt;&lt;u&gt;ServerHello&lt;/u&gt;&lt;/em&gt;, the server sends a few other messages, which depend on the cipher suite and some other parameters:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;Certificate&lt;/em&gt;&lt;/strong&gt;: the server’s certificate, which contains its &lt;em&gt;&lt;u&gt;public key&lt;/u&gt;&lt;/em&gt;. This message is almost always sent, except if the cipher suite mandates a handshake without a certificate.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;ServerKeyExchange&lt;/em&gt;&lt;/strong&gt;: some extra values for the key exchange, if what is in the certificate is not sufficient. In particular, the &lt;strong&gt;&lt;em&gt;&lt;u&gt;DHE cipher suites&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; use an &lt;em&gt;&lt;u&gt;ephemeral Diffie-Hellman key exchange&lt;/u&gt;&lt;/em&gt;, which requires that message.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;CertificateRequest&lt;/em&gt;&lt;/strong&gt;: a message to request the client to also identify itself with a certificate of its own. This message contains the list of names of trust anchors (aka “root certificates”) that the server will use to validate the client certificate.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;ServerHelloDone&lt;/em&gt;&lt;/strong&gt;: a marker message (of length zero) which says that the server is finished, and the client should now talk.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The &lt;em&gt;&lt;u&gt;client&lt;/u&gt;&lt;/em&gt; must then respond with:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;Certificate&lt;/em&gt;&lt;/strong&gt;: the client certificate, if the server requested one. There are subtle variations between versions (with SSLv3, the client must omit this message if it does not have a certificate; with TLS 1.0+, in the same situation, it must send a Certificate message with an empty list of certificates).&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;ClientKeyExchange&lt;/em&gt;&lt;/strong&gt;: the client part of the actual key exchange (e.g. &lt;em&gt;&lt;u&gt;some random value encrypted with the server RSA key&lt;/u&gt;&lt;/em&gt;).&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;CertificateVerify&lt;/em&gt;&lt;/strong&gt;: a &lt;em&gt;&lt;u&gt;digital signature computed by the client over all previous handshake messages&lt;/u&gt;&lt;/em&gt;. This message is sent when the server requested a client certificate, and the client complied. &lt;em&gt;&lt;u&gt;This is how the client proves to the server that it really &quot;owns&quot; the public key&lt;/u&gt;&lt;/em&gt; which is encoded in the certificate it sent.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Initial Handshake is over by now.&lt;/li&gt;
+  &lt;li&gt;With following messages Client and Server will switch over to encrypted communication.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;ChangeCipherSpec&lt;/em&gt;&lt;/strong&gt;: Then the client sends a ChangeCipherSpec message, which is not a handshake message: it has its own record type, so it will be sent in a record of its own. &lt;u&gt;Its contents are purely symbolic&lt;/u&gt; (a single byte of value 1). This message marks the &lt;em&gt;&lt;u&gt;point at which the client switches to the newly negotiated cipher suite and keys&lt;/u&gt;&lt;/em&gt;. &lt;u&gt;The subsequent records from the client will then be&lt;/u&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;encrypted&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;Finished&lt;/em&gt;&lt;/strong&gt;: The Finished message is a &lt;strong&gt;&lt;em&gt;&lt;u&gt;cryptographic checksum&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; &lt;u&gt;computed over all previous handshake messages&lt;/u&gt; (from both the client and server). Since it is emitted after the ChangeCipherSpec, it is also &lt;em&gt;&lt;u&gt;covered by the&lt;/u&gt;&lt;/em&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;integrity check&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; and the &lt;strong&gt;&lt;em&gt;&lt;u&gt;encryption&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.
+        &lt;ul&gt;
+          &lt;li&gt;When the server receives &lt;strong&gt;Finished&lt;/strong&gt; message and verifies its contents, it obtains a proof that it has indeed talked to the same client all along. This message protects the handshake from alterations (the attacker cannot modify the handshake messages and still get the &lt;strong&gt;Finished&lt;/strong&gt; message right).&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The server finally responds with its own &lt;strong&gt;&lt;em&gt;ChangeCipherSpec&lt;/em&gt;&lt;/strong&gt; then &lt;strong&gt;&lt;em&gt;Finished&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;At that point, the handshake is finished, and the client and server may exchange application data (in encrypted records tagged as such).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;cipher-suite&quot;&gt;Cipher Suite:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;A cipher suite is a &lt;em&gt;&lt;u&gt;16-bit symbolic identifier&lt;/u&gt;&lt;/em&gt; for a set of cryptographic algorithms.&lt;/li&gt;
+  &lt;li&gt;For instance, the &lt;strong&gt;&lt;em&gt;TLS_RSA_WITH_AES_128_CBC_SHA&lt;/em&gt;&lt;/strong&gt; cipher suite has value 0x002F,
+    &lt;ul&gt;
+      &lt;li&gt;and means records use &lt;em&gt;&lt;u&gt;HMAC/SHA-1&lt;/u&gt;&lt;/em&gt; and &lt;em&gt;&lt;u&gt;AES encryption with a 128-bit key&lt;/u&gt;&lt;/em&gt;,&lt;/li&gt;
+      &lt;li&gt;and the key exchange is done by &lt;em&gt;&lt;u&gt;encrypting a random key&lt;/u&gt;&lt;/em&gt; with the server’s &lt;em&gt;&lt;u&gt;RSA public key&lt;/u&gt;&lt;/em&gt;”.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;the client suggests but the server chooses.&lt;/li&gt;
+  &lt;li&gt;The cipher suite is in the hands of the server. Courteous servers are supposed to follow the preferences of the client (if possible), but they can do otherwise and some actually do (e.g. as part of protection against BEAST).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;abbreviated-handshake&quot;&gt;Abbreviated Handshake:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;In the full handshake, the server sends a “session ID” (i.e. a bunch of up to 32 bytes) to the client.&lt;/li&gt;
+  &lt;li&gt;Later on, the &lt;em&gt;&lt;u&gt;client&lt;/u&gt;&lt;/em&gt; can come back and send the &lt;strong&gt;&lt;em&gt;&lt;u&gt;same session ID&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; as part of his ClientHello. This means that the &lt;em&gt;&lt;u&gt;client still remembers the cipher suite and keys from the previous handshake&lt;/u&gt;&lt;/em&gt; and would like to reuse these parameters.&lt;/li&gt;
+  &lt;li&gt;If the &lt;em&gt;&lt;u&gt;server&lt;/u&gt;&lt;/em&gt; also remembers the cipher suite and keys, then it copies that &lt;strong&gt;&lt;em&gt;&lt;u&gt;specific session ID&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; in its ServerHello, and then follows the abbreviated handshake:
+&lt;img src=&quot;/assets/images/TLS-abbreviated-handshake.png&quot; alt=&quot;Abbreviated Handshake&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;The abbreviated handshake is shorter: fewer messages, &lt;strong&gt;&lt;em&gt;&lt;u&gt;no asymmetric cryptography business&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, and, most importantly, &lt;strong&gt;reduced latency&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;A typical Web browser will open an SSL connection with a full handshake, then do abbreviated handshakes for all other connections to the same server: the other connections it opens in parallel, and also the subsequent connections to the same server.&lt;/li&gt;
+  &lt;li&gt;Indeed, typical &lt;em&gt;&lt;u&gt;Web servers will close connections after 15 seconds of inactivity&lt;/u&gt;&lt;/em&gt;, but they will &lt;em&gt;&lt;u&gt;remember sessions (the cipher suite and keys) for a lot longer&lt;/u&gt;&lt;/em&gt; (possibly for hours or even days).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;handshake-re-initiation&quot;&gt;Handshake Re-initiation:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;At any time, the client or the server can initiate a new handshake (the server can send a &lt;strong&gt;&lt;em&gt;&lt;u&gt;HelloRequest&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; message to trigger it; the client just sends a &lt;strong&gt;&lt;em&gt;&lt;u&gt;ClientHello&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;).&lt;/li&gt;
+  &lt;li&gt;A typical situation is the following:
+    &lt;ul&gt;
+      &lt;li&gt;An HTTPS server is configured to listen to SSL requests.&lt;/li&gt;
+      &lt;li&gt;A client connects and a handshake is performed.&lt;/li&gt;
+      &lt;li&gt;Once the handshake is done, the client sends its “applicative data”, which consists of an &lt;em&gt;&lt;u&gt;HTTP request&lt;/u&gt;&lt;/em&gt;. &lt;strong&gt;At that point&lt;/strong&gt; (and at that point only), the server learns the target path. Up to that point, the URL which the client wishes to reach was unknown to the server (the server might have been made aware of the target server name through a Server Name Indication SSL extension, but this does not include the path).&lt;/li&gt;
+      &lt;li&gt;Upon seeing the path, the server may learn that &lt;em&gt;&lt;u&gt;this is for a part of its data which is supposed to be accessed only by clients authenticated with certificates&lt;/u&gt;&lt;/em&gt;. But the server did not ask for a client certificate in the handshake (in particular because not-so-old Web browsers displayed freakish popups when asked for a certificate, in particular, if they did not have one, so a server would refrain from asking a certificate if it did not have good reason to believe that the client has one and knows how to use it).&lt;/li&gt;
+      &lt;li&gt;Therefore, the server triggers a new handshake, this time requesting a certificate.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="Security" /><category term="SSL" /><category term="TLS" /><category term="HTTPS" /><category term="Security" /><category term="SSL" /><category term="TLS" /><category term="HTTPS" /><summary type="html">History: First SSL prototypes came from Netscape when they were developing the first versions of their flagship browser, Netscape Navigator. SSL version 3 (SSLv3) was an enhanced protocol which still works today and is widely supported. The protocol has been standardized, with a new name in order to avoid legal issues; the new name is TLS. Three versions of TLS have been produced so far, each with its dedicated RFC: TLS 1.0, TLS 1.1 and TLS 1.2. SSLv3 is then 3.0 while the TLS versions are, respectively, 3.1, 3.2 and 3.3. Thus, TLS 1.0 is sometimes called SSL 3.1. (SSL 3.0 and TLS 1.0 differ by only some minute details.) TLS 1.1 and 1.2 are not yet widely supported SSLv3 and TLS 1.0 are supported “everywhere” (even IE 6.0 knows them). Context SSL aims at providing a secure bidirectional tunnel for arbitrary data. TCP in brief: TCP is the well-known protocol for sending data over the Internet. TCP works over the IP “packets” and provides a bidirectional tunnel for bytes; it works for every byte values and sends them into two streams which can operate simultaneously. TCP handles the hard work of splitting the data into packets, acknowledging them, reassembling them back into their right order, while removing duplicates and reemitting lost packets. From the point of view of the application which uses TCP, there are just two streams, and the packets are invisible; in particular, the streams are not split into “messages” (it is up to the application to take its own encoding rules if it wishes to have messages, and that’s precisely what HTTP does). Why SSL/TLS: TCP is reliable in the presence of “accidents”, i.e. transmission errors due to flaky hardware, network congestion, people with smartphones who walk out the range of a given base station, and other non-malicious events. However, an ill-intentioned individual (the “attacker”) with some access to the transport medium could read all the transmitted data and/or alter it intentionally, and TCP does not protect against that. Hence SSL. SSL assumes that it works over a TCP-like protocol, which provides a reliable stream; SSL does not implement reemission of lost packets and things like that. The attacker is supposed to be in power to disrupt communication completely in an unavoidable way (for instance, he can cut the cables) so SSL’s job is to: detect alterations (the attacker must not be able to alter the data silently); ensure data confidentiality (the attacker must not gain knowledge of the exchanged data). SSL fulfills these goals to a large (but not absolute) extent. Record Protocol: SSL is layered and the bottom layer is the record protocol. Whatever data is sent in an SSL tunnel is split into records. Over the wire (the underlying TCP socket or TCP-like medium), a record looks like this: HH V1:V2 L1:L2 data HH is a single byte which indicates the type of data in the record. Four types are defined: change_cipher_spec (20) alert (21) handshake (22) application_data (23) V1: V2 is the protocol version, over two bytes. For all versions currently defined, V1 has value 0x03, while V2 has value 0x00 for SSLv3, 0x01 for TLS 1.0 0x02 for TLS 1.1 0x03 for TLS 1.2 L1: L2 is the length of data, in bytes (big-endian convention is used: the length is 256*L1+L2). The total length of data cannot exceed 18432 bytes, but in practice, it cannot even reach that value. So a record has a five-byte header, followed by at most 18 kB of data. The data is where symmetric encryption and integrity checks are applied. When a record is emitted, both sender and receiver are supposed to agree on which cryptographic algorithms are currently applied, and with which keys; this agreement is obtained through the handshake protocol. Compression, if any, is also applied at that point. Record protocol works like this: Initially, there are some bytes to transfer; these are application data or some other kind of bytes. This payload consists of at most 16384 bytes, but possibly less (a payload of length 0 is legal, but it turns out that Internet Explorer 6.0 does not like that at all). The payload is then compressed with whatever compression algorithm is currently agreed upon. Compression is *stateful* and thus may depend upon the contents of previous records. In practice, compression is either “null” (no compression at all) or “Deflate” (RFC 3749), the latter being currently courteously but firmly shown the exit door in the Web context, due to the recent CRIME attack. Compression aims at shortening data, but it must necessarily expand it slightly in some unfavorable situations (due to the pigeonhole principle). SSL allows for an expansion of at most 1024 bytes. Of course, null compression never expands (but never shortens either); Deflate will expand by at most 10 bytes if the implementation is any good. The compressed payload is then protected against alterations and encrypted. If the current encryption-and-integrity algorithms are “null”, then this step is a no-operation. Otherwise, a MAC is appended, then some padding (depending on the encryption algorithm), and the result is encrypted. These steps again induce some expansion, which the SSL standard limits to 1024 extra bytes (combined with the maximum expansion from the compression step, this brings us to the 18432 bytes, to which we must add the 5-byte header). The MAC is, usually, HMAC with one of the usual hash functions (mostly MD5, SHA-1 or SHA-256)(with SSLv3, this is not the “true” HMAC but something very similar and, to the best of our knowledge, as secure as HMAC). Encryption will use either a block cipher in CBC mode, or the RC4 stream cipher. Crucially, the MAC is first computed and appended to the data, and the result is encrypted. This is MAC-then-encrypt and it is actually not a very good idea. The MAC is computed over the concatenation of the (compressed) payload and a sequence number, so that an industrious attacker may not swap records. Handshake: The handshake is a protocol which is played within the record protocol. Its goal is to establish the algorithms and keys which are to be used for the records. It consists of messages. Each handshake message begins with a four-byte header, one byte which describes the message type, then three bytes for the message length (big-endian convention). The successive handshake messages are then sent with records tagged with the “handshake” type (the first byte of the header of each record has value 22). Initially, client and server “agree upon” null encryption with no MAC and null compression. This means that the record they will first send will be sent as cleartext and unprotected. Full Handshake: The full handshake looks like this: ClientHello: The first message of a handshake is a ClientHello. It is the message by which the client states its intention to do some SSL. (Note that “client” is a symbolic role; it means “the party which speaks first”.) The ClientHello message contains: the maximum protocol version that the client wishes to support; the client random (32 bytes, out of which 28 are supposed to be generated with a cryptographically strong number generator); the session ID (in case the client wants to resume a session in an abbreviated handshake, see below); the list of cipher suites that the client knows of, ordered by client preference; the list of compression algorithms that the client knows of, ordered by client preference; some optional extensions. ServerHello: The server responds to the ClientHello with a ServerHello which contains: the protocol version that the client and server will use; the server random (32 bytes, with 28 random bytes); the session ID for this connection; the cipher suite that will be used; the compression algorithm that will be used; optionally, some extensions. Besides ClientHello and ServerHello, the server sends a few other messages, which depend on the cipher suite and some other parameters: Certificate: the server’s certificate, which contains its public key. This message is almost always sent, except if the cipher suite mandates a handshake without a certificate. ServerKeyExchange: some extra values for the key exchange, if what is in the certificate is not sufficient. In particular, the DHE cipher suites use an ephemeral Diffie-Hellman key exchange, which requires that message. CertificateRequest: a message to request the client to also identify itself with a certificate of its own. This message contains the list of names of trust anchors (aka “root certificates”) that the server will use to validate the client certificate. ServerHelloDone: a marker message (of length zero) which says that the server is finished, and the client should now talk. The client must then respond with: Certificate: the client certificate, if the server requested one. There are subtle variations between versions (with SSLv3, the client must omit this message if it does not have a certificate; with TLS 1.0+, in the same situation, it must send a Certificate message with an empty list of certificates). ClientKeyExchange: the client part of the actual key exchange (e.g. some random value encrypted with the server RSA key). CertificateVerify: a digital signature computed by the client over all previous handshake messages. This message is sent when the server requested a client certificate, and the client complied. This is how the client proves to the server that it really &quot;owns&quot; the public key which is encoded in the certificate it sent. Initial Handshake is over by now. With following messages Client and Server will switch over to encrypted communication. ChangeCipherSpec: Then the client sends a ChangeCipherSpec message, which is not a handshake message: it has its own record type, so it will be sent in a record of its own. Its contents are purely symbolic (a single byte of value 1). This message marks the point at which the client switches to the newly negotiated cipher suite and keys. The subsequent records from the client will then be encrypted. Finished: The Finished message is a cryptographic checksum computed over all previous handshake messages (from both the client and server). Since it is emitted after the ChangeCipherSpec, it is also covered by the integrity check and the encryption. When the server receives Finished message and verifies its contents, it obtains a proof that it has indeed talked to the same client all along. This message protects the handshake from alterations (the attacker cannot modify the handshake messages and still get the Finished message right). The server finally responds with its own ChangeCipherSpec then Finished. At that point, the handshake is finished, and the client and server may exchange application data (in encrypted records tagged as such). Cipher Suite: A cipher suite is a 16-bit symbolic identifier for a set of cryptographic algorithms. For instance, the TLS_RSA_WITH_AES_128_CBC_SHA cipher suite has value 0x002F, and means records use HMAC/SHA-1 and AES encryption with a 128-bit key, and the key exchange is done by encrypting a random key with the server’s RSA public key”. the client suggests but the server chooses. The cipher suite is in the hands of the server. Courteous servers are supposed to follow the preferences of the client (if possible), but they can do otherwise and some actually do (e.g. as part of protection against BEAST). Abbreviated Handshake: In the full handshake, the server sends a “session ID” (i.e. a bunch of up to 32 bytes) to the client. Later on, the client can come back and send the same session ID as part of his ClientHello. This means that the client still remembers the cipher suite and keys from the previous handshake and would like to reuse these parameters. If the server also remembers the cipher suite and keys, then it copies that specific session ID in its ServerHello, and then follows the abbreviated handshake: The abbreviated handshake is shorter: fewer messages, no asymmetric cryptography business, and, most importantly, reduced latency. A typical Web browser will open an SSL connection with a full handshake, then do abbreviated handshakes for all other connections to the same server: the other connections it opens in parallel, and also the subsequent connections to the same server. Indeed, typical Web servers will close connections after 15 seconds of inactivity, but they will remember sessions (the cipher suite and keys) for a lot longer (possibly for hours or even days). Handshake Re-initiation: At any time, the client or the server can initiate a new handshake (the server can send a HelloRequest message to trigger it; the client just sends a ClientHello). A typical situation is the following: An HTTPS server is configured to listen to SSL requests. A client connects and a handshake is performed. Once the handshake is done, the client sends its “applicative data”, which consists of an HTTP request. At that point (and at that point only), the server learns the target path. Up to that point, the URL which the client wishes to reach was unknown to the server (the server might have been made aware of the target server name through a Server Name Indication SSL extension, but this does not include the path). Upon seeing the path, the server may learn that this is for a part of its data which is supposed to be accessed only by clients authenticated with certificates. But the server did not ask for a client certificate in the handshake (in particular because not-so-old Web browsers displayed freakish popups when asked for a certificate, in particular, if they did not have one, so a server would refrain from asking a certificate if it did not have good reason to believe that the client has one and knows how to use it). Therefore, the server triggers a new handshake, this time requesting a certificate.</summary></entry></feed>
