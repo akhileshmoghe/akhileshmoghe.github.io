@@ -24,8 +24,8 @@ Somewhere in 2017-18, I experienced what I would refer as a my own taste of *<u>
 
 __*Eureka...*__<img class="circle" width="30" height="30" src="assets/images/eureka_smiley_3.jpeg" />
 &nbsp;&nbsp; Some introspection led me to __*<u>Internet of Things</u>*__, as my career interest and now here I am, for last <u>3 years, exclusively working on IoT projects</u>, focusing on the <u>Architecture-Design-Implementation</u> of __*IoT/Edge*__ Devices/__*Cloud*__ applications for <u>devices, data & software updates management</u>. In these years, me with my team, successfully delivered 3 projects, based on __*AWS IoT*__, __*Azure IoT*__, __*Ayla IoT*__ Networks, __*Mender.io*__, cloud platforms on __*Nvidia Jetson*__ + __*x86 CCB*__ + __*STM32*__ devices.
-In these projects, I have been working on and getting a taste of every aspect of IoT, right from <u>north-side of</u> __*Bootloader on MCUs*__ <u>to the south-side of</u> __*Cloud Applications*__, from being a __*device-to-cloud communication*__ application developer to being a __*Systems Engineer*__ working on <u>Board bring-ups, OS/Firmware flash & Updates</u>.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [<u>detailed CV here...</u>](cv.html)
+In these projects, I have been working on and getting a taste of every aspect of IoT, right from <u>north-side of</u> __*Bootloader on MCUs*__ <u>to the south-side of</u> __*Cloud Applications*__, from being a __*device-to-cloud communication*__ application developer to being a __*Systems Engineer*__ working on <u>Board bring-ups, OS/Firmware flash & Updates</u>.\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [<u>detailed CV here...</u>](cv.html)
 
 #### *What's this BlogSite?*
 
@@ -45,9 +45,10 @@ This BlogSite is my beginning and the __*<u>Journey of Me Myself as an Enterpris
 
 While this website is mostly meant as a journal for myself, it is also a portfolio for future collaborators/recruiters. If you want to get in touch for advice/collaborations, job offers or just to say hi, the quicket way is by email or Twitter. The links are at the bottom of the page.
 
-Happy exploring!!!
-- Akhilesh
+Happy exploring!!!\
+__*<u>Akhilesh</u>*__
 
+&nbsp;
 #### Disclaimer:
 The blogs on this site are mostly as a journal for myself, and it has been put in public domain to help someone interested.
 The contents for muliple articles are sourced from various forums, blogs, technical writeups/documentations.

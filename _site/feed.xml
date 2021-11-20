@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-20T10:24:10+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Every THING is Internet of Things</title><subtitle>A Journey in the direction of ---&gt; IoT ---&gt; Edge ---&gt; Cloud ---&gt; DevOps ---&gt; ML ---&gt; AI
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-20T10:46:09+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Every THING is Internet of Things</title><subtitle>A Journey in the direction of ---&gt; IoT ---&gt; Edge ---&gt; Cloud ---&gt; DevOps ---&gt; ML ---&gt; AI
 </subtitle><author><name>Akhilesh Moghe</name><email>akhileshmoghe@live.com</email></author><entry><title type="html">AWS Greengrass Service V2: a Service to build, deploy and manage IoT applications on Edge Devices</title><link href="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/12/AWS-Greengrass.html" rel="alternate" type="text/html" title="AWS Greengrass Service V2: a Service to build, deploy and manage IoT applications on Edge Devices" /><published>2021-11-12T12:33:22+05:30</published><updated>2021-11-12T12:33:22+05:30</updated><id>http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/12/AWS-Greengrass</id><content type="html" xml:base="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/12/AWS-Greengrass.html">&lt;p&gt;This write-up will only focus on AWS Sagemaker ML service with respect to ML model deployment to Edge devices and Cloud.&lt;/p&gt;
 
 &lt;h2 id=&quot;ml-inference-on-greengrass-devices&quot;&gt;ML Inference on Greengrass devices&lt;/h2&gt;
@@ -517,8 +517,8 @@ can be deleted from the outbound queue.&lt;br /&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;retained-messages-clean-session-and-qos-inter-related-behavior&quot;&gt;Retained messages, Clean Session and QoS inter-related behavior&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/images/mqtt/RetainedMessages_CleanSession_QoS.png&quot; alt=&quot;Retained messages, Clean Session and QoS inter-related behavior&quot; /&gt;
+&lt;h3 id=&quot;retained-messages-clean-session-and-qos-inter-related-behavior&quot;&gt;Retained messages, Clean Session and QoS inter-related behavior&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/mqtt/RetainedMessages_CleanSession_QoS.png&quot; alt=&quot;Retained messages, Clean Session and QoS inter-related behavior&quot; /&gt;&lt;br /&gt;
   Reference: &lt;a href=&quot;http://www.steves-internet-guide.com/mqtt-retained-messages-example/&quot;&gt;MQTT Retained Messages Explained&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;wills&quot;&gt;Wills&lt;/h2&gt;

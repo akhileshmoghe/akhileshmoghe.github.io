@@ -1,0 +1,51 @@
+I"�<p><em>Hello there, welcome to this BlogSite…!!!</em></p>
+
+<h4 id="who-am-i"><em>Who am I?</em></h4>
+
+<figure class="aligncenter circle image--lg">
+	<img align="left" width="250" height="250" src="assets/images/logo/Akhilesh_Moghe.jpeg" style="padding-right: 5px" />
+</figure>
+
+<p>I’m an <em>Agile, Result-oriented</em> Engineer from Nagpur, currently living in the Pune, India. I have completed my graduation in <strong>Electronics and Telecommunications <em>(B.E.)</em></strong> from <em>YCCE, RTMNU Nagpur University</em>. After graduation, I completed a <strong>Post Graduate Diploma program in <em>Embedded Systems</em></strong> from <em>CDAC, Hyderabad</em>, before joining the IT industry with <em><strong>Persistent Systems</strong></em>.<br />
+In my career, spanning over a decade now with Persistent Systems I am steadily progressing from being a Software Engineer in 2011, to <strong><em><u>Senior Engineering Lead</u></em></strong> <em>in 2021</em>, gathering experiences in technology domains like <strong>Telecom-Multimedia</strong>, <em>Enterprise Content Management</em>, <strong><em><u>Internet of Things</u></em></strong>, <strong>Cloud</strong>.</p>
+
+<h4 id="why-do-i-do-whatever-i-do"><em>Why do I do, Whatever I do?</em></h4>
+
+<p>Somewhere in 2017-18, I experienced what I would refer as a my own taste of <em><u>Mid-Life Crisis</u></em>, more of an <em>Identity Crisis</em>. I was doing fine in day to day professional tasks, but had very little sense of where my career was heading. I was dissatisfied, unhappy by just being a developer. I could easily conclude, I cannot just be a developer, hoping around some programming languages, switching projects/jobs. I was in search of some Domain/Technology can be <strong><em>my identity</em></strong>, <strong><em>my expertise</em></strong>, which I will enjoy to put my heart in it, which will be relevant to my previous experiences/studies and will be relevant to my future aspirations.</p>
+
+<p><strong><em>Eureka…</em></strong><img class="circle" width="30" height="30" src="assets/images/eureka_smiley_3.jpeg" />
+   Some introspection led me to <strong><em><u>Internet of Things</u></em></strong>, as my career interest and now here I am, for last <u>3 years, exclusively working on IoT projects</u>, focusing on the <u>Architecture-Design-Implementation</u> of <strong><em>IoT/Edge</em></strong> Devices/<strong><em>Cloud</em></strong> applications for <u>devices, data &amp; software updates management</u>. In these years, me with my team, successfully delivered 3 projects, based on <strong><em>AWS IoT</em></strong>, <strong><em>Azure IoT</em></strong>, <strong><em>Ayla IoT</em></strong> Networks, <strong><em>Mender.io</em></strong>, cloud platforms on <strong><em>Nvidia Jetson</em></strong> + <strong><em>x86 CCB</em></strong> + <strong><em>STM32</em></strong> devices.
+In these projects, I have been working on and getting a taste of every aspect of IoT, right from <u>north-side of</u> <strong><em>Bootloader on MCUs</em></strong> <u>to the south-side of</u> <strong><em>Cloud Applications</em></strong>, from being a <strong><em>device-to-cloud communication</em></strong> application developer to being a <strong><em>Systems Engineer</em></strong> working on <u>Board bring-ups, OS/Firmware flash &amp; Updates</u>.
+                                                                                                              <a href="cv.html"><u>detailed CV here...</u></a></p>
+
+<h4 id="whats-this-blogsite"><em>What’s this BlogSite?</em></h4>
+
+<p>Ok, Again, something about myself…<br />
+I have an habit, you can say a <em>Good habit</em> of <u>making notes, writing down</u> whatever I am studying. Few years before, I was reborn as a Digital human-being and started making notes in text/word editors.
+Also another Good habit of me is <u>Pinning down references</u>, to recall where did I leaned or read that.
+Pinning references have been immensely useful during the dilema of was that really suppose to work that way, or when situation arises where we need to back something with evidence.
+But over the years, I have got a huge repository of such text/ms-word/bookmarks, which is getting messy to be maintained offline, and the real pain is to search through this, kind of <strong><em>my-own digital book-shelf</em></strong>.
+What to do about it?</p>
+
+<p>Another reason,<br />
+Couple of years back, I came across a new concept <a href="https://www.amazon.in/Emergence-Enterprise-Blueprint-Leadership-Century/dp/1619845091"><strong><em><u>Me Enterprise</u></em></strong></a> through a seminar in my office itself. The speaker was also the author of the book with same title.
+This concept is about focusing on yourself, about treating yourself some kind of an organization, or an enterprise.
+It emphasizes on the fact that In today’s world, <em><u>we are the owner, creator and nourisher of our own life</u></em>, specifically our professional life. We ourself have to sell ourself in the market.
+Today, everything is Digital, everything has an online presence, then how can we IT, Software, Technology workers be left behind. We need to have our own presence here, we need to create a brand of ourself, and market it. That’s Me Enterprise.
+This BlogSite is my beginning and the <strong><em><u>Journey of Me Myself as an Enterprise</u></em></strong>.</p>
+
+<p>While this website is mostly meant as a journal for myself, it is also a portfolio for future collaborators/recruiters. If you want to get in touch for advice/collaborations, job offers or just to say hi, the quicket way is by email or Twitter. The links are at the bottom of the page.</p>
+
+<p>Happy exploring!!!</p>
+<ul>
+  <li>Akhilesh
+\</li>
+</ul>
+
+<h4 id="disclaimer">Disclaimer:</h4>
+<p>The blogs on this site are mostly as a journal for myself, and it has been put in public domain to help someone interested.
+The contents for muliple articles are sourced from various forums, blogs, technical writeups/documentations.
+I have been and will always try to add references to the source articles, but there can be instances where I could not recall the original source of material.
+The rights of the contents, partial or full will always be with their original owners.</p>
+
+:ET
