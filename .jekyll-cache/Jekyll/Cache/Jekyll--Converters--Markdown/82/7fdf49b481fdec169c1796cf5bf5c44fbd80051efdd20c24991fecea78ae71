@@ -1,0 +1,27 @@
+I"¨<p>This write-up will explain different <strong><em><u>GRASP Patterns</u></em></strong>, explained in book: <a href="https://www.amazon.com/gp/product/0131489062/ref=as_li_qf_asin_il_tl?ie=UTF8&amp;tag=fluentcpp-20&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=0131489062&amp;linkId=43cfc4d0a6ea922ef663317e4f91db85">Applying UML and Patterns</a>, which are more important in day to day programming life than the whole lot of GoF design patterns.
+GRASP is a set of 9 fundamental principles in OOPs design and responsibility assignment.
+These patterns solve some software problem common to many software development projects.</p>
+
+<h2 id="information-expert-information-hiding">Information Expert (Information Hiding)</h2>
+<ul>
+  <li><em><u>Problem</u></em> it solves: How will you assign a responsibility to a module/class?</li>
+  <li><em><u>Solution</u></em>: Assign responsibility to the class that has the information needed to fulfill it.</li>
+  <li>Used to determine where to delegate responsibilities such as methods, computed fields, and so on.</li>
+  <li><em><u>If you have an operation to do, and this operations needs inputs, then you should consider putting the responsibility of carrying out this operation in the class that contains the inputs for it</u></em>.</li>
+  <li>Helps keeping the data local, i.e. <strong><em>Data Encapsulation</em></strong>.</li>
+  <li>Reduces relationships between the classes. (Class is self-sufficient in terms of data to carryout itâ€™s tasks.)</li>
+</ul>
+
+<h2 id="creator">Creator</h2>
+<ul>
+  <li>The creation of objects is one of the most common activities in an object-oriented system.</li>
+  <li>Which class is responsible for creating objects is a fundamental property of the relationship between objects of particular classes.</li>
+  <li></li>
+</ul>
+
+<h5 id="reference">Reference</h5>
+<ul>
+  <li><a href="https://www.cplusplus.com/reference/forward_list/forward_list/">std::forward_list</a></li>
+</ul>
+
+:ET

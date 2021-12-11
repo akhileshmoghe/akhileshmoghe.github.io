@@ -5,6 +5,8 @@ titles:
   en      : &EN       Akhilesh Moghe
   # @end locale config
 show_subscribe: true
+sidebar:
+  nav: personal-info
 ---
 
 *Hello there, welcome to this BlogSite...!!!*

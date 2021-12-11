@@ -1,29 +1,27 @@
 header:
   - titles:
-      en      : &EN       Archive
+      en      : &EN       Articles
     url: /archive.html
     
-  - titles:
-      en      : &EN       CV
-    url: /cv.html
+#  - titles:
+#      en      : &EN       CV
+#    url: /cv.html
 
   - titles:
       en      : &EN       About Me
     url: /about.html
     
-docs-en:
-  - title:      Start
+personal-info:
+  - title:      About Me
     children:
-      - title:  Quick Start
-        url:    /docs/en/quick-start
-      - title:  Structure
-        url:    /docs/en/structure
-  - title:      Customization
-    children:
-      - title:  Configuration
-        url:    /docs/en/configuration
-      - title:  Navigation
-        url:    /docs/en/navigation
+      - title:  CV
+        url:    cv
+      - title:  Skills
+        url:    technical-skills
+      - title:  Experience
+        url:    experience
+      - title:  Recognitions
+        url:    awards
 
 docs-hz:
   - title:      Start-hz

@@ -1,0 +1,406 @@
+I"}<h1 id="overview">Overview</h1>
+<p>This blog is about SSL or TLS communication, it explains in depth about the <em><u>Protocols</u></em> used, <em><u>Handshake</u></em> mechanism. Also the respective responsibilities of TCP and TLS protocols in a <em><u>Secure</u></em>, <em><u>Reliable</u></em> communication.</p>
+
+<h2 id="history">History:</h2>
+<ul>
+  <li>First SSL prototypes came from Netscape when they were developing the first versions of their flagship browser, Netscape Navigator.</li>
+  <li><strong><em><u>SSL version 3</u></em></strong> (SSLv3) was an enhanced protocol which <u>still works today</u> and is widely supported. The protocol has been standardized, with a new name in order to avoid legal issues; the new name is <strong><em><u>TLS</u></em></strong>.</li>
+  <li>Four versions of TLS have been produced so far, each with its dedicated RFC: TLS 1.0, TLS 1.1, TLS 1.2 and TLS 1.3.</li>
+  <li>TLS 1.0 and 1.1 are now deprecated in 2020.</li>
+  <li>TLS 1.2 removed the backward compatibility with SSL such that TLS sessions never negotiate the use of Secure Sockets Layer (SSL) version 2.0.
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_1.2">TLS 1.2 Improvements</a></li>
+      <li>AWS IoT still supports TLS 1.2 only.</li>
+    </ul>
+  </li>
+  <li>TLS 1.3 is fully supported by Firefox, Chrome, wolfSSL.
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_1.3">TLS 1.3 Improvements</a>
+        <ul>
+          <li><em>Mandating perfect forward secrecy, by means of using ephemeral keys during the (EC)DH key agreement</em></li>
+          <li><em>Prohibiting SSL or RC4 negotiation for backwards compatibility</em></li>
+          <li><em>Encrypting all handshake messages after the ServerHello</em></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="tcp-and-tls">TCP and TLS</h2>
+<ul>
+  <li>TCP assumes the responsibility of Reliable data communication.</li>
+  <li>SSL/TLS aims at providing a Secure bidirectional tunnel for arbitrary data.</li>
+</ul>
+
+<h3 id="tcp-in-brief">TCP in brief:</h3>
+<ul>
+  <li>TCP is the well-known protocol for sending data over the Internet.</li>
+  <li>TCP works over the IP “packets” and provides a bidirectional tunnel for bytes; it works for every byte values and sends them into two streams which can operate simultaneously.</li>
+  <li>TCP handles the hard work of splitting the data into packets, acknowledging them, reassembling them back into their right order, while removing duplicates and reemitting lost packets.</li>
+  <li>From the point of view of the application which uses TCP, there are just two streams, and the packets are invisible; in particular, the streams are not split into “messages” (it is up to the application to take its own encoding rules if it wishes to have messages, and that’s precisely what HTTP does).</li>
+</ul>
+
+<h3 id="why-ssltls">Why SSL/TLS:</h3>
+<ul>
+  <li>TCP is reliable in the presence of “accidents”, i.e. transmission errors due to flaky hardware, network congestion, people with smartphones who walk out the range of a given base station, and other non-malicious events.</li>
+  <li>However, an ill-intentioned individual (the “attacker”) with some access to the transport medium could read all the transmitted data and/or alter it intentionally, and TCP does not protect against that.</li>
+  <li>Hence SSL.</li>
+  <li>SSL assumes that it works over a TCP-like protocol, which provides a reliable stream;</li>
+  <li>SSL does not implement reemission of lost packets and things like that. The attacker is supposed to be in power to disrupt communication completely in an unavoidable way (for instance, he can cut the cables)</li>
+  <li>so SSL’s job is to:
+    <ul>
+      <li>detect alterations (the attacker must not be able to alter the data silently);</li>
+      <li>ensure data confidentiality (the attacker must not gain knowledge of the exchanged data).</li>
+      <li>SSL fulfills these goals to a large (but not absolute) extent.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="record-protocol">Record Protocol:</h2>
+<ul>
+  <li>SSL is layered and the <u>bottom layer</u> is the <strong><em>record protocol</em></strong>.</li>
+  <li>Whatever data is sent in an SSL tunnel is split into records.</li>
+  <li>Over the wire (the underlying TCP socket or TCP-like medium), a record looks like this:<br />
+<code class="language-plaintext highlighter-rouge">HH V1:V2 L1:L2 data</code>
+    <ul>
+      <li><em><u>HH</u></em> is a <em>single byte</em> which indicates <u>the type of data</u> in the record.
+        <ul>
+          <li>Four types are defined:
+            <ul>
+              <li><strong><em>change_cipher_spec</em></strong> (20)</li>
+              <li><strong><em>alert</em></strong> (21)</li>
+              <li><strong><em>handshake</em></strong> (22)</li>
+              <li><strong><em>application_data</em></strong> (23)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><em><u>V1: V2</u></em> is the <strong><em>protocol version</em></strong>, over <em>two bytes</em>.
+For all versions currently defined,
+        <ul>
+          <li><u>V1 has value 0x03</u>, while <u>V2 has value 0x00</u> for <strong><em>SSLv3</em></strong>,</li>
+          <li>0x01 for TLS 1.0</li>
+          <li>0x02 for TLS 1.1</li>
+          <li>0x03 for TLS 1.2</li>
+        </ul>
+      </li>
+      <li><em><u>L1: L2</u></em> is the <strong><em>length of data</em></strong>, in <em>bytes</em> (big-endian convention is used: the length is 256*L1+L2).
+        <ul>
+          <li>The <u>total length of data cannot exceed 18432 bytes</u>, but in practice, it cannot even reach that value.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>So a record has a <em><u>five-byte header</u></em>, followed by at most <em><u>18 kB of data</u></em>.</li>
+  <li>The data is where <em><u>symmetric encryption</u></em> and <em><u>integrity checks</u></em> are applied.</li>
+  <li>When a record is emitted, both sender and receiver are supposed to agree on which cryptographic algorithms are currently applied, and with which keys; this agreement is obtained through the <em>handshake protocol</em>. <em><u>Compression</u></em>, if any, is also applied at that point.</li>
+</ul>
+
+<h3 id="record-protocol-works-like-this">Record protocol works like this:</h3>
+<ul>
+  <li>Initially, there are some bytes to transfer; these are application data or some other kind of bytes. This <em><u>payload consists of at most 16384 bytes</u></em>, but possibly less (a payload of length 0 is legal, but it turns out that Internet Explorer 6.0 does not like that at all).</li>
+  <li>The <em><u>payload is then compressed</u></em> with whatever compression algorithm is currently agreed upon.
+    <ul>
+      <li><u>Compression is *stateful* and thus may depend upon the contents of previous records.</u></li>
+      <li>In practice, compression is either “null” (no compression at all) or “Deflate” (RFC 3749),
+        <ul>
+          <li>the latter being currently courteously but firmly shown the exit door in the Web context, due to the recent CRIME attack.</li>
+        </ul>
+      </li>
+      <li>Compression aims at shortening data, but it must necessarily expand it slightly in some unfavorable situations (due to the pigeonhole principle).</li>
+      <li>SSL allows for an expansion of at most 1024 bytes. Of course, null compression never expands (but never shortens either); Deflate will expand by at most 10 bytes if the implementation is any good.</li>
+    </ul>
+  </li>
+  <li>The compressed payload is then protected against alterations and <em><u>encrypted</u></em>.
+    <ul>
+      <li>If the current encryption-and-integrity algorithms are “null”, then this step is a no-operation.</li>
+      <li>Otherwise, a MAC is appended, then some padding (depending on the encryption algorithm), and the result is encrypted.</li>
+      <li>
+        <p>These steps again induce some expansion, which the SSL standard limits to 1024 extra bytes (combined with the maximum expansion from the compression step, this brings us to the 18432 bytes, to which we must add the 5-byte header).</p>
+      </li>
+      <li>The MAC is, usually, <strong><em><u>HMAC</u></em></strong> with one of the usual hash functions (mostly <em><u>MD5, SHA-1 or SHA-256</u></em>)(with SSLv3, this is not the “true” HMAC but something very similar and, to the best of our knowledge, as secure as HMAC).</li>
+      <li><strong><em>Encryption</em></strong> will use either a <em><u>block cipher in CBC mode</u></em>, or the <em><u>RC4 stream cipher</u></em>.</li>
+      <li>Crucially, the MAC is first computed and appended to the data, and the result is encrypted.
+        <ul>
+          <li>This is MAC-then-encrypt and it is actually not a very good idea. The MAC is computed over the concatenation of the (compressed) payload and a sequence number, so that an industrious attacker may not swap records.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="handshake">Handshake:</h2>
+<ul>
+  <li>The handshake is a protocol which is played within the record protocol with <em>content type = 22</em>.</li>
+  <li>Its goal is to <em><u>establish the algorithms and keys which are to be used for the records</u></em>.</li>
+  <li>It consists of messages. Each handshake message begins with a <em><u>four-byte header</u></em>,
+    <ul>
+      <li><em><u>one byte</u></em> which describes the <strong><em>message type</em></strong>,</li>
+      <li>then <em><u>three bytes</u></em> for the <strong><em>message length</em></strong> (big-endian convention).</li>
+    </ul>
+  </li>
+  <li>
+    <p>The successive handshake messages are then sent with records tagged with the “handshake” type (the first byte of the header of each record has value 22(~content type)).</p>
+  </li>
+  <li>Initially, client and server “agree upon” <em><u>null encryption with no MAC</u></em> and <em><u>null compression</u></em>. This means that the record they will first send will be sent as <em><u>cleartext and unprotected</u></em>.</li>
+</ul>
+
+<h3 id="full-handshake-mutual-authentication">Full Handshake (Mutual Authentication)</h3>
+<ul>
+  <li>
+    <p>The full handshake looks like this: 
+<img src="/assets/images/TLS-Handshake.png" alt="TLS-Handshake" /></p>
+  </li>
+  <li><strong><em><u>ClientHello</u></em></strong>:
+    <ul>
+      <li>The first message of a handshake is a <strong><em><u>ClientHello</u></em></strong>.
+        <ul>
+          <li>It is the message by which the client states its intention to do some SSL.
+(Note that “client” is a symbolic role; it means “the party which speaks first”.)</li>
+          <li>The ClientHello message contains:</li>
+          <li>the <strong><em>Highest protocol version</em></strong> that the client wishes to support;</li>
+          <li>the <strong><em>client random</em></strong> (32 bytes, out of which 28 are supposed to be generated with a <em><u>cryptographically strong number generator</u></em>);</li>
+          <li>the <strong><em>session ID</em></strong> (in case the client wants to resume a session in an abbreviated handshake, see below);</li>
+          <li>the list of <strong><em>cipher suites</em></strong> that the client knows of, <em><u>ordered by client preference</u></em>;</li>
+          <li>the list of <strong><em>compression algorithms</em></strong> that the client knows of, <em><u>ordered by client preference</u></em>;</li>
+          <li>some optional extensions.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong><em><u>ServerHello</u></em></strong>:
+    <ul>
+      <li>The server responds to the <em><u>ClientHello</u></em> with a <strong><em><u>ServerHello</u></em></strong> which contains:
+        <ul>
+          <li>the <strong><em>protocol version</em></strong> that the client and server will use;</li>
+          <li>the <strong><em>server random</em></strong> (32 bytes, with 28 random bytes);</li>
+          <li>the <strong><em>session ID</em></strong> for this connection;</li>
+          <li>the <strong><em>cipher suite</em></strong> that will be used;</li>
+          <li>the <strong><em>compression algorithm</em></strong> that will be used;</li>
+          <li>optionally, some extensions.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Besides <em><u>ClientHello</u></em> and <em><u>ServerHello</u></em>, the server sends a few other messages, which depend on the cipher suite and some other parameters:</li>
+  <li><strong><em><u>Certificate</u></em></strong>: the server’s certificate, which contains its <em><u>public key</u></em>. This message is almost always sent, except if the cipher suite mandates a handshake without a certificate.</li>
+  <li><strong><em><u>ServerKeyExchange</u></em></strong>: some extra values for the key exchange, if what is in the certificate is not sufficient. In particular, the <strong><em><u>DHE cipher suites</u></em></strong> like <strong><em><u>DHE</u></em></strong> &amp; <strong><em><u>ECDHE</u></em></strong> use an <em><u>ephemeral Diffie-Hellman key exchange</u></em>, which requires that message.</li>
+  <li><strong><em><u>CertificateRequest</u></em></strong>: a message to request the client to also identify itself with a certificate of its own. This message contains the list of names of trust anchors (aka “root certificates”) that the server will use to validate the client certificate.</li>
+  <li><strong><em><u>ServerHelloDone</u></em></strong>: a marker message (of length zero) which says that the server is finished, and the client should now talk.</li>
+  <li>The <em><u>client</u></em> must then respond with:</li>
+  <li><strong><em><u>Certificate</u></em></strong>: the client certificate, if the server requested one. There are subtle variations between versions (with SSLv3, the client must omit this message if it does not have a certificate; with TLS 1.0+, in the same situation, it must send a Certificate message with an empty list of certificates).</li>
+  <li><strong><em><u>ClientKeyExchange</u></em></strong>: the client part of the actual key exchange (e.g. <em><u>some random value (~PreMasterSecrete) encrypted with</u></em> the <strong><em><u>server RSA public key</u></em></strong>).
+    <ul>
+      <li>The client and server then use the <em><u>random numbers</u></em> and <em><u>PreMasterSecret</u></em> to compute a common secret, called the <strong><em><u>master secret</u></em></strong>. All other key data (session keys such as IV, symmetric encryption key, MAC key) for this connection is derived from this master secret (and the client- and server-generated random values), which is passed through a carefully designed <em><u>pseudorandom</u></em> function.</li>
+    </ul>
+  </li>
+  <li><strong><em><u>CertificateVerify</u></em></strong>: a <em><u>digital signature computed by the client over all previous handshake messages</u></em>. This message is sent when the server requested a client certificate, and the client complied. <em><u>This is how the client proves to the server that it really "owns" the public key</u></em> which is encoded in the certificate it sent.</li>
+  <li>Initial Handshake is over by now.</li>
+  <li>With following messages Client and Server will switch over to encrypted communication.</li>
+  <li><strong><em><u>ChangeCipherSpec</u></em></strong>: Then the client sends a ChangeCipherSpec message, which is not a handshake message: it has its own record type with <em>content type = 20</em>, so it will be sent in a record of its own. <u>Its contents are purely symbolic</u> (a single byte of value 1). This message marks the <em><u>point at which the client switches to the newly negotiated cipher suite and keys</u></em>. <u>The subsequent records from the client will then be</u> <strong><em><u>encrypted</u></em></strong>.</li>
+  <li><strong><em><u>Finished</u></em></strong>: The Finished message is a <strong><em><u>cryptographic checksum</u></em></strong> <u>computed over all previous handshake messages</u> (from both the client and server). Since it is emitted after the ChangeCipherSpec, it is also <em><u>covered by the</u></em> <strong><em><u>integrity check</u></em></strong> (containing a <em><u>hash</u></em> and <em><u>MAC</u></em> over the previous handshake messages) and the <strong><em><u>encryption</u></em></strong>.
+    <ul>
+      <li>When the server receives <strong>Finished</strong> message and verifies its contents, it obtains a proof that it has indeed talked to the same client all along. This message protects the handshake from alterations (the attacker cannot modify the handshake messages and still get the <strong>Finished</strong> message right).</li>
+    </ul>
+  </li>
+  <li>The server finally responds with its own <strong><em>ChangeCipherSpec</em></strong> then <strong><em>Finished</em></strong>.</li>
+  <li>Client performs the same decryption and verification procedure as the server did in the previous step.</li>
+  <li>At that point, the handshake is finished, and the client and server may exchange application data (in encrypted records tagged as such). The application protocol is enabled, with <em>content type = 23</em>.</li>
+  <li>Application messages exchanged between client and server will also be authenticated and optionally encrypted exactly like in their Finished message. Otherwise, the <em>content type will = 25</em> and the client will not authenticate.</li>
+</ul>
+
+<h3 id="basic-handshake">Basic Handshake</h3>
+<ul>
+  <li>In this handshake, only Server is Authenticated with it’s Server Certificate.</li>
+  <li>Client Certificate is not mandatory.</li>
+  <li>Flow of Handshake will same as Full Handshake, but without few messages getting excanged as:
+    <ul>
+      <li><strong><em><u>CertificateRequest</u></em></strong> message will not be sent by Server in this case.</li>
+      <li>Client will not send the <strong><em>Certificate</em></strong> message with it’s own certificate.</li>
+      <li>Client will not send the <strong><em>CertificateVerify</em></strong> message.</li>
+      <li>Otherwise, all messages of Full Handshake will be exchanged.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="abbreviatedresumed-handshake">Abbreviated/Resumed Handshake:</h3>
+<ul>
+  <li>In the full handshake, the server sends a “session ID” (i.e. a bunch of up to 32 bytes) to the client.</li>
+  <li>Later on, the <em><u>client</u></em> can come back and send the <strong><em><u>same session ID</u></em></strong> as part of his ClientHello. This means that the <em><u>client still remembers the cipher suite and keys from the previous handshake</u></em> and would like to reuse these parameters.</li>
+  <li>If the <em><u>server</u></em> also remembers the cipher suite and keys, then it copies that <strong><em><u>specific session ID</u></em></strong> in its ServerHello, and then follows the abbreviated handshake:
+<img src="/assets/images/TLS-abbreviated-handshake.png" alt="Abbreviated Handshake" /></li>
+  <li>The abbreviated handshake is shorter: fewer messages, <strong><em><u>no asymmetric cryptography business</u></em></strong>, and, most importantly, <strong>reduced latency</strong>.</li>
+  <li>A typical Web browser will open an SSL connection with a full handshake, then do abbreviated handshakes for all other connections to the same server: the other connections it opens in parallel, and also the subsequent connections to the same server.</li>
+  <li>Indeed, typical <em><u>Web servers will close connections after 15 seconds of inactivity</u></em>, but they will <em><u>remember sessions (the cipher suite and keys) for a lot longer</u></em> (possibly for hours or even days).</li>
+  <li>Resumed sessions can also be used for <strong><em><u>single sign-on</u></em></strong>, as it guarantees that both the original session and any resumed session originate from the same client.</li>
+  <li>Resumed Sessions are of particular importance for the <strong><em><u>FTP over TLS/SSL</u></em></strong> protocol, which would otherwise suffer from a <em><u>man-in-the-middle</u></em> attack in which an attacker could intercept the contents of the secondary data connections.</li>
+</ul>
+
+<h3 id="handshake-re-initiation">Handshake Re-initiation:</h3>
+<ul>
+  <li>At any time, the client or the server can initiate a new handshake (the server can send a <strong><em><u>HelloRequest</u></em></strong> message to trigger it; the client just sends a <strong><em><u>ClientHello</u></em></strong>).</li>
+  <li>A typical situation is the following:
+    <ul>
+      <li>An HTTPS server is configured to listen to SSL requests.</li>
+      <li>A client connects and a handshake is performed.</li>
+      <li>Once the handshake is done, the client sends its “applicative data”, which consists of an <em><u>HTTP request</u></em>. <strong>At that point</strong> (and at that point only), the server learns the target path. Up to that point, the URL which the client wishes to reach was unknown to the server (the server might have been made aware of the target server name through a Server Name Indication SSL extension, but this does not include the path).</li>
+      <li>Upon seeing the path, the server may learn that <em><u>this is for a part of its data which is supposed to be accessed only by clients authenticated with certificates</u></em>. But the server did not ask for a client certificate in the handshake (in particular because not-so-old Web browsers displayed freakish popups when asked for a certificate, in particular, if they did not have one, so a server would refrain from asking a certificate if it did not have good reason to believe that the client has one and knows how to use it).</li>
+      <li>Therefore, the server triggers a new handshake, this time requesting a certificate.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="session-tickets">Session Tickets</h3>
+<ul>
+  <li>RFC 5077 extends TLS via use of <em><u>Session Tickets</u></em>, instead of <em>Session IDs</em>.</li>
+  <li>It defines a way to resume a TLS session without requiring that session-specific state is stored at the TLS server.</li>
+  <li>Instead <em><u>the TLS server stores its session-specific state in a session ticket and sends the session ticket to the TLS client for storing</u></em>.</li>
+  <li>The client resumes a TLS session by sending the session ticket to the server, and the server resumes the TLS session according to the session-specific state in the ticket.</li>
+  <li>The session ticket is encrypted and authenticated by the server, and the server verifies its validity before using its contents.</li>
+  <li>OpenSSL weakness in this method:
+    <ul>
+      <li>OpenSSL always limits encryption and authentication security of the transmitted TLS session ticket to <code class="language-plaintext highlighter-rouge">AES128-CBC-SHA256</code>, no matter what other TLS parameters were negotiated for the actual TLS session.</li>
+      <li>This means that the state information (the TLS session ticket) is not as well protected as the TLS session itself.</li>
+      <li>Of particular concern is <em><u>OpenSSL's storage of the keys</u></em> in an application-wide context (SSL_CTX), i.e. for the life of the application, and <em><u>not allowing for re-keying of the "AES128-CBC-SHA256" TLS session tickets without resetting the application-wide OpenSSL context</u></em> (which is uncommon, error-prone and often requires manual administrative intervention).</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="tls-content-types">TLS Content Types:</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hex</th>
+      <th style="text-align: left">Dec</th>
+      <th style="text-align: left">Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0x14</td>
+      <td style="text-align: left">20</td>
+      <td style="text-align: left">ChangeCipherSpec</td>
+    </tr>
+    <tr>
+      <td>0x15</td>
+      <td style="text-align: left">21</td>
+      <td style="text-align: left">Alert</td>
+    </tr>
+    <tr>
+      <td>0x16</td>
+      <td style="text-align: left">22</td>
+      <td style="text-align: left">HandShake</td>
+    </tr>
+    <tr>
+      <td>0x17</td>
+      <td style="text-align: left">23</td>
+      <td style="text-align: left">Application</td>
+    </tr>
+    <tr>
+      <td>0x18</td>
+      <td style="text-align: left">24</td>
+      <td style="text-align: left">Heartbeat</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="cipher-suite">Cipher Suite:</h2>
+<ul>
+  <li>A cipher suite is a <em><u>16-bit symbolic identifier</u></em> for a set of cryptographic algorithms.</li>
+  <li>For instance, the <strong><em>TLS_RSA_WITH_AES_128_CBC_SHA</em></strong> cipher suite has value 0x002F,
+    <ul>
+      <li>and means records use <em><u>HMAC/SHA-1</u></em> and <em><u>AES encryption with a 128-bit key</u></em>,</li>
+      <li>and the key exchange is done by <em><u>encrypting a random key</u></em> with the server’s <em><u>RSA public key</u></em>”.</li>
+    </ul>
+  </li>
+  <li>the client suggests but the server chooses.</li>
+  <li>The cipher suite is in the hands of the server. Courteous servers are supposed to follow the preferences of the client (if possible), but they can do otherwise and some actually do (e.g. as part of protection against BEAST).</li>
+</ul>
+
+<h2 id="certificates">Certificates</h2>
+<ul>
+  <li>The certificate is a vessel for the <strong><em><u>Server Public Key</u></em></strong>, <strong><em><u>Identity of its Owner</u></em></strong>, <strong><em><u>digital signature</u></em></strong> of an entity that has verified the certificate’s contents (<em><u>issuer</u></em>, <em><u>CA</u></em>).</li>
+  <li>It is used to thwart active attackers who would want to impersonate the server: such an attacker intercepts the communication and sends its <em><u>RSA Public Key</u></em> instead of the server’s.</li>
+  <li>The certificate is signed by a <strong><em><u>certification authority</u></em></strong>, so that the client may know that a given <em><u>RSA Public Key</u></em> is really the genuine one from the server he wants to talk with.</li>
+  <li>Digital signatures also use <em><u>asymmetric cryptography</u></em>, although in a distinct way (for instance, there is also a variant of <strong>RSA</strong> for digital signatures).</li>
+  <li>X.509 is the most common format for public key certificates.</li>
+</ul>
+
+<h3 id="chain-of-trust">Chain of Trust</h3>
+<p><img src="/assets/images/tls/chain-of-trust.png" alt="Chain of Trust" /></p>
+
+<h3 id="most-common-fields-in-certificates">Most Common Fields in certificates</h3>
+<ul>
+  <li><strong>Serial Number</strong>: Used to uniquely identify the certificate within a CA’s systems. In particular this is used to track revocation information.</li>
+  <li><strong>Subject</strong>: The entity a certificate belongs to: a machine, an individual, or an organization.</li>
+  <li><strong>Issuer</strong>: The entity that verified the information and signed the certificate.</li>
+  <li><strong>Not Before</strong>: The earliest time and date on which the certificate is valid. Usually set to a few hours or days prior to the moment the certificate was issued, to avoid clock skew problems.</li>
+  <li><strong>Not After</strong>: The time and date past which the certificate is no longer valid.</li>
+  <li><strong>Key Usage</strong>: The valid cryptographic uses of the certificate’s public key. Common values include digital signature validation, key encipherment, and certificate signing.</li>
+  <li><strong>Extended Key Usage</strong>: The applications in which the certificate may be used. Common values include TLS server authentication, email protection, and code signing.</li>
+  <li><strong>Public Key</strong>: A public key belonging to the certificate subject.</li>
+  <li><strong>Signature Algorithm</strong>: This contain a hashing algorithm and an encryption algorithm. For example “sha256RSA” where sha256 is the hashing algorithm and RSA is the encryption algorithm.</li>
+  <li><strong>Signature</strong>: The body of the certificate is hashed (hashing algorithm in “Signature Algorithm” field is used) and then the hash is encrypted (encryption algorithm in the “Signature Algorithm” field is used) with the issuer’s private key.</li>
+</ul>
+
+<h3 id="tlsssl-server-certificates">TLS/SSL server certificates</h3>
+<ul>
+  <li>Certificates are used to trust the Servers in a Secure TLS communication as the certificate is signed by a trusted certificate authority.</li>
+  <li>The subject of the certificate matches the <em><u>hostname</u></em> (i.e. <em><u>domain name</u></em>) to which the client is trying to connect;</li>
+  <li><em><u>Domain name</u></em> of the website is listed as the <strong><em><u>Common Name</u></em></strong> in the <strong><em><u>Subject field</u></em></strong> of the certificate.</li>
+  <li>A certificate may be valid for multiple hostnames (multiple websites). Such certificates are commonly called <strong><em><u>Subject Alternative Name (SAN)</u></em></strong> certificates or <strong><em><u>Unified Communications Certificates (UCC)</u></em></strong>. These certificates contain the field Subject Alternative Name.</li>
+  <li>If some of the hostnames contain an asterisk (*), a certificate may also be called a <strong><u>wildcard certificate</u></strong>.</li>
+  <li>TLS Certificates are classified as:
+    <ul>
+      <li><strong><em><u>Domain Validation SSL (DV) </u></em></strong>
+        <ul>
+          <li>A certificate provider will issue a domain-validated (DV) certificate to a purchaser if the purchaser can demonstrate one vetting criterion: <strong>the right to administratively manage the affected DNS domain(s)</strong>.</li>
+        </ul>
+      </li>
+      <li><strong><em><u>Organization Validation SSL (OV) </u></em></strong>
+        <ul>
+          <li>A certificate provider will issue an organization validation (OV) class certificate to a purchaser if the purchaser can meet two criteria:
+            <ul>
+              <li><strong>the right to administratively manage the domain name</strong> in question, and perhaps,</li>
+              <li><strong>the organization’s actual existence as a legal entity</strong>.</li>
+            </ul>
+          </li>
+          <li>A certificate provider publishes its OV vetting criteria through its certificate policy.</li>
+        </ul>
+      </li>
+      <li><strong><em><u>Extended Validation SSL</u></em></strong>
+        <ul>
+          <li>To acquire an Extended Validation (EV) certificate, the <em><u>purchaser must persuade the certificate provider of its</u></em> <strong>legal identity</strong>, including <strong>manual verification checks</strong> by a human.</li>
+          <li>As with OV certificates, a certificate provider publishes its EV vetting criteria through its certificate policy.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="tlsssl-client-certificates">TLS/SSL client certificates</h3>
+<ul>
+  <li>These are less common and are mainly used as <strong><em><u>IoT device identity</u></em></strong>, also common in <strong><em><u>RPC</u></em></strong> systems.</li>
+  <li>These are not usually issued by CAs but the operator of a service that requires client certificates will usually operate their own internal CA to issue them.</li>
+</ul>
+
+<h3 id="code-signing-certificate">Code signing certificate</h3>
+<ul>
+  <li>Certificates can also be used to validate signatures on programs to ensure they were not tampered with during delivery.</li>
+  <li><a href="https://en.wikipedia.org/wiki/Code_signing">ToDo</a></li>
+</ul>
+
+<h3 id="self-signed-certificate">Self-signed certificate</h3>
+<ul>
+  <li>Also referred in Cryptography as <strong>Snake Oil certificates</strong>, due to their untrustworthiness.</li>
+  <li><a href="https://en.wikipedia.org/wiki/Self-signed_certificate">ToDo</a></li>
+</ul>
+
+<h2 id="references">References</h2>
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">Wikipedia: Transport Layer Security</a></li>
+  <li><a href="https://security.stackexchange.com/a/20847/214329">StackOverflow: Transport Layer Security</a></li>
+</ul>
+
+:ET

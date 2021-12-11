@@ -1,0 +1,127 @@
+I"y<p>This write-up explains different ways to restrict a program to run on a specific CPU core(s). This might be required for some high priority tasks/programs to run dedicatedly on few core on a multi-core/processor systems. This is used to achieve performance benefits from multi-processor systems.</p>
+
+<h2 id="sched-setaffinity">sched-setaffinity()</h2>
+<ul>
+  <li>Linux System Call</li>
+  <li>A process’s CPU <strong><em>affinity mask</em></strong> determines the <em><u>set of CPUs on which it is eligible to run</u></em>.</li>
+  <li>Dedicating one CPU to a particular process can be acheved as:
+    <ul>
+      <li>setting the affinity mask of that process to specify a single CPU.</li>
+      <li>and setting the affinity mask of all other processes to exclude that CPU.</li>
+    </ul>
+  </li>
+  <li><em><u>Restricting a process to run on a single CPU also avoids the performance cost caused by the cache invalidation that occurs when a process ceases to execute on one CPU and then recommences execution on a different CPU</u></em>.</li>
+  <li>These restrictions on the actual set of CPUs on which the process will run are silently imposed by the kernel.</li>
+  <li>The affinity mask is actually a per-thread attribute that can be adjusted independently for each of the threads in a thread group.
+    <ul>
+      <li>use <code class="language-plaintext highlighter-rouge">-a</code> option with <strong><em>taskset</em></strong> command to add affinity mask to all threads of the process.</li>
+    </ul>
+  </li>
+  <li>A child created via fork(2) inherits its parent’s CPU affinity mask. The affinity mask is preserved across an execve(2).</li>
+</ul>
+
+<h3 id="python-3-sched_setaffinity">Python 3: sched_setaffinity()</h3>
+<ul>
+  <li>Python 3 <code class="language-plaintext highlighter-rouge">os module</code> supports sched-setaffinity() method</li>
+  <li>Example usage:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; import os
+&gt;&gt;&gt; os.sched_getaffinity(0)
+{0, 1, 2, 3}
+----------------
+
+&gt;&gt;&gt; os.sched_setaffinity(0, {1, 3})
+&gt;&gt;&gt; os.sched_getaffinity(0)
+{1, 3}
+----------------
+
+&gt;&gt;&gt; x = {i for i in range(10)}
+&gt;&gt;&gt; x
+{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+----------------
+
+&gt;&gt;&gt; os.sched_setaffinity(0, x)
+&gt;&gt;&gt; os.sched_getaffinity(0)
+{0, 1, 2, 3}
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h5 id="reference">Reference</h5>
+<ul>
+  <li><a href="https://linux.die.net/man/2/sched_setaffinity">sched_setaffinity(2)</a></li>
+  <li><a href="https://docs.python.org/dev/library/os.html#os.sched_setaffinity">Python 3: sched_setaffinity()</a></li>
+  <li><a href="https://stackoverflow.com/questions/15639779/why-does-multiprocessing-use-only-a-single-core-after-i-import-numpy">Why does multiprocessing use only a single core after I import numpy?</a></li>
+</ul>
+
+<h2 id="taskset">taskset</h2>
+<ul>
+  <li>Linux Command</li>
+  <li>set or retrieve a process’s <strong>*<u>CPU affinity*</u></strong>.</li>
+  <li>Works on a running process and can also launch a new process.</li>
+  <li>CPU affinity is a scheduler property that “bonds” a process to a given set of CPUs on the system.</li>
+  <li>The Linux scheduler will honor the given CPU affinity and the process will not run on any other CPUs.</li>
+  <li>:warning: Note that the Linux scheduler also supports natural CPU affinity:
+    <ul>
+      <li>the scheduler attempts to keep processes on the same CPU as long as practical for performance reasons.</li>
+      <li>Therefore, forcing a specific CPU affinity is useful only in certain applications.</li>
+    </ul>
+  </li>
+  <li>The CPU affinity is represented as a <strong>bitmask</strong>,
+    <ul>
+      <li>with the lowest order bit corresponding to the first logical CPU.</li>
+      <li>and the highest order bit corresponding to the last logical CPU.</li>
+    </ul>
+  </li>
+  <li>:memo: Not all CPUs may exist on a given system but a mask may specify more CPUs than are present.</li>
+  <li>:memo: A retrieved mask will reflect only the bits that correspond to CPUs physically on the system.</li>
+  <li>Examples:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  taskset -c 0 mycommand --option    # start a command with the given affinity.
+  -------------------
+
+  taskset -c -pa 0 1234              # set the affinity of a running process.
+                                     # -a for applying affinity mask to all the threads of the process.
+  -------------------
+
+  0x00000001
+     is processor #0,
+  -------------------
+
+  0x00000003
+     is processors #0 and #1,
+  -------------------
+
+  0xFFFFFFFF
+     is processors #0 through #31,
+  -------------------
+
+  32
+     is processors #1, #4, and #5,
+  -------------------
+
+  --cpu-list 0-2,6
+  or
+  - c 0-2,6
+     is processors #0, #1, #2, and #6.
+  -------------------
+
+  --cpu-list 0-10:2
+  or
+  -c 0-10:2
+     is processors #0, #2, #4, #6, #8 and #10. The suffix ":N"
+     specifies stride in the range, for example 0-10:3 is
+     interpreted as 0,3,6,9 list.
+</code></pre></div></div>
+
+<h5 id="reference-1">Reference</h5>
+<ul>
+  <li><a href="https://man7.org/linux/man-pages/man1/taskset.1.html">taskset</a></li>
+</ul>
+
+<h2 id="reference-2">Reference</h2>
+<ul>
+  <li><a href="https://unix.stackexchange.com/questions/23106/how-to-limit-a-process-to-one-cpu-core-in-linux">How to limit a process to one CPU core in Linux?</a></li>
+</ul>
+
+:ET

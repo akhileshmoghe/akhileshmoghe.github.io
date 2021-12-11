@@ -1,0 +1,229 @@
+I"�&<p>This write-up will explain different <strong><em><u>Container Adapters</u></em></strong>, like <strong><em><u>Stack</u></em></strong>, <strong><em><u>Queue</u></em></strong>, <strong><em><u>Priority Queue</u></em></strong> their respective features and mainly their appropriate use-cases.</p>
+<ul>
+  <li>Container Adapters are NOT full container classes.</li>
+  <li>But the classes that provide a <em><u>specific interface</u></em> relying on an object of one of the Container class (such as deque/list) to handle the elements.</li>
+  <li>The underlying container is encapsulated in a way that its elements are accessed by the members of the container adapter independent of the underlying container class.</li>
+</ul>
+
+<h2 id="stack">Stack</h2>
+<ul>
+  <li>Operate in a <strong><em><u>LIFO</u></em></strong> context (<em><u>last-in first-out</u></em>)</li>
+  <li>Elements are <strong>Inserted/Extracted</strong> <em><u>Only from</u></em> <strong><em><u>ONE END</u></em></strong> of the container.</li>
+  <li>Elements are <strong>pushed/popped</strong> from the <em><u>back</u></em> of the specific container, which is known as the <em><u>TOP</u></em> of the stack.</li>
+  <li>By <em><u>default</u></em>, standard container <strong>std::deque</strong> is used, if no container class is specified for a particular stack class instantiation.</li>
+  <li>Otherwise, <strong>std::vector</strong>, <strong>std::list</strong> also used as underlying container.</li>
+  <li><u>Use-cases</u>:
+    <ul>
+      <li>First-In Last-Out operations</li>
+      <li>Reversal of elements</li>
+    </ul>
+  </li>
+  <li>Example:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>std::stack&lt;int&gt; first;                                  // empty stack
+---------------------
+    
+std::deque&lt;int&gt; mydeque (3,100);                        // deque with 3 elements
+std::stack&lt;int&gt; second (mydeque);                       // stack initialized to copy of deque
+---------------------
+    
+std::stack&lt;int,std::vector&lt;int&gt; &gt; third;                // empty stack using vector
+---------------------
+    
+std::vector&lt;int&gt; myvector (2,200);                      // vector with 2 elements
+std::stack&lt;int,std::vector&lt;int&gt; &gt; fourth (myvector);
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="operations">Operations:</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    * empty()
+    * size()
+    * top()
+    * pop()
+    * push()
+    ------------
+    
+    C++11:
+    * emplace()
+    * swap()
+</code></pre></div></div>
+
+<h3 id="time-complexity-stack-operations">Time Complexity Stack Operations</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operation</th>
+      <th style="text-align: center">Time Complexity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Push</td>
+      <td style="text-align: center"><strong><em>O(1)</em></strong></td>
+    </tr>
+    <tr>
+      <td>Pop</td>
+      <td style="text-align: center"><strong><em>O(1)</em></strong></td>
+    </tr>
+    <tr>
+      <td>Top</td>
+      <td style="text-align: center"><strong><em>O(1)</em></strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="stack-decision-criteria">Stack Decision Criteria</h3>
+<ul>
+  <li>:heavy_check_mark: <strong>Order</strong> is Important.</li>
+  <li>:heavy_check_mark: <em><u>Last-in, First-out</u></em> (<strong>LIFO</strong>) accepted/required.</li>
+  <li>:x: Size varies widely - <strong>Dynamic</strong></li>
+  <li>:x: Need to find Nth element - <strong>Random Access</strong></li>
+  <li>:x: <strong>Insert/Erase</strong> at the <em><u>Front/Back</u></em></li>
+  <li>:x: <strong>Insert/Erase</strong> at <em><u>Mid-positions</u></em></li>
+  <li>:x: <strong>Key:Value</strong> pair</li>
+</ul>
+
+<h5 id="references">References:</h5>
+<ul>
+  <li><a href="https://www.cplusplus.com/reference/stack/stack/">std::stack</a></li>
+</ul>
+
+<h2 id="queue">Queue</h2>
+<ul>
+  <li>Operate in <strong><em><u>FIFO</u></em></strong> (<em><u>First-in, First-out</u></em>)</li>
+  <li>Elements are <strong>Inserted</strong> <em><u>from one end</u></em> of the container and <strong>Extracted</strong> <em><u>from the other end</u></em>.</li>
+  <li>Elements are <strong>Pushed</strong> from the <em><u>back</u></em> of the specific container and <strong>Popped</strong> from its <em><u>front</u></em>.</li>
+  <li>By <em><u>default</u></em>, standard container ‘<strong><em>std::deque</em></strong>’ is used, if no container class is specified for a particular queue class instantiation.</li>
+  <li>Otherwise, <strong><em>std::vector</em></strong>, <strong><em>std::list</em></strong> also used as underlying container.</li>
+  <li><u>Use-cases</u>:
+    <ul>
+      <li>First-In First-Out operations</li>
+      <li>Simple online ordering system (first come first served)</li>
+      <li>Semaphore queue handling</li>
+      <li>CPU scheduling (FCFS)</li>
+    </ul>
+  </li>
+  <li>Example:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>std::queue&lt;int&gt; first;                                // empty queue
+------------
+    
+std::deque&lt;int&gt; mydeck (3,100);                       // deque with 3 elements
+std::queue&lt;int&gt; second (mydeck);                      // queue initialized to copy of deque
+------------
+    
+std::queue&lt;int,std::list&lt;int&gt; &gt; third;                // empty queue with list as underlying container
+------------
+    
+std::list&lt;int&gt; mylist (2,200);                        // list with 2 elements
+std::queue&lt;int,std::list&lt;int&gt; &gt; fourth (mylist);
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="operations-1">Operations:</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    * empty()
+    * size()
+    * front()
+    * back()
+    * pop()
+    * push()
+    --------------
+    
+    C++11:
+    * emplace()
+    * swap()
+</code></pre></div></div>
+
+<h3 id="time-complexity-queue-operations">Time Complexity Queue Operations</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operation</th>
+      <th style="text-align: center">Time Complexity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Push</td>
+      <td style="text-align: center"><strong><em>O(1)</em></strong></td>
+    </tr>
+    <tr>
+      <td>Pop</td>
+      <td style="text-align: center"><strong><em>O(1)</em></strong></td>
+    </tr>
+    <tr>
+      <td>Top</td>
+      <td style="text-align: center"><strong><em>O(1)</em></strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="queue-decision-criteria">Queue Decision Criteria</h3>
+<ul>
+  <li>:heavy_check_mark: <strong>Order</strong> is Important.</li>
+  <li>:heavy_check_mark: <em><u>First-in, First-out</u></em> (<strong>FIFO</strong>) accepted/required.</li>
+  <li>:x: Size varies widely - <strong>Dynamic</strong></li>
+  <li>:x: Need to find Nth element - <strong>Random Access</strong></li>
+  <li>:x: <strong>Insert/Erase</strong> at the <em><u>Front/Back</u></em></li>
+  <li>:x: <strong>Insert/Erase</strong> at <em><u>Mid-positions</u></em></li>
+  <li>:x: <strong>Key:Value</strong> pair</li>
+</ul>
+
+<h2 id="priority_queue">Priority_Queue</h2>
+<ul>
+  <li>Its First element is always the “<strong><em><u>Greatest of the elements</u></em></strong>” it contains, according to some “<em><u>strict weak ordering</u></em>” criterion.
+    <ul>
+      <li>Similar to a <em><u>heap</u></em>, where elements can be inserted at any moment, and <em><u>only the</u></em> <strong><em><u>max heap</u></em></strong> <em><u>element</u></em> can be retrieved (the one at the top in the priority queue).</li>
+    </ul>
+  </li>
+  <li>Elements are <strong>Popped</strong> from the <em><u>back</u></em> of the specific container, which is known as the <em><u>top</u></em> of the priority queue.</li>
+  <li>The underlying container shall be accessible through <strong>Random Access</strong> Iterators
+    <ul>
+      <li>Support of Random Access Iterators is required to keep a “<em><u>Heap structure</u></em>” internally at all times.</li>
+      <li>This is done automatically by the container adapter by automatically calling the algorithm functions:
+        <ul>
+          <li>make_heap,</li>
+          <li>push_heap and</li>
+          <li>pop_heap</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>By <em><u>default</u></em>, standard container ‘<strong><em>std::vector</em></strong>’ is used, if no container class is specified for a particular priority_queue class instantiation.</li>
+  <li>Otherwise, ‘<strong>std::deque</strong>’ can also be used as underlying container.</li>
+</ul>
+
+<h3 id="operation">Operation:</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    * empty()
+    * size()
+    * top()
+    * push()
+    * pop()
+    ------------
+    
+    C++11:
+    * emplace()
+    * swap()
+</code></pre></div></div>
+
+<h3 id="priority-queue-decision-criteria">Priority Queue Decision Criteria</h3>
+<ul>
+  <li>:heavy_check_mark: <strong>Order</strong> is Important.</li>
+  <li>:heavy_check_mark: <em><u>First-in, First-out</u></em> (<strong>FIFO</strong>) accepted/required.</li>
+  <li>:x: Size varies widely - <strong>Dynamic</strong></li>
+  <li>:x: Need to find Nth element - <strong>Random Access</strong></li>
+  <li>:x: <strong>Insert/Erase</strong> at the <em><u>Front/Back</u></em></li>
+  <li>:x: <strong>Insert/Erase</strong> at <em><u>Mid-positions</u></em></li>
+  <li>:x: <strong>Key:Value</strong> pair</li>
+</ul>
+
+<h5 id="reference">Reference</h5>
+<ul>
+  <li><a href="https://www.cplusplus.com/reference/stack/stack/">std::stack</a></li>
+  <li><a href="https://www.cplusplus.com/reference/queue/queue/">std::queue</a></li>
+  <li><a href="https://www.cplusplus.com/reference/queue/priority_queue/">std::priority_queue</a></li>
+</ul>
+
+:ET

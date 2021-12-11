@@ -1,5 +1,313 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-20T10:46:09+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Every THING is Internet of Things</title><subtitle>A Journey in the direction of ---&gt; IoT ---&gt; Edge ---&gt; Cloud ---&gt; DevOps ---&gt; ML ---&gt; AI
-</subtitle><author><name>Akhilesh Moghe</name><email>akhileshmoghe@live.com</email></author><entry><title type="html">AWS Greengrass Service V2: a Service to build, deploy and manage IoT applications on Edge Devices</title><link href="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/12/AWS-Greengrass.html" rel="alternate" type="text/html" title="AWS Greengrass Service V2: a Service to build, deploy and manage IoT applications on Edge Devices" /><published>2021-11-12T12:33:22+05:30</published><updated>2021-11-12T12:33:22+05:30</updated><id>http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/12/AWS-Greengrass</id><content type="html" xml:base="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/12/AWS-Greengrass.html">&lt;p&gt;This write-up will only focus on AWS Sagemaker ML service with respect to ML model deployment to Edge devices and Cloud.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-11T20:10:14+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Every THING is Internet of Thing</title><subtitle>A Journey in the direction of ---&gt; IoT ---&gt; Edge ---&gt; Cloud ---&gt; DevOps ---&gt; ML ---&gt; AI
+</subtitle><author><name>Akhilesh Moghe</name><email>akhileshmoghe@live.com</email></author><entry><title type="html">Design Patterns: Most Important GRASP Patterns of designing an application or module</title><link href="http://localhost:4000/c++/design%20patterns/2021/12/07/C++_Design_Patterns_GRASP_Patterns.html" rel="alternate" type="text/html" title="Design Patterns: Most Important GRASP Patterns of designing an application or module" /><published>2021-12-07T05:33:22+05:30</published><updated>2021-12-07T05:33:22+05:30</updated><id>http://localhost:4000/c++/design%20patterns/2021/12/07/C++_Design_Patterns_GRASP_Patterns</id><content type="html" xml:base="http://localhost:4000/c++/design%20patterns/2021/12/07/C++_Design_Patterns_GRASP_Patterns.html">&lt;p&gt;This write-up will explain different &lt;strong&gt;&lt;em&gt;&lt;u&gt;GRASP Patterns&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, explained in book: &lt;a href=&quot;https://www.amazon.com/gp/product/0131489062/ref=as_li_qf_asin_il_tl?ie=UTF8&amp;amp;tag=fluentcpp-20&amp;amp;creative=9325&amp;amp;linkCode=as2&amp;amp;creativeASIN=0131489062&amp;amp;linkId=43cfc4d0a6ea922ef663317e4f91db85&quot;&gt;Applying UML and Patterns&lt;/a&gt;, which are more important in day to day programming life than the whole lot of GoF design patterns.
+GRASP is a set of 9 fundamental principles in OOPs design and responsibility assignment.
+These patterns solve some software problem common to many software development projects.&lt;/p&gt;
+
+&lt;h2 id=&quot;information-expert-information-hiding&quot;&gt;Information Expert (Information Hiding)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;&lt;u&gt;Problem&lt;/u&gt;&lt;/em&gt; it solves: How will you assign a responsibility to a module/class?&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;&lt;u&gt;Solution&lt;/u&gt;&lt;/em&gt;: Assign responsibility to the class that has the information needed to fulfill it.&lt;/li&gt;
+  &lt;li&gt;Used to determine where to delegate responsibilities such as methods, computed fields, and so on.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;&lt;u&gt;If you have an operation to do, and this operations needs inputs, then you should consider putting the responsibility of carrying out this operation in the class that contains the inputs for it&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Helps keeping the data local, i.e. &lt;strong&gt;&lt;em&gt;Data Encapsulation&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Reduces relationships between the classes. (Class is self-sufficient in terms of data to carryout it’s tasks.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;creator&quot;&gt;Creator&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;The creation of objects is one of the most common activities in an object-oriented system.&lt;/li&gt;
+  &lt;li&gt;Which class is responsible for creating objects is a fundamental property of the relationship between objects of particular classes.&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;reference&quot;&gt;Reference&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cplusplus.com/reference/forward_list/forward_list/&quot;&gt;std::forward_list&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="C++" /><category term="Design Patterns" /><category term="C++" /><category term="Design Patterns" /><summary type="html">This write-up will explain different GRASP Patterns, explained in book: Applying UML and Patterns, which are more important in day to day programming life than the whole lot of GoF design patterns. GRASP is a set of 9 fundamental principles in OOPs design and responsibility assignment. These patterns solve some software problem common to many software development projects. Information Expert (Information Hiding) Problem it solves: How will you assign a responsibility to a module/class? Solution: Assign responsibility to the class that has the information needed to fulfill it. Used to determine where to delegate responsibilities such as methods, computed fields, and so on. If you have an operation to do, and this operations needs inputs, then you should consider putting the responsibility of carrying out this operation in the class that contains the inputs for it. Helps keeping the data local, i.e. Data Encapsulation. Reduces relationships between the classes. (Class is self-sufficient in terms of data to carryout it’s tasks.) Creator The creation of objects is one of the most common activities in an object-oriented system. Which class is responsible for creating objects is a fundamental property of the relationship between objects of particular classes. Reference std::forward_list</summary></entry><entry><title type="html">AWS IoT Twinmaker:</title><link href="http://localhost:4000/posts/twinmaker" rel="alternate" type="text/html" title="AWS IoT Twinmaker:" /><published>2021-12-07T00:00:00+05:30</published><updated>2021-12-07T00:00:00+05:30</updated><id>http://localhost:4000/posts/AWS-IoT-Twinmaker</id><content type="html" xml:base="http://localhost:4000/posts/twinmaker">&lt;p&gt;This write-up will focus on newly launched AWS IoT Twinmaker service.&lt;/p&gt;
+
+&lt;h2 id=&quot;digital-twins&quot;&gt;Digital Twins&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Digital twins are &lt;em&gt;&lt;u&gt;virtual representations of physical systems&lt;/u&gt;&lt;/em&gt; such as buildings, factories, production lines, and equipment that are regularly updated with real-world data to mimic the &lt;strong&gt;structure&lt;/strong&gt;, &lt;strong&gt;state&lt;/strong&gt;, and &lt;strong&gt;behavior&lt;/strong&gt; of the systems they represent.&lt;/li&gt;
+  &lt;li&gt;To create and use digital twins of real-world systems to monitor and optimize operations.&lt;/li&gt;
+  &lt;li&gt;We can create digital twins of &lt;strong&gt;equipment&lt;/strong&gt;, &lt;strong&gt;processes&lt;/strong&gt;, and &lt;strong&gt;facilities&lt;/strong&gt; by connecting data from different data sources like &lt;em&gt;&lt;u&gt;equipment sensors&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;video feeds&lt;/u&gt;&lt;/em&gt;, and &lt;em&gt;&lt;u&gt;business applications&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;digital-twin-graph&quot;&gt;Digital Twin Graph&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;AWS IoT TwinMaker forms a digital twin graph that combines and understands the &lt;em&gt;&lt;u&gt;relationships between virtual representations of your physical systems and connected data sources&lt;/u&gt;&lt;/em&gt;, so you can accurately model your real-world environment.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;&lt;u&gt;Import&lt;/u&gt;&lt;/em&gt; existing &lt;strong&gt;3D models&lt;/strong&gt; (such as &lt;em&gt;&lt;u&gt;CAD files&lt;/u&gt;&lt;/em&gt;, and &lt;em&gt;&lt;u&gt;point cloud scans&lt;/u&gt;&lt;/em&gt;) to compose and arrange &lt;strong&gt;3D scenes&lt;/strong&gt; of a physical space and its contents (e.g. a factory and its equipment) using simple 3D tools.&lt;/li&gt;
+  &lt;li&gt;We can add data to these models/scenes for visualization as:
+    &lt;ul&gt;
+      &lt;li&gt;Interactive video.&lt;/li&gt;
+      &lt;li&gt;sensor data overlays from the connected data sources.&lt;/li&gt;
+      &lt;li&gt;insights from connected machine learning (ML) and simulation services.&lt;/li&gt;
+      &lt;li&gt;equipment maintenance records and manuals.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Using the digital twin graph, customers can now issue geospatial queries such as finding all cameras that are pointing to an equipment to help with root cause analysis.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;amazon-managed-grafana-plugin&quot;&gt;Amazon Managed Grafana plugin&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Can be used to create a web-based application for end users.&lt;/li&gt;
+  &lt;li&gt;Use Grafana applications to observe and interact with the digital twin to help them optimize factory operations, increase production output, and improve equipment performance.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;model-builder&quot;&gt;Model Builder&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Allows you to create &lt;em&gt;&lt;u&gt;workspaces&lt;/u&gt;&lt;/em&gt; that will hold the resources, such as entity models and visual assets needed to create a digital twin.&lt;/li&gt;
+  &lt;li&gt;In this workspace, create entities that represent digital replicas of your equipment.&lt;/li&gt;
+  &lt;li&gt;Specify custom relationships between these entities to create a digital twin graph of your real-world system.&lt;/li&gt;
+  &lt;li&gt;Using the digital twin graph, customers can now issue geospatial queries such as finding all cameras that are pointing to an equipment to help with root cause analysis.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;data-connector&quot;&gt;Data Connector&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Associate entities with connectors (called as &lt;em&gt;components&lt;/em&gt; in AWS IoT TwinMaker) to data stores such as AWS IoT SiteWise, to provide context to the data present in various data stores.&lt;/li&gt;
+  &lt;li&gt;Built-in &lt;strong&gt;&lt;em&gt;&lt;u&gt;Data Connectors&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; for the following AWS services:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;AWS IoT SiteWise&lt;/strong&gt; for equipment and &lt;em&gt;&lt;u&gt;time-series sensor data&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Amazon Kinesis Video Streams&lt;/strong&gt; for &lt;em&gt;&lt;u&gt;video data&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Amazon Simple Storage Service (S3)&lt;/strong&gt; for &lt;em&gt;&lt;u&gt;storage of visual resources&lt;/u&gt;&lt;/em&gt; (for example, CAD files) and data from business applications.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Provides a framework for you to create &lt;em&gt;&lt;u&gt;your own Data Connectors&lt;/u&gt;&lt;/em&gt; to use with other data sources (such as &lt;a href=&quot;https://www.snowflake.com/&quot;&gt;Snowflake&lt;/a&gt; and &lt;a href=&quot;https://siemens.mindsphere.io/en&quot;&gt;Siemens MindSphere&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;scene-composer&quot;&gt;Scene Composer&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;A tool to create visualizations in 3D.&lt;/li&gt;
+  &lt;li&gt;You can bring previously built 3D/CAD models into your resource library in Amazon S3.&lt;/li&gt;
+  &lt;li&gt;these visual assets can be brought into a scene, and position the 3D assets to match your real-world systems.&lt;/li&gt;
+  &lt;li&gt;visual annotations such as tags on top of the base scene.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;references&quot;&gt;References&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/iot/introducing-aws-iot-twinmaker/&quot;&gt;Introducing AWS IoT TwinMaker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;further-reference&quot;&gt;Further Reference&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/aws-samples/aws-iot-twinmaker-samples&quot;&gt;aws-samples/aws-iot-twinmaker-samples&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="AWS IoT" /><category term="Digital Twin" /><category term="AWS IoT" /><category term="Digital Twin" /><summary type="html">This write-up will focus on newly launched AWS IoT Twinmaker service. Digital Twins Digital twins are virtual representations of physical systems such as buildings, factories, production lines, and equipment that are regularly updated with real-world data to mimic the structure, state, and behavior of the systems they represent. To create and use digital twins of real-world systems to monitor and optimize operations. We can create digital twins of equipment, processes, and facilities by connecting data from different data sources like equipment sensors, video feeds, and business applications. Digital Twin Graph AWS IoT TwinMaker forms a digital twin graph that combines and understands the relationships between virtual representations of your physical systems and connected data sources, so you can accurately model your real-world environment. Import existing 3D models (such as CAD files, and point cloud scans) to compose and arrange 3D scenes of a physical space and its contents (e.g. a factory and its equipment) using simple 3D tools. We can add data to these models/scenes for visualization as: Interactive video. sensor data overlays from the connected data sources. insights from connected machine learning (ML) and simulation services. equipment maintenance records and manuals. Using the digital twin graph, customers can now issue geospatial queries such as finding all cameras that are pointing to an equipment to help with root cause analysis. Amazon Managed Grafana plugin Can be used to create a web-based application for end users. Use Grafana applications to observe and interact with the digital twin to help them optimize factory operations, increase production output, and improve equipment performance. Model Builder Allows you to create workspaces that will hold the resources, such as entity models and visual assets needed to create a digital twin. In this workspace, create entities that represent digital replicas of your equipment. Specify custom relationships between these entities to create a digital twin graph of your real-world system. Using the digital twin graph, customers can now issue geospatial queries such as finding all cameras that are pointing to an equipment to help with root cause analysis. Data Connector Associate entities with connectors (called as components in AWS IoT TwinMaker) to data stores such as AWS IoT SiteWise, to provide context to the data present in various data stores. Built-in Data Connectors for the following AWS services: AWS IoT SiteWise for equipment and time-series sensor data Amazon Kinesis Video Streams for video data Amazon Simple Storage Service (S3) for storage of visual resources (for example, CAD files) and data from business applications. Provides a framework for you to create your own Data Connectors to use with other data sources (such as Snowflake and Siemens MindSphere). Scene Composer A tool to create visualizations in 3D. You can bring previously built 3D/CAD models into your resource library in Amazon S3. these visual assets can be brought into a scene, and position the 3D assets to match your real-world systems. visual annotations such as tags on top of the base scene. References Introducing AWS IoT TwinMaker Further Reference aws-samples/aws-iot-twinmaker-samples</summary></entry><entry><title type="html">How to limit a process to run on One CPU core in Linux</title><link href="http://localhost:4000/linux/systems%20engineering/os/2021/12/06/How-to-run-a-process-on-a-particular-cpu-core.html" rel="alternate" type="text/html" title="How to limit a process to run on One CPU core in Linux" /><published>2021-12-06T12:33:22+05:30</published><updated>2021-12-06T12:33:22+05:30</updated><id>http://localhost:4000/linux/systems%20engineering/os/2021/12/06/How-to-run-a-process-on-a-particular-cpu-core</id><content type="html" xml:base="http://localhost:4000/linux/systems%20engineering/os/2021/12/06/How-to-run-a-process-on-a-particular-cpu-core.html">&lt;p&gt;This write-up explains different ways to restrict a program to run on a specific CPU core(s). This might be required for some high priority tasks/programs to run dedicatedly on few core on a multi-core/processor systems. This is used to achieve performance benefits from multi-processor systems.&lt;/p&gt;
+
+&lt;h2 id=&quot;sched-setaffinity&quot;&gt;sched-setaffinity()&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Linux System Call&lt;/li&gt;
+  &lt;li&gt;A process’s CPU &lt;strong&gt;&lt;em&gt;affinity mask&lt;/em&gt;&lt;/strong&gt; determines the &lt;em&gt;&lt;u&gt;set of CPUs on which it is eligible to run&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Dedicating one CPU to a particular process can be acheved as:
+    &lt;ul&gt;
+      &lt;li&gt;setting the affinity mask of that process to specify a single CPU.&lt;/li&gt;
+      &lt;li&gt;and setting the affinity mask of all other processes to exclude that CPU.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;&lt;u&gt;Restricting a process to run on a single CPU also avoids the performance cost caused by the cache invalidation that occurs when a process ceases to execute on one CPU and then recommences execution on a different CPU&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;These restrictions on the actual set of CPUs on which the process will run are silently imposed by the kernel.&lt;/li&gt;
+  &lt;li&gt;The affinity mask is actually a per-thread attribute that can be adjusted independently for each of the threads in a thread group.
+    &lt;ul&gt;
+      &lt;li&gt;use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-a&lt;/code&gt; option with &lt;strong&gt;&lt;em&gt;taskset&lt;/em&gt;&lt;/strong&gt; command to add affinity mask to all threads of the process.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;A child created via fork(2) inherits its parent’s CPU affinity mask. The affinity mask is preserved across an execve(2).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;python-3-sched_setaffinity&quot;&gt;Python 3: sched_setaffinity()&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Python 3 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;os module&lt;/code&gt; supports sched-setaffinity() method&lt;/li&gt;
+  &lt;li&gt;Example usage:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; import os
+&amp;gt;&amp;gt;&amp;gt; os.sched_getaffinity(0)
+{0, 1, 2, 3}
+----------------
+
+&amp;gt;&amp;gt;&amp;gt; os.sched_setaffinity(0, {1, 3})
+&amp;gt;&amp;gt;&amp;gt; os.sched_getaffinity(0)
+{1, 3}
+----------------
+
+&amp;gt;&amp;gt;&amp;gt; x = {i for i in range(10)}
+&amp;gt;&amp;gt;&amp;gt; x
+{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+----------------
+
+&amp;gt;&amp;gt;&amp;gt; os.sched_setaffinity(0, x)
+&amp;gt;&amp;gt;&amp;gt; os.sched_getaffinity(0)
+{0, 1, 2, 3}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;reference&quot;&gt;Reference&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://linux.die.net/man/2/sched_setaffinity&quot;&gt;sched_setaffinity(2)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.python.org/dev/library/os.html#os.sched_setaffinity&quot;&gt;Python 3: sched_setaffinity()&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/15639779/why-does-multiprocessing-use-only-a-single-core-after-i-import-numpy&quot;&gt;Why does multiprocessing use only a single core after I import numpy?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;taskset&quot;&gt;taskset&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Linux Command&lt;/li&gt;
+  &lt;li&gt;set or retrieve a process’s &lt;strong&gt;*&lt;u&gt;CPU affinity*&lt;/u&gt;&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Works on a running process and can also launch a new process.&lt;/li&gt;
+  &lt;li&gt;CPU affinity is a scheduler property that “bonds” a process to a given set of CPUs on the system.&lt;/li&gt;
+  &lt;li&gt;The Linux scheduler will honor the given CPU affinity and the process will not run on any other CPUs.&lt;/li&gt;
+  &lt;li&gt;:warning: Note that the Linux scheduler also supports natural CPU affinity:
+    &lt;ul&gt;
+      &lt;li&gt;the scheduler attempts to keep processes on the same CPU as long as practical for performance reasons.&lt;/li&gt;
+      &lt;li&gt;Therefore, forcing a specific CPU affinity is useful only in certain applications.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The CPU affinity is represented as a &lt;strong&gt;bitmask&lt;/strong&gt;,
+    &lt;ul&gt;
+      &lt;li&gt;with the lowest order bit corresponding to the first logical CPU.&lt;/li&gt;
+      &lt;li&gt;and the highest order bit corresponding to the last logical CPU.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;:memo: Not all CPUs may exist on a given system but a mask may specify more CPUs than are present.&lt;/li&gt;
+  &lt;li&gt;:memo: A retrieved mask will reflect only the bits that correspond to CPUs physically on the system.&lt;/li&gt;
+  &lt;li&gt;Examples:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  taskset -c 0 mycommand --option    # start a command with the given affinity.
+  -------------------
+
+  taskset -c -pa 0 1234              # set the affinity of a running process.
+                                     # -a for applying affinity mask to all the threads of the process.
+  -------------------
+
+  0x00000001
+     is processor #0,
+  -------------------
+
+  0x00000003
+     is processors #0 and #1,
+  -------------------
+
+  0xFFFFFFFF
+     is processors #0 through #31,
+  -------------------
+
+  32
+     is processors #1, #4, and #5,
+  -------------------
+
+  --cpu-list 0-2,6
+  or
+  - c 0-2,6
+     is processors #0, #1, #2, and #6.
+  -------------------
+
+  --cpu-list 0-10:2
+  or
+  -c 0-10:2
+     is processors #0, #2, #4, #6, #8 and #10. The suffix &quot;:N&quot;
+     specifies stride in the range, for example 0-10:3 is
+     interpreted as 0,3,6,9 list.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;reference-1&quot;&gt;Reference&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://man7.org/linux/man-pages/man1/taskset.1.html&quot;&gt;taskset&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference-2&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://unix.stackexchange.com/questions/23106/how-to-limit-a-process-to-one-cpu-core-in-linux&quot;&gt;How to limit a process to one CPU core in Linux?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="Linux" /><category term="Systems Engineering" /><category term="OS" /><category term="Linux" /><category term="Systems Engineering" /><category term="OS" /><summary type="html">This write-up explains different ways to restrict a program to run on a specific CPU core(s). This might be required for some high priority tasks/programs to run dedicatedly on few core on a multi-core/processor systems. This is used to achieve performance benefits from multi-processor systems. sched-setaffinity() Linux System Call A process’s CPU affinity mask determines the set of CPUs on which it is eligible to run. Dedicating one CPU to a particular process can be acheved as: setting the affinity mask of that process to specify a single CPU. and setting the affinity mask of all other processes to exclude that CPU. Restricting a process to run on a single CPU also avoids the performance cost caused by the cache invalidation that occurs when a process ceases to execute on one CPU and then recommences execution on a different CPU. These restrictions on the actual set of CPUs on which the process will run are silently imposed by the kernel. The affinity mask is actually a per-thread attribute that can be adjusted independently for each of the threads in a thread group. use -a option with taskset command to add affinity mask to all threads of the process. A child created via fork(2) inherits its parent’s CPU affinity mask. The affinity mask is preserved across an execve(2). Python 3: sched_setaffinity() Python 3 os module supports sched-setaffinity() method Example usage: &amp;gt;&amp;gt;&amp;gt; import os &amp;gt;&amp;gt;&amp;gt; os.sched_getaffinity(0) {0, 1, 2, 3} ---------------- &amp;gt;&amp;gt;&amp;gt; os.sched_setaffinity(0, {1, 3}) &amp;gt;&amp;gt;&amp;gt; os.sched_getaffinity(0) {1, 3} ---------------- &amp;gt;&amp;gt;&amp;gt; x = {i for i in range(10)} &amp;gt;&amp;gt;&amp;gt; x {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} ---------------- &amp;gt;&amp;gt;&amp;gt; os.sched_setaffinity(0, x) &amp;gt;&amp;gt;&amp;gt; os.sched_getaffinity(0) {0, 1, 2, 3} Reference sched_setaffinity(2) Python 3: sched_setaffinity() Why does multiprocessing use only a single core after I import numpy? taskset Linux Command set or retrieve a process’s *CPU affinity*. Works on a running process and can also launch a new process. CPU affinity is a scheduler property that “bonds” a process to a given set of CPUs on the system. The Linux scheduler will honor the given CPU affinity and the process will not run on any other CPUs. :warning: Note that the Linux scheduler also supports natural CPU affinity: the scheduler attempts to keep processes on the same CPU as long as practical for performance reasons. Therefore, forcing a specific CPU affinity is useful only in certain applications. The CPU affinity is represented as a bitmask, with the lowest order bit corresponding to the first logical CPU. and the highest order bit corresponding to the last logical CPU. :memo: Not all CPUs may exist on a given system but a mask may specify more CPUs than are present. :memo: A retrieved mask will reflect only the bits that correspond to CPUs physically on the system. Examples: taskset -c 0 mycommand --option # start a command with the given affinity. ------------------- taskset -c -pa 0 1234 # set the affinity of a running process. # -a for applying affinity mask to all the threads of the process. ------------------- 0x00000001 is processor #0, ------------------- 0x00000003 is processors #0 and #1, ------------------- 0xFFFFFFFF is processors #0 through #31, ------------------- 32 is processors #1, #4, and #5, ------------------- --cpu-list 0-2,6 or - c 0-2,6 is processors #0, #1, #2, and #6. ------------------- --cpu-list 0-10:2 or -c 0-10:2 is processors #0, #2, #4, #6, #8 and #10. The suffix &quot;:N&quot; specifies stride in the range, for example 0-10:3 is interpreted as 0,3,6,9 list. Reference taskset Reference How to limit a process to one CPU core in Linux?</summary></entry><entry><title type="html">5G: Private 5G Networks for IoT Use cases</title><link href="http://localhost:4000/5g/iot/edge%20computing/aws%20iot/2021/12/04/Private-5G-Networks.html" rel="alternate" type="text/html" title="5G: Private 5G Networks for IoT Use cases" /><published>2021-12-04T12:33:22+05:30</published><updated>2021-12-04T12:33:22+05:30</updated><id>http://localhost:4000/5g/iot/edge%20computing/aws%20iot/2021/12/04/Private-5G-Networks</id><content type="html" xml:base="http://localhost:4000/5g/iot/edge%20computing/aws%20iot/2021/12/04/Private-5G-Networks.html">&lt;p&gt;This write-up explains different use cases of Private 5G Networks, specifically in IoT &amp;amp; Edge-Computing domains.&lt;/p&gt;
+
+&lt;h2 id=&quot;problems-with-existing-enterprise-networks&quot;&gt;Problems with existing Enterprise Networks&lt;/h2&gt;
+&lt;p&gt;Enterprise networks are under strain, because:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Increasing internet connected-serving applications.&lt;/li&gt;
+  &lt;li&gt;Increasing number of users.&lt;/li&gt;
+  &lt;li&gt;Increasing number of Connected IoT Devices.&lt;/li&gt;
+  &lt;li&gt;Increased Video content consumption.&lt;/li&gt;
+  &lt;li&gt;Low Latency requirements.&lt;/li&gt;
+  &lt;li&gt;Wired networks are inflexible and expensive to expand&lt;/li&gt;
+  &lt;li&gt;Wi-Fi networks suffer from Coverage, Reliability &amp;amp; Capacity issues.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;advantages-of-5g-networks&quot;&gt;Advantages of 5G Networks&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Reliable network connectivity for use cases that involve device mobility.&lt;/li&gt;
+  &lt;li&gt;Longer range than Wi-Fi networks.&lt;/li&gt;
+  &lt;li&gt;Better coverage, especially in industrial/hospital environments.&lt;/li&gt;
+  &lt;li&gt;Low-latency connectivity for IoT-Edge applications.&lt;/li&gt;
+  &lt;li&gt;Full enterprise control over users, devices, network utilization and data. Implement enterprise-specific network configuration and security policies.&lt;/li&gt;
+  &lt;li&gt;Convenience of CBRS (Citizens Broadband Radio Service) in the US with no need to acquire spectrum licenses.(US specific)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;private-5g-use-cases&quot;&gt;Private 5G use-cases&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Indoor Scenarios such as Industrial Manufacturing Hub or Hospitals or Retail stores
+    &lt;ul&gt;
+      &lt;li&gt;Improved coverage and reliability close to wired networks with flexibility as Wi-Fi.&lt;/li&gt;
+      &lt;li&gt;Connect autonomous mobile robots (AMRs), automated guided vehicles (AGVs), video surveillance systems.&lt;/li&gt;
+      &lt;li&gt;Underground deployments, where cellular network is often difficult to reach, unreliable.
+        &lt;ul&gt;
+          &lt;li&gt;Mining sites can be a great scenario for connectivity to Iot Sensors, video surveillance.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Point-of-sale (PoS) transactions, video surveillance in Retail stores.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Outdoor Scenarios such as Transport Hubs
+    &lt;ul&gt;
+      &lt;li&gt;Increase range and penetration over Wi-Fi in shipping ports, airports, train and bus terminals.&lt;/li&gt;
+      &lt;li&gt;Reliable connectivity for IoT sensor data for predictive maintenance, video feeds for safety, push-to-talk (PTT) applications for communications.&lt;/li&gt;
+      &lt;li&gt;Remote Places where public network services are not available like Oil-Gas, Mining IIoT sites&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;On-premise IoT-Edge-AI-ML Analysis
+    &lt;ul&gt;
+      &lt;li&gt;Low latency use-cases can be a reality as in case of Internet of Medical things (IoMT).&lt;/li&gt;
+      &lt;li&gt;Real-time AI-ML diagnosis on sensors, video data.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Large Images/Videos data analysis
+    &lt;ul&gt;
+      &lt;li&gt;As in case of Radiology scans or live video, or Raw image data, which are relatively large chunks of data.&lt;/li&gt;
+      &lt;li&gt;with 5G low latency and dedicated network without the risk of channel interference, these loads can be transmitted in real-time and analysis be performed on it or it can be made available for remote monitoring or diagnosis services.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;AR-VR applications
+    &lt;ul&gt;
+      &lt;li&gt;with all of the promises of 5G networks such as Low Latency, dedicated bandwidth, AR/VR application experiances can be made production grade, deployed and simultaneously used by large gatherings.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;aws-private-5g&quot;&gt;AWS Private 5G&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;It simplifies the procurement, deployment, and installation process&lt;/li&gt;
+  &lt;li&gt;Allowing customers to deploy their own 4G/LTE or 5G network.&lt;/li&gt;
+  &lt;li&gt;In the US, AWS Private 5G uses CBRS (Citizens Broadband Radio Service), avoiding the need to procure spectrum licenses.&lt;/li&gt;
+  &lt;li&gt;Integration with Spectrum Access System (SAS) for FCC regulation compliance are handled by AWS.&lt;/li&gt;
+  &lt;li&gt;Delivers, provisions, and maintains all the preintegrated hardware, 5G Core and RAN software, and SIM cards.&lt;/li&gt;
+  &lt;li&gt;Small cell radio units (RUs) are deployed on premises and the 5G Core (5GC) software runs either in an AWS Region or on premises using AWS managed infrastructure (AWS Outposts).&lt;/li&gt;
+  &lt;li&gt;Setup Customized Bandwidths, Latency and Quality of Service (QoS) profiles for groups of devices and applications.&lt;/li&gt;
+  &lt;li&gt;Pricing is based on Network Coverage and Capacity requirements, but not the number of connected devices.&lt;/li&gt;
+  &lt;li&gt;Zero upfront charges for radio units, on-premises hardware, and SIMs. No installation charges or additional software licensing fees.&lt;/li&gt;
+  &lt;li&gt;Provision a private cellular network of any size.&lt;/li&gt;
+  &lt;li&gt;Expand coverage, and scale number of connected devices as needed.&lt;/li&gt;
+  &lt;li&gt;AWS IAM integration to manage access between AWS services and devices in the network.
+    &lt;ul&gt;
+      &lt;li&gt;5G-powered SIM cards are treated as IAM resources.&lt;/li&gt;
+      &lt;li&gt;Manage SIM control policies.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Amazon CloudWatch Monitoring
+    &lt;ul&gt;
+      &lt;li&gt;Query metrics for network status, connected APs or SIMs, uplink and downlink usage by user, device, network categories.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/private5g/&quot;&gt;AWS Private 5G&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="5G" /><category term="IoT" /><category term="Edge Computing" /><category term="AWS IoT" /><category term="5G" /><category term="IoT" /><category term="Edge Computing" /><category term="AWS IoT" /><summary type="html">This write-up explains different use cases of Private 5G Networks, specifically in IoT &amp;amp; Edge-Computing domains. Problems with existing Enterprise Networks Enterprise networks are under strain, because: Increasing internet connected-serving applications. Increasing number of users. Increasing number of Connected IoT Devices. Increased Video content consumption. Low Latency requirements. Wired networks are inflexible and expensive to expand Wi-Fi networks suffer from Coverage, Reliability &amp;amp; Capacity issues. Advantages of 5G Networks Reliable network connectivity for use cases that involve device mobility. Longer range than Wi-Fi networks. Better coverage, especially in industrial/hospital environments. Low-latency connectivity for IoT-Edge applications. Full enterprise control over users, devices, network utilization and data. Implement enterprise-specific network configuration and security policies. Convenience of CBRS (Citizens Broadband Radio Service) in the US with no need to acquire spectrum licenses.(US specific) Private 5G use-cases Indoor Scenarios such as Industrial Manufacturing Hub or Hospitals or Retail stores Improved coverage and reliability close to wired networks with flexibility as Wi-Fi. Connect autonomous mobile robots (AMRs), automated guided vehicles (AGVs), video surveillance systems. Underground deployments, where cellular network is often difficult to reach, unreliable. Mining sites can be a great scenario for connectivity to Iot Sensors, video surveillance. Point-of-sale (PoS) transactions, video surveillance in Retail stores. Outdoor Scenarios such as Transport Hubs Increase range and penetration over Wi-Fi in shipping ports, airports, train and bus terminals. Reliable connectivity for IoT sensor data for predictive maintenance, video feeds for safety, push-to-talk (PTT) applications for communications. Remote Places where public network services are not available like Oil-Gas, Mining IIoT sites On-premise IoT-Edge-AI-ML Analysis Low latency use-cases can be a reality as in case of Internet of Medical things (IoMT). Real-time AI-ML diagnosis on sensors, video data. Large Images/Videos data analysis As in case of Radiology scans or live video, or Raw image data, which are relatively large chunks of data. with 5G low latency and dedicated network without the risk of channel interference, these loads can be transmitted in real-time and analysis be performed on it or it can be made available for remote monitoring or diagnosis services. AR-VR applications with all of the promises of 5G networks such as Low Latency, dedicated bandwidth, AR/VR application experiances can be made production grade, deployed and simultaneously used by large gatherings. AWS Private 5G It simplifies the procurement, deployment, and installation process Allowing customers to deploy their own 4G/LTE or 5G network. In the US, AWS Private 5G uses CBRS (Citizens Broadband Radio Service), avoiding the need to procure spectrum licenses. Integration with Spectrum Access System (SAS) for FCC regulation compliance are handled by AWS. Delivers, provisions, and maintains all the preintegrated hardware, 5G Core and RAN software, and SIM cards. Small cell radio units (RUs) are deployed on premises and the 5G Core (5GC) software runs either in an AWS Region or on premises using AWS managed infrastructure (AWS Outposts). Setup Customized Bandwidths, Latency and Quality of Service (QoS) profiles for groups of devices and applications. Pricing is based on Network Coverage and Capacity requirements, but not the number of connected devices. Zero upfront charges for radio units, on-premises hardware, and SIMs. No installation charges or additional software licensing fees. Provision a private cellular network of any size. Expand coverage, and scale number of connected devices as needed. AWS IAM integration to manage access between AWS services and devices in the network. 5G-powered SIM cards are treated as IAM resources. Manage SIM control policies. Amazon CloudWatch Monitoring Query metrics for network status, connected APs or SIMs, uplink and downlink usage by user, device, network categories. Reference AWS Private 5G</summary></entry><entry><title type="html">AWS Greengrass Service V2: a Service to build, deploy and manage IoT applications on Edge Devices</title><link href="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/12/AWS-Greengrass.html" rel="alternate" type="text/html" title="AWS Greengrass Service V2: a Service to build, deploy and manage IoT applications on Edge Devices" /><published>2021-11-12T12:33:22+05:30</published><updated>2021-11-12T12:33:22+05:30</updated><id>http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/12/AWS-Greengrass</id><content type="html" xml:base="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/12/AWS-Greengrass.html">&lt;p&gt;This write-up will only focus on AWS Sagemaker ML service with respect to ML model deployment to Edge devices and Cloud.&lt;/p&gt;
 
 &lt;h2 id=&quot;ml-inference-on-greengrass-devices&quot;&gt;ML Inference on Greengrass devices&lt;/h2&gt;
 &lt;ul&gt;
@@ -53,7 +361,100 @@
 &lt;h2 id=&quot;further-references&quot;&gt;Further References&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/aws-samples/greengrass-v2-docker-ros-demo&quot;&gt;ROS2 Docker Sample Application with AWS IoT Greengrass 2.0&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><summary type="html">This write-up will only focus on AWS Sagemaker ML service with respect to ML model deployment to Edge devices and Cloud. ML Inference on Greengrass devices ML models can be trained using AWS Sagemaker or custom ml trainining ways. Models are stored in AWS S3 for deployment to Greengrass devices. ML models are deployed as artifacts in your components to perform inference on your core devices. ML Components AWS provides following Machine Learning components that can be deployed to edge devices to perform Machine Learning Inference. ML models can be trained using AWS Sagemaker or custom ml trainining ways. Models are stored in AWS S3 for deployment to Greengrass devices. AWS-provided machine learning components are broadly categorized as follows: Model component — Contains machine learning models as Greengrass artifacts. Runtime component — Contains the script that installs the machine learning framework and its dependencies on the Greengrass core device. Inference component — Contains the inference code and includes component dependencies to install the machine learning framework and download pre-trained machine learning models. To perform custom machine learning inference with your own models that are stored in Amazon S3, or to use a different machine learning framework, you can use the recipes of the following public components as templates to create custom machine learning components. Further Reference: Customize your machine learning components AWS provided ML model components: SageMaker Edge Manager DLR image classification DLR object detection DLR image classification model store DLR object detection model store DLR installer TensorFlow Lite image classification TensorFlow Lite object detection TensorFlow Lite image classification model store TensorFlow Lite object detection model store TensorFlow Lite installer AWS SageMaker Edge Manager agent With SageMaker Edge Manager, you can use Amazon SageMaker Neo-compiled models directly on your core device. AWS SageMaker Edge Manager Further References ROS2 Docker Sample Application with AWS IoT Greengrass 2.0</summary></entry><entry><title type="html">AWS Sagemaker Machine Learning Service, Sagemaker Neo, Sagemaker Edge Manager</title><link href="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/ml/2021/11/11/AWS-SageMaker.html" rel="alternate" type="text/html" title="AWS Sagemaker Machine Learning Service, Sagemaker Neo, Sagemaker Edge Manager" /><published>2021-11-11T12:33:22+05:30</published><updated>2021-11-11T12:33:22+05:30</updated><id>http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/ml/2021/11/11/AWS-SageMaker</id><content type="html" xml:base="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/ml/2021/11/11/AWS-SageMaker.html">&lt;p&gt;This write-up will only focus on AWS Sagemaker ML service with respect to ML model deployment to Edge devices and Cloud.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><summary type="html">This write-up will only focus on AWS Sagemaker ML service with respect to ML model deployment to Edge devices and Cloud. ML Inference on Greengrass devices ML models can be trained using AWS Sagemaker or custom ml trainining ways. Models are stored in AWS S3 for deployment to Greengrass devices. ML models are deployed as artifacts in your components to perform inference on your core devices. ML Components AWS provides following Machine Learning components that can be deployed to edge devices to perform Machine Learning Inference. ML models can be trained using AWS Sagemaker or custom ml trainining ways. Models are stored in AWS S3 for deployment to Greengrass devices. AWS-provided machine learning components are broadly categorized as follows: Model component — Contains machine learning models as Greengrass artifacts. Runtime component — Contains the script that installs the machine learning framework and its dependencies on the Greengrass core device. Inference component — Contains the inference code and includes component dependencies to install the machine learning framework and download pre-trained machine learning models. To perform custom machine learning inference with your own models that are stored in Amazon S3, or to use a different machine learning framework, you can use the recipes of the following public components as templates to create custom machine learning components. Further Reference: Customize your machine learning components AWS provided ML model components: SageMaker Edge Manager DLR image classification DLR object detection DLR image classification model store DLR object detection model store DLR installer TensorFlow Lite image classification TensorFlow Lite object detection TensorFlow Lite image classification model store TensorFlow Lite object detection model store TensorFlow Lite installer AWS SageMaker Edge Manager agent With SageMaker Edge Manager, you can use Amazon SageMaker Neo-compiled models directly on your core device. AWS SageMaker Edge Manager Further References ROS2 Docker Sample Application with AWS IoT Greengrass 2.0</summary></entry><entry><title type="html">Why prefer Static memory allocation over Dynamic in Embedded Firmmware</title><link href="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/12/Why-Static-Memory-Allocation-Preferred-over-Dynamic-in-Embedded-Firmwares.html" rel="alternate" type="text/html" title="Why prefer Static memory allocation over Dynamic in Embedded Firmmware" /><published>2021-11-12T12:33:22+05:30</published><updated>2021-11-12T12:33:22+05:30</updated><id>http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/12/Why-Static-Memory-Allocation-Preferred-over-Dynamic-in-Embedded-Firmwares</id><content type="html" xml:base="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/12/Why-Static-Memory-Allocation-Preferred-over-Dynamic-in-Embedded-Firmwares.html">&lt;p&gt;This write-up will gather the pointers and conclude on why Static memory allocation is preferred over Dynamic memory in Embedded world.&lt;/p&gt;
+
+&lt;h2 id=&quot;options-for-memory-allocation-pros--cons&quot;&gt;Options for Memory Allocation, Pros &amp;amp; Cons&lt;/h2&gt;
+&lt;p&gt;Embedded systems have limited amount of Random Access Memory (RAM) which will be used across different types of memory sections like Stack, Heap, data, variables sections.&lt;/p&gt;
+
+&lt;h3 id=&quot;static-memory-allocation-without-stack-or-heap&quot;&gt;Static memory allocation, without Stack or Heap&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;If all of the memory is allocated Statically, the the amount of RAM being used can be determined at Compile time.&lt;/li&gt;
+  &lt;li&gt;This avoids the memory-related issues like: memory leaks, dangling pointers, segmentation fault, etc.&lt;/li&gt;
+  &lt;li&gt;We have following options to allocate memory for all kind of data:
+    &lt;ul&gt;
+      &lt;li&gt;Global variables.&lt;/li&gt;
+      &lt;li&gt;File Static variables.&lt;/li&gt;
+      &lt;li&gt;Function Static Variables.&lt;/li&gt;
+      &lt;li&gt;Local variables inside functions.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;8-bit Microcontrollers like 8051 &amp;amp; PIC are usually designed to work with only Static memory.&lt;/li&gt;
+  &lt;li&gt;If there is no support for stack in MCU hardware, all the local variables are stored in the same memory location and that memory location is not used by any other function, even if the function is not running.&lt;/li&gt;
+  &lt;li&gt;This prohibits the use of recursion or any other mechanism that requires reentrant code.
+    &lt;ul&gt;
+      &lt;li&gt;e.g. an interrupt routine can’t call a function that may also be called by the main flow of execution.&lt;/li&gt;
+      &lt;li&gt;but this guarantees, no memory related run-time issues.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;This provides robustness of the program at the cost of programming flexibility &amp;amp; efficiency.&lt;/li&gt;
+  &lt;li&gt;This is only feasible for MCUs which are supposed to run a small system &amp;amp; where memory usage is very limited and can be predetermined exactly.&lt;/li&gt;
+  &lt;li&gt;For larger systems, this approach of No Stack, No Heap is not feasible, as it will need enourmous amount of RAM for every individual memory allocation, which each need different memory location.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;stack-based-memory-management&quot;&gt;Stack based memory management&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;A block of memory is allocated on Stack for each invocation of a function and the same is regained after function exits.&lt;/li&gt;
+  &lt;li&gt;It’s difficult for a recursive program to predict how much Stack size will be in worst case.&lt;/li&gt;
+  &lt;li&gt;A multi-tasking system needs to have a separate Stack for each task.&lt;/li&gt;
+  &lt;li&gt;Plus an extra on efor Interrupts.&lt;/li&gt;
+  &lt;li&gt;Stack size is usually pre-determined and statically fixed.&lt;/li&gt;
+  &lt;li&gt;Stack Overflow is an untimely issue in static stack size allocation, a task may run into it, which the stack of other task is empty at that time.&lt;/li&gt;
+  &lt;li&gt;Best Practice:
+    &lt;ul&gt;
+      &lt;li&gt;Allocate the Stack Size to be 50% more than the worst case seen during testing.&lt;/li&gt;
+      &lt;li&gt;Many RTOS systems provide a stack size tracing feature.&lt;/li&gt;
+      &lt;li&gt;Check for infinite recursion cases, if any.&lt;/li&gt;
+      &lt;li&gt;Check for local variables sizes, specially for large sizes, it may extend beyond the top of stack (stack overflow).&lt;/li&gt;
+      &lt;li&gt;Check for large variable arrays &amp;amp; recursive functions, they determine the pattern of stack usage.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;heap-based-memory-management&quot;&gt;Heap based memory management&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Heap memory is assigned with malloc() and regained with free() in C.&lt;/li&gt;
+  &lt;li&gt;Stack management, i.e. memory allocation and regaining is managed by compiler, but the onus of Heap management relies with the programmer.&lt;/li&gt;
+  &lt;li&gt;Heap is a major reason of devious bugs in C programs.
+    &lt;ul&gt;
+      &lt;li&gt;You freed the memory with free(), but continue to access it with a pointer that is nor NULLED after free() and neither being checked for NULL. This is perfect receipe for untimely crash, unexpected behaviour.&lt;/li&gt;
+      &lt;li&gt;You did not freed the memory for later access, but the pointers to that memory itself have gone out of scope. Now you are staring at Memory Leaks, the memory allocations that cannot be regained. It just a matter of time, you will run out of memory due to memory leak tending towards infinity with each call to that buggy code.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Memory Fragmentation:
+    &lt;ul&gt;
+      &lt;li&gt;This cannot be corrected at the application level.&lt;/li&gt;
+      &lt;li&gt;Caused by the blocks of memory available being broken down into smaller pieces as many allocations and frees are performed.&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=_G4HJDQjeP8&amp;amp;ab_channel=cpp4arduino&quot;&gt;Memory Heap Fragmentation&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The conclusion is that heap use does involve an element of risk, which the programmer may choose to accept in return for a more flexible, RAM-efficient system.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;memory-pools&quot;&gt;Memory Pools&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Pools, or partitions, of fixed-size memory blocks can be used to completely eliminate the potential for fragmentation.&lt;/li&gt;
+  &lt;li&gt;A compromise between static allocation and a general purpose heap.&lt;/li&gt;
+  &lt;li&gt;This heap can be tuned at design time for the size of the requests that will be made, as Embedded programs are usually addressing and desined for a particular problem or use-case, not for general purposes.&lt;/li&gt;
+  &lt;li&gt;Each pool contains an array of blocks. Unused blocks can be linked together in a list. The pools themselves are declared as arrays.&lt;/li&gt;
+  &lt;li&gt;Size is fixed for each pool.&lt;/li&gt;
+  &lt;li&gt;This system must be tuned by deciding which size blocks to make available and how many blocks to provide in each pool.&lt;/li&gt;
+  &lt;li&gt;Defining pools at sizes which are powers of two (that is, 2, 4, 8, 16, 32, 64, etc.) is a good starting point.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/1725923/how-bad-is-it-to-use-dynamic-datastuctures-on-an-embedded-system&quot;&gt;how bad is it to use dynamic datastuctures on an embedded system?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.nongnu.org/avr-libc/user-manual/malloc.html&quot;&gt;Memory Areas and Using malloc()&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://barrgroup.com/embedded-systems/how-to/malloc-free-dynamic-memory-allocation&quot;&gt;How to Allocate Dynamic Memory Safely&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.embedded.com/use-malloc-why-not/&quot;&gt;Use malloc()? Why not?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/33430900/dynamic-memory-allocation-in-embedded-c&quot;&gt;Dynamic memory allocation in embedded C&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://open4tech.com/concept-heap-usage-embedded-systems/&quot;&gt;The Concept of Heap and Its Usage in Embedded Systems&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.embeddedcomputing.com/technology/software-and-os/ides-application-programming/dynamic-memory-allocation-just-say-no&quot;&gt;Dynamic Memory Allocation - Just Say No&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/21370410/why-shouldnt-we-have-dynamic-allocated-memory-with-different-size-in-embedded-s&quot;&gt;Why shouldn’t we have dynamic allocated memory with different size in embedded system&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.embedded.com/mastering-stack-and-heap-for-system-reliability-part-1-calculating-stack-size/&quot;&gt;Mastering stack and heap for system reliability: Part 1 – Calculating stack size&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.embedded.com/dynamic-memory-and-heap-contiguity/&quot;&gt;Dynamic memory and heap contiguity&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/37812732/use-of-malloc-in-embedded-c/37814174&quot;&gt;use of malloc in embedded c [closed]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><summary type="html">This write-up will gather the pointers and conclude on why Static memory allocation is preferred over Dynamic memory in Embedded world. Options for Memory Allocation, Pros &amp;amp; Cons Embedded systems have limited amount of Random Access Memory (RAM) which will be used across different types of memory sections like Stack, Heap, data, variables sections. Static memory allocation, without Stack or Heap If all of the memory is allocated Statically, the the amount of RAM being used can be determined at Compile time. This avoids the memory-related issues like: memory leaks, dangling pointers, segmentation fault, etc. We have following options to allocate memory for all kind of data: Global variables. File Static variables. Function Static Variables. Local variables inside functions. 8-bit Microcontrollers like 8051 &amp;amp; PIC are usually designed to work with only Static memory. If there is no support for stack in MCU hardware, all the local variables are stored in the same memory location and that memory location is not used by any other function, even if the function is not running. This prohibits the use of recursion or any other mechanism that requires reentrant code. e.g. an interrupt routine can’t call a function that may also be called by the main flow of execution. but this guarantees, no memory related run-time issues. This provides robustness of the program at the cost of programming flexibility &amp;amp; efficiency. This is only feasible for MCUs which are supposed to run a small system &amp;amp; where memory usage is very limited and can be predetermined exactly. For larger systems, this approach of No Stack, No Heap is not feasible, as it will need enourmous amount of RAM for every individual memory allocation, which each need different memory location. Stack based memory management A block of memory is allocated on Stack for each invocation of a function and the same is regained after function exits. It’s difficult for a recursive program to predict how much Stack size will be in worst case. A multi-tasking system needs to have a separate Stack for each task. Plus an extra on efor Interrupts. Stack size is usually pre-determined and statically fixed. Stack Overflow is an untimely issue in static stack size allocation, a task may run into it, which the stack of other task is empty at that time. Best Practice: Allocate the Stack Size to be 50% more than the worst case seen during testing. Many RTOS systems provide a stack size tracing feature. Check for infinite recursion cases, if any. Check for local variables sizes, specially for large sizes, it may extend beyond the top of stack (stack overflow). Check for large variable arrays &amp;amp; recursive functions, they determine the pattern of stack usage. Heap based memory management Heap memory is assigned with malloc() and regained with free() in C. Stack management, i.e. memory allocation and regaining is managed by compiler, but the onus of Heap management relies with the programmer. Heap is a major reason of devious bugs in C programs. You freed the memory with free(), but continue to access it with a pointer that is nor NULLED after free() and neither being checked for NULL. This is perfect receipe for untimely crash, unexpected behaviour. You did not freed the memory for later access, but the pointers to that memory itself have gone out of scope. Now you are staring at Memory Leaks, the memory allocations that cannot be regained. It just a matter of time, you will run out of memory due to memory leak tending towards infinity with each call to that buggy code. Memory Fragmentation: This cannot be corrected at the application level. Caused by the blocks of memory available being broken down into smaller pieces as many allocations and frees are performed. Memory Heap Fragmentation The conclusion is that heap use does involve an element of risk, which the programmer may choose to accept in return for a more flexible, RAM-efficient system. Memory Pools Pools, or partitions, of fixed-size memory blocks can be used to completely eliminate the potential for fragmentation. A compromise between static allocation and a general purpose heap. This heap can be tuned at design time for the size of the requests that will be made, as Embedded programs are usually addressing and desined for a particular problem or use-case, not for general purposes. Each pool contains an array of blocks. Unused blocks can be linked together in a list. The pools themselves are declared as arrays. Size is fixed for each pool. This system must be tuned by deciding which size blocks to make available and how many blocks to provide in each pool. Defining pools at sizes which are powers of two (that is, 2, 4, 8, 16, 32, 64, etc.) is a good starting point. References how bad is it to use dynamic datastuctures on an embedded system? Memory Areas and Using malloc() How to Allocate Dynamic Memory Safely Use malloc()? Why not? Dynamic memory allocation in embedded C The Concept of Heap and Its Usage in Embedded Systems Dynamic Memory Allocation - Just Say No Why shouldn’t we have dynamic allocated memory with different size in embedded system Mastering stack and heap for system reliability: Part 1 – Calculating stack size Dynamic memory and heap contiguity use of malloc in embedded c [closed]</summary></entry><entry><title type="html">AWS Sagemaker Machine Learning Service, Sagemaker Neo, Sagemaker Edge Manager</title><link href="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/ml/2021/11/11/AWS-SageMaker.html" rel="alternate" type="text/html" title="AWS Sagemaker Machine Learning Service, Sagemaker Neo, Sagemaker Edge Manager" /><published>2021-11-11T12:33:22+05:30</published><updated>2021-11-11T12:33:22+05:30</updated><id>http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/ml/2021/11/11/AWS-SageMaker</id><content type="html" xml:base="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/ml/2021/11/11/AWS-SageMaker.html">&lt;p&gt;This write-up will only focus on AWS Sagemaker ML service with respect to ML model deployment to Edge devices and Cloud.&lt;/p&gt;
 
 &lt;h2 id=&quot;aws-sagemaker-neo&quot;&gt;AWS Sagemaker Neo&lt;/h2&gt;
 &lt;ul&gt;
@@ -592,785 +993,230 @@ can be deleted from the outbound queue.&lt;br /&gt;
       &lt;li&gt;Supported architectures: (more info) amd64, arm32v6, arm64v8, i386, ppc64le, s390x&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><summary type="html">MQTT Protocol MQTT = Message Queuing Telemetry Transport Telemetry = Tele-Metering = Remote Measurements Originally Developed by IBM, now Open Sourced. Though MQ stands for ‘Message Queuing’, actually there’s NO Messages being Queued. It’s a Publish/Subscribe mechanism. Sensor Devices Publish data to the Topics/Servers/Brokers. Topics are subscribed by other devices such as mobile devices those are looking for data from Sensors. Low Bandwidth Protocol Messages being sent by devices are very small in bytes. e.g. Temperature sensor sending 100 degree reading. Small Code Footprint The code used for this is very small. Used in: Facebook Messenger for iOS and Android PubNub MQTT Ports Protocol: TCP/IP Ports: 1883 - non-encrypted communication 8883 - encrypted communication Maximum Payload Size MQTT Protocol Max Payload - 256 MBs AWS IoT MQTT Max Payload - 128 KBs Quality of Service Levels: 0 = At Most Once (Best effort, No Ack) - Sender does not store messages, neither the receiver sends any acknowledgement. - This method requires only one message and once the message is sent to the broker by the client it is deleted from the message queue. - Therefore QoS 0 nullifies the chances of duplicate messages, which is why it is also known as the fire and forget method. - It provides a minimal and most unreliable message transmission level that offers the fastest delivery effort. 1 = At Least Once (Acknowledged, Retransmitted if Ack not received) - Using QoS 1, the delivery of a message is guaranteed (at least once, but the message may be sent more than once , if necessary). - This method needs two messages. - Here, the sender sends a message and waits to receive an acknowledgment (PUBACK message). - If it receives an acknowledgment from the client then it deletes the message from the outward-bound queue. - In case, it does not receive a PUBACK message, it resends the message with the duplicate flag (DUP flag) enabled. 2 = Exactly Once - The QoS 2 level setting guarantees exactly-once delivery of a message. - This is the slowest of all the levels and needs four messages. - In this level, the sender sends a message (PUBLISH) and waits for an acknowledgment (PUBREC message). - The receiver also sends a PUBREC message. - If the sender of the message fails to receive an acknowledgment (PUBREC), it sends the message again with the DUP flag enabled. - Upon receiving the acknowledgment message PUBREC, the sender transmits the message release message (PUBREL). - If the receiver does not receive the PUBREL message it resends the PUBREC message. - Once the receiver receives the PUBREL message, It forwards the message to all the subscribing clients. - Note: For Sender Broker is the receiver and for Receiver Broker is the sender. - Thereafter the receiver sends a publish complete (PUBCOMP) message. - In case the sender does not receive the PUBCOMP message, it resends the PUBREL message. - Once the sending client receives the PUBCOMP message, the transmission process is marked as completed and the message can be deleted from the outbound queue. these messages are same as used in WiFi communication. Retained Messages Server keeps messages even after sending it to all Subscribers. New Subscribers get the retained messages. We had seen this behavior in PubNub, where last message Published to Channel was retained till the next message is Published to that channel. This Last message was available to new subscriber. Only One Message is retained per Topic. Usecase: Sensor periodically sending a message on a topic. New subscriber will get the last state of the sensor with Retained message. Reference: MQTT Retained Messages Explained Clean Session and Durable Session Clean Session: Clean Session Flag = 1 [Optional] All of the client’s subscriptions are removed when it disconnects from the server. Durable Session: Clean Session Flag = 0 [Optional] The client’s subscriptions remain in effect after any disconnection. In this event, subsequent messages that arrive carrying a High QoS designation are stored for delivery after the connection is reestablished. Retained messages, Clean Session and QoS inter-related behavior Reference: MQTT Retained Messages Explained Wills A Will or a Message is informed by client with server that should be published to a specific Topic or Topics in the event of an unexpected disconnection. A Will is an alarm or security settings where system when a remote sensor has lost contact with the network. Keep Alive Messages Periodically sent Topic Trees, Strings Topics are organized Hierarchically into Topic Trees, using the ‘/’ character to create subtopics in the Topic String. Topic String A character string that identifies the Topic of a publish/subscribe message. Topic strings can contain either of two Wildcards: These WildCards Allows subscribers to match patterns within strings defined by message publishers Wildcard: #: Multilevel used to match any number of levels within a Topic. e.g. subscribers to truck/contents/# receive all messages that are designated for the topics: truck/contents truck/contents/rfid Wildcard: +: Single Level used to match Just ONE Topic Level. e.g. truck/+ matches truck/contents but not truck/contents/rfid MQTT Brokers Comparison Stress-Testing MQTT Brokers: A Comparative Analysis of Performance Measurements: Tested Borkers: Mosquitto - Bevywise MQTT Route - ActiveMQ - HiveMQ CE - VerneMQ - EMQ X Mosquitto outperforms the other considered solutions in most metrics; ActiveMQ is the best performing one in terms of Scalability due to its multi-threaded implementation. Bevywise MQTT Route has promising results for resource-constrained scenarios. ActiveMQ scales well in distributed/multi-core environment to beat all other brokers’ performance. If the hardware is resource-constrained (CPU/Memory/IO/Performance), then Mosquitto or Bevywise MQTT Route can be taken as better choices. Running MQTT broker in Containerized mode eclipse-mosquitto Maintained by: the Eclipse Foundation Supported architectures: (more info) amd64, arm32v6, arm64v8, i386, ppc64le, s390x</summary></entry><entry><title type="html">AWS Training Links and Ramp Up Guides</title><link href="http://localhost:4000/iot/cloud/aws/2021/10/27/AWS-Ramp-up-guides-training-links.html" rel="alternate" type="text/html" title="AWS Training Links and Ramp Up Guides" /><published>2021-10-27T12:33:22+05:30</published><updated>2021-10-27T12:33:22+05:30</updated><id>http://localhost:4000/iot/cloud/aws/2021/10/27/AWS-Ramp-up-guides-training-links</id><content type="html" xml:base="http://localhost:4000/iot/cloud/aws/2021/10/27/AWS-Ramp-up-guides-training-links.html">&lt;h3 id=&quot;aws-training-links&quot;&gt;AWS Training Links&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;/assets/docs/Ramp-Up_Guide_IoT.pdf&quot;&gt;AWS IoT Ramp-up Guide&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;/assets/docs/Ramp-Up_Guide_CloudPractitioner.pdf&quot;&gt;AWS Cloud Practictioner Ramp-up Guide&lt;/a&gt;&lt;/p&gt;</content><author><name>Akhilesh Moghe</name></author><category term="IoT" /><category term="Cloud" /><category term="AWS" /><category term="IoT" /><category term="Cloud" /><category term="AWS" /><summary type="html">AWS Training Links AWS IoT Ramp-up Guide AWS Cloud Practictioner Ramp-up Guide</summary></entry><entry><title type="html">AWS IoT Sitewise Edge</title><link href="http://localhost:4000/iot/cloud/aws%20iot/edge%20iot/2021/10/27/AWS-IoT-Sitewise-Edge.html" rel="alternate" type="text/html" title="AWS IoT Sitewise Edge" /><published>2021-10-27T12:33:22+05:30</published><updated>2021-10-27T12:33:22+05:30</updated><id>http://localhost:4000/iot/cloud/aws%20iot/edge%20iot/2021/10/27/AWS-IoT-Sitewise-Edge</id><content type="html" xml:base="http://localhost:4000/iot/cloud/aws%20iot/edge%20iot/2021/10/27/AWS-IoT-Sitewise-Edge.html">&lt;h1 id=&quot;aws-iot-sitewise&quot;&gt;AWS IoT Sitewise:&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><summary type="html">MQTT Protocol MQTT = Message Queuing Telemetry Transport Telemetry = Tele-Metering = Remote Measurements Originally Developed by IBM, now Open Sourced. Though MQ stands for ‘Message Queuing’, actually there’s NO Messages being Queued. It’s a Publish/Subscribe mechanism. Sensor Devices Publish data to the Topics/Servers/Brokers. Topics are subscribed by other devices such as mobile devices those are looking for data from Sensors. Low Bandwidth Protocol Messages being sent by devices are very small in bytes. e.g. Temperature sensor sending 100 degree reading. Small Code Footprint The code used for this is very small. Used in: Facebook Messenger for iOS and Android PubNub MQTT Ports Protocol: TCP/IP Ports: 1883 - non-encrypted communication 8883 - encrypted communication Maximum Payload Size MQTT Protocol Max Payload - 256 MBs AWS IoT MQTT Max Payload - 128 KBs Quality of Service Levels: 0 = At Most Once (Best effort, No Ack) - Sender does not store messages, neither the receiver sends any acknowledgement. - This method requires only one message and once the message is sent to the broker by the client it is deleted from the message queue. - Therefore QoS 0 nullifies the chances of duplicate messages, which is why it is also known as the fire and forget method. - It provides a minimal and most unreliable message transmission level that offers the fastest delivery effort. 1 = At Least Once (Acknowledged, Retransmitted if Ack not received) - Using QoS 1, the delivery of a message is guaranteed (at least once, but the message may be sent more than once , if necessary). - This method needs two messages. - Here, the sender sends a message and waits to receive an acknowledgment (PUBACK message). - If it receives an acknowledgment from the client then it deletes the message from the outward-bound queue. - In case, it does not receive a PUBACK message, it resends the message with the duplicate flag (DUP flag) enabled. 2 = Exactly Once - The QoS 2 level setting guarantees exactly-once delivery of a message. - This is the slowest of all the levels and needs four messages. - In this level, the sender sends a message (PUBLISH) and waits for an acknowledgment (PUBREC message). - The receiver also sends a PUBREC message. - If the sender of the message fails to receive an acknowledgment (PUBREC), it sends the message again with the DUP flag enabled. - Upon receiving the acknowledgment message PUBREC, the sender transmits the message release message (PUBREL). - If the receiver does not receive the PUBREL message it resends the PUBREC message. - Once the receiver receives the PUBREL message, It forwards the message to all the subscribing clients. - Note: For Sender Broker is the receiver and for Receiver Broker is the sender. - Thereafter the receiver sends a publish complete (PUBCOMP) message. - In case the sender does not receive the PUBCOMP message, it resends the PUBREL message. - Once the sending client receives the PUBCOMP message, the transmission process is marked as completed and the message can be deleted from the outbound queue. these messages are same as used in WiFi communication. Retained Messages Server keeps messages even after sending it to all Subscribers. New Subscribers get the retained messages. We had seen this behavior in PubNub, where last message Published to Channel was retained till the next message is Published to that channel. This Last message was available to new subscriber. Only One Message is retained per Topic. Usecase: Sensor periodically sending a message on a topic. New subscriber will get the last state of the sensor with Retained message. Reference: MQTT Retained Messages Explained Clean Session and Durable Session Clean Session: Clean Session Flag = 1 [Optional] All of the client’s subscriptions are removed when it disconnects from the server. Durable Session: Clean Session Flag = 0 [Optional] The client’s subscriptions remain in effect after any disconnection. In this event, subsequent messages that arrive carrying a High QoS designation are stored for delivery after the connection is reestablished. Retained messages, Clean Session and QoS inter-related behavior Reference: MQTT Retained Messages Explained Wills A Will or a Message is informed by client with server that should be published to a specific Topic or Topics in the event of an unexpected disconnection. A Will is an alarm or security settings where system when a remote sensor has lost contact with the network. Keep Alive Messages Periodically sent Topic Trees, Strings Topics are organized Hierarchically into Topic Trees, using the ‘/’ character to create subtopics in the Topic String. Topic String A character string that identifies the Topic of a publish/subscribe message. Topic strings can contain either of two Wildcards: These WildCards Allows subscribers to match patterns within strings defined by message publishers Wildcard: #: Multilevel used to match any number of levels within a Topic. e.g. subscribers to truck/contents/# receive all messages that are designated for the topics: truck/contents truck/contents/rfid Wildcard: +: Single Level used to match Just ONE Topic Level. e.g. truck/+ matches truck/contents but not truck/contents/rfid MQTT Brokers Comparison Stress-Testing MQTT Brokers: A Comparative Analysis of Performance Measurements: Tested Borkers: Mosquitto - Bevywise MQTT Route - ActiveMQ - HiveMQ CE - VerneMQ - EMQ X Mosquitto outperforms the other considered solutions in most metrics; ActiveMQ is the best performing one in terms of Scalability due to its multi-threaded implementation. Bevywise MQTT Route has promising results for resource-constrained scenarios. ActiveMQ scales well in distributed/multi-core environment to beat all other brokers’ performance. If the hardware is resource-constrained (CPU/Memory/IO/Performance), then Mosquitto or Bevywise MQTT Route can be taken as better choices. Running MQTT broker in Containerized mode eclipse-mosquitto Maintained by: the Eclipse Foundation Supported architectures: (more info) amd64, arm32v6, arm64v8, i386, ppc64le, s390x</summary></entry><entry><title type="html">C++ STL: Container Adapters and Use cases</title><link href="http://localhost:4000/c++/data%20structures/stl/2021/11/01/C++_STL_Container_Adapters.html" rel="alternate" type="text/html" title="C++ STL: Container Adapters and Use cases" /><published>2021-11-01T12:33:22+05:30</published><updated>2021-11-01T12:33:22+05:30</updated><id>http://localhost:4000/c++/data%20structures/stl/2021/11/01/C++_STL_Container_Adapters</id><content type="html" xml:base="http://localhost:4000/c++/data%20structures/stl/2021/11/01/C++_STL_Container_Adapters.html">&lt;p&gt;This write-up will explain different &lt;strong&gt;&lt;em&gt;&lt;u&gt;Container Adapters&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, like &lt;strong&gt;&lt;em&gt;&lt;u&gt;Stack&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;&lt;u&gt;Queue&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;&lt;u&gt;Priority Queue&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; their respective features and mainly their appropriate use-cases.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;AWS IoT SiteWise is a managed service that simplifies collecting, organizing, and analyzing industrial equipment data.
-&lt;img src=&quot;/assets/images/aws/aws-iot-sitewise-edge.png&quot; alt=&quot;AWS IoT Sitewise Overview&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Container Adapters are NOT full container classes.&lt;/li&gt;
+  &lt;li&gt;But the classes that provide a &lt;em&gt;&lt;u&gt;specific interface&lt;/u&gt;&lt;/em&gt; relying on an object of one of the Container class (such as deque/list) to handle the elements.&lt;/li&gt;
+  &lt;li&gt;The underlying container is encapsulated in a way that its elements are accessed by the members of the container adapter independent of the underlying container class.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;features&quot;&gt;Features:&lt;/h2&gt;
-&lt;h3 id=&quot;assets-modeling&quot;&gt;Assets Modeling:&lt;/h3&gt;
-
-&lt;h3 id=&quot;assets-metrics&quot;&gt;Assets Metrics:&lt;/h3&gt;
-
-&lt;h3 id=&quot;sitewise-edge&quot;&gt;SiteWise Edge:&lt;/h3&gt;
+&lt;h2 id=&quot;stack&quot;&gt;Stack&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;SiteWise Edge software runs on on-premises servers, industrial gateways, computers, AWS Outposts and AWS Snow Family devices.&lt;/li&gt;
-  &lt;li&gt;SiteWise Edge can collect-organize-process-monitor industrial equipment data locally before sending it to AWS cloud.&lt;/li&gt;
-  &lt;li&gt;SiteWise Edge uses AWS IoT Greengrass, which provides a local software runtime environment for edge devices to help build, deploy and manage applications.&lt;/li&gt;
-  &lt;li&gt;SiteWise Edge software automates the process of securely connecting to and reading data from your industrial equipment and onsite data servers or historian databases.&lt;/li&gt;
-  &lt;li&gt;SiteWise Edge collects this data using multiple industrial protocols including OPC-UA, Modbus TCP and EtherNet/IP, which are provided as pre-packaged connectors that run on AWS IoT Greengrass.&lt;/li&gt;
-  &lt;li&gt;Once data is collected, with Sitewise Edge you can filter data streams by sampling or comparing against a specified criterion (e.g. air temperature above a user specified threshold).
+  &lt;li&gt;Operate in a &lt;strong&gt;&lt;em&gt;&lt;u&gt;LIFO&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; context (&lt;em&gt;&lt;u&gt;last-in first-out&lt;/u&gt;&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;Elements are &lt;strong&gt;Inserted/Extracted&lt;/strong&gt; &lt;em&gt;&lt;u&gt;Only from&lt;/u&gt;&lt;/em&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;ONE END&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; of the container.&lt;/li&gt;
+  &lt;li&gt;Elements are &lt;strong&gt;pushed/popped&lt;/strong&gt; from the &lt;em&gt;&lt;u&gt;back&lt;/u&gt;&lt;/em&gt; of the specific container, which is known as the &lt;em&gt;&lt;u&gt;TOP&lt;/u&gt;&lt;/em&gt; of the stack.&lt;/li&gt;
+  &lt;li&gt;By &lt;em&gt;&lt;u&gt;default&lt;/u&gt;&lt;/em&gt;, standard container &lt;strong&gt;std::deque&lt;/strong&gt; is used, if no container class is specified for a particular stack class instantiation.&lt;/li&gt;
+  &lt;li&gt;Otherwise, &lt;strong&gt;std::vector&lt;/strong&gt;, &lt;strong&gt;std::list&lt;/strong&gt; also used as underlying container.&lt;/li&gt;
+  &lt;li&gt;&lt;u&gt;Use-cases&lt;/u&gt;:
     &lt;ul&gt;
-      &lt;li&gt;Greengrass can also filter data with multiple lambda functions or components.&lt;/li&gt;
-      &lt;li&gt;What does SiteWise filters that’s different than what can be done with Greengrass, or SiteWise has some specific filtering mechanisms that are ready to use?&lt;/li&gt;
+      &lt;li&gt;First-In Last-Out operations&lt;/li&gt;
+      &lt;li&gt;Reversal of elements&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Once the data is processed, you can send the data to AWS IoT SiteWise in the cloud and for longer term storage and analysis in your industrial data lake you can send to other AWS Cloud services such as Amazon S3 and Amazon Timestream.&lt;/li&gt;
-  &lt;li&gt;local applications can call AWS IoT SiteWise query APIs on the SiteWise Edge software to read asset time series data, and computed transforms and metrics.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;data-ingestion&quot;&gt;Data Ingestion:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;AWS IoT SiteWise supports other data ingestion methods, including the MQTT protocol via integration with AWS IoT Core, then use the AWS IoT Core Rules Engine to route messages to AWS IoT SiteWise.&lt;/li&gt;
-  &lt;li&gt;Edge or Cloud Applications can send data to AWS IoT SiteWise using REST APIs also.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;gateway-management&quot;&gt;Gateway Management:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Configure and Monitor Edge Gateways(~that run SiteWise Edge software) across all facilities and view a consolidated list of active gateways, through the console or using APIs. You can also monitor the health of gateways remotely.&lt;/li&gt;
-  &lt;li&gt;Gateway metrics about health, status, performance can also be viewed in AWS CloudWatch Matrics console.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;sitewise-monitor&quot;&gt;SiteWise Monitor:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;AWS IoT SiteWise includes the ability to create &lt;strong&gt;&lt;em&gt;no-code&lt;/em&gt;&lt;/strong&gt;, &lt;em&gt;&lt;u&gt;fully-managed&lt;/u&gt;&lt;/em&gt; web applications using SiteWise Monitor for visualizing and interacting with operational data from devices and equipment connected to AWS IoT.&lt;/li&gt;
-  &lt;li&gt;Discover and display Asset data, computed metrics + historical time series data ingested and modeled in AWS IoT SiteWise.&lt;/li&gt;
-  &lt;li&gt;Visualize these data as charts, threshold these charts.&lt;/li&gt;
-  &lt;li&gt;Integrate Single-Sign-On with SiteWise Monitor.&lt;/li&gt;
-  &lt;li&gt;Administrators can create one or more web applications to share data, accesses across organizations, users.&lt;/li&gt;
-  &lt;li&gt;SiteWise Monitor web applications can also be deployed locally on SiteWise Edge software to visualize equipment data locally in case of intermittent connectivity.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;alarms&quot;&gt;Alarms:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;You can define, setup and update alarm rule and notifications for equipment performance issues on any asset data property using AWS IoT SiteWise Console, Monitor or SDKs.&lt;/li&gt;
-  &lt;li&gt;You can configure Email, SMS notifications and Severity of alarms.&lt;/li&gt;
-  &lt;li&gt;can also configure additional actions to other AWS services including AWS Lambda, Amazon Simple Queue Service (SQS), and Amazon Simple Notification Service (SNS), to be executed when an alarm triggers.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;extensibility&quot;&gt;Extensibility:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Custom edge and cloud applications can use query APIs to easily retrieve asset data and computed metrics from the AWS IoT SiteWise &lt;strong&gt;&lt;em&gt;time series data store&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;use a publish/subscribe interface to consume a near real-time stream of structured IoT data.&lt;/li&gt;
-  &lt;li&gt;Custom edge applications can also call the same AWS IoT SiteWise query APIs on the SiteWise Edge software running on-premises to retrieve asset data and metrics, without relying on connectivity to the cloud.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="IoT" /><category term="Cloud" /><category term="AWS IoT" /><category term="Edge IoT" /><category term="IoT" /><category term="Cloud" /><category term="AWS IoT" /><category term="Edge IoT" /><summary type="html">AWS IoT Sitewise: AWS IoT SiteWise is a managed service that simplifies collecting, organizing, and analyzing industrial equipment data. Features: Assets Modeling: Assets Metrics: SiteWise Edge: SiteWise Edge software runs on on-premises servers, industrial gateways, computers, AWS Outposts and AWS Snow Family devices. SiteWise Edge can collect-organize-process-monitor industrial equipment data locally before sending it to AWS cloud. SiteWise Edge uses AWS IoT Greengrass, which provides a local software runtime environment for edge devices to help build, deploy and manage applications. SiteWise Edge software automates the process of securely connecting to and reading data from your industrial equipment and onsite data servers or historian databases. SiteWise Edge collects this data using multiple industrial protocols including OPC-UA, Modbus TCP and EtherNet/IP, which are provided as pre-packaged connectors that run on AWS IoT Greengrass. Once data is collected, with Sitewise Edge you can filter data streams by sampling or comparing against a specified criterion (e.g. air temperature above a user specified threshold). Greengrass can also filter data with multiple lambda functions or components. What does SiteWise filters that’s different than what can be done with Greengrass, or SiteWise has some specific filtering mechanisms that are ready to use? Once the data is processed, you can send the data to AWS IoT SiteWise in the cloud and for longer term storage and analysis in your industrial data lake you can send to other AWS Cloud services such as Amazon S3 and Amazon Timestream. local applications can call AWS IoT SiteWise query APIs on the SiteWise Edge software to read asset time series data, and computed transforms and metrics. Data Ingestion: AWS IoT SiteWise supports other data ingestion methods, including the MQTT protocol via integration with AWS IoT Core, then use the AWS IoT Core Rules Engine to route messages to AWS IoT SiteWise. Edge or Cloud Applications can send data to AWS IoT SiteWise using REST APIs also. Gateway Management: Configure and Monitor Edge Gateways(~that run SiteWise Edge software) across all facilities and view a consolidated list of active gateways, through the console or using APIs. You can also monitor the health of gateways remotely. Gateway metrics about health, status, performance can also be viewed in AWS CloudWatch Matrics console. SiteWise Monitor: AWS IoT SiteWise includes the ability to create no-code, fully-managed web applications using SiteWise Monitor for visualizing and interacting with operational data from devices and equipment connected to AWS IoT. Discover and display Asset data, computed metrics + historical time series data ingested and modeled in AWS IoT SiteWise. Visualize these data as charts, threshold these charts. Integrate Single-Sign-On with SiteWise Monitor. Administrators can create one or more web applications to share data, accesses across organizations, users. SiteWise Monitor web applications can also be deployed locally on SiteWise Edge software to visualize equipment data locally in case of intermittent connectivity. Alarms: You can define, setup and update alarm rule and notifications for equipment performance issues on any asset data property using AWS IoT SiteWise Console, Monitor or SDKs. You can configure Email, SMS notifications and Severity of alarms. can also configure additional actions to other AWS services including AWS Lambda, Amazon Simple Queue Service (SQS), and Amazon Simple Notification Service (SNS), to be executed when an alarm triggers. Extensibility: Custom edge and cloud applications can use query APIs to easily retrieve asset data and computed metrics from the AWS IoT SiteWise time series data store use a publish/subscribe interface to consume a near real-time stream of structured IoT data. Custom edge applications can also call the same AWS IoT SiteWise query APIs on the SiteWise Edge software running on-premises to retrieve asset data and metrics, without relying on connectivity to the cloud.</summary></entry><entry><title type="html">Why IoT Edge Computing?</title><link href="http://localhost:4000/iot/cloud/edge%20computing/edge/2021/10/23/Why-Edge-Computing.html" rel="alternate" type="text/html" title="Why IoT Edge Computing?" /><published>2021-10-23T12:33:22+05:30</published><updated>2021-10-23T12:33:22+05:30</updated><id>http://localhost:4000/iot/cloud/edge%20computing/edge/2021/10/23/Why-Edge-Computing</id><content type="html" xml:base="http://localhost:4000/iot/cloud/edge%20computing/edge/2021/10/23/Why-Edge-Computing.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This article highlights the key factors that will drive the need of Edge Compute in ever growing field of IoT.&lt;/p&gt;
-
-&lt;h2 id=&quot;why-edge-compute&quot;&gt;Why Edge Compute?&lt;/h2&gt;
-&lt;h3 id=&quot;latency&quot;&gt;Latency:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;IoT systems generate huge data from sensors.&lt;/li&gt;
-  &lt;li&gt;Sending all these raw data every time to cloud is a costly affair in terms of money, latency and many more.&lt;/li&gt;
-  &lt;li&gt;The round time for sending data from IoT devices to cloud and receiving back the inference data/command from cloud usually take 100s of milliseconds.&lt;/li&gt;
-  &lt;li&gt;There are many real-life use-cases, where this much of latency is not acceptable, usually in these cases inference needs to happen under few milliseconds.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;fast-response-time&quot;&gt;Fast Response Time:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Decisions can be made locally on devices with the stream of data arriving.&lt;/li&gt;
-  &lt;li&gt;With local decision-making capability, there’s no round trip of data.&lt;/li&gt;
-  &lt;li&gt;Resulting in Fast Response.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;data-privacy&quot;&gt;Data Privacy:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;In many industries such as Healthcare, Industrial, Government Organizations, customers do not want to send data to public cloud or outside their data centers for data privacy and safety concerns.&lt;/li&gt;
-  &lt;li&gt;Also, regulations like &lt;strong&gt;&lt;em&gt;HIPAA&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;GDPR&lt;/em&gt;&lt;/strong&gt; mandates the data privacy and security, which is a strong motive behind keeping data on-premises servers.&lt;/li&gt;
-  &lt;li&gt;Though data privacy, safety and security can be addressed in cloud infrastructures with Multitenancy and similar practices, it may not be acceptable to all customers.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;bandwidth&quot;&gt;Bandwidth:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;As the data generated and frequency increases, the data to be synced will increase.&lt;/li&gt;
-  &lt;li&gt;This definitely results in increased bandwidth consumption.&lt;/li&gt;
-  &lt;li&gt;There may be restrictions on Network Bandwidth allocation per device or network.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;cost&quot;&gt;Cost:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;IoT systems generate huge data from sensors.&lt;/li&gt;
-  &lt;li&gt;Sending all these raw data every time to cloud is costly affair in terms of money, latency and many more.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;pre-processing&quot;&gt;Pre-processing:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;IoT systems generate huge data from sensors.&lt;/li&gt;
-  &lt;li&gt;Sending all these raw data every time to cloud is costly affair in terms of money, latency and many more.&lt;/li&gt;
-  &lt;li&gt;So usually, the raw IoT sensors data is pre-processed, transformed, fine grained before sending it over to data centers.&lt;/li&gt;
-  &lt;li&gt;Many of the IoT devices, do not have that much of compute capability, e.g., MCUs, in these scenarios, data pre-processing can be done on the Edge devices before cloud.&lt;/li&gt;
-  &lt;li&gt;Edge devices can also act as a translation bridge between different protocols, e.g., Industrial protocols like CAN Bus, Modbus, OPC-UA are not directly compatible with cloud data storage protocols like JSON. Edge devices can handle these protocol translations.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;no-direct-connectivity-gateway-kind-of-functionality&quot;&gt;No direct connectivity, Gateway kind of functionality:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;In many scenarios, IoT devices will not be directly exposed to the internet.&lt;/li&gt;
-  &lt;li&gt;IoT devices are only connecting to the gateway devices, which provide them local connectivity, but no internet access.&lt;/li&gt;
-  &lt;li&gt;In such scenarios, IoT devices needs to send data to gateway i.e., Edge devices.&lt;/li&gt;
-  &lt;li&gt;And Edge device then sends data to cloud.&lt;/li&gt;
-  &lt;li&gt;In these cases, Routers or the mobiles acting as hotspots can be Edge devices.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;on-premise-ai-ml-inference-scenarios&quot;&gt;On-premise AI, ML Inference scenarios:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Allows you to deploy models built and trained in the cloud and run them on edge devices.&lt;/li&gt;
-  &lt;li&gt;Edge computing uses this model to process data locally and respond to the event rapidly.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;intermittent-connectivity&quot;&gt;Intermittent Connectivity:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;No one can guarantee continuous internet access.&lt;/li&gt;
-  &lt;li&gt;There will be many situations of intermittent connectivity.&lt;/li&gt;
-  &lt;li&gt;Though internet connectivity is intermittent, we can have local uninterrupted connectivity to IoT devices.&lt;/li&gt;
-  &lt;li&gt;Having Edge processing, we can have AI, ML inferences on Edge devices, without bothering about internet cloud connectivity.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;iot-architecture-limitations&quot;&gt;IoT Architecture Limitations:&lt;/h2&gt;
-&lt;h3 id=&quot;todays-iot-approach&quot;&gt;Today’s IoT Approach:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;In today’s prevailing IoT architecture, sensor data is transmitted over a wide area network to be centralized, processed and analyzed — which creates an additional supply of enriched data.&lt;/li&gt;
-  &lt;li&gt;These data and analytical models are intended to trigger actions either on the thing itself, in upstream business systems, or in other platforms that can use the data outside of the original context.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;challenges-in-iot-approach&quot;&gt;Challenges in IoT Approach:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;IoT approach is unsustainable in the long term, due to:
-    &lt;ul&gt;
-      &lt;li&gt;the number of device connections,&lt;/li&gt;
-      &lt;li&gt;volume of data,&lt;/li&gt;
-      &lt;li&gt;latency across different locations and networks,&lt;/li&gt;
-      &lt;li&gt;and the asynchronous nature of many connections between data flow and analytical cloud services.&lt;/li&gt;
-      &lt;li&gt;In addition, today’s heterogeneous networks are unable to manage the massive growth anticipated in the number of endpoints and the data volume.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;These challenges have created a pressing need to move information and analytical models closer to the source of data, in order to provide compute capability inside an environment where connectivity and response times can be controlled.
-That’s where Edge Computing comes into picture.&lt;/p&gt;</content><author><name>Akhilesh Moghe</name></author><category term="IoT" /><category term="Cloud" /><category term="Edge Computing" /><category term="Edge" /><category term="IoT" /><category term="Cloud" /><category term="Edge Computing" /><category term="Edge" /><summary type="html">Introduction This article highlights the key factors that will drive the need of Edge Compute in ever growing field of IoT. Why Edge Compute? Latency: IoT systems generate huge data from sensors. Sending all these raw data every time to cloud is a costly affair in terms of money, latency and many more. The round time for sending data from IoT devices to cloud and receiving back the inference data/command from cloud usually take 100s of milliseconds. There are many real-life use-cases, where this much of latency is not acceptable, usually in these cases inference needs to happen under few milliseconds. Fast Response Time: Decisions can be made locally on devices with the stream of data arriving. With local decision-making capability, there’s no round trip of data. Resulting in Fast Response. Data Privacy: In many industries such as Healthcare, Industrial, Government Organizations, customers do not want to send data to public cloud or outside their data centers for data privacy and safety concerns. Also, regulations like HIPAA, GDPR mandates the data privacy and security, which is a strong motive behind keeping data on-premises servers. Though data privacy, safety and security can be addressed in cloud infrastructures with Multitenancy and similar practices, it may not be acceptable to all customers. Bandwidth: As the data generated and frequency increases, the data to be synced will increase. This definitely results in increased bandwidth consumption. There may be restrictions on Network Bandwidth allocation per device or network. Cost: IoT systems generate huge data from sensors. Sending all these raw data every time to cloud is costly affair in terms of money, latency and many more. Pre-processing: IoT systems generate huge data from sensors. Sending all these raw data every time to cloud is costly affair in terms of money, latency and many more. So usually, the raw IoT sensors data is pre-processed, transformed, fine grained before sending it over to data centers. Many of the IoT devices, do not have that much of compute capability, e.g., MCUs, in these scenarios, data pre-processing can be done on the Edge devices before cloud. Edge devices can also act as a translation bridge between different protocols, e.g., Industrial protocols like CAN Bus, Modbus, OPC-UA are not directly compatible with cloud data storage protocols like JSON. Edge devices can handle these protocol translations. No direct connectivity, Gateway kind of functionality: In many scenarios, IoT devices will not be directly exposed to the internet. IoT devices are only connecting to the gateway devices, which provide them local connectivity, but no internet access. In such scenarios, IoT devices needs to send data to gateway i.e., Edge devices. And Edge device then sends data to cloud. In these cases, Routers or the mobiles acting as hotspots can be Edge devices. On-premise AI, ML Inference scenarios: Allows you to deploy models built and trained in the cloud and run them on edge devices. Edge computing uses this model to process data locally and respond to the event rapidly. Intermittent Connectivity: No one can guarantee continuous internet access. There will be many situations of intermittent connectivity. Though internet connectivity is intermittent, we can have local uninterrupted connectivity to IoT devices. Having Edge processing, we can have AI, ML inferences on Edge devices, without bothering about internet cloud connectivity. IoT Architecture Limitations: Today’s IoT Approach: In today’s prevailing IoT architecture, sensor data is transmitted over a wide area network to be centralized, processed and analyzed — which creates an additional supply of enriched data. These data and analytical models are intended to trigger actions either on the thing itself, in upstream business systems, or in other platforms that can use the data outside of the original context. Challenges in IoT Approach: IoT approach is unsustainable in the long term, due to: the number of device connections, volume of data, latency across different locations and networks, and the asynchronous nature of many connections between data flow and analytical cloud services. In addition, today’s heterogeneous networks are unable to manage the massive growth anticipated in the number of endpoints and the data volume. These challenges have created a pressing need to move information and analytical models closer to the source of data, in order to provide compute capability inside an environment where connectivity and response times can be controlled. That’s where Edge Computing comes into picture.</summary></entry><entry><title type="html">Container Security</title><link href="http://localhost:4000/containers/docker/kubernetes/devops/2021/10/07/Container-Security.html" rel="alternate" type="text/html" title="Container Security" /><published>2021-10-07T12:33:22+05:30</published><updated>2021-10-07T12:33:22+05:30</updated><id>http://localhost:4000/containers/docker/kubernetes/devops/2021/10/07/Container-Security</id><content type="html" xml:base="http://localhost:4000/containers/docker/kubernetes/devops/2021/10/07/Container-Security.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-
-&lt;h2 id=&quot;threats-and-risks-areas&quot;&gt;Threats and Risks Areas:&lt;/h2&gt;
-
-&lt;h3 id=&quot;image-development&quot;&gt;Image Development:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Careless approach:
-    &lt;ul&gt;
-      &lt;li&gt;Installing components, applications without security safeguards or with default configs.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Sensitive Data in DockerFiles:
-    &lt;ul&gt;
-      &lt;li&gt;Password hardcoding&lt;/li&gt;
-      &lt;li&gt;Default passwords&lt;/li&gt;
-      &lt;li&gt;SSH encryption keys (specifically private part of keys)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Unreliable third-party source of Base Images:
-    &lt;ul&gt;
-      &lt;li&gt;Embedded Malwares:
-        &lt;ul&gt;
-          &lt;li&gt;Owner added Malware in image with malicious intents&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Non-updated Images:
-    &lt;ul&gt;
-      &lt;li&gt;Images not being maintained with Vulnerability patches&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Unreliable source of package installations:
-    &lt;ul&gt;
-      &lt;li&gt;ppa repositories&lt;/li&gt;
-      &lt;li&gt;Cascaded dependencies&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;code-repository&quot;&gt;Code Repository:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Open-source unmaintained repositories/projects&lt;/li&gt;
-  &lt;li&gt;Cascaded dependencies project repositories&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;image-registries-hub&quot;&gt;Image Registries Hub:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Unsecured Public Registry&lt;/li&gt;
-  &lt;li&gt;Local unsecured registry setup&lt;/li&gt;
-  &lt;li&gt;Misconfigured security controls on registries&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;kubernetesdocker-apis-abuse&quot;&gt;Kubernetes/Docker APIs Abuse:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Vulnerabilities in Kubernetes or Docker APIs itself.
-    &lt;ul&gt;
-      &lt;li&gt;CVE-2017-1002101 allows containers that use subPath volume mounts to access files or directories outside of the volume, including the host’s file system.&lt;/li&gt;
-      &lt;li&gt;CVE-2017-1002102 allows containers using secret, configMap, or projected or downwardAPI volume to trigger deletion of arbitrary files and directories on the nodes where they are running.&lt;/li&gt;
-      &lt;li&gt;CVE-2018-1002105, proxy request handling in kube-apiserver, can leave vulnerable TCP connections open to abuse.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Unrestricted Accesses:
-    &lt;ul&gt;
-      &lt;li&gt;Admin accesses missuses.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Unauthorized Accesses&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;applications-and-ports&quot;&gt;Applications and Ports:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Misconfigured Applications and Ports
-    &lt;ul&gt;
-      &lt;li&gt;May give-out sensitive information&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Application Exploitation with:
-    &lt;ul&gt;
-      &lt;li&gt;SQL injection&lt;/li&gt;
-      &lt;li&gt;cross-site scripting&lt;/li&gt;
-      &lt;li&gt;remote file inclusion&lt;/li&gt;
-      &lt;li&gt;brute-force attacks.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;API Abuse with misconfigured/Exposed ports&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;best-practises&quot;&gt;Best Practises:&lt;/h2&gt;
-&lt;h3 id=&quot;use-of-user-namespaces-in-linux&quot;&gt;Use of User Namespaces in Linux:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;when enabled, allows for &lt;u&gt;container isolation by limiting container access to system resources&lt;/u&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;run-applications-as-regular-users-in-containers-also&quot;&gt;Run Applications as regular users in containers also:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Setting applications to run as regular users can stop privilege escalation attacks from accessing the critical parts of the container.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;selinuxapparmor&quot;&gt;SELinux/AppArmor:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Mandatory access control (MAC) tools such as SELinux (Security-Enhanced Linux) and AppArmor can help prevent attacks that compromise application and system services by &lt;u&gt;limiting access to files and network resources&lt;/u&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;minimize-use-of-third-party-unmaintained-unverifiable-installs&quot;&gt;Minimize use of third-party, unmaintained, unverifiable installs:&lt;/h3&gt;
-
-&lt;h3 id=&quot;mount-root-file-system-as-read-only-on-host&quot;&gt;Mount Root File System as Read-Only on Host:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;will restrict write access for applications, limiting the chances of an attacker being able to introduce malicious elements to the container.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;scan-repository-images-for-new-vulnerabilities-being-reported&quot;&gt;Scan Repository Images for new Vulnerabilities being reported:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;When building an image in your CI pipeline, image scanning must be a requirement for a passing build run.&lt;/li&gt;
-  &lt;li&gt;Scanners:
-    &lt;ul&gt;
-      &lt;li&gt;Many scanners check only installed operating system packages. Others may also scan installed runtime libraries for some programming languages. Some may also provide additional binary fingerprinting or other testing of file contents.&lt;/li&gt;
-      &lt;li&gt;Make sure your scanner offers a compatible API or tool that you can plug into your CI pipeline and provides the data you need to evaluate your criteria for failing a build.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;determine acceptable levels of risk for allowing a build to pass such as any vulnerability below a certain severity - or alternatively, failing builds with fixable vulnerabilities above a certain severity.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;runtime-image-scanning&quot;&gt;Runtime Image Scanning:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Runtime scanning is more important, both for any third-party image you may use and for your own images, which may contain &lt;strong&gt;newly discovered security vulnerabilities&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;You can use custom or third-party &lt;a href=&quot;https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/&quot;&gt;&lt;u&gt;admission controllers&lt;/u&gt;&lt;/a&gt; in Kubernetes clusters &lt;u&gt;to prevent the scheduling of insecure container images&lt;/u&gt;.&lt;/li&gt;
-  &lt;li&gt;While some scanners support storing &lt;strong&gt;scan output in a database or cache&lt;/strong&gt;, users will have to weigh their tolerance for outdated information &lt;strong&gt;against the latency introduced by performing a real-time scan for each image pull&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;deploy-firewall&quot;&gt;Deploy Firewall:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Using the integrated firewall for the Docker virtual network, especially for TCP API control, can filter external attacks.&lt;/li&gt;
-  &lt;li&gt;Use of Application firewalls.&lt;/li&gt;
-  &lt;li&gt;Allow only required network ingress.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;use-of-static-analysis-tools-for-containers&quot;&gt;Use of static analysis tools for containers:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://quay.github.io/clair/&quot;&gt;&lt;u&gt;Clair&lt;/u&gt;&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Prevents vulnerability with Static analysis on containers&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;disable-sockets&quot;&gt;Disable Sockets:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;UNIX socket is a two-way communication mechanism that allows the host to communicate with the containers.&lt;/li&gt;
-  &lt;li&gt;Disabling this socket can thwart attacks that exploit it — for example, an attacker abusing the API from inside a container.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;use-of-differentdistributed-databases-for-applications&quot;&gt;Use of Different/Distributed Databases for applications:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Reduces the attack vector&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;regular-updates-to-host-os-and-kernel&quot;&gt;Regular updates to Host OS and Kernel:&lt;/h3&gt;
-
-&lt;h3 id=&quot;limit-administrative-accesses-to-buildci-infrastructure&quot;&gt;Limit Administrative accesses to Build/CI infrastructure:&lt;/h3&gt;
-
-&lt;h3 id=&quot;remove-package-installers-such-as-apt-yum-even-shells-if-possible&quot;&gt;Remove Package Installers such as APT, YUM, even shells if possible:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;This might reduce attack vector, as in any compromised container, attacker will not be able to install malicious software, packages.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/GoogleContainerTools/distroless&quot;&gt;&lt;u&gt;Google Distroless&lt;/u&gt;&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;“Distroless” images contain only your application and its runtime dependencies. They do not contain package managers, shells or any other programs you would expect to find in a standard Linux distribution.&lt;/li&gt;
-      &lt;li&gt;Restricting what’s in your runtime container to precisely what’s necessary for your app is a best practice.&lt;/li&gt;
-      &lt;li&gt;Distroless images are very small.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Keeping the image as minimal as possible has the added bonus of reducing the probability of encountering zero-day vulnerabilities – which will need patching – and keeping the image smaller, which makes storing and pulling it faster.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;use-of-signed-and-verifiable-container-images&quot;&gt;Use of Signed and Verifiable Container Images:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;With image signing, the &lt;u&gt;registry generates a __checksum__&lt;/u&gt; of a tagged image’s contents and then uses a &lt;strong&gt;private cryptographic key&lt;/strong&gt; to create an encrypted signature with the image metadata.&lt;/li&gt;
-  &lt;li&gt;Clients could still pull and run the image without verifying the signature, but runtimes in secure environments should support image verification requirements.&lt;/li&gt;
-  &lt;li&gt;&lt;u&gt;Image verification uses the __public key counterpart__ of the signing key to decrypt&lt;/u&gt; the contents of the image signature, which can then be compared to the pulled image to ensure the image’s contents have not been modified.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/sigstore/cosign&quot;&gt;&lt;u&gt;cosign&lt;/u&gt;&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Container Signing, Verification and Storage in an OCI registry.&lt;/li&gt;
-      &lt;li&gt;Cosign aims to make signatures invisible infrastructure.&lt;/li&gt;
-      &lt;li&gt;Cosign supports:
-        &lt;ul&gt;
-          &lt;li&gt;Hardware and KMS signing&lt;/li&gt;
-          &lt;li&gt;Bring-your-own PKI&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://github.com/sigstore/cosign/blob/main/USAGE.md&quot;&gt;&lt;u&gt;Detailed Usage of cosign&lt;/u&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;avoid-installing&quot;&gt;Avoid installing:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Restricting the image to required binaries, libraries, and configuration files provides the best protection.&lt;/li&gt;
-  &lt;li&gt;&lt;u&gt;Package managers&lt;/u&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;apt, yum, apk&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;u&gt;Network tools and clients&lt;/u&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;wget, curl, netcat, ssh.&lt;/li&gt;
-      &lt;li&gt;If you normally use curl to download, say, a configuration file, make the contents into a &lt;u&gt;__Kubernetes ConfigMap__&lt;/u&gt; instead.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;u&gt;Unix shells&lt;/u&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;sh, bash.&lt;/li&gt;
-      &lt;li&gt;Note that removing shells also prevents the use of shell scripts at runtime. Instead, &lt;strong&gt;use a compiled language when possible&lt;/strong&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;u&gt;Compilers and debuggers&lt;/u&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;These should be used only in build and development containers, but never in production containers.&lt;/li&gt;
-      &lt;li&gt;Kubernetes also currently (as of version 1.16) has alpha support for &lt;a href=&quot;https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/&quot;&gt;&lt;u&gt;ephemeral containers&lt;/u&gt;&lt;/a&gt;, which can be placed in an existing pod to facilitate debugging.
-        &lt;ul&gt;
-          &lt;li&gt;If you install these tools in your production images to perform application debugging.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;build-vs-runtime-containers-should-be-different&quot;&gt;Build vs Runtime Containers should be different:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;build tools you use to generate and compile your applications can be exploited when run on production systems.&lt;/li&gt;
-  &lt;li&gt;Containers should be treated as temporary, ephemeral entities.&lt;/li&gt;
-  &lt;li&gt;Never plan on “patching” or altering a running container.&lt;/li&gt;
-  &lt;li&gt;Build a new image and replace the outdated container deployments.&lt;/li&gt;
-  &lt;li&gt;Use multi-stage Dockerfiles to keep software compilation out of runtime images.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;never-bake-any-secrets-into-your-images-even-if-the-images-are-for-internal-use&quot;&gt;Never bake any secrets into your images, even if the images are for internal use:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;TLS certificate keys&lt;/li&gt;
-  &lt;li&gt;cloud provider credentials&lt;/li&gt;
-  &lt;li&gt;SSH private keys&lt;/li&gt;
-  &lt;li&gt;database/user passwords&lt;/li&gt;
-  &lt;li&gt;Supplying sensitive data only at runtime also enables you to use the same image in different runtime environments, which should use different credentials.&lt;/li&gt;
-  &lt;li&gt;It also simplifies updating expired or revoked secrets without rebuilding the image.&lt;/li&gt;
-  &lt;li&gt;As an alternative to baked-in secrets, &lt;u&gt;supply secrets to Kubernetes pods as&lt;/u&gt; &lt;strong&gt;&lt;em&gt;Kubernetes secrets&lt;/em&gt;&lt;/strong&gt;, or use another secret management system.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;image-registry-and-controls&quot;&gt;Image Registry and Controls:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Registries which support using &lt;strong&gt;&lt;em&gt;immutable tags on images&lt;/em&gt;&lt;/strong&gt;, &lt;u&gt;preventing the same tag from being reused on multiple versions&lt;/u&gt; of a repository’s image, enforce &lt;strong&gt;&lt;em&gt;deterministic image runtimes&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;Many audited certifications and site reliability teams require the ability to know exactly which version of a given image, and therefore of an application, is deployed at a given time, a situation which is impossible when every image pull uses the latest tag.&lt;/li&gt;
-  &lt;li&gt;Kubernetes does not offer native support for using &lt;strong&gt;&lt;em&gt;secure image pull&lt;/em&gt;&lt;/strong&gt; options. You will need to deploy a &lt;a href=&quot;https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/&quot;&gt;&lt;u&gt;Kubernetes admission controller&lt;/u&gt;&lt;/a&gt; that can &lt;u&gt;verify that pods use trusted registries&lt;/u&gt;.&lt;/li&gt;
-  &lt;li&gt;For signed image support, the controller would need to be able to verify the image’s signature.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;maintainability-vulnerability-management&quot;&gt;Maintainability: Vulnerability Management:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Generate your own policies and procedures for handling image security and vulnerability management. Start by defining your criteria for what constitutes an unsafe image, using metrics such as:
-    &lt;ul&gt;
-      &lt;li&gt;vulnerability &lt;strong&gt;&lt;em&gt;severity&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;number&lt;/em&gt;&lt;/strong&gt; of vulnerabilities&lt;/li&gt;
-      &lt;li&gt;whether those vulnerabilities have &lt;strong&gt;&lt;em&gt;patches or fixes available&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;whether the vulnerabilities impact __*misconfigured deployments&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Set a &lt;strong&gt;&lt;em&gt;deadline&lt;/em&gt;&lt;/strong&gt; for building replacement images and deploying those to production.
-    &lt;ul&gt;
-      &lt;li&gt;Should the deadlines vary by vulnerability severity?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Decide if you want to block the scheduling of containers from existing images when a new vulnerability is discovered? You will also need to define procedures to handle containers with these vulnerable images that are already running in production.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;references&quot;&gt;References:&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.trendmicro.com/vinfo/us/security/news/security-technology/container-security-examining-potential-threats-to-the-container-environment&quot;&gt;Container Security: Examining Potential Threats to the Container Environment&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://cloud.redhat.com/blog/container-image-security-beyond-vulnerability-scanning&quot;&gt;Container Image Security: Beyond Vulnerability Scanning&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;/assets/docs/container-and-kubernetes-security-eval-guide-v3.pdf&quot;&gt;StackRox: Container and Kubernetes Security Eval Guide.pdf&lt;/a&gt;&lt;/p&gt;</content><author><name>Akhilesh Moghe</name></author><category term="Containers" /><category term="Docker" /><category term="Kubernetes" /><category term="DevOps" /><category term="Containers" /><category term="Docker" /><category term="Kubernetes" /><category term="DevOps" /><summary type="html">Introduction Threats and Risks Areas: Image Development: Careless approach: Installing components, applications without security safeguards or with default configs. Sensitive Data in DockerFiles: Password hardcoding Default passwords SSH encryption keys (specifically private part of keys) Unreliable third-party source of Base Images: Embedded Malwares: Owner added Malware in image with malicious intents Non-updated Images: Images not being maintained with Vulnerability patches Unreliable source of package installations: ppa repositories Cascaded dependencies Code Repository: Open-source unmaintained repositories/projects Cascaded dependencies project repositories Image Registries Hub: Unsecured Public Registry Local unsecured registry setup Misconfigured security controls on registries Kubernetes/Docker APIs Abuse: Vulnerabilities in Kubernetes or Docker APIs itself. CVE-2017-1002101 allows containers that use subPath volume mounts to access files or directories outside of the volume, including the host’s file system. CVE-2017-1002102 allows containers using secret, configMap, or projected or downwardAPI volume to trigger deletion of arbitrary files and directories on the nodes where they are running. CVE-2018-1002105, proxy request handling in kube-apiserver, can leave vulnerable TCP connections open to abuse. Unrestricted Accesses: Admin accesses missuses. Unauthorized Accesses Applications and Ports: Misconfigured Applications and Ports May give-out sensitive information Application Exploitation with: SQL injection cross-site scripting remote file inclusion brute-force attacks. API Abuse with misconfigured/Exposed ports Best Practises: Use of User Namespaces in Linux: when enabled, allows for container isolation by limiting container access to system resources. Run Applications as regular users in containers also: Setting applications to run as regular users can stop privilege escalation attacks from accessing the critical parts of the container. SELinux/AppArmor: Mandatory access control (MAC) tools such as SELinux (Security-Enhanced Linux) and AppArmor can help prevent attacks that compromise application and system services by limiting access to files and network resources. Minimize use of third-party, unmaintained, unverifiable installs: Mount Root File System as Read-Only on Host: will restrict write access for applications, limiting the chances of an attacker being able to introduce malicious elements to the container. Scan Repository Images for new Vulnerabilities being reported: When building an image in your CI pipeline, image scanning must be a requirement for a passing build run. Scanners: Many scanners check only installed operating system packages. Others may also scan installed runtime libraries for some programming languages. Some may also provide additional binary fingerprinting or other testing of file contents. Make sure your scanner offers a compatible API or tool that you can plug into your CI pipeline and provides the data you need to evaluate your criteria for failing a build. determine acceptable levels of risk for allowing a build to pass such as any vulnerability below a certain severity - or alternatively, failing builds with fixable vulnerabilities above a certain severity. Runtime Image Scanning: Runtime scanning is more important, both for any third-party image you may use and for your own images, which may contain newly discovered security vulnerabilities. You can use custom or third-party admission controllers in Kubernetes clusters to prevent the scheduling of insecure container images. While some scanners support storing scan output in a database or cache, users will have to weigh their tolerance for outdated information against the latency introduced by performing a real-time scan for each image pull. Deploy Firewall: Using the integrated firewall for the Docker virtual network, especially for TCP API control, can filter external attacks. Use of Application firewalls. Allow only required network ingress. Use of static analysis tools for containers: Clair Prevents vulnerability with Static analysis on containers Disable Sockets: UNIX socket is a two-way communication mechanism that allows the host to communicate with the containers. Disabling this socket can thwart attacks that exploit it — for example, an attacker abusing the API from inside a container. Use of Different/Distributed Databases for applications: Reduces the attack vector Regular updates to Host OS and Kernel: Limit Administrative accesses to Build/CI infrastructure: Remove Package Installers such as APT, YUM, even shells if possible: This might reduce attack vector, as in any compromised container, attacker will not be able to install malicious software, packages. Google Distroless “Distroless” images contain only your application and its runtime dependencies. They do not contain package managers, shells or any other programs you would expect to find in a standard Linux distribution. Restricting what’s in your runtime container to precisely what’s necessary for your app is a best practice. Distroless images are very small. Keeping the image as minimal as possible has the added bonus of reducing the probability of encountering zero-day vulnerabilities – which will need patching – and keeping the image smaller, which makes storing and pulling it faster. Use of Signed and Verifiable Container Images: With image signing, the registry generates a __checksum__ of a tagged image’s contents and then uses a private cryptographic key to create an encrypted signature with the image metadata. Clients could still pull and run the image without verifying the signature, but runtimes in secure environments should support image verification requirements. Image verification uses the __public key counterpart__ of the signing key to decrypt the contents of the image signature, which can then be compared to the pulled image to ensure the image’s contents have not been modified. cosign Container Signing, Verification and Storage in an OCI registry. Cosign aims to make signatures invisible infrastructure. Cosign supports: Hardware and KMS signing Bring-your-own PKI Detailed Usage of cosign Avoid installing: Restricting the image to required binaries, libraries, and configuration files provides the best protection. Package managers: apt, yum, apk Network tools and clients: wget, curl, netcat, ssh. If you normally use curl to download, say, a configuration file, make the contents into a __Kubernetes ConfigMap__ instead. Unix shells: sh, bash. Note that removing shells also prevents the use of shell scripts at runtime. Instead, use a compiled language when possible. Compilers and debuggers: These should be used only in build and development containers, but never in production containers. Kubernetes also currently (as of version 1.16) has alpha support for ephemeral containers, which can be placed in an existing pod to facilitate debugging. If you install these tools in your production images to perform application debugging. Build vs Runtime Containers should be different: build tools you use to generate and compile your applications can be exploited when run on production systems. Containers should be treated as temporary, ephemeral entities. Never plan on “patching” or altering a running container. Build a new image and replace the outdated container deployments. Use multi-stage Dockerfiles to keep software compilation out of runtime images. Never bake any secrets into your images, even if the images are for internal use: TLS certificate keys cloud provider credentials SSH private keys database/user passwords Supplying sensitive data only at runtime also enables you to use the same image in different runtime environments, which should use different credentials. It also simplifies updating expired or revoked secrets without rebuilding the image. As an alternative to baked-in secrets, supply secrets to Kubernetes pods as Kubernetes secrets, or use another secret management system. Image Registry and Controls: Registries which support using immutable tags on images, preventing the same tag from being reused on multiple versions of a repository’s image, enforce deterministic image runtimes. Many audited certifications and site reliability teams require the ability to know exactly which version of a given image, and therefore of an application, is deployed at a given time, a situation which is impossible when every image pull uses the latest tag. Kubernetes does not offer native support for using secure image pull options. You will need to deploy a Kubernetes admission controller that can verify that pods use trusted registries. For signed image support, the controller would need to be able to verify the image’s signature. Maintainability: Vulnerability Management: Generate your own policies and procedures for handling image security and vulnerability management. Start by defining your criteria for what constitutes an unsafe image, using metrics such as: vulnerability severity number of vulnerabilities whether those vulnerabilities have patches or fixes available whether the vulnerabilities impact __*misconfigured deployments Set a deadline for building replacement images and deploying those to production. Should the deadlines vary by vulnerability severity? Decide if you want to block the scheduling of containers from existing images when a new vulnerability is discovered? You will also need to define procedures to handle containers with these vulnerable images that are already running in production. References: Container Security: Examining Potential Threats to the Container Environment Container Image Security: Beyond Vulnerability Scanning StackRox: Container and Kubernetes Security Eval Guide.pdf</summary></entry><entry><title type="html">Extend EC2 EBS Volume size without downtime</title><link href="http://localhost:4000/aws/ec2/ebs/2021/06/30/Extend-EC2-EBS-Volume-size-without-downtime.html" rel="alternate" type="text/html" title="Extend EC2 EBS Volume size without downtime" /><published>2021-06-30T12:33:22+05:30</published><updated>2021-06-30T12:33:22+05:30</updated><id>http://localhost:4000/aws/ec2/ebs/2021/06/30/Extend-EC2-EBS-Volume-size-without-downtime</id><content type="html" xml:base="http://localhost:4000/aws/ec2/ebs/2021/06/30/Extend-EC2-EBS-Volume-size-without-downtime.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;It’s a very common scenario when you run out of space on an running EC2 instance. And you need to increase the volume of that running instance without shutting it down. This post is all about the same scenario.&lt;/p&gt;
-
-&lt;h2 id=&quot;modify-ebs-volume&quot;&gt;Modify EBS Volume:&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Login to your AWS console&lt;/li&gt;
-  &lt;li&gt;Choose “EC2” from the services list&lt;/li&gt;
-  &lt;li&gt;Click on “Volumes” under ELASTIC BLOCK STORE menu (on the left)&lt;/li&gt;
-  &lt;li&gt;Choose the volume that you want to resize, right-click on “Modify Volume”&lt;/li&gt;
-  &lt;li&gt;You’ll see an option window like this one:&lt;/li&gt;
-  &lt;li&gt;Set the new size for your EBS volume (in this case i extended an 8GB volume to 20GB)&lt;/li&gt;
-  &lt;li&gt;Click on modify.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/Extend_EC2_EBS_Volume_size.png&quot; alt=&quot;Modify EBS Volume&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;SSH to the EC2 instance where the EBS we’ve just extended is attached to.&lt;/li&gt;
-  &lt;li&gt;Type the following command to list our block devices:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ubuntu@ip-172-31-6-183:~$ lsblk
-NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
-loop0     7:0    0 32.3M  1 loop /snap/snapd/11588
-loop2     7:2    0 55.5M  1 loop /snap/core18/1997 
-loop3     7:3    0 33.3M  1 loop /snap/amazon-ssm-agent/3552 
-loop4     7:4    0 32.3M  1 loop /snap/snapd/12398 
-loop5     7:5    0 55.5M  1 loop /snap/core18/2074 
-xvda    202:0    0  150G  0 disk  
-└─xvda1 202:1    0  150G  0 part / 
-ubuntu@ip-172-31-6-183:~$ 
-
-ubuntu@ip-172-31-6-183:~$ lsblk 
-NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT 
-loop0     7:0    0 32.3M  1 loop /snap/snapd/11588 
-loop2     7:2    0 55.5M  1 loop /snap/core18/1997 
-loop3     7:3    0 33.3M  1 loop /snap/amazon-ssm-agent/3552 
-loop4     7:4    0 32.3M  1 loop /snap/snapd/12398 
-loop5     7:5    0 55.5M  1 loop /snap/core18/2074 
-xvda    202:0    0  200G  0 disk  
-└─xvda1 202:1    0  150G  0 part / 
-ubuntu@ip-172-31-6-183:~$
+  &lt;li&gt;Example:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;std::stack&amp;lt;int&amp;gt; first;                                  // empty stack
+---------------------
+    
+std::deque&amp;lt;int&amp;gt; mydeque (3,100);                        // deque with 3 elements
+std::stack&amp;lt;int&amp;gt; second (mydeque);                       // stack initialized to copy of deque
+---------------------
+    
+std::stack&amp;lt;int,std::vector&amp;lt;int&amp;gt; &amp;gt; third;                // empty stack using vector
+---------------------
+    
+std::vector&amp;lt;int&amp;gt; myvector (2,200);                      // vector with 2 elements
+std::stack&amp;lt;int,std::vector&amp;lt;int&amp;gt; &amp;gt; fourth (myvector);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;As you can see size of the root volume reflects the new size, 200GB, the size of the partition reflects the original size, 150 GB, and must be extended before you can extend the file system.&lt;/li&gt;
-  &lt;li&gt;To do so, type the following command:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Be careful, there is a space between device name and partition number! 
+&lt;/ul&gt;
 
-ubuntu@ip-172-31-6-183:~$ sudo growpart /dev/xvda 1 
-CHANGED: partition=1 start=2048 old: size=314570719 end=314572767 new: size=419428319,end=419430367 
-ubuntu@ip-172-31-6-183:~$ 
+&lt;h3 id=&quot;operations&quot;&gt;Operations:&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    * empty()
+    * size()
+    * top()
+    * pop()
+    * push()
+    ------------
+    
+    C++11:
+    * emplace()
+    * swap()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-ubuntu@ip-172-31-6-183:~$ lsblk 
-NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT 
-loop0     7:0    0 32.3M  1 loop /snap/snapd/11588 
-loop2     7:2    0 55.5M  1 loop /snap/core18/1997 
-loop3     7:3    0 33.3M  1 loop /snap/amazon-ssm-agent/3552 
-loop4     7:4    0 32.3M  1 loop /snap/snapd/12398 
-loop5     7:5    0 55.5M  1 loop /snap/core18/2074 
-xvda    202:0    0  200G  0 disk  
-└─xvda1 202:1    0  200G  0 part / 
-ubuntu@ip-172-31-6-183:~$
+&lt;h3 id=&quot;time-complexity-stack-operations&quot;&gt;Time Complexity Stack Operations&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Operation&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Time Complexity&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Push&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;O(1)&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Pop&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;O(1)&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Top&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;O(1)&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;stack-decision-criteria&quot;&gt;Stack Decision Criteria&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;:heavy_check_mark: &lt;strong&gt;Order&lt;/strong&gt; is Important.&lt;/li&gt;
+  &lt;li&gt;:heavy_check_mark: &lt;em&gt;&lt;u&gt;Last-in, First-out&lt;/u&gt;&lt;/em&gt; (&lt;strong&gt;LIFO&lt;/strong&gt;) accepted/required.&lt;/li&gt;
+  &lt;li&gt;:x: Size varies widely - &lt;strong&gt;Dynamic&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;:x: Need to find Nth element - &lt;strong&gt;Random Access&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;:x: &lt;strong&gt;Insert/Erase&lt;/strong&gt; at the &lt;em&gt;&lt;u&gt;Front/Back&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;:x: &lt;strong&gt;Insert/Erase&lt;/strong&gt; at &lt;em&gt;&lt;u&gt;Mid-positions&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;:x: &lt;strong&gt;Key:Value&lt;/strong&gt; pair&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;references&quot;&gt;References:&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cplusplus.com/reference/stack/stack/&quot;&gt;std::stack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;queue&quot;&gt;Queue&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Operate in &lt;strong&gt;&lt;em&gt;&lt;u&gt;FIFO&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; (&lt;em&gt;&lt;u&gt;First-in, First-out&lt;/u&gt;&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;Elements are &lt;strong&gt;Inserted&lt;/strong&gt; &lt;em&gt;&lt;u&gt;from one end&lt;/u&gt;&lt;/em&gt; of the container and &lt;strong&gt;Extracted&lt;/strong&gt; &lt;em&gt;&lt;u&gt;from the other end&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Elements are &lt;strong&gt;Pushed&lt;/strong&gt; from the &lt;em&gt;&lt;u&gt;back&lt;/u&gt;&lt;/em&gt; of the specific container and &lt;strong&gt;Popped&lt;/strong&gt; from its &lt;em&gt;&lt;u&gt;front&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;By &lt;em&gt;&lt;u&gt;default&lt;/u&gt;&lt;/em&gt;, standard container ‘&lt;strong&gt;&lt;em&gt;std::deque&lt;/em&gt;&lt;/strong&gt;’ is used, if no container class is specified for a particular queue class instantiation.&lt;/li&gt;
+  &lt;li&gt;Otherwise, &lt;strong&gt;&lt;em&gt;std::vector&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;std::list&lt;/em&gt;&lt;/strong&gt; also used as underlying container.&lt;/li&gt;
+  &lt;li&gt;&lt;u&gt;Use-cases&lt;/u&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;First-In First-Out operations&lt;/li&gt;
+      &lt;li&gt;Simple online ordering system (first come first served)&lt;/li&gt;
+      &lt;li&gt;Semaphore queue handling&lt;/li&gt;
+      &lt;li&gt;CPU scheduling (FCFS)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Example:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;std::queue&amp;lt;int&amp;gt; first;                                // empty queue
+------------
+    
+std::deque&amp;lt;int&amp;gt; mydeck (3,100);                       // deque with 3 elements
+std::queue&amp;lt;int&amp;gt; second (mydeck);                      // queue initialized to copy of deque
+------------
+    
+std::queue&amp;lt;int,std::list&amp;lt;int&amp;gt; &amp;gt; third;                // empty queue with list as underlying container
+------------
+    
+std::list&amp;lt;int&amp;gt; mylist (2,200);                        // list with 2 elements
+std::queue&amp;lt;int,std::list&amp;lt;int&amp;gt; &amp;gt; fourth (mylist);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Extend the filesystem itself.&lt;/li&gt;
-  &lt;li&gt;Confirm File System type with:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ubuntu@ip-172-31-6-183:~$ df -Th 
-Filesystem     Type            Size    Used    Avail    Use%    Mounted on 
-udev               devtmpfs   16G     0          16G      0%        /dev 
-tmpfs              tmpfs         3.2G    824K   3.2G     1%        /run 
-/dev/xvda1     ext4      146G  128G   18G  88% / 
-tmpfs          tmpfs      16G   88K   16G   1% /dev/shm 
-tmpfs          tmpfs     5.0M     0  5.0M   0% /run/lock 
-tmpfs          tmpfs      16G     0   16G   0% /sys/fs/cgroup 
-/dev/loop0     squashfs   33M   33M     0 100% /snap/snapd/11588 
-/dev/loop2     squashfs   56M   56M     0 100% /snap/core18/1997 
-/dev/loop3     squashfs   34M   34M     0 100% /snap/amazon-ssm-agent/3552 
-/dev/loop5     squashfs   56M   56M     0 100% /snap/core18/2074 
-/dev/loop4     squashfs   33M   33M     0 100% /snap/snapd/12398 
-tmpfs          tmpfs     3.2G     0  3.2G   0% /run/user/1000 
-ubuntu@ip-172-31-6-183:~$
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;If your filesystem is an ext2, ext3, or ext4, type:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ubuntu@ip-172-31-6-183:~$ sudo resize2fs /dev/xvda1  
-resize2fs 1.44.1 (24-Mar-2018) 
-Filesystem at /dev/xvda1 is mounted on /; on-line resizing required 
-old_desc_blocks = 19, new_desc_blocks = 25 
-The filesystem on /dev/xvda1 is now 52428539 (4k) blocks long. 
+&lt;/ul&gt;
 
-ubuntu@ip-172-31-6-183:~$
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;If your filesystem is an XFS, then type:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[ec2-user ~]$ sudo xfs_growfs /dev/xvda1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Finally we can check our extended filesystem by typing:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ubuntu@ip-172-31-6-183:~$ df -Th 
-Filesystem     Type      Size  Used Avail Use% Mounted on 
-udev           devtmpfs   16G     0   16G   0% /dev 
-tmpfs          tmpfs     3.2G  824K  3.2G   1% /run 
-/dev/xvda1     ext4      194G  128G   67G  66% / 
-tmpfs          tmpfs      16G   88K   16G   1% /dev/shm 
-tmpfs          tmpfs     5.0M     0  5.0M   0% /run/lock 
-tmpfs          tmpfs      16G     0   16G   0% /sys/fs/cgroup 
-/dev/loop0     squashfs   33M   33M     0 100% /snap/snapd/11588 
-/dev/loop2     squashfs   56M   56M     0 100% /snap/core18/1997 
-/dev/loop3     squashfs   34M   34M     0 100% /snap/amazon-ssm-agent/3552 
-/dev/loop5     squashfs   56M   56M     0 100% /snap/core18/2074 
-/dev/loop4     squashfs   33M   33M     0 100% /snap/snapd/12398 
-tmpfs          tmpfs     3.2G     0  3.2G   0% /run/user/1000 
-ubuntu@ip-172-31-6-183:~$
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;h2 id=&quot;references&quot;&gt;References:&lt;/h2&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://medium.com/geekculture/tutorial-how-to-extend-aws-ebs-volumes-with-no-downtime-ec7d9e82426e&quot;&gt;Tutorial: How to Extend AWS EBS Volumes with No Downtime&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html?icmpid=docs_ec2_console&quot;&gt;Extend a Linux file system after resizing a volume&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="AWS" /><category term="EC2" /><category term="EBS" /><category term="AWS" /><category term="EC2" /><category term="EBS" /><summary type="html">Introduction It’s a very common scenario when you run out of space on an running EC2 instance. And you need to increase the volume of that running instance without shutting it down. This post is all about the same scenario. Modify EBS Volume: Login to your AWS console Choose “EC2” from the services list Click on “Volumes” under ELASTIC BLOCK STORE menu (on the left) Choose the volume that you want to resize, right-click on “Modify Volume” You’ll see an option window like this one: Set the new size for your EBS volume (in this case i extended an 8GB volume to 20GB) Click on modify. SSH to the EC2 instance where the EBS we’ve just extended is attached to. Type the following command to list our block devices: ubuntu@ip-172-31-6-183:~$ lsblk NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT loop0 7:0 0 32.3M 1 loop /snap/snapd/11588 loop2 7:2 0 55.5M 1 loop /snap/core18/1997 loop3 7:3 0 33.3M 1 loop /snap/amazon-ssm-agent/3552 loop4 7:4 0 32.3M 1 loop /snap/snapd/12398 loop5 7:5 0 55.5M 1 loop /snap/core18/2074 xvda 202:0 0 150G 0 disk └─xvda1 202:1 0 150G 0 part / ubuntu@ip-172-31-6-183:~$ ubuntu@ip-172-31-6-183:~$ lsblk NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT loop0 7:0 0 32.3M 1 loop /snap/snapd/11588 loop2 7:2 0 55.5M 1 loop /snap/core18/1997 loop3 7:3 0 33.3M 1 loop /snap/amazon-ssm-agent/3552 loop4 7:4 0 32.3M 1 loop /snap/snapd/12398 loop5 7:5 0 55.5M 1 loop /snap/core18/2074 xvda 202:0 0 200G 0 disk └─xvda1 202:1 0 150G 0 part / ubuntu@ip-172-31-6-183:~$ As you can see size of the root volume reflects the new size, 200GB, the size of the partition reflects the original size, 150 GB, and must be extended before you can extend the file system. To do so, type the following command: Be careful, there is a space between device name and partition number! ubuntu@ip-172-31-6-183:~$ sudo growpart /dev/xvda 1 CHANGED: partition=1 start=2048 old: size=314570719 end=314572767 new: size=419428319,end=419430367 ubuntu@ip-172-31-6-183:~$ ubuntu@ip-172-31-6-183:~$ lsblk NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT loop0 7:0 0 32.3M 1 loop /snap/snapd/11588 loop2 7:2 0 55.5M 1 loop /snap/core18/1997 loop3 7:3 0 33.3M 1 loop /snap/amazon-ssm-agent/3552 loop4 7:4 0 32.3M 1 loop /snap/snapd/12398 loop5 7:5 0 55.5M 1 loop /snap/core18/2074 xvda 202:0 0 200G 0 disk └─xvda1 202:1 0 200G 0 part / ubuntu@ip-172-31-6-183:~$ Extend the filesystem itself. Confirm File System type with: ubuntu@ip-172-31-6-183:~$ df -Th Filesystem Type Size Used Avail Use% Mounted on udev devtmpfs 16G 0 16G 0% /dev tmpfs tmpfs 3.2G 824K 3.2G 1% /run /dev/xvda1 ext4 146G 128G 18G 88% / tmpfs tmpfs 16G 88K 16G 1% /dev/shm tmpfs tmpfs 5.0M 0 5.0M 0% /run/lock tmpfs tmpfs 16G 0 16G 0% /sys/fs/cgroup /dev/loop0 squashfs 33M 33M 0 100% /snap/snapd/11588 /dev/loop2 squashfs 56M 56M 0 100% /snap/core18/1997 /dev/loop3 squashfs 34M 34M 0 100% /snap/amazon-ssm-agent/3552 /dev/loop5 squashfs 56M 56M 0 100% /snap/core18/2074 /dev/loop4 squashfs 33M 33M 0 100% /snap/snapd/12398 tmpfs tmpfs 3.2G 0 3.2G 0% /run/user/1000 ubuntu@ip-172-31-6-183:~$ If your filesystem is an ext2, ext3, or ext4, type: ubuntu@ip-172-31-6-183:~$ sudo resize2fs /dev/xvda1 resize2fs 1.44.1 (24-Mar-2018) Filesystem at /dev/xvda1 is mounted on /; on-line resizing required old_desc_blocks = 19, new_desc_blocks = 25 The filesystem on /dev/xvda1 is now 52428539 (4k) blocks long. ubuntu@ip-172-31-6-183:~$ If your filesystem is an XFS, then type: [ec2-user ~]$ sudo xfs_growfs /dev/xvda1 Finally we can check our extended filesystem by typing: ubuntu@ip-172-31-6-183:~$ df -Th Filesystem Type Size Used Avail Use% Mounted on udev devtmpfs 16G 0 16G 0% /dev tmpfs tmpfs 3.2G 824K 3.2G 1% /run /dev/xvda1 ext4 194G 128G 67G 66% / tmpfs tmpfs 16G 88K 16G 1% /dev/shm tmpfs tmpfs 5.0M 0 5.0M 0% /run/lock tmpfs tmpfs 16G 0 16G 0% /sys/fs/cgroup /dev/loop0 squashfs 33M 33M 0 100% /snap/snapd/11588 /dev/loop2 squashfs 56M 56M 0 100% /snap/core18/1997 /dev/loop3 squashfs 34M 34M 0 100% /snap/amazon-ssm-agent/3552 /dev/loop5 squashfs 56M 56M 0 100% /snap/core18/2074 /dev/loop4 squashfs 33M 33M 0 100% /snap/snapd/12398 tmpfs tmpfs 3.2G 0 3.2G 0% /run/user/1000 ubuntu@ip-172-31-6-183:~$ References: Tutorial: How to Extend AWS EBS Volumes with No Downtime Extend a Linux file system after resizing a volume</summary></entry><entry><title type="html">SSL TLS Explained</title><link href="http://localhost:4000/security/ssl/tls/https/2020/03/26/SSL-TLS-Explained.html" rel="alternate" type="text/html" title="SSL TLS Explained" /><published>2020-03-26T12:33:22+05:30</published><updated>2020-03-26T12:33:22+05:30</updated><id>http://localhost:4000/security/ssl/tls/https/2020/03/26/SSL-TLS-Explained</id><content type="html" xml:base="http://localhost:4000/security/ssl/tls/https/2020/03/26/SSL-TLS-Explained.html">&lt;h2 id=&quot;history&quot;&gt;History:&lt;/h2&gt;
+&lt;h3 id=&quot;operations-1&quot;&gt;Operations:&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    * empty()
+    * size()
+    * front()
+    * back()
+    * pop()
+    * push()
+    --------------
+    
+    C++11:
+    * emplace()
+    * swap()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;time-complexity-queue-operations&quot;&gt;Time Complexity Queue Operations&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Operation&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Time Complexity&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Push&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;O(1)&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Pop&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;O(1)&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Top&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;O(1)&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;queue-decision-criteria&quot;&gt;Queue Decision Criteria&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;First SSL prototypes came from Netscape when they were developing the first versions of their flagship browser, Netscape Navigator.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;SSL version 3&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; (SSLv3) was an enhanced protocol which &lt;u&gt;still works today&lt;/u&gt; and is widely supported. The protocol has been standardized, with a new name in order to avoid legal issues; the new name is &lt;strong&gt;&lt;em&gt;&lt;u&gt;TLS&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;Three versions of TLS have been produced so far, each with its dedicated RFC: TLS 1.0, TLS 1.1 and TLS 1.2.
+  &lt;li&gt;:heavy_check_mark: &lt;strong&gt;Order&lt;/strong&gt; is Important.&lt;/li&gt;
+  &lt;li&gt;:heavy_check_mark: &lt;em&gt;&lt;u&gt;First-in, First-out&lt;/u&gt;&lt;/em&gt; (&lt;strong&gt;FIFO&lt;/strong&gt;) accepted/required.&lt;/li&gt;
+  &lt;li&gt;:x: Size varies widely - &lt;strong&gt;Dynamic&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;:x: Need to find Nth element - &lt;strong&gt;Random Access&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;:x: &lt;strong&gt;Insert/Erase&lt;/strong&gt; at the &lt;em&gt;&lt;u&gt;Front/Back&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;:x: &lt;strong&gt;Insert/Erase&lt;/strong&gt; at &lt;em&gt;&lt;u&gt;Mid-positions&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;:x: &lt;strong&gt;Key:Value&lt;/strong&gt; pair&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;priority_queue&quot;&gt;Priority_Queue&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Its First element is always the “&lt;strong&gt;&lt;em&gt;&lt;u&gt;Greatest of the elements&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;” it contains, according to some “&lt;em&gt;&lt;u&gt;strict weak ordering&lt;/u&gt;&lt;/em&gt;” criterion.
     &lt;ul&gt;
-      &lt;li&gt;SSLv3 is then 3.0&lt;/li&gt;
-      &lt;li&gt;while the TLS versions are, respectively, 3.1, 3.2 and 3.3.&lt;/li&gt;
-      &lt;li&gt;Thus, TLS 1.0 is sometimes called SSL 3.1. (SSL 3.0 and TLS 1.0 differ by only some minute details.)&lt;/li&gt;
-      &lt;li&gt;TLS 1.1 and 1.2 are not yet widely supported&lt;/li&gt;
-      &lt;li&gt;SSLv3 and TLS 1.0 are supported “everywhere” (even IE 6.0 knows them).&lt;/li&gt;
+      &lt;li&gt;Similar to a &lt;em&gt;&lt;u&gt;heap&lt;/u&gt;&lt;/em&gt;, where elements can be inserted at any moment, and &lt;em&gt;&lt;u&gt;only the&lt;/u&gt;&lt;/em&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;max heap&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;&lt;u&gt;element&lt;/u&gt;&lt;/em&gt; can be retrieved (the one at the top in the priority queue).&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;context&quot;&gt;Context&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;SSL aims at providing a secure bidirectional tunnel for arbitrary data.
-    &lt;h3 id=&quot;tcp-in-brief&quot;&gt;TCP in brief:&lt;/h3&gt;
-  &lt;/li&gt;
-  &lt;li&gt;TCP is the well-known protocol for sending data over the Internet.&lt;/li&gt;
-  &lt;li&gt;TCP works over the IP “packets” and provides a bidirectional tunnel for bytes; it works for every byte values and sends them into two streams which can operate simultaneously.&lt;/li&gt;
-  &lt;li&gt;TCP handles the hard work of splitting the data into packets, acknowledging them, reassembling them back into their right order, while removing duplicates and reemitting lost packets.&lt;/li&gt;
-  &lt;li&gt;From the point of view of the application which uses TCP, there are just two streams, and the packets are invisible; in particular, the streams are not split into “messages” (it is up to the application to take its own encoding rules if it wishes to have messages, and that’s precisely what HTTP does).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;why-ssltls&quot;&gt;Why SSL/TLS:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;TCP is reliable in the presence of “accidents”, i.e. transmission errors due to flaky hardware, network congestion, people with smartphones who walk out the range of a given base station, and other non-malicious events.&lt;/li&gt;
-  &lt;li&gt;However, an ill-intentioned individual (the “attacker”) with some access to the transport medium could read all the transmitted data and/or alter it intentionally, and TCP does not protect against that.&lt;/li&gt;
-  &lt;li&gt;Hence SSL.&lt;/li&gt;
-  &lt;li&gt;SSL assumes that it works over a TCP-like protocol, which provides a reliable stream;&lt;/li&gt;
-  &lt;li&gt;SSL does not implement reemission of lost packets and things like that. The attacker is supposed to be in power to disrupt communication completely in an unavoidable way (for instance, he can cut the cables)&lt;/li&gt;
-  &lt;li&gt;so SSL’s job is to:
+  &lt;li&gt;Elements are &lt;strong&gt;Popped&lt;/strong&gt; from the &lt;em&gt;&lt;u&gt;back&lt;/u&gt;&lt;/em&gt; of the specific container, which is known as the &lt;em&gt;&lt;u&gt;top&lt;/u&gt;&lt;/em&gt; of the priority queue.&lt;/li&gt;
+  &lt;li&gt;The underlying container shall be accessible through &lt;strong&gt;Random Access&lt;/strong&gt; Iterators
     &lt;ul&gt;
-      &lt;li&gt;detect alterations (the attacker must not be able to alter the data silently);&lt;/li&gt;
-      &lt;li&gt;ensure data confidentiality (the attacker must not gain knowledge of the exchanged data).&lt;/li&gt;
-      &lt;li&gt;SSL fulfills these goals to a large (but not absolute) extent.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;record-protocol&quot;&gt;Record Protocol:&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;SSL is layered and the &lt;u&gt;bottom layer&lt;/u&gt; is the &lt;strong&gt;&lt;em&gt;record protocol&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;Whatever data is sent in an SSL tunnel is split into records.&lt;/li&gt;
-  &lt;li&gt;Over the wire (the underlying TCP socket or TCP-like medium), a record looks like this:&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HH V1:V2 L1:L2 data&lt;/code&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;&lt;u&gt;HH&lt;/u&gt;&lt;/em&gt; is a &lt;em&gt;single byte&lt;/em&gt; which indicates &lt;u&gt;the type of data&lt;/u&gt; in the record.
+      &lt;li&gt;Support of Random Access Iterators is required to keep a “&lt;em&gt;&lt;u&gt;Heap structure&lt;/u&gt;&lt;/em&gt;” internally at all times.&lt;/li&gt;
+      &lt;li&gt;This is done automatically by the container adapter by automatically calling the algorithm functions:
         &lt;ul&gt;
-          &lt;li&gt;Four types are defined:
-            &lt;ul&gt;
-              &lt;li&gt;&lt;strong&gt;&lt;em&gt;change_cipher_spec&lt;/em&gt;&lt;/strong&gt; (20)&lt;/li&gt;
-              &lt;li&gt;&lt;strong&gt;&lt;em&gt;alert&lt;/em&gt;&lt;/strong&gt; (21)&lt;/li&gt;
-              &lt;li&gt;&lt;strong&gt;&lt;em&gt;handshake&lt;/em&gt;&lt;/strong&gt; (22)&lt;/li&gt;
-              &lt;li&gt;&lt;strong&gt;&lt;em&gt;application_data&lt;/em&gt;&lt;/strong&gt; (23)&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;&lt;u&gt;V1: V2&lt;/u&gt;&lt;/em&gt; is the &lt;strong&gt;&lt;em&gt;protocol version&lt;/em&gt;&lt;/strong&gt;, over &lt;em&gt;two bytes&lt;/em&gt;.
-For all versions currently defined,
-        &lt;ul&gt;
-          &lt;li&gt;&lt;u&gt;V1 has value 0x03&lt;/u&gt;, while &lt;u&gt;V2 has value 0x00&lt;/u&gt; for &lt;strong&gt;&lt;em&gt;SSLv3&lt;/em&gt;&lt;/strong&gt;,&lt;/li&gt;
-          &lt;li&gt;0x01 for TLS 1.0&lt;/li&gt;
-          &lt;li&gt;0x02 for TLS 1.1&lt;/li&gt;
-          &lt;li&gt;0x03 for TLS 1.2&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;&lt;u&gt;L1: L2&lt;/u&gt;&lt;/em&gt; is the &lt;strong&gt;&lt;em&gt;length of data&lt;/em&gt;&lt;/strong&gt;, in &lt;em&gt;bytes&lt;/em&gt; (big-endian convention is used: the length is 256*L1+L2).
-        &lt;ul&gt;
-          &lt;li&gt;The &lt;u&gt;total length of data cannot exceed 18432 bytes&lt;/u&gt;, but in practice, it cannot even reach that value.&lt;/li&gt;
+          &lt;li&gt;make_heap,&lt;/li&gt;
+          &lt;li&gt;push_heap and&lt;/li&gt;
+          &lt;li&gt;pop_heap&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;So a record has a &lt;em&gt;&lt;u&gt;five-byte header&lt;/u&gt;&lt;/em&gt;, followed by at most &lt;em&gt;&lt;u&gt;18 kB of data&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;The data is where &lt;em&gt;&lt;u&gt;symmetric encryption&lt;/u&gt;&lt;/em&gt; and &lt;em&gt;&lt;u&gt;integrity checks&lt;/u&gt;&lt;/em&gt; are applied.&lt;/li&gt;
-  &lt;li&gt;When a record is emitted, both sender and receiver are supposed to agree on which cryptographic algorithms are currently applied, and with which keys; this agreement is obtained through the &lt;em&gt;handshake protocol&lt;/em&gt;. &lt;em&gt;&lt;u&gt;Compression&lt;/u&gt;&lt;/em&gt;, if any, is also applied at that point.&lt;/li&gt;
+  &lt;li&gt;By &lt;em&gt;&lt;u&gt;default&lt;/u&gt;&lt;/em&gt;, standard container ‘&lt;strong&gt;&lt;em&gt;std::vector&lt;/em&gt;&lt;/strong&gt;’ is used, if no container class is specified for a particular priority_queue class instantiation.&lt;/li&gt;
+  &lt;li&gt;Otherwise, ‘&lt;strong&gt;std::deque&lt;/strong&gt;’ can also be used as underlying container.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;record-protocol-works-like-this&quot;&gt;Record protocol works like this:&lt;/h3&gt;
+&lt;h3 id=&quot;operation&quot;&gt;Operation:&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    * empty()
+    * size()
+    * top()
+    * push()
+    * pop()
+    ------------
+    
+    C++11:
+    * emplace()
+    * swap()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;priority-queue-decision-criteria&quot;&gt;Priority Queue Decision Criteria&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;Initially, there are some bytes to transfer; these are application data or some other kind of bytes. This &lt;em&gt;&lt;u&gt;payload consists of at most 16384 bytes&lt;/u&gt;&lt;/em&gt;, but possibly less (a payload of length 0 is legal, but it turns out that Internet Explorer 6.0 does not like that at all).&lt;/li&gt;
-  &lt;li&gt;The &lt;em&gt;&lt;u&gt;payload is then compressed&lt;/u&gt;&lt;/em&gt; with whatever compression algorithm is currently agreed upon.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;u&gt;Compression is *stateful* and thus may depend upon the contents of previous records.&lt;/u&gt;&lt;/li&gt;
-      &lt;li&gt;In practice, compression is either “null” (no compression at all) or “Deflate” (RFC 3749),
-        &lt;ul&gt;
-          &lt;li&gt;the latter being currently courteously but firmly shown the exit door in the Web context, due to the recent CRIME attack.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Compression aims at shortening data, but it must necessarily expand it slightly in some unfavorable situations (due to the pigeonhole principle).&lt;/li&gt;
-      &lt;li&gt;SSL allows for an expansion of at most 1024 bytes. Of course, null compression never expands (but never shortens either); Deflate will expand by at most 10 bytes if the implementation is any good.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The compressed payload is then protected against alterations and &lt;em&gt;&lt;u&gt;encrypted&lt;/u&gt;&lt;/em&gt;.
-    &lt;ul&gt;
-      &lt;li&gt;If the current encryption-and-integrity algorithms are “null”, then this step is a no-operation.&lt;/li&gt;
-      &lt;li&gt;Otherwise, a MAC is appended, then some padding (depending on the encryption algorithm), and the result is encrypted.&lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;These steps again induce some expansion, which the SSL standard limits to 1024 extra bytes (combined with the maximum expansion from the compression step, this brings us to the 18432 bytes, to which we must add the 5-byte header).&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;The MAC is, usually, &lt;strong&gt;&lt;em&gt;&lt;u&gt;HMAC&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; with one of the usual hash functions (mostly &lt;em&gt;&lt;u&gt;MD5, SHA-1 or SHA-256&lt;/u&gt;&lt;/em&gt;)(with SSLv3, this is not the “true” HMAC but something very similar and, to the best of our knowledge, as secure as HMAC).&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;Encryption&lt;/em&gt;&lt;/strong&gt; will use either a &lt;em&gt;&lt;u&gt;block cipher in CBC mode&lt;/u&gt;&lt;/em&gt;, or the &lt;em&gt;&lt;u&gt;RC4 stream cipher&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-      &lt;li&gt;Crucially, the MAC is first computed and appended to the data, and the result is encrypted.
-        &lt;ul&gt;
-          &lt;li&gt;This is MAC-then-encrypt and it is actually not a very good idea. The MAC is computed over the concatenation of the (compressed) payload and a sequence number, so that an industrious attacker may not swap records.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;:heavy_check_mark: &lt;strong&gt;Order&lt;/strong&gt; is Important.&lt;/li&gt;
+  &lt;li&gt;:heavy_check_mark: &lt;em&gt;&lt;u&gt;First-in, First-out&lt;/u&gt;&lt;/em&gt; (&lt;strong&gt;FIFO&lt;/strong&gt;) accepted/required.&lt;/li&gt;
+  &lt;li&gt;:x: Size varies widely - &lt;strong&gt;Dynamic&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;:x: Need to find Nth element - &lt;strong&gt;Random Access&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;:x: &lt;strong&gt;Insert/Erase&lt;/strong&gt; at the &lt;em&gt;&lt;u&gt;Front/Back&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;:x: &lt;strong&gt;Insert/Erase&lt;/strong&gt; at &lt;em&gt;&lt;u&gt;Mid-positions&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;:x: &lt;strong&gt;Key:Value&lt;/strong&gt; pair&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;handshake&quot;&gt;Handshake:&lt;/h2&gt;
+&lt;h5 id=&quot;reference&quot;&gt;Reference&lt;/h5&gt;
 &lt;ul&gt;
-  &lt;li&gt;The handshake is a protocol which is played within the record protocol.&lt;/li&gt;
-  &lt;li&gt;Its goal is to &lt;em&gt;&lt;u&gt;establish the algorithms and keys which are to be used for the records&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;It consists of messages. Each handshake message begins with a &lt;em&gt;&lt;u&gt;four-byte header&lt;/u&gt;&lt;/em&gt;,
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;&lt;u&gt;one byte&lt;/u&gt;&lt;/em&gt; which describes the &lt;strong&gt;&lt;em&gt;message type&lt;/em&gt;&lt;/strong&gt;,&lt;/li&gt;
-      &lt;li&gt;then &lt;em&gt;&lt;u&gt;three bytes&lt;/u&gt;&lt;/em&gt; for the &lt;strong&gt;&lt;em&gt;message length&lt;/em&gt;&lt;/strong&gt; (big-endian convention).&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The successive handshake messages are then sent with records tagged with the “handshake” type (the first byte of the header of each record has value 22).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Initially, client and server “agree upon” &lt;em&gt;&lt;u&gt;null encryption with no MAC&lt;/u&gt;&lt;/em&gt; and &lt;em&gt;&lt;u&gt;null compression&lt;/u&gt;&lt;/em&gt;. This means that the record they will first send will be sent as &lt;em&gt;&lt;u&gt;cleartext and unprotected&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;full-handshake&quot;&gt;Full Handshake:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;The full handshake looks like this: 
-&lt;img src=&quot;/assets/images/TLS-Handshake.png&quot; alt=&quot;TLS-Handshake&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;ClientHello&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;The first message of a handshake is a &lt;strong&gt;&lt;em&gt;&lt;u&gt;ClientHello&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.
-        &lt;ul&gt;
-          &lt;li&gt;It is the message by which the client states its intention to do some SSL.
-(Note that “client” is a symbolic role; it means “the party which speaks first”.)&lt;/li&gt;
-          &lt;li&gt;The ClientHello message contains:&lt;/li&gt;
-          &lt;li&gt;the &lt;strong&gt;&lt;em&gt;maximum protocol version&lt;/em&gt;&lt;/strong&gt; that the client wishes to support;&lt;/li&gt;
-          &lt;li&gt;the &lt;strong&gt;&lt;em&gt;client random&lt;/em&gt;&lt;/strong&gt; (32 bytes, out of which 28 are supposed to be generated with a &lt;em&gt;&lt;u&gt;cryptographically strong number generator&lt;/u&gt;&lt;/em&gt;);&lt;/li&gt;
-          &lt;li&gt;the &lt;strong&gt;&lt;em&gt;session ID&lt;/em&gt;&lt;/strong&gt; (in case the client wants to resume a session in an abbreviated handshake, see below);&lt;/li&gt;
-          &lt;li&gt;the list of &lt;strong&gt;&lt;em&gt;cipher suites&lt;/em&gt;&lt;/strong&gt; that the client knows of, &lt;em&gt;&lt;u&gt;ordered by client preference&lt;/u&gt;&lt;/em&gt;;&lt;/li&gt;
-          &lt;li&gt;the list of &lt;strong&gt;&lt;em&gt;compression algorithms&lt;/em&gt;&lt;/strong&gt; that the client knows of, &lt;em&gt;&lt;u&gt;ordered by client preference&lt;/u&gt;&lt;/em&gt;;&lt;/li&gt;
-          &lt;li&gt;some optional extensions.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;ServerHello&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;The server responds to the &lt;em&gt;&lt;u&gt;ClientHello&lt;/u&gt;&lt;/em&gt; with a &lt;strong&gt;&lt;em&gt;&lt;u&gt;ServerHello&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; which contains:
-        &lt;ul&gt;
-          &lt;li&gt;the &lt;strong&gt;&lt;em&gt;protocol version&lt;/em&gt;&lt;/strong&gt; that the client and server will use;&lt;/li&gt;
-          &lt;li&gt;the &lt;strong&gt;&lt;em&gt;server random&lt;/em&gt;&lt;/strong&gt; (32 bytes, with 28 random bytes);&lt;/li&gt;
-          &lt;li&gt;the &lt;strong&gt;&lt;em&gt;session ID&lt;/em&gt;&lt;/strong&gt; for this connection;&lt;/li&gt;
-          &lt;li&gt;the &lt;strong&gt;&lt;em&gt;cipher suite&lt;/em&gt;&lt;/strong&gt; that will be used;&lt;/li&gt;
-          &lt;li&gt;the &lt;strong&gt;&lt;em&gt;compression algorithm&lt;/em&gt;&lt;/strong&gt; that will be used;&lt;/li&gt;
-          &lt;li&gt;optionally, some extensions.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Besides &lt;em&gt;&lt;u&gt;ClientHello&lt;/u&gt;&lt;/em&gt; and &lt;em&gt;&lt;u&gt;ServerHello&lt;/u&gt;&lt;/em&gt;, the server sends a few other messages, which depend on the cipher suite and some other parameters:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;Certificate&lt;/em&gt;&lt;/strong&gt;: the server’s certificate, which contains its &lt;em&gt;&lt;u&gt;public key&lt;/u&gt;&lt;/em&gt;. This message is almost always sent, except if the cipher suite mandates a handshake without a certificate.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;ServerKeyExchange&lt;/em&gt;&lt;/strong&gt;: some extra values for the key exchange, if what is in the certificate is not sufficient. In particular, the &lt;strong&gt;&lt;em&gt;&lt;u&gt;DHE cipher suites&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; use an &lt;em&gt;&lt;u&gt;ephemeral Diffie-Hellman key exchange&lt;/u&gt;&lt;/em&gt;, which requires that message.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;CertificateRequest&lt;/em&gt;&lt;/strong&gt;: a message to request the client to also identify itself with a certificate of its own. This message contains the list of names of trust anchors (aka “root certificates”) that the server will use to validate the client certificate.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;ServerHelloDone&lt;/em&gt;&lt;/strong&gt;: a marker message (of length zero) which says that the server is finished, and the client should now talk.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The &lt;em&gt;&lt;u&gt;client&lt;/u&gt;&lt;/em&gt; must then respond with:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;Certificate&lt;/em&gt;&lt;/strong&gt;: the client certificate, if the server requested one. There are subtle variations between versions (with SSLv3, the client must omit this message if it does not have a certificate; with TLS 1.0+, in the same situation, it must send a Certificate message with an empty list of certificates).&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;ClientKeyExchange&lt;/em&gt;&lt;/strong&gt;: the client part of the actual key exchange (e.g. &lt;em&gt;&lt;u&gt;some random value encrypted with the server RSA key&lt;/u&gt;&lt;/em&gt;).&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;CertificateVerify&lt;/em&gt;&lt;/strong&gt;: a &lt;em&gt;&lt;u&gt;digital signature computed by the client over all previous handshake messages&lt;/u&gt;&lt;/em&gt;. This message is sent when the server requested a client certificate, and the client complied. &lt;em&gt;&lt;u&gt;This is how the client proves to the server that it really &quot;owns&quot; the public key&lt;/u&gt;&lt;/em&gt; which is encoded in the certificate it sent.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Initial Handshake is over by now.&lt;/li&gt;
-  &lt;li&gt;With following messages Client and Server will switch over to encrypted communication.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;ChangeCipherSpec&lt;/em&gt;&lt;/strong&gt;: Then the client sends a ChangeCipherSpec message, which is not a handshake message: it has its own record type, so it will be sent in a record of its own. &lt;u&gt;Its contents are purely symbolic&lt;/u&gt; (a single byte of value 1). This message marks the &lt;em&gt;&lt;u&gt;point at which the client switches to the newly negotiated cipher suite and keys&lt;/u&gt;&lt;/em&gt;. &lt;u&gt;The subsequent records from the client will then be&lt;/u&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;encrypted&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;Finished&lt;/em&gt;&lt;/strong&gt;: The Finished message is a &lt;strong&gt;&lt;em&gt;&lt;u&gt;cryptographic checksum&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; &lt;u&gt;computed over all previous handshake messages&lt;/u&gt; (from both the client and server). Since it is emitted after the ChangeCipherSpec, it is also &lt;em&gt;&lt;u&gt;covered by the&lt;/u&gt;&lt;/em&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;integrity check&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; and the &lt;strong&gt;&lt;em&gt;&lt;u&gt;encryption&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.
-        &lt;ul&gt;
-          &lt;li&gt;When the server receives &lt;strong&gt;Finished&lt;/strong&gt; message and verifies its contents, it obtains a proof that it has indeed talked to the same client all along. This message protects the handshake from alterations (the attacker cannot modify the handshake messages and still get the &lt;strong&gt;Finished&lt;/strong&gt; message right).&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The server finally responds with its own &lt;strong&gt;&lt;em&gt;ChangeCipherSpec&lt;/em&gt;&lt;/strong&gt; then &lt;strong&gt;&lt;em&gt;Finished&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;At that point, the handshake is finished, and the client and server may exchange application data (in encrypted records tagged as such).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;cipher-suite&quot;&gt;Cipher Suite:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;A cipher suite is a &lt;em&gt;&lt;u&gt;16-bit symbolic identifier&lt;/u&gt;&lt;/em&gt; for a set of cryptographic algorithms.&lt;/li&gt;
-  &lt;li&gt;For instance, the &lt;strong&gt;&lt;em&gt;TLS_RSA_WITH_AES_128_CBC_SHA&lt;/em&gt;&lt;/strong&gt; cipher suite has value 0x002F,
-    &lt;ul&gt;
-      &lt;li&gt;and means records use &lt;em&gt;&lt;u&gt;HMAC/SHA-1&lt;/u&gt;&lt;/em&gt; and &lt;em&gt;&lt;u&gt;AES encryption with a 128-bit key&lt;/u&gt;&lt;/em&gt;,&lt;/li&gt;
-      &lt;li&gt;and the key exchange is done by &lt;em&gt;&lt;u&gt;encrypting a random key&lt;/u&gt;&lt;/em&gt; with the server’s &lt;em&gt;&lt;u&gt;RSA public key&lt;/u&gt;&lt;/em&gt;”.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;the client suggests but the server chooses.&lt;/li&gt;
-  &lt;li&gt;The cipher suite is in the hands of the server. Courteous servers are supposed to follow the preferences of the client (if possible), but they can do otherwise and some actually do (e.g. as part of protection against BEAST).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;abbreviated-handshake&quot;&gt;Abbreviated Handshake:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;In the full handshake, the server sends a “session ID” (i.e. a bunch of up to 32 bytes) to the client.&lt;/li&gt;
-  &lt;li&gt;Later on, the &lt;em&gt;&lt;u&gt;client&lt;/u&gt;&lt;/em&gt; can come back and send the &lt;strong&gt;&lt;em&gt;&lt;u&gt;same session ID&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; as part of his ClientHello. This means that the &lt;em&gt;&lt;u&gt;client still remembers the cipher suite and keys from the previous handshake&lt;/u&gt;&lt;/em&gt; and would like to reuse these parameters.&lt;/li&gt;
-  &lt;li&gt;If the &lt;em&gt;&lt;u&gt;server&lt;/u&gt;&lt;/em&gt; also remembers the cipher suite and keys, then it copies that &lt;strong&gt;&lt;em&gt;&lt;u&gt;specific session ID&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; in its ServerHello, and then follows the abbreviated handshake:
-&lt;img src=&quot;/assets/images/TLS-abbreviated-handshake.png&quot; alt=&quot;Abbreviated Handshake&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;The abbreviated handshake is shorter: fewer messages, &lt;strong&gt;&lt;em&gt;&lt;u&gt;no asymmetric cryptography business&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, and, most importantly, &lt;strong&gt;reduced latency&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;A typical Web browser will open an SSL connection with a full handshake, then do abbreviated handshakes for all other connections to the same server: the other connections it opens in parallel, and also the subsequent connections to the same server.&lt;/li&gt;
-  &lt;li&gt;Indeed, typical &lt;em&gt;&lt;u&gt;Web servers will close connections after 15 seconds of inactivity&lt;/u&gt;&lt;/em&gt;, but they will &lt;em&gt;&lt;u&gt;remember sessions (the cipher suite and keys) for a lot longer&lt;/u&gt;&lt;/em&gt; (possibly for hours or even days).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;handshake-re-initiation&quot;&gt;Handshake Re-initiation:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;At any time, the client or the server can initiate a new handshake (the server can send a &lt;strong&gt;&lt;em&gt;&lt;u&gt;HelloRequest&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; message to trigger it; the client just sends a &lt;strong&gt;&lt;em&gt;&lt;u&gt;ClientHello&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;).&lt;/li&gt;
-  &lt;li&gt;A typical situation is the following:
-    &lt;ul&gt;
-      &lt;li&gt;An HTTPS server is configured to listen to SSL requests.&lt;/li&gt;
-      &lt;li&gt;A client connects and a handshake is performed.&lt;/li&gt;
-      &lt;li&gt;Once the handshake is done, the client sends its “applicative data”, which consists of an &lt;em&gt;&lt;u&gt;HTTP request&lt;/u&gt;&lt;/em&gt;. &lt;strong&gt;At that point&lt;/strong&gt; (and at that point only), the server learns the target path. Up to that point, the URL which the client wishes to reach was unknown to the server (the server might have been made aware of the target server name through a Server Name Indication SSL extension, but this does not include the path).&lt;/li&gt;
-      &lt;li&gt;Upon seeing the path, the server may learn that &lt;em&gt;&lt;u&gt;this is for a part of its data which is supposed to be accessed only by clients authenticated with certificates&lt;/u&gt;&lt;/em&gt;. But the server did not ask for a client certificate in the handshake (in particular because not-so-old Web browsers displayed freakish popups when asked for a certificate, in particular, if they did not have one, so a server would refrain from asking a certificate if it did not have good reason to believe that the client has one and knows how to use it).&lt;/li&gt;
-      &lt;li&gt;Therefore, the server triggers a new handshake, this time requesting a certificate.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="Security" /><category term="SSL" /><category term="TLS" /><category term="HTTPS" /><category term="Security" /><category term="SSL" /><category term="TLS" /><category term="HTTPS" /><summary type="html">History: First SSL prototypes came from Netscape when they were developing the first versions of their flagship browser, Netscape Navigator. SSL version 3 (SSLv3) was an enhanced protocol which still works today and is widely supported. The protocol has been standardized, with a new name in order to avoid legal issues; the new name is TLS. Three versions of TLS have been produced so far, each with its dedicated RFC: TLS 1.0, TLS 1.1 and TLS 1.2. SSLv3 is then 3.0 while the TLS versions are, respectively, 3.1, 3.2 and 3.3. Thus, TLS 1.0 is sometimes called SSL 3.1. (SSL 3.0 and TLS 1.0 differ by only some minute details.) TLS 1.1 and 1.2 are not yet widely supported SSLv3 and TLS 1.0 are supported “everywhere” (even IE 6.0 knows them). Context SSL aims at providing a secure bidirectional tunnel for arbitrary data. TCP in brief: TCP is the well-known protocol for sending data over the Internet. TCP works over the IP “packets” and provides a bidirectional tunnel for bytes; it works for every byte values and sends them into two streams which can operate simultaneously. TCP handles the hard work of splitting the data into packets, acknowledging them, reassembling them back into their right order, while removing duplicates and reemitting lost packets. From the point of view of the application which uses TCP, there are just two streams, and the packets are invisible; in particular, the streams are not split into “messages” (it is up to the application to take its own encoding rules if it wishes to have messages, and that’s precisely what HTTP does). Why SSL/TLS: TCP is reliable in the presence of “accidents”, i.e. transmission errors due to flaky hardware, network congestion, people with smartphones who walk out the range of a given base station, and other non-malicious events. However, an ill-intentioned individual (the “attacker”) with some access to the transport medium could read all the transmitted data and/or alter it intentionally, and TCP does not protect against that. Hence SSL. SSL assumes that it works over a TCP-like protocol, which provides a reliable stream; SSL does not implement reemission of lost packets and things like that. The attacker is supposed to be in power to disrupt communication completely in an unavoidable way (for instance, he can cut the cables) so SSL’s job is to: detect alterations (the attacker must not be able to alter the data silently); ensure data confidentiality (the attacker must not gain knowledge of the exchanged data). SSL fulfills these goals to a large (but not absolute) extent. Record Protocol: SSL is layered and the bottom layer is the record protocol. Whatever data is sent in an SSL tunnel is split into records. Over the wire (the underlying TCP socket or TCP-like medium), a record looks like this: HH V1:V2 L1:L2 data HH is a single byte which indicates the type of data in the record. Four types are defined: change_cipher_spec (20) alert (21) handshake (22) application_data (23) V1: V2 is the protocol version, over two bytes. For all versions currently defined, V1 has value 0x03, while V2 has value 0x00 for SSLv3, 0x01 for TLS 1.0 0x02 for TLS 1.1 0x03 for TLS 1.2 L1: L2 is the length of data, in bytes (big-endian convention is used: the length is 256*L1+L2). The total length of data cannot exceed 18432 bytes, but in practice, it cannot even reach that value. So a record has a five-byte header, followed by at most 18 kB of data. The data is where symmetric encryption and integrity checks are applied. When a record is emitted, both sender and receiver are supposed to agree on which cryptographic algorithms are currently applied, and with which keys; this agreement is obtained through the handshake protocol. Compression, if any, is also applied at that point. Record protocol works like this: Initially, there are some bytes to transfer; these are application data or some other kind of bytes. This payload consists of at most 16384 bytes, but possibly less (a payload of length 0 is legal, but it turns out that Internet Explorer 6.0 does not like that at all). The payload is then compressed with whatever compression algorithm is currently agreed upon. Compression is *stateful* and thus may depend upon the contents of previous records. In practice, compression is either “null” (no compression at all) or “Deflate” (RFC 3749), the latter being currently courteously but firmly shown the exit door in the Web context, due to the recent CRIME attack. Compression aims at shortening data, but it must necessarily expand it slightly in some unfavorable situations (due to the pigeonhole principle). SSL allows for an expansion of at most 1024 bytes. Of course, null compression never expands (but never shortens either); Deflate will expand by at most 10 bytes if the implementation is any good. The compressed payload is then protected against alterations and encrypted. If the current encryption-and-integrity algorithms are “null”, then this step is a no-operation. Otherwise, a MAC is appended, then some padding (depending on the encryption algorithm), and the result is encrypted. These steps again induce some expansion, which the SSL standard limits to 1024 extra bytes (combined with the maximum expansion from the compression step, this brings us to the 18432 bytes, to which we must add the 5-byte header). The MAC is, usually, HMAC with one of the usual hash functions (mostly MD5, SHA-1 or SHA-256)(with SSLv3, this is not the “true” HMAC but something very similar and, to the best of our knowledge, as secure as HMAC). Encryption will use either a block cipher in CBC mode, or the RC4 stream cipher. Crucially, the MAC is first computed and appended to the data, and the result is encrypted. This is MAC-then-encrypt and it is actually not a very good idea. The MAC is computed over the concatenation of the (compressed) payload and a sequence number, so that an industrious attacker may not swap records. Handshake: The handshake is a protocol which is played within the record protocol. Its goal is to establish the algorithms and keys which are to be used for the records. It consists of messages. Each handshake message begins with a four-byte header, one byte which describes the message type, then three bytes for the message length (big-endian convention). The successive handshake messages are then sent with records tagged with the “handshake” type (the first byte of the header of each record has value 22). Initially, client and server “agree upon” null encryption with no MAC and null compression. This means that the record they will first send will be sent as cleartext and unprotected. Full Handshake: The full handshake looks like this: ClientHello: The first message of a handshake is a ClientHello. It is the message by which the client states its intention to do some SSL. (Note that “client” is a symbolic role; it means “the party which speaks first”.) The ClientHello message contains: the maximum protocol version that the client wishes to support; the client random (32 bytes, out of which 28 are supposed to be generated with a cryptographically strong number generator); the session ID (in case the client wants to resume a session in an abbreviated handshake, see below); the list of cipher suites that the client knows of, ordered by client preference; the list of compression algorithms that the client knows of, ordered by client preference; some optional extensions. ServerHello: The server responds to the ClientHello with a ServerHello which contains: the protocol version that the client and server will use; the server random (32 bytes, with 28 random bytes); the session ID for this connection; the cipher suite that will be used; the compression algorithm that will be used; optionally, some extensions. Besides ClientHello and ServerHello, the server sends a few other messages, which depend on the cipher suite and some other parameters: Certificate: the server’s certificate, which contains its public key. This message is almost always sent, except if the cipher suite mandates a handshake without a certificate. ServerKeyExchange: some extra values for the key exchange, if what is in the certificate is not sufficient. In particular, the DHE cipher suites use an ephemeral Diffie-Hellman key exchange, which requires that message. CertificateRequest: a message to request the client to also identify itself with a certificate of its own. This message contains the list of names of trust anchors (aka “root certificates”) that the server will use to validate the client certificate. ServerHelloDone: a marker message (of length zero) which says that the server is finished, and the client should now talk. The client must then respond with: Certificate: the client certificate, if the server requested one. There are subtle variations between versions (with SSLv3, the client must omit this message if it does not have a certificate; with TLS 1.0+, in the same situation, it must send a Certificate message with an empty list of certificates). ClientKeyExchange: the client part of the actual key exchange (e.g. some random value encrypted with the server RSA key). CertificateVerify: a digital signature computed by the client over all previous handshake messages. This message is sent when the server requested a client certificate, and the client complied. This is how the client proves to the server that it really &quot;owns&quot; the public key which is encoded in the certificate it sent. Initial Handshake is over by now. With following messages Client and Server will switch over to encrypted communication. ChangeCipherSpec: Then the client sends a ChangeCipherSpec message, which is not a handshake message: it has its own record type, so it will be sent in a record of its own. Its contents are purely symbolic (a single byte of value 1). This message marks the point at which the client switches to the newly negotiated cipher suite and keys. The subsequent records from the client will then be encrypted. Finished: The Finished message is a cryptographic checksum computed over all previous handshake messages (from both the client and server). Since it is emitted after the ChangeCipherSpec, it is also covered by the integrity check and the encryption. When the server receives Finished message and verifies its contents, it obtains a proof that it has indeed talked to the same client all along. This message protects the handshake from alterations (the attacker cannot modify the handshake messages and still get the Finished message right). The server finally responds with its own ChangeCipherSpec then Finished. At that point, the handshake is finished, and the client and server may exchange application data (in encrypted records tagged as such). Cipher Suite: A cipher suite is a 16-bit symbolic identifier for a set of cryptographic algorithms. For instance, the TLS_RSA_WITH_AES_128_CBC_SHA cipher suite has value 0x002F, and means records use HMAC/SHA-1 and AES encryption with a 128-bit key, and the key exchange is done by encrypting a random key with the server’s RSA public key”. the client suggests but the server chooses. The cipher suite is in the hands of the server. Courteous servers are supposed to follow the preferences of the client (if possible), but they can do otherwise and some actually do (e.g. as part of protection against BEAST). Abbreviated Handshake: In the full handshake, the server sends a “session ID” (i.e. a bunch of up to 32 bytes) to the client. Later on, the client can come back and send the same session ID as part of his ClientHello. This means that the client still remembers the cipher suite and keys from the previous handshake and would like to reuse these parameters. If the server also remembers the cipher suite and keys, then it copies that specific session ID in its ServerHello, and then follows the abbreviated handshake: The abbreviated handshake is shorter: fewer messages, no asymmetric cryptography business, and, most importantly, reduced latency. A typical Web browser will open an SSL connection with a full handshake, then do abbreviated handshakes for all other connections to the same server: the other connections it opens in parallel, and also the subsequent connections to the same server. Indeed, typical Web servers will close connections after 15 seconds of inactivity, but they will remember sessions (the cipher suite and keys) for a lot longer (possibly for hours or even days). Handshake Re-initiation: At any time, the client or the server can initiate a new handshake (the server can send a HelloRequest message to trigger it; the client just sends a ClientHello). A typical situation is the following: An HTTPS server is configured to listen to SSL requests. A client connects and a handshake is performed. Once the handshake is done, the client sends its “applicative data”, which consists of an HTTP request. At that point (and at that point only), the server learns the target path. Up to that point, the URL which the client wishes to reach was unknown to the server (the server might have been made aware of the target server name through a Server Name Indication SSL extension, but this does not include the path). Upon seeing the path, the server may learn that this is for a part of its data which is supposed to be accessed only by clients authenticated with certificates. But the server did not ask for a client certificate in the handshake (in particular because not-so-old Web browsers displayed freakish popups when asked for a certificate, in particular, if they did not have one, so a server would refrain from asking a certificate if it did not have good reason to believe that the client has one and knows how to use it). Therefore, the server triggers a new handshake, this time requesting a certificate.</summary></entry></feed>
+  &lt;li&gt;&lt;a href=&quot;https://www.cplusplus.com/reference/stack/stack/&quot;&gt;std::stack&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cplusplus.com/reference/queue/queue/&quot;&gt;std::queue&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cplusplus.com/reference/queue/priority_queue/&quot;&gt;std::priority_queue&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="C++" /><category term="Data Structures" /><category term="STL" /><category term="C++" /><category term="Data Structures" /><category term="STL" /><summary type="html">This write-up will explain different Container Adapters, like Stack, Queue, Priority Queue their respective features and mainly their appropriate use-cases. Container Adapters are NOT full container classes. But the classes that provide a specific interface relying on an object of one of the Container class (such as deque/list) to handle the elements. The underlying container is encapsulated in a way that its elements are accessed by the members of the container adapter independent of the underlying container class. Stack Operate in a LIFO context (last-in first-out) Elements are Inserted/Extracted Only from ONE END of the container. Elements are pushed/popped from the back of the specific container, which is known as the TOP of the stack. By default, standard container std::deque is used, if no container class is specified for a particular stack class instantiation. Otherwise, std::vector, std::list also used as underlying container. Use-cases: First-In Last-Out operations Reversal of elements Example: std::stack&amp;lt;int&amp;gt; first; // empty stack --------------------- std::deque&amp;lt;int&amp;gt; mydeque (3,100); // deque with 3 elements std::stack&amp;lt;int&amp;gt; second (mydeque); // stack initialized to copy of deque --------------------- std::stack&amp;lt;int,std::vector&amp;lt;int&amp;gt; &amp;gt; third; // empty stack using vector --------------------- std::vector&amp;lt;int&amp;gt; myvector (2,200); // vector with 2 elements std::stack&amp;lt;int,std::vector&amp;lt;int&amp;gt; &amp;gt; fourth (myvector); Operations: * empty() * size() * top() * pop() * push() ------------ C++11: * emplace() * swap() Time Complexity Stack Operations Operation Time Complexity Push O(1) Pop O(1) Top O(1) Stack Decision Criteria :heavy_check_mark: Order is Important. :heavy_check_mark: Last-in, First-out (LIFO) accepted/required. :x: Size varies widely - Dynamic :x: Need to find Nth element - Random Access :x: Insert/Erase at the Front/Back :x: Insert/Erase at Mid-positions :x: Key:Value pair References: std::stack Queue Operate in FIFO (First-in, First-out) Elements are Inserted from one end of the container and Extracted from the other end. Elements are Pushed from the back of the specific container and Popped from its front. By default, standard container ‘std::deque’ is used, if no container class is specified for a particular queue class instantiation. Otherwise, std::vector, std::list also used as underlying container. Use-cases: First-In First-Out operations Simple online ordering system (first come first served) Semaphore queue handling CPU scheduling (FCFS) Example: std::queue&amp;lt;int&amp;gt; first; // empty queue ------------ std::deque&amp;lt;int&amp;gt; mydeck (3,100); // deque with 3 elements std::queue&amp;lt;int&amp;gt; second (mydeck); // queue initialized to copy of deque ------------ std::queue&amp;lt;int,std::list&amp;lt;int&amp;gt; &amp;gt; third; // empty queue with list as underlying container ------------ std::list&amp;lt;int&amp;gt; mylist (2,200); // list with 2 elements std::queue&amp;lt;int,std::list&amp;lt;int&amp;gt; &amp;gt; fourth (mylist); Operations: * empty() * size() * front() * back() * pop() * push() -------------- C++11: * emplace() * swap() Time Complexity Queue Operations Operation Time Complexity Push O(1) Pop O(1) Top O(1) Queue Decision Criteria :heavy_check_mark: Order is Important. :heavy_check_mark: First-in, First-out (FIFO) accepted/required. :x: Size varies widely - Dynamic :x: Need to find Nth element - Random Access :x: Insert/Erase at the Front/Back :x: Insert/Erase at Mid-positions :x: Key:Value pair Priority_Queue Its First element is always the “Greatest of the elements” it contains, according to some “strict weak ordering” criterion. Similar to a heap, where elements can be inserted at any moment, and only the max heap element can be retrieved (the one at the top in the priority queue). Elements are Popped from the back of the specific container, which is known as the top of the priority queue. The underlying container shall be accessible through Random Access Iterators Support of Random Access Iterators is required to keep a “Heap structure” internally at all times. This is done automatically by the container adapter by automatically calling the algorithm functions: make_heap, push_heap and pop_heap By default, standard container ‘std::vector’ is used, if no container class is specified for a particular priority_queue class instantiation. Otherwise, ‘std::deque’ can also be used as underlying container. Operation: * empty() * size() * top() * push() * pop() ------------ C++11: * emplace() * swap() Priority Queue Decision Criteria :heavy_check_mark: Order is Important. :heavy_check_mark: First-in, First-out (FIFO) accepted/required. :x: Size varies widely - Dynamic :x: Need to find Nth element - Random Access :x: Insert/Erase at the Front/Back :x: Insert/Erase at Mid-positions :x: Key:Value pair Reference std::stack std::queue std::priority_queue</summary></entry></feed>

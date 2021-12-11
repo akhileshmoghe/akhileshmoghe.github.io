@@ -1,0 +1,70 @@
+I"Y<p>This write-up will focus on newly launched AWS IoT Twinmaker service.</p>
+
+<h2 id="digital-twins">Digital Twins</h2>
+<ul>
+  <li>Digital twins are <em><u>virtual representations of physical systems</u></em> such as buildings, factories, production lines, and equipment that are regularly updated with real-world data to mimic the <strong>structure</strong>, <strong>state</strong>, and <strong>behavior</strong> of the systems they represent.</li>
+  <li>To create and use digital twins of real-world systems to monitor and optimize operations.</li>
+  <li>We can create digital twins of <strong>equipment</strong>, <strong>processes</strong>, and <strong>facilities</strong> by connecting data from different data sources like <em><u>equipment sensors</u></em>, <em><u>video feeds</u></em>, and <em><u>business applications</u></em>.</li>
+</ul>
+
+<h2 id="digital-twin-graph">Digital Twin Graph</h2>
+<ul>
+  <li>AWS IoT TwinMaker forms a digital twin graph that combines and understands the <em><u>relationships between virtual representations of your physical systems and connected data sources</u></em>, so you can accurately model your real-world environment.</li>
+  <li><em><u>Import</u></em> existing <strong>3D models</strong> (such as <em><u>CAD files</u></em>, and <em><u>point cloud scans</u></em>) to compose and arrange <strong>3D scenes</strong> of a physical space and its contents (e.g. a factory and its equipment) using simple 3D tools.</li>
+  <li>We can add data to these models/scenes for visualization as:
+    <ul>
+      <li>Interactive video.</li>
+      <li>sensor data overlays from the connected data sources.</li>
+      <li>insights from connected machine learning (ML) and simulation services.</li>
+      <li>equipment maintenance records and manuals.</li>
+    </ul>
+  </li>
+  <li>Using the digital twin graph, customers can now issue geospatial queries such as finding all cameras that are pointing to an equipment to help with root cause analysis.</li>
+</ul>
+
+<h2 id="amazon-managed-grafana-plugin">Amazon Managed Grafana plugin</h2>
+<ul>
+  <li>Can be used to create a web-based application for end users.</li>
+  <li>Use Grafana applications to observe and interact with the digital twin to help them optimize factory operations, increase production output, and improve equipment performance.</li>
+</ul>
+
+<h2 id="model-builder">Model Builder</h2>
+<ul>
+  <li>Allows you to create <em><u>workspaces</u></em> that will hold the resources, such as entity models and visual assets needed to create a digital twin.</li>
+  <li>In this workspace, create entities that represent digital replicas of your equipment.</li>
+  <li>Specify custom relationships between these entities to create a digital twin graph of your real-world system.</li>
+  <li>Using the digital twin graph, customers can now issue geospatial queries such as finding all cameras that are pointing to an equipment to help with root cause analysis.</li>
+</ul>
+
+<h2 id="data-connector">Data Connector</h2>
+<ul>
+  <li>Associate entities with connectors (called as <em>components</em> in AWS IoT TwinMaker) to data stores such as AWS IoT SiteWise, to provide context to the data present in various data stores.</li>
+  <li>Built-in <strong><em><u>Data Connectors</u></em></strong> for the following AWS services:
+    <ul>
+      <li><strong>AWS IoT SiteWise</strong> for equipment and <em><u>time-series sensor data</u></em></li>
+      <li><strong>Amazon Kinesis Video Streams</strong> for <em><u>video data</u></em></li>
+      <li><strong>Amazon Simple Storage Service (S3)</strong> for <em><u>storage of visual resources</u></em> (for example, CAD files) and data from business applications.</li>
+    </ul>
+  </li>
+  <li>Provides a framework for you to create <em><u>your own Data Connectors</u></em> to use with other data sources (such as <a href="https://www.snowflake.com/">Snowflake</a> and <a href="https://siemens.mindsphere.io/en">Siemens MindSphere</a>).</li>
+</ul>
+
+<h2 id="scene-composer">Scene Composer</h2>
+<ul>
+  <li>A tool to create visualizations in 3D.</li>
+  <li>You can bring previously built 3D/CAD models into your resource library in Amazon S3.</li>
+  <li>these visual assets can be brought into a scene, and position the 3D assets to match your real-world systems.</li>
+  <li>visual annotations such as tags on top of the base scene.</li>
+</ul>
+
+<h5 id="references">References</h5>
+<ul>
+  <li><a href="https://aws.amazon.com/blogs/iot/introducing-aws-iot-twinmaker/">Introducing AWS IoT TwinMaker</a></li>
+</ul>
+
+<h5 id="further-reference">Further Reference</h5>
+<ul>
+  <li><a href="https://github.com/aws-samples/aws-iot-twinmaker-samples">aws-samples/aws-iot-twinmaker-samples</a></li>
+</ul>
+
+:ET

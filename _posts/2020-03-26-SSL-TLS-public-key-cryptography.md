@@ -19,6 +19,9 @@ author: Akhilesh Moghe
 show_author_profile: true
 ---
 
+# Overview
+  In this blog, we will explore how a Public key is created with RSA Asymmetric Key Encryption in an oversimplified version. We will know, how a shared secrete is shared between server and client, which is then used for further encrypted commnication after initial handshake.
+
 ## Magic of Public Key Cryptography:
 Here's an oversimplified version of RSA Asymmetric Key Encryption:
 
@@ -41,10 +44,21 @@ Here's an oversimplified version of RSA Asymmetric Key Encryption:
 &nbsp;
 
 * So __*<u>x</u>*__ is a __*<u>shared secret</u>*__ between the client and the server.
-* After that this is pretty straightforward *<u>symmetric encryption</u>*, using __*<u>x</u>*__ a __*<u>shared secret</u>*__ as key.
+* __*<u>n</u>*__ is the __*<u>RSA Public Key</u>*__ sent by the server.
+* After that this is pretty straightforward *<u>symmetric encryption</u>*, using __*<u>x</u>*__ a __*<u>shared secret</u>*__ as key.\
+&nbsp;
 
-## A Cretificate:
+### Further Reading
+If interested in knowing actual RSA operations like Key-generation, Key-distribution, Encryption, Decryption; see [Wikipedia RSA link](https://en.wikipedia.org/wiki/RSA_(cryptosystem)#Operation).
+
+## A Cretificate
 * The certificate is a vessel for the server public key (__*<u>n</u>*__).
 * It is used to thwart active attackers who would want to impersonate the server: such an attacker intercepts the communication and sends its value __*<u>n</u>*__ instead of the server's __*<u>n</u>*__.
 * The certificate is signed by a __*<u>certification authority</u>*__, so that the client may know that a given __*<u>n</u>*__ is really the genuine __*<u>n</u>*__ from the server he wants to talk with.
 * Digital signatures also use *<u>asymmetric cryptography</u>*, although in a distinct way (for instance, there is also a variant of __RSA__ for digital signatures).
+
+\
+&nbsp;
+## References
+  - [How is it possible that people observing an HTTPS connection being established wouldn't know how to decrypt it?](https://security.stackexchange.com/a/6296/214329)
+  
