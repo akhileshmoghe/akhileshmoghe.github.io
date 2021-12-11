@@ -1,12 +1,10 @@
 header:
   - titles:
+      en      : &EN       Home
+    url: /index.html
+  - titles:
       en      : &EN       Articles
     url: /archive.html
-    
-#  - titles:
-#      en      : &EN       CV
-#    url: /cv.html
-
   - titles:
       en      : &EN       About Me
     url: /about.html

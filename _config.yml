@@ -37,7 +37,7 @@ author:
   type      : # "person" (default), "organization"
   name      : Akhilesh Moghe
   url       :
-  avatar    : assets/images/logo/IoT.jpg # path or url of avatar image (square)
+  avatar    : assets/images/logo/Akhilesh_Moghe.jpeg # path or url of avatar image (square)
   bio       : I am an IoT Developer.
   email     : akhileshmoghe@live.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name

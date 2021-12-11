@@ -11,8 +11,8 @@ toc_sticky : true
 tags:
   - C++
   - Design Patterns
-author: Akhilesh Moghe
-show_author_profile: true
+#author: Akhilesh Moghe
+#show_author_profile: true
 ---
 
 This write-up will explain different __*<u>GRASP Patterns</u>*__, explained in book: [Applying UML and Patterns](https://www.amazon.com/gp/product/0131489062/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=fluentcpp-20&creative=9325&linkCode=as2&creativeASIN=0131489062&linkId=43cfc4d0a6ea922ef663317e4f91db85), which are more important in day to day programming life than the whole lot of GoF design patterns.
