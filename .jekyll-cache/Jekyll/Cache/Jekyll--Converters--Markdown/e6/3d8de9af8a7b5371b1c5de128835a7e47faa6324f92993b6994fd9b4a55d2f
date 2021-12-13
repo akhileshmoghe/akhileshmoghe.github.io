@@ -1,0 +1,21 @@
+I"�<h2 id="jetson-nano-bootloader-functionalities">Jetson Nano Bootloader functionalities:</h2>
+<ul>
+  <li>The primary function of the NVIDIA® Jetson Nano™ boot software is to initialize the SoC (System on a Chip), including:</li>
+  <li>Initializing MC/EMC/CPU</li>
+  <li>Setting up security parameters</li>
+  <li>Loading different firmware</li>
+  <li>Maintaining Chain of Trust</li>
+  <li>Setting memory carveouts for different firmware</li>
+  <li>Flashing the device</li>
+  <li>Booting to the operating system
+  Additionally, the Jetson Nano boot software also performs other operations defined by product requirements, including but not limited to:</li>
+  <li>Initialization of HDMI™/DSI</li>
+  <li>Displaying the boot logo</li>
+</ul>
+
+<h5 id="references">References:</h5>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=DV5S_ZSdK0s&amp;t=6s&amp;ab_channel=PentesterAcademyTV">Embedded Linux Booting Process (Multi-Stage Bootloaders, Kernel, Filesystem)</a></li>
+</ul>
+
+:ET

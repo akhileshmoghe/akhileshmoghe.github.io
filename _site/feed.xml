@@ -1,5 +1,433 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-11T23:51:15+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Every THING is Internet of Thing</title><subtitle>A Journey in the direction of ---&gt; IoT ---&gt; Edge ---&gt; Cloud ---&gt; DevOps ---&gt; ML ---&gt; AI
-</subtitle><author><name>Akhilesh Moghe</name><email>akhileshmoghe@live.com</email></author><entry><title type="html">Design Patterns: Most Important GRASP Patterns of designing an application or module</title><link href="http://localhost:4000/c++/design%20patterns/2021/12/07/C++_Design_Patterns_GRASP_Patterns.html" rel="alternate" type="text/html" title="Design Patterns: Most Important GRASP Patterns of designing an application or module" /><published>2021-12-07T05:33:22+05:30</published><updated>2021-12-07T05:33:22+05:30</updated><id>http://localhost:4000/c++/design%20patterns/2021/12/07/C++_Design_Patterns_GRASP_Patterns</id><content type="html" xml:base="http://localhost:4000/c++/design%20patterns/2021/12/07/C++_Design_Patterns_GRASP_Patterns.html">&lt;p&gt;This write-up will explain different &lt;strong&gt;&lt;em&gt;&lt;u&gt;GRASP Patterns&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, explained in book: &lt;a href=&quot;https://www.amazon.com/gp/product/0131489062/ref=as_li_qf_asin_il_tl?ie=UTF8&amp;amp;tag=fluentcpp-20&amp;amp;creative=9325&amp;amp;linkCode=as2&amp;amp;creativeASIN=0131489062&amp;amp;linkId=43cfc4d0a6ea922ef663317e4f91db85&quot;&gt;Applying UML and Patterns&lt;/a&gt;, which are more important in day to day programming life than the whole lot of GoF design patterns.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-12T20:48:43+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Every THING is Internet of Thing</title><subtitle>A Journey in the direction of ---&gt; IoT ---&gt; Edge ---&gt; Cloud ---&gt; DevOps ---&gt; ML ---&gt; AI
+</subtitle><author><name>Akhilesh Moghe</name><email>akhileshmoghe@live.com</email></author><entry><title type="html">Linux Boot Process</title><link href="http://localhost:4000/_post/linux/boot_process" rel="alternate" type="text/html" title="Linux Boot Process" /><published>2021-12-12T01:33:22+05:30</published><updated>2021-12-12T01:33:22+05:30</updated><id>http://localhost:4000/_post/linux/Boot-process</id><content type="html" xml:base="http://localhost:4000/_post/linux/boot_process">&lt;p&gt;This article will focus on different stages of boot process in Linux OS.
+There are 6 distinct stages of boot process, each explained in brief as below.
+There’s also a note on &lt;em&gt;&lt;u&gt;runlevels&lt;/u&gt;&lt;/em&gt; which represents the state of the system after boot, which are usually managed by systemd.&lt;/p&gt;
+
+&lt;p&gt;Embedded Linux boot process similar to standard Linux to much extent, but due to the variations in hadware and the board specifics like multi-stage bootloaders, it becomes somewhat different in bootloader section and pre-dominant use of &lt;strong&gt;&lt;em&gt;u-Boot&lt;/em&gt;&lt;/strong&gt; bootloader in embedded systems also needs to be addressed. To find out specifics of &lt;a href=&quot;/_post/embedded/linux/boot_process&quot;&gt;Embedded Linux Boot Process&lt;/a&gt; see this article.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-bios-basic-inputoutput-system&quot;&gt;1. BIOS (Basic Input/Output System)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;BIOS is a program that controls computer’s hardware from the time the computer is started until the main operating system takes over.&lt;/li&gt;
+  &lt;li&gt;BIOS first performs some &lt;em&gt;&lt;u&gt;integrity checks&lt;/u&gt;&lt;/em&gt;, i.e. &lt;em&gt;&lt;u&gt;power on self test&lt;/u&gt;&lt;/em&gt; (POST) of the &lt;strong&gt;HDD&lt;/strong&gt; or &lt;strong&gt;SSD&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;BIOS acts as an intermediary between the CPU and the input and output devices. This eliminates the need for the operating system to be aware of the hardware addresses of the input and output devices.&lt;/li&gt;
+  &lt;li&gt;When there’s a change in device details, only the BIOS Configuration needs to be updated. (accomplished by pressing a specified key F12 or F2 as soon as the computer begins to start up).&lt;/li&gt;
+  &lt;li&gt;BIOS program, written in the &lt;em&gt;&lt;u&gt;assembly language&lt;/u&gt;&lt;/em&gt; of the CPU used, is stored on &lt;strong&gt;&lt;em&gt;Electrically Erasable Programmable ROM (EEPROM)&lt;/em&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;em&gt;flash&lt;/em&gt;&lt;/strong&gt; memory.&lt;/li&gt;
+  &lt;li&gt;BIOS searches for, loads, and executes the boot loader program.&lt;/li&gt;
+  &lt;li&gt;BIOS loads and executes the &lt;strong&gt;&lt;em&gt;Master Boot Record (MBR)&lt;/em&gt;&lt;/strong&gt; boot loader.&lt;/li&gt;
+  &lt;li&gt;BIOSs permit the user to select the order in which the system searches for &lt;em&gt;&lt;u&gt;bootable media&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;MBR is usually on HDD or SSD, but sometimes on a USB stick or CD-ROM such as with a live installation of Linux.&lt;/li&gt;
+  &lt;li&gt;Once the boot loader is loaded into memory and the BIOS gives control of the system to it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2-master-boot-record-mbr&quot;&gt;2. Master Boot Record (MBR)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;MBR is responsible for loading and executing the &lt;strong&gt;&lt;em&gt;GRUB&lt;/em&gt;&lt;/strong&gt; boot loader.&lt;/li&gt;
+  &lt;li&gt;MBR is located in the &lt;em&gt;&lt;u&gt;1st sector&lt;/u&gt;&lt;/em&gt; of the bootable disk, which is typically &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/hda&lt;/code&gt;, or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/sda&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;MBR is less than &lt;em&gt;&lt;u&gt;512 bytes&lt;/u&gt;&lt;/em&gt; in size. This has three components 1) &lt;em&gt;&lt;u&gt;primary boot loader info&lt;/u&gt;&lt;/em&gt; in 1st 446 bytes 2) &lt;em&gt;&lt;u&gt;partition table info&lt;/u&gt;&lt;/em&gt; in next 64 bytes 3) &lt;em&gt;&lt;u&gt;mbr validation check&lt;/u&gt;&lt;/em&gt; in last 2 bytes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3-gnu-grand-unified-bootloader-grub&quot;&gt;3. GNU GRand Unified Bootloader (GRUB)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;GRUB is the typical boot loader for most modern Linux systems.&lt;/li&gt;
+  &lt;li&gt;GRUB Splash Screen is the first to appear on screen. If you have multiple kernel images installed, you can use your keyboard to select the one you want your system to boot with.&lt;/li&gt;
+  &lt;li&gt;GRUB configuration file is usually at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/boot/grub/grub.conf&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/grub.conf&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-kernel&quot;&gt;4. Kernel&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;The Kernel that was selected by GRUB first mounts the &lt;strong&gt;&lt;em&gt;root file system&lt;/em&gt;&lt;/strong&gt; that’s specified in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grub.conf&lt;/code&gt; file.&lt;/li&gt;
+  &lt;li&gt;Then Kernel executes the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/sbin/init&lt;/code&gt; program, which is *&lt;u&gt;always the first program to be executed&lt;/u&gt;. You can confirm this with its *&lt;u&gt;process id (PID)&lt;/u&gt;, which should always be &lt;strong&gt;1&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;The kernel then establishes &lt;em&gt;&lt;u&gt;a temporary root file system&lt;/u&gt;&lt;/em&gt; using &lt;strong&gt;&lt;em&gt;Initial RAM Disk (initrd)&lt;/em&gt;&lt;/strong&gt; until the real file system is mounted.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5-init&quot;&gt;5. Init&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;With Init stage, system executes runlevel programs. System looks for an init file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/inittab&lt;/code&gt; to decide the Linux run level.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;6-runlevel-programs&quot;&gt;6. Runlevel Programs&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;A runlevel is a mode of operation in the computer operating systems that implements Unix System V-style initialization.&lt;/li&gt;
+  &lt;li&gt;Conventionally, &lt;em&gt;&lt;u&gt;seven runlevels&lt;/u&gt;&lt;/em&gt; exist, numbered from zero to six.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;&lt;u&gt;Only one runlevel is executed on startup&lt;/u&gt;&lt;/em&gt;; run levels are &lt;em&gt;&lt;u&gt;not executed one after another&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;A runlevel defines the state of the machine after boot&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;By default most of the LINUX based system boots to runlevel 3 or runlevel 5.&lt;/li&gt;
+  &lt;li&gt;Depending on your default init level setting, which are usually managed by &lt;strong&gt;&lt;em&gt;systemd&lt;/em&gt;&lt;/strong&gt;, the system will execute the start scripts for each run level are different performing different tasks. These start scripts corresponding to each run level can be found in special files present under &lt;strong&gt;&lt;em&gt;rc sub directories&lt;/em&gt;&lt;/strong&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;At &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/rc.d&lt;/code&gt; directory there will be either a set of files named &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rc.0&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rc.1&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rc.2&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rc.3&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rc.4&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rc.5&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rc.6&lt;/code&gt;, or a set of directories named &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rc0.d&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rc1.d&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rc2.d&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rc3.d&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rc4.d&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rc5.d&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rc6.d&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;In these directories, you’ll find programs that start with either an “&lt;strong&gt;&lt;em&gt;S&lt;/em&gt;&lt;/strong&gt;” or “&lt;strong&gt;&lt;em&gt;K&lt;/em&gt;&lt;/strong&gt;” for &lt;em&gt;&lt;u&gt;startup&lt;/u&gt;&lt;/em&gt; and &lt;em&gt;&lt;u&gt;kill&lt;/u&gt;&lt;/em&gt;, respectively. Startup programs are executed during &lt;em&gt;&lt;u&gt;system startup&lt;/u&gt;&lt;/em&gt;, and kill programs during &lt;em&gt;&lt;u&gt;shutdown&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+      &lt;li&gt;There are numbers right next to S and K in the program names. Those are the &lt;em&gt;&lt;u&gt;sequence number&lt;/u&gt;&lt;/em&gt; in which the programs should be started or killed.
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;root@PTL011669:# cd /etc/rc0.d/
+root@PTL011669:rc0.d# ls
+K01alsa-utils           K01avahi-daemon    K01docker         K01kerneloops     K01mdadm-waitidle  K01rpcbind
+K01spice-vdagent        K01apache2         K01bluetooth      K01etc-setserial  K01lighttpd        K01mosquitto
+K01rsyslog              K01unattended-upgrades               K01apache-htcacheclean               K01cgroupfs-mount
+K01gdm3                 K01lvm2-lvmetad    K01networking     K01saned          K01uuidd           K01atop
+K01chrony               K01hddtemp         K01lvm2-lvmpolld  K01plymouth       K01setserial       K01virtualbox
+K01atopacct             K01cups-browsed    K01irqbalance     K01mdadm          K01postfix         K01speech-dispatcher
+root@PTL011669:rc0.d# 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;Changing runlevel&lt;/em&gt;&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;init&lt;/em&gt;&lt;/strong&gt; is the program responsible for altering the run level which can be called using &lt;strong&gt;&lt;em&gt;telinit&lt;/em&gt;&lt;/strong&gt; command.&lt;/li&gt;
+      &lt;li&gt;&lt;u&gt;Need for changing the runlevel&lt;/u&gt;:
+        &lt;ul&gt;
+          &lt;li&gt;There can be a situation when you may find &lt;em&gt;&lt;u&gt;trouble in logging&lt;/u&gt;&lt;/em&gt; in in case you don’t remember the password or because of the corrupted &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/passwd&lt;/code&gt; file, in this case the problem can be solved by booting into a single user mode i.e runlevel 1.&lt;/li&gt;
+          &lt;li&gt;You can easily &lt;em&gt;&lt;u&gt;halt the system&lt;/u&gt;&lt;/em&gt; by changing the runlevel to 0 by using telinit 0.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;Standard runlevels&lt;/em&gt;&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;ID&lt;/th&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;Off&lt;/td&gt;
+      &lt;td&gt;Turns off the device.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Single User mode&lt;/td&gt;
+      &lt;td&gt;Mode for administrative tasks.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Multi-user mode&lt;/td&gt;
+      &lt;td&gt;Does not configure network interfaces and does not export networks services.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Multi-user mode with networking&lt;/td&gt;
+      &lt;td&gt;Starts the system normally.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Not used/user-definable&lt;/td&gt;
+      &lt;td&gt;For special purposes.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;Full mode&lt;/td&gt;
+      &lt;td&gt;Same as runlevel 3 + display manager.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;Reboot&lt;/td&gt;
+      &lt;td&gt;Reboots the device.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h5 id=&quot;references&quot;&gt;References:&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.linfo.org/bios.html&quot;&gt;BIOS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Runlevel&quot;&gt;Runlevels&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/run-levels-linux/&quot;&gt;Runlevels&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.freecodecamp.org/news/the-linux-booting-process-6-steps-described-in-detail/&quot;&gt;The Linux Booting Process - 6 Steps Described in Detail&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="Linux" /><category term="Embedded Linux" /><category term="Bootloader" /><category term="Linux" /><category term="Embedded Linux" /><category term="Bootloader" /><summary type="html">This article will focus on different stages of boot process in Linux OS. There are 6 distinct stages of boot process, each explained in brief as below. There’s also a note on runlevels which represents the state of the system after boot, which are usually managed by systemd. Embedded Linux boot process similar to standard Linux to much extent, but due to the variations in hadware and the board specifics like multi-stage bootloaders, it becomes somewhat different in bootloader section and pre-dominant use of u-Boot bootloader in embedded systems also needs to be addressed. To find out specifics of Embedded Linux Boot Process see this article. 1. BIOS (Basic Input/Output System) BIOS is a program that controls computer’s hardware from the time the computer is started until the main operating system takes over. BIOS first performs some integrity checks, i.e. power on self test (POST) of the HDD or SSD. BIOS acts as an intermediary between the CPU and the input and output devices. This eliminates the need for the operating system to be aware of the hardware addresses of the input and output devices. When there’s a change in device details, only the BIOS Configuration needs to be updated. (accomplished by pressing a specified key F12 or F2 as soon as the computer begins to start up). BIOS program, written in the assembly language of the CPU used, is stored on Electrically Erasable Programmable ROM (EEPROM) or flash memory. BIOS searches for, loads, and executes the boot loader program. BIOS loads and executes the Master Boot Record (MBR) boot loader. BIOSs permit the user to select the order in which the system searches for bootable media. MBR is usually on HDD or SSD, but sometimes on a USB stick or CD-ROM such as with a live installation of Linux. Once the boot loader is loaded into memory and the BIOS gives control of the system to it. 2. Master Boot Record (MBR) MBR is responsible for loading and executing the GRUB boot loader. MBR is located in the 1st sector of the bootable disk, which is typically /dev/hda, or /dev/sda. MBR is less than 512 bytes in size. This has three components 1) primary boot loader info in 1st 446 bytes 2) partition table info in next 64 bytes 3) mbr validation check in last 2 bytes. 3. GNU GRand Unified Bootloader (GRUB) GRUB is the typical boot loader for most modern Linux systems. GRUB Splash Screen is the first to appear on screen. If you have multiple kernel images installed, you can use your keyboard to select the one you want your system to boot with. GRUB configuration file is usually at /boot/grub/grub.conf or /etc/grub.conf. 4. Kernel The Kernel that was selected by GRUB first mounts the root file system that’s specified in the grub.conf file. Then Kernel executes the /sbin/init program, which is *always the first program to be executed. You can confirm this with its *process id (PID), which should always be 1. The kernel then establishes a temporary root file system using Initial RAM Disk (initrd) until the real file system is mounted. 5. Init With Init stage, system executes runlevel programs. System looks for an init file /etc/inittab to decide the Linux run level. 6. Runlevel Programs A runlevel is a mode of operation in the computer operating systems that implements Unix System V-style initialization. Conventionally, seven runlevels exist, numbered from zero to six. Only one runlevel is executed on startup; run levels are not executed one after another. A runlevel defines the state of the machine after boot. By default most of the LINUX based system boots to runlevel 3 or runlevel 5. Depending on your default init level setting, which are usually managed by systemd, the system will execute the start scripts for each run level are different performing different tasks. These start scripts corresponding to each run level can be found in special files present under rc sub directories. At /etc/rc.d directory there will be either a set of files named rc.0, rc.1, rc.2, rc.3, rc.4, rc.5 and rc.6, or a set of directories named rc0.d, rc1.d, rc2.d, rc3.d, rc4.d, rc5.d and rc6.d. In these directories, you’ll find programs that start with either an “S” or “K” for startup and kill, respectively. Startup programs are executed during system startup, and kill programs during shutdown. There are numbers right next to S and K in the program names. Those are the sequence number in which the programs should be started or killed. root@PTL011669:# cd /etc/rc0.d/ root@PTL011669:rc0.d# ls K01alsa-utils K01avahi-daemon K01docker K01kerneloops K01mdadm-waitidle K01rpcbind K01spice-vdagent K01apache2 K01bluetooth K01etc-setserial K01lighttpd K01mosquitto K01rsyslog K01unattended-upgrades K01apache-htcacheclean K01cgroupfs-mount K01gdm3 K01lvm2-lvmetad K01networking K01saned K01uuidd K01atop K01chrony K01hddtemp K01lvm2-lvmpolld K01plymouth K01setserial K01virtualbox K01atopacct K01cups-browsed K01irqbalance K01mdadm K01postfix K01speech-dispatcher root@PTL011669:rc0.d# Changing runlevel: init is the program responsible for altering the run level which can be called using telinit command. Need for changing the runlevel: There can be a situation when you may find trouble in logging in in case you don’t remember the password or because of the corrupted /etc/passwd file, in this case the problem can be solved by booting into a single user mode i.e runlevel 1. You can easily halt the system by changing the runlevel to 0 by using telinit 0. Standard runlevels: ID Name Description 0 Off Turns off the device. 1 Single User mode Mode for administrative tasks. 2 Multi-user mode Does not configure network interfaces and does not export networks services. 3 Multi-user mode with networking Starts the system normally. 4 Not used/user-definable For special purposes. 5 Full mode Same as runlevel 3 + display manager. 6 Reboot Reboots the device. References: BIOS Runlevels Runlevels The Linux Booting Process - 6 Steps Described in Detail</summary></entry><entry><title type="html">Typical Embedded Linux Boot Process</title><link href="http://localhost:4000/_post/embedded/linux/boot_process" rel="alternate" type="text/html" title="Typical Embedded Linux Boot Process" /><published>2021-12-12T01:33:22+05:30</published><updated>2021-12-12T01:33:22+05:30</updated><id>http://localhost:4000/_post/embedded/linux/Embedded-Linux-Boot-process</id><content type="html" xml:base="http://localhost:4000/_post/embedded/linux/boot_process">&lt;p&gt;Usually, there are 6 distinct stages of boot process, each explained in brief in &lt;a href=&quot;/_post/linux/boot_process&quot;&gt;Linux Boot Process&lt;/a&gt; article.
+This article will focus on different stages of boot process Specifically in Embedded Linux.
+Though the content and screenshots in this article are for BeagleBone board, the boot process is almost similar in general.&lt;/p&gt;
+
+&lt;h2 id=&quot;embedded-linux-booting-process-multi-stage-bootloaders-kernel-filesystem&quot;&gt;Embedded Linux Booting Process (Multi-Stage Bootloaders, Kernel, Filesystem)&lt;/h2&gt;
+&lt;iframe width=&quot;665&quot; height=&quot;374&quot; src=&quot;https://www.youtube.com/embed/DV5S_ZSdK0s&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In this video, we will look at how the BeagleBone Black boots into an embedded Linux system. We will understand how the &lt;strong&gt;&lt;em&gt;ROM Bootloader&lt;/em&gt;&lt;/strong&gt; works for the AM335x SoC series, the first and second stage bootloaders (&lt;strong&gt;&lt;em&gt;SPL/MLO&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;U-Boot&lt;/em&gt;&lt;/strong&gt;) and how to load the kernel, device tree, filesystem and user space processes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;embedded-linux-boot-process&quot;&gt;Embedded Linux Boot Process:&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/embedded/boot/embedded_linux_boot_process.png&quot; alt=&quot;Embedded Linux Boot Process&quot; class=&quot;shadow&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;embedded-linux-boot-sequence&quot;&gt;Embedded Linux Boot Sequence:&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/embedded/boot/embedded_linux_boot_sequence.png&quot; alt=&quot;Embedded Linux Boot Sequence&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The variation in the boot process is typically only in the first couple of Steps, i.e. how does a &lt;strong&gt;&lt;em&gt;ROM Bootloader&lt;/em&gt;&lt;/strong&gt; loads the &lt;strong&gt;&lt;em&gt;u-boot&lt;/em&gt;&lt;/strong&gt; in RAM and passes control to it. These steps will be something board specific.&lt;/li&gt;
+  &lt;li&gt;Once the &lt;strong&gt;&lt;em&gt;u-boot&lt;/em&gt;&lt;/strong&gt; is in memory, rest of the steps are standard.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;why-the-1st-stage-bootloader-mlo-is-required-at-all&quot;&gt;Why the 1st stage bootloader (MLO) is required at all?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;ROM Bootloader has only access to internal RAM by default. As the SoC vendors knows very little about how &amp;amp; which external peripherals the SoC is going to interact with. DRAM/RAM controllers are again a separate vendors.&lt;/li&gt;
+  &lt;li&gt;So, ROM Bootloader code cannot assume anything, and can only work on the things it knows, i.e. internal RAM.&lt;/li&gt;
+  &lt;li&gt;Internal RAM is usually very limited in size in the range of few Kilo-Bytes, for BeagleBone it’s 128KB.&lt;/li&gt;
+  &lt;li&gt;RAM internal to a SoC is very expensive. This is a key reason why multiple stage bootloaders are really required and are common in embedded devices.&lt;/li&gt;
+  &lt;li&gt;On the other hand, U-Boot is fairly large program, given the amountof functionality it supports. It cannot be accomodated in internal RAM of the SoC.&lt;/li&gt;
+  &lt;li&gt;That’s why MLO or multiple stage bootloaders are required, the MLO understands the interaction with external RAM and can load the u-boot on it.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/_post/embedded/linux/boot_process/jetson_nano#bootloader-components&quot;&gt;NVIDIA® Jetson™ Nano has in all 5 Bootloader stages, including BootROM, which is hard-wired in SoC.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;references&quot;&gt;References:&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=DV5S_ZSdK0s&amp;amp;t=6s&amp;amp;ab_channel=PentesterAcademyTV&quot;&gt;Embedded Linux Booting Process (Multi-Stage Bootloaders, Kernel, Filesystem)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="Linux" /><category term="Embedded Linux" /><category term="Bootloader" /><category term="Linux" /><category term="Embedded Linux" /><category term="Bootloader" /><summary type="html">Usually, there are 6 distinct stages of boot process, each explained in brief in Linux Boot Process article. This article will focus on different stages of boot process Specifically in Embedded Linux. Though the content and screenshots in this article are for BeagleBone board, the boot process is almost similar in general. Embedded Linux Booting Process (Multi-Stage Bootloaders, Kernel, Filesystem) In this video, we will look at how the BeagleBone Black boots into an embedded Linux system. We will understand how the ROM Bootloader works for the AM335x SoC series, the first and second stage bootloaders (SPL/MLO and U-Boot) and how to load the kernel, device tree, filesystem and user space processes. Embedded Linux Boot Process: Embedded Linux Boot Sequence: The variation in the boot process is typically only in the first couple of Steps, i.e. how does a ROM Bootloader loads the u-boot in RAM and passes control to it. These steps will be something board specific. Once the u-boot is in memory, rest of the steps are standard. Why the 1st stage bootloader (MLO) is required at all? ROM Bootloader has only access to internal RAM by default. As the SoC vendors knows very little about how &amp;amp; which external peripherals the SoC is going to interact with. DRAM/RAM controllers are again a separate vendors. So, ROM Bootloader code cannot assume anything, and can only work on the things it knows, i.e. internal RAM. Internal RAM is usually very limited in size in the range of few Kilo-Bytes, for BeagleBone it’s 128KB. RAM internal to a SoC is very expensive. This is a key reason why multiple stage bootloaders are really required and are common in embedded devices. On the other hand, U-Boot is fairly large program, given the amountof functionality it supports. It cannot be accomodated in internal RAM of the SoC. That’s why MLO or multiple stage bootloaders are required, the MLO understands the interaction with external RAM and can load the u-boot on it. NVIDIA® Jetson™ Nano has in all 5 Bootloader stages, including BootROM, which is hard-wired in SoC. References: Embedded Linux Booting Process (Multi-Stage Bootloaders, Kernel, Filesystem)</summary></entry><entry><title type="html">NVIDIA L4T Embedded Linux Boot Process for Jetson Nano</title><link href="http://localhost:4000/_post/embedded/linux/boot_process/jetson_nano" rel="alternate" type="text/html" title="NVIDIA L4T Embedded Linux Boot Process for Jetson Nano" /><published>2021-12-12T01:33:22+05:30</published><updated>2021-12-12T01:33:22+05:30</updated><id>http://localhost:4000/_post/embedded/linux/boot_process/Jetson-Nano-Boot-Process</id><content type="html" xml:base="http://localhost:4000/_post/embedded/linux/boot_process/jetson_nano">&lt;h2 id=&quot;jetson-nano-bootloader-functionalities&quot;&gt;Jetson Nano Bootloader functionalities:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;The primary function of the NVIDIA® Jetson Nano™ boot software is to initialize the SoC (System on a Chip), including:&lt;/li&gt;
+  &lt;li&gt;Initializing MC/EMC/CPU&lt;/li&gt;
+  &lt;li&gt;Setting up security parameters&lt;/li&gt;
+  &lt;li&gt;Loading different firmware&lt;/li&gt;
+  &lt;li&gt;Maintaining Chain of Trust&lt;/li&gt;
+  &lt;li&gt;Setting memory carveouts for different firmware&lt;/li&gt;
+  &lt;li&gt;Flashing the device&lt;/li&gt;
+  &lt;li&gt;Booting to the operating system
+  Additionally, the Jetson Nano boot software also performs other operations defined by product requirements, including but not limited to:&lt;/li&gt;
+  &lt;li&gt;Initialization of HDMI™/DSI&lt;/li&gt;
+  &lt;li&gt;Displaying the boot logo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/embedded/boot/jetson_nano_boot_sequence.png&quot; alt=&quot;jetson_nano_boot_sequence&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;BPMP???&lt;/em&gt;&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;BPMP is NVIDIA Tegra &lt;em&gt;&lt;u&gt;Boot and Power Management Processor&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;The BPMP is a specific processor in Tegra chip, which is designed for booting process handling and offloading the power management, clock management, and reset control tasks from the CPU.&lt;/li&gt;
+      &lt;li&gt;The BPMP firmware driver, which can create the interprocessor communication (IPC) between the CPU and BPMP.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;bootloader-components&quot;&gt;Bootloader Components&lt;/h2&gt;
+&lt;h3 id=&quot;0-bootrom&quot;&gt;0. BootROM&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Jetson Nano BootROM (BR) is &lt;em&gt;&lt;u&gt;hard-wired in the SoC&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;It initializes the Boot Media and loads bootloaders and firmware from the Boot Media.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;Boot Configuration Table (BCT)&lt;/em&gt;&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Multiple copies of the BootROM Boot Configuration Table (BCT) may be stored &lt;em&gt;&lt;u&gt;at the start of the Boot-Media&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+      &lt;li&gt;The BCT contains configuration parameters used by the BootROM for hardware initialization.&lt;/li&gt;
+      &lt;li&gt;Bootloader info in BCT:
+        &lt;ul&gt;
+          &lt;li&gt;Size&lt;/li&gt;
+          &lt;li&gt;Entry point&lt;/li&gt;
+          &lt;li&gt;Load address&lt;/li&gt;
+          &lt;li&gt;Hash&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/assets/images/embedded/boot/bootrom-boot-flow.jpg&quot; alt=&quot;bootrom-boot-flow&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;1-tegraboot&quot;&gt;1. TegraBoot&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;TegraBoot (NVTBoot) is the &lt;em&gt;&lt;u&gt;first boot software&lt;/u&gt;&lt;/em&gt; component loaded by BootROM in &lt;em&gt;&lt;u&gt;SysRAM (Internal RAM)&lt;/u&gt;&lt;/em&gt;, and runs on BPMP.&lt;/li&gt;
+  &lt;li&gt;2 Types:
+    &lt;ul&gt;
+      &lt;li&gt;One used for &lt;em&gt;&lt;u&gt;cold boot&lt;/u&gt;&lt;/em&gt; (~hard boot:restart the board)&lt;/li&gt;
+      &lt;li&gt;One for &lt;em&gt;&lt;u&gt;recovery boot/flashing&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Responsibilities:
+    &lt;ul&gt;
+      &lt;li&gt;Loading and initializing firmware (FW) components such as &lt;strong&gt;&lt;em&gt;TOS&lt;/em&gt;&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;TOS contains the &lt;em&gt;&lt;u&gt;trusted OS binary&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Creating carveouts
+        &lt;ul&gt;
+          &lt;li&gt;carveouts: It’s share memory for the coprocess.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Completing CPU initialization&lt;/li&gt;
+      &lt;li&gt;Loading the next stage bootloader&lt;/li&gt;
+      &lt;li&gt;Supporting flashing&lt;/li&gt;
+      &lt;li&gt;Supporting RCM boot
+        &lt;ul&gt;
+          &lt;li&gt;Recovery mode: used during flasing the board&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Reading PMIC reset reason
+        &lt;ul&gt;
+          &lt;li&gt;PMIC: Power Management IC&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Loading the bootloader device tree and passing the device tree load address to CBoot&lt;/li&gt;
+      &lt;li&gt;Stops execution when the CCPLEX is booted
+        &lt;ul&gt;
+          &lt;li&gt;CCPLEX: main CPU Complex, CCPLEX typically runs the system’s primary software stack.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2-tegrboot-cpu&quot;&gt;2. TegrBoot CPU&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Add rollback prevention.&lt;/li&gt;
+  &lt;li&gt;Using bootloader DTB(~device tree binary), perform EMC(~Electromagnetic Compatibility) training and update kernel DTB with training results.&lt;/li&gt;
+  &lt;li&gt;Pass control to CBoot.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;3-cboot&quot;&gt;3. CBoot&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;&lt;u&gt;Primary CPU bootloader&lt;/u&gt;&lt;/em&gt; used on mobile platforms in the &lt;em&gt;&lt;u&gt;cold boot&lt;/u&gt;&lt;/em&gt; path.&lt;/li&gt;
+  &lt;li&gt;features:
+    &lt;ul&gt;
+      &lt;li&gt;Supports display and &lt;em&gt;&lt;u&gt;boot logo/bmp splash&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Based on the &lt;a href=&quot;https://github.com/littlekernel/lk&quot;&gt;&lt;strong&gt;&lt;em&gt;Little Kernel (LK) open source bootloader&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Uses the interrupt and scheduling frameworks of LK&lt;/li&gt;
+      &lt;li&gt;Uses CDF for frameworks, drivers, and libraries&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;BootLoader and kernel use separate device trees stored in separate partitions.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Responsibilities:
+    &lt;ul&gt;
+      &lt;li&gt;Parsing the CPU-BL parameters and initializing the bootloader device tree&lt;/li&gt;
+      &lt;li&gt;Chaining to U-Boot to boot the kernel&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;&lt;u&gt;Supporting the update mechanism&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Unhalts the BPMP so that the BPMP-FW can start running&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;4-u-boot&quot;&gt;4. U-Boot&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;default OS bootloader for NVIDIA® Jetson™ L4T Driver Package.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;partitions&quot;&gt;Partitions&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;L4T&lt;/em&gt;&lt;/strong&gt; supports formatting mass storage media(~SD cards, USB) into &lt;em&gt;&lt;u&gt;multiple partitions&lt;/u&gt;&lt;/em&gt; for storing data, such as the device &lt;em&gt;&lt;u&gt;OS image&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;Bootloader image&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;device firmware&lt;/u&gt;&lt;/em&gt;, and &lt;em&gt;&lt;u&gt;Bootloader splash screens&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;partition-configuration-file&quot;&gt;Partition Configuration file&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Located at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;top&amp;gt;/Linux_for_Tegra/bootloader/t210ref/cfg/&lt;/code&gt; for Jetson Nano devices&lt;/li&gt;
+  &lt;li&gt;NVIDIA Jetson Nano (SKU 0000): flash_l4t_t210_max-spi_sd_p3448.xml&lt;/li&gt;
+  &lt;li&gt;NVIDIA Jetson Nano (SKU 0002): flash_l4t_t210_emmc_p3448.xml&lt;/li&gt;
+  &lt;li&gt;During the flashing procedure, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flash.sh&lt;/code&gt; reads in the partition configuration file, translates keywords into values specified in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;device&amp;gt;.conf&lt;/code&gt; or in option parameters and saves the data in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bootloader/flash.xml&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;__*bootloader/tegraflash.py*__&lt;/code&gt; reads in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bootloader/flash.xml&lt;/code&gt; and &lt;em&gt;&lt;u&gt;performs actual flashing&lt;/u&gt;&lt;/em&gt; as specified by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bootloader/flash.xml&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;partition-table-overview&quot;&gt;Partition Table Overview&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Describe partition use for the &lt;em&gt;&lt;u&gt;boot device&lt;/u&gt;&lt;/em&gt; (~MicroSD Card, USB) on each supported platform.&lt;/li&gt;
+  &lt;li&gt;Not all Partiotions are really required.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.nvidia.com/jetson/l4t/Tegra%20Linux%20Driver%20Package%20Development%20Guide/part_config.html#wwp115285&quot;&gt;Jetson Nano Development Module (P3448-0000) Flashed to On-Board Memory&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.nvidia.com/jetson/l4t/Tegra%20Linux%20Driver%20Package%20Development%20Guide/part_config.html#wwp116068&quot;&gt;Jetson Nano Development Module (P3448-0000) Flashed to Micro SD Card&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.nvidia.com/jetson/l4t/Tegra%20Linux%20Driver%20Package%20Development%20Guide/part_config.html#wwp117730&quot;&gt;Jetson Nano Production Module (P3448-0002)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;bootloader-update&quot;&gt;Bootloader Update&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;NVIDIA® Jetson™ Nano platform use the &lt;strong&gt;&lt;em&gt;Debian package&lt;/em&gt;&lt;/strong&gt; facility to update Bootloader.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;Dual Boot Strategy&lt;/em&gt;&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;&lt;u&gt;Ensures that a usable Bootloader partition exists at all times during an update&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bootloader-components-validation--partition-layout&quot;&gt;Bootloader Components Validation &amp;amp; Partition Layout&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Boot Configuration Table&lt;/strong&gt; (BCT) is stored in a partition named BCT.&lt;/li&gt;
+  &lt;li&gt;The NVIDIA flashing utility &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tegraflash.py&lt;/code&gt; writes up to &lt;em&gt;&lt;u&gt;64 instances of the BCT&lt;/u&gt;&lt;/em&gt;.
+    &lt;h4 id=&quot;bootloader-validation&quot;&gt;&lt;em&gt;&lt;u&gt;Bootloader Validation&lt;/u&gt;&lt;/em&gt;:&lt;/h4&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;BootROM&lt;/strong&gt; validates the BCT through an &lt;em&gt;&lt;u&gt;integrated checksum&lt;/u&gt;&lt;/em&gt; or &lt;em&gt;&lt;u&gt;RSA signature&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;If the calculated checksum or signature does not match the value in the BCT located at the beginning of the partition, the BootROM attempts to validate the next instances of the BCT.&lt;/li&gt;
+  &lt;li&gt;When &lt;strong&gt;BootROM&lt;/strong&gt; finds a valid set of checksums or signatures, it transfers control to the specified instance of TegraBoot.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;TegraBoot&lt;/strong&gt; computes and &lt;em&gt;&lt;u&gt;validates the checksums&lt;/u&gt;&lt;/em&gt; for the first &lt;strong&gt;BFS&lt;/strong&gt; and the first &lt;strong&gt;KFS&lt;/strong&gt; and the signatures the individual files. When the checksums and signatures have been validated, TegraBoot loads the appropriate boot files,
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;BFS&lt;/strong&gt;: a set of all of the files in a group of partitions that are concerned with booting.
+        &lt;ul&gt;
+          &lt;li&gt;The TegraBoot CPU binary&lt;/li&gt;
+          &lt;li&gt;DTB files used by Bootloader&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;KFS&lt;/strong&gt;: a set of all of the files in a group of partitions that are concerned with loading the kernel.
+        &lt;ul&gt;
+          &lt;li&gt;DTB files used by the kernel&lt;/li&gt;
+          &lt;li&gt;Warmboot binary&lt;/li&gt;
+          &lt;li&gt;Trusted OS image&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;After validation, TegraBoot transfers control to the boot loader, e.g. &lt;strong&gt;CBoot&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;The CBoot loader validates and loads the next-level software component, such as the &lt;strong&gt;Linux kernel&lt;/strong&gt; or &lt;strong&gt;U‑Boot&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;If TegraBoot &lt;em&gt;&lt;u&gt;fails to validate&lt;/u&gt;&lt;/em&gt; the first BFS andKFS, it &lt;em&gt;&lt;u&gt;overwrites itself&lt;/u&gt;&lt;/em&gt; and &lt;em&gt;&lt;u&gt;resets the board&lt;/u&gt;&lt;/em&gt; so that the BootROM can validate and load the next set of TegraBoot, BFS, and KFS.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;partition-layout&quot;&gt;&lt;em&gt;&lt;u&gt;Partition Layout&lt;/u&gt;&lt;/em&gt;:&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;Boot Partition&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;BCT&lt;/strong&gt;, which contains redundant instances of the &lt;em&gt;&lt;u&gt;Boot Configuration Table&lt;/u&gt;&lt;/em&gt;. This must be the first partition on the boot device.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;NVC&lt;/strong&gt; contains &lt;em&gt;&lt;u&gt;TegraBoot&lt;/u&gt;&lt;/em&gt;. This must be the second boot partition.&lt;/li&gt;
+  &lt;li&gt;The following boot partitions, PT through BPF, are part of the BFS.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;PT&lt;/strong&gt; contains layout information for each BFS, and indicates the beginning of each one. It is the first partition in the BFS.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;TBC&lt;/strong&gt; contains the &lt;em&gt;&lt;u&gt;TegraBoot CPU-side binary&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;RP1&lt;/strong&gt; contains &lt;em&gt;&lt;u&gt;TegraBoot DTBs&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;EBT&lt;/strong&gt; contains &lt;em&gt;&lt;u&gt;CBoot&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;WB0&lt;/strong&gt; contains the &lt;em&gt;&lt;u&gt;warm boot binary&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;BPF&lt;/strong&gt; contains &lt;a href=&quot;/_post/embedded/linux/boot_process/jetson_nano#jetson-nano-bootloader-functionalities&quot;&gt;&lt;em&gt;&lt;u&gt;BPMP microcode&lt;/u&gt;&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;NVC‑1&lt;/strong&gt; contains a copy of NVC.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;PT‑1&lt;/strong&gt; through BPF‑1 are copy partitions for the primaries NVC through BPF, making up a copy of the BFS, denoted BFS‑1.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;PAD&lt;/strong&gt; is an &lt;em&gt;&lt;u&gt;empty partition&lt;/u&gt;&lt;/em&gt; which ensures the VER and VER_b are at the very end of the boot partition.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;VER_b&lt;/strong&gt; contains additional &lt;em&gt;&lt;u&gt;version information for redundancy and version checking&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;VER&lt;/strong&gt; contains version information.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;GP1&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; contains the sdmmc_user device’s &lt;em&gt;&lt;u&gt;primary GPT&lt;/u&gt;&lt;/em&gt;. All partitions defined after this one are configured in the Linux kernel, and are accessible by standard partition tools such as gdisk and parted.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;User Partition&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The following partitions constitute the kernel-file-set (KFS), and have redundant copy partitions:&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;DTB&lt;/strong&gt; contains &lt;em&gt;&lt;u&gt;kernel DTBs&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;TOS&lt;/strong&gt; contains the &lt;em&gt;&lt;u&gt;trusted OS binary&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;EKS&lt;/strong&gt; is optional, and is reserved for future use.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;LNX&lt;/strong&gt; contains either the &lt;em&gt;&lt;u&gt;Linux kernel&lt;/u&gt;&lt;/em&gt; or &lt;em&gt;&lt;u&gt;U-Boot&lt;/u&gt;&lt;/em&gt;, depending on your choice of DFLT_KERNEL_IMAGE in the configuration file.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;DTB‑1&lt;/strong&gt; through EKS‑1 constitute a copy of the primary KFS, denoted KFS‑1.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bootloader-update-payload-bup&quot;&gt;Bootloader Update Payload (BUP)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;multi-spec BUP&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;A multi-spec BUP includes multiple firmware binaries and BCT images of each type.&lt;/li&gt;
+      &lt;li&gt;When you run the updater, it uses the appropriate binary of each type for the device you are updating.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;single-spec BUP&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;A single-spec BUP contains just one binary of each type, and can be used to update just one Jetson device configuration.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Detailed Steps for:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.nvidia.com/jetson/l4t/Tegra%20Linux%20Driver%20Package%20Development%20Guide/bootloader_update_nano_tx1.html#wwpID0E0IG0HA&quot;&gt;Generating the Bootloader Update Payload (BUP)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.nvidia.com/jetson/l4t/Tegra%20Linux%20Driver%20Package%20Development%20Guide/bootloader_update_nano_tx1.html#wwpID0E03E0HA&quot;&gt;Bootloader Update&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.nvidia.com/jetson/l4t/Tegra%20Linux%20Driver%20Package%20Development%20Guide/bootloader_update_nano_tx1.html#wwpID0E0QE0HA&quot;&gt;Bootloader Update Flow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;references&quot;&gt;References:&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=DV5S_ZSdK0s&amp;amp;t=6s&amp;amp;ab_channel=PentesterAcademyTV&quot;&gt;Embedded Linux Booting Process (Multi-Stage Bootloaders, Kernel, Filesystem)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="Linux" /><category term="Embedded Linux" /><category term="Bootloader" /><category term="Jetson Nano" /><category term="Linux" /><category term="Embedded Linux" /><category term="Bootloader" /><category term="Jetson Nano" /><summary type="html">Jetson Nano Bootloader functionalities: The primary function of the NVIDIA® Jetson Nano™ boot software is to initialize the SoC (System on a Chip), including: Initializing MC/EMC/CPU Setting up security parameters Loading different firmware Maintaining Chain of Trust Setting memory carveouts for different firmware Flashing the device Booting to the operating system Additionally, the Jetson Nano boot software also performs other operations defined by product requirements, including but not limited to: Initialization of HDMI™/DSI Displaying the boot logo BPMP??? BPMP is NVIDIA Tegra Boot and Power Management Processor The BPMP is a specific processor in Tegra chip, which is designed for booting process handling and offloading the power management, clock management, and reset control tasks from the CPU. The BPMP firmware driver, which can create the interprocessor communication (IPC) between the CPU and BPMP. Bootloader Components 0. BootROM Jetson Nano BootROM (BR) is hard-wired in the SoC. It initializes the Boot Media and loads bootloaders and firmware from the Boot Media. Boot Configuration Table (BCT) Multiple copies of the BootROM Boot Configuration Table (BCT) may be stored at the start of the Boot-Media. The BCT contains configuration parameters used by the BootROM for hardware initialization. Bootloader info in BCT: Size Entry point Load address Hash 1. TegraBoot TegraBoot (NVTBoot) is the first boot software component loaded by BootROM in SysRAM (Internal RAM), and runs on BPMP. 2 Types: One used for cold boot (~hard boot:restart the board) One for recovery boot/flashing Responsibilities: Loading and initializing firmware (FW) components such as TOS TOS contains the trusted OS binary. Creating carveouts carveouts: It’s share memory for the coprocess. Completing CPU initialization Loading the next stage bootloader Supporting flashing Supporting RCM boot Recovery mode: used during flasing the board Reading PMIC reset reason PMIC: Power Management IC Loading the bootloader device tree and passing the device tree load address to CBoot Stops execution when the CCPLEX is booted CCPLEX: main CPU Complex, CCPLEX typically runs the system’s primary software stack. 2. TegrBoot CPU Add rollback prevention. Using bootloader DTB(~device tree binary), perform EMC(~Electromagnetic Compatibility) training and update kernel DTB with training results. Pass control to CBoot. 3. CBoot Primary CPU bootloader used on mobile platforms in the cold boot path. features: Supports display and boot logo/bmp splash Based on the Little Kernel (LK) open source bootloader Uses the interrupt and scheduling frameworks of LK Uses CDF for frameworks, drivers, and libraries BootLoader and kernel use separate device trees stored in separate partitions. Responsibilities: Parsing the CPU-BL parameters and initializing the bootloader device tree Chaining to U-Boot to boot the kernel Supporting the update mechanism Unhalts the BPMP so that the BPMP-FW can start running 4. U-Boot default OS bootloader for NVIDIA® Jetson™ L4T Driver Package. Partitions L4T supports formatting mass storage media(~SD cards, USB) into multiple partitions for storing data, such as the device OS image, Bootloader image, device firmware, and Bootloader splash screens. Partition Configuration file Located at &amp;lt;top&amp;gt;/Linux_for_Tegra/bootloader/t210ref/cfg/ for Jetson Nano devices NVIDIA Jetson Nano (SKU 0000): flash_l4t_t210_max-spi_sd_p3448.xml NVIDIA Jetson Nano (SKU 0002): flash_l4t_t210_emmc_p3448.xml During the flashing procedure, flash.sh reads in the partition configuration file, translates keywords into values specified in &amp;lt;device&amp;gt;.conf or in option parameters and saves the data in bootloader/flash.xml. Then __*bootloader/tegraflash.py*__ reads in bootloader/flash.xml and performs actual flashing as specified by bootloader/flash.xml. Partition Table Overview Describe partition use for the boot device (~MicroSD Card, USB) on each supported platform. Not all Partiotions are really required. Jetson Nano Development Module (P3448-0000) Flashed to On-Board Memory Jetson Nano Development Module (P3448-0000) Flashed to Micro SD Card Jetson Nano Production Module (P3448-0002) Bootloader Update NVIDIA® Jetson™ Nano platform use the Debian package facility to update Bootloader. Dual Boot Strategy Ensures that a usable Bootloader partition exists at all times during an update. Bootloader Components Validation &amp;amp; Partition Layout Boot Configuration Table (BCT) is stored in a partition named BCT. The NVIDIA flashing utility tegraflash.py writes up to 64 instances of the BCT. Bootloader Validation: BootROM validates the BCT through an integrated checksum or RSA signature. If the calculated checksum or signature does not match the value in the BCT located at the beginning of the partition, the BootROM attempts to validate the next instances of the BCT. When BootROM finds a valid set of checksums or signatures, it transfers control to the specified instance of TegraBoot. TegraBoot computes and validates the checksums for the first BFS and the first KFS and the signatures the individual files. When the checksums and signatures have been validated, TegraBoot loads the appropriate boot files, BFS: a set of all of the files in a group of partitions that are concerned with booting. The TegraBoot CPU binary DTB files used by Bootloader KFS: a set of all of the files in a group of partitions that are concerned with loading the kernel. DTB files used by the kernel Warmboot binary Trusted OS image After validation, TegraBoot transfers control to the boot loader, e.g. CBoot. The CBoot loader validates and loads the next-level software component, such as the Linux kernel or U‑Boot. If TegraBoot fails to validate the first BFS andKFS, it overwrites itself and resets the board so that the BootROM can validate and load the next set of TegraBoot, BFS, and KFS. Partition Layout: 1. Boot Partition: BCT, which contains redundant instances of the Boot Configuration Table. This must be the first partition on the boot device. NVC contains TegraBoot. This must be the second boot partition. The following boot partitions, PT through BPF, are part of the BFS. PT contains layout information for each BFS, and indicates the beginning of each one. It is the first partition in the BFS. TBC contains the TegraBoot CPU-side binary. RP1 contains TegraBoot DTBs. EBT contains CBoot. WB0 contains the warm boot binary. BPF contains BPMP microcode NVC‑1 contains a copy of NVC. PT‑1 through BPF‑1 are copy partitions for the primaries NVC through BPF, making up a copy of the BFS, denoted BFS‑1. PAD is an empty partition which ensures the VER and VER_b are at the very end of the boot partition. VER_b contains additional version information for redundancy and version checking. VER contains version information. 2. GP1 contains the sdmmc_user device’s primary GPT. All partitions defined after this one are configured in the Linux kernel, and are accessible by standard partition tools such as gdisk and parted. 3. User Partition: The following partitions constitute the kernel-file-set (KFS), and have redundant copy partitions: DTB contains kernel DTBs. TOS contains the trusted OS binary. EKS is optional, and is reserved for future use. LNX contains either the Linux kernel or U-Boot, depending on your choice of DFLT_KERNEL_IMAGE in the configuration file. DTB‑1 through EKS‑1 constitute a copy of the primary KFS, denoted KFS‑1. Bootloader Update Payload (BUP) multi-spec BUP: A multi-spec BUP includes multiple firmware binaries and BCT images of each type. When you run the updater, it uses the appropriate binary of each type for the device you are updating. single-spec BUP: A single-spec BUP contains just one binary of each type, and can be used to update just one Jetson device configuration. Detailed Steps for: Generating the Bootloader Update Payload (BUP) Bootloader Update Bootloader Update Flow References: Embedded Linux Booting Process (Multi-Stage Bootloaders, Kernel, Filesystem)</summary></entry><entry><title type="html">Design Patterns: Most Important GRASP Patterns of designing an application or module</title><link href="http://localhost:4000/c++/design%20patterns/2021/12/07/C++_Design_Patterns_GRASP_Patterns.html" rel="alternate" type="text/html" title="Design Patterns: Most Important GRASP Patterns of designing an application or module" /><published>2021-12-07T05:33:22+05:30</published><updated>2021-12-07T05:33:22+05:30</updated><id>http://localhost:4000/c++/design%20patterns/2021/12/07/C++_Design_Patterns_GRASP_Patterns</id><content type="html" xml:base="http://localhost:4000/c++/design%20patterns/2021/12/07/C++_Design_Patterns_GRASP_Patterns.html">&lt;p&gt;This write-up will explain different &lt;strong&gt;&lt;em&gt;&lt;u&gt;GRASP Patterns&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, explained in book: &lt;a href=&quot;https://www.amazon.com/gp/product/0131489062/ref=as_li_qf_asin_il_tl?ie=UTF8&amp;amp;tag=fluentcpp-20&amp;amp;creative=9325&amp;amp;linkCode=as2&amp;amp;creativeASIN=0131489062&amp;amp;linkId=43cfc4d0a6ea922ef663317e4f91db85&quot;&gt;Applying UML and Patterns&lt;/a&gt;, which are more important in day to day programming life than the whole lot of GoF design patterns.
 GRASP is a set of 9 fundamental principles in OOPs design and responsibility assignment.
 These patterns solve some software problem common to many software development projects.&lt;/p&gt;
 
@@ -534,689 +962,4 @@ These patterns solve some software problem common to many software development p
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/machine-learning/machine-learning-at-the-edge-with-aws-outposts-and-amazon-sagemaker/&quot;&gt;Machine Learning at the Edge with AWS Outposts and Amazon SageMaker&lt;/a&gt;
   &lt;img src=&quot;/assets/images/aws/aws-outpost-sagemaker-edge-manager.png&quot; alt=&quot;aws-outpost-sagemaker-edge-manager&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><category term="ML" /><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><category term="ML" /><summary type="html">This write-up will only focus on AWS Sagemaker ML service with respect to ML model deployment to Edge devices and Cloud. AWS Sagemaker Neo Amazon SageMaker Neo enables developers to optimize machine learning (ML) models for inference on SageMaker in the cloud and supported devices at the edge for the specific underlying hardware. Optimizes machine learning models for inference on cloud instances and edge devices to run faster with no loss in accuracy. Amazon SageMaker Neo runtime is supported on Android, iOS, Linux, and Windows operating systems. Sagemaker neo can optimize the ML model to run on target hardware platform of Edge devices based on processors from Ambarella, Apple, ARM, Intel, MediaTek, Nvidia, NXP, Qualcomm, RockChip, Texas Instruments, or Xilinx. Compiles it into an executable. For inference in the cloud, SageMaker Neo speeds up inference and saves cost by creating an inference optimized container that include MXNet, PyTorch, and TensorFlow integrated with Neo runtime for SageMaker hosting. Amazon SageMaker Neo supports optimization for a model from the framework-specific format of DarkNet, Keras, MXNet, PyTorch, TensorFlow, TensorFlow-Lite, ONNX, or XGBoost. Amazon SageMaker Neo runtime occupies 1MB of storage and 2MB of memory, which is many times smaller than the storage and memory footprint of a framework, while providing a simple common API to run a compiled model originating in any framework. Amazon SageMaker Neo takes advantage of partner-provided accelerator libraries to deliver the best available performance for a deep learning model on heterogeneous hardware platforms with a hardware accelerator as well as a CPU. Acceleration libraries such as Ambarella CV Tools, Nvidia Tensor RT, and Texas Instruments TIDL each support a specific set of functions and operators. SageMaker Neo automatically partitions your model so that the part with operators supported by the accelerator can run on the accelerator while the rest of the model runs on the CPU. Amazon SageMaker Neo now compiles models for Amazon SageMaker INF1 instance targets. SageMaker hosting provides a managed service for inference on the INF1 instances, which are based on the AWS Inferentia chip. References Amazon SageMaker Neo AWS Sagemaker Edge Manager AWS Sagemaker Edge Manager consists of a Service running in AWS cloud and an Agent running on Edge devices. Sagemaker Edge Manager deploys a ML model optimized with SageMaker Neo automatically so you don’t need to have Neo runtime installed on your devices in order to take advantage of the model optimizations. Agent Use the agent to make predictions with models loaded onto your edge devices. The agent also collects model metrics and *captures data at specific intervals. Sample data is stored in your Amazon S3 bucket. 2 methods of installing and deploying the Edge Manager agent onto your edge devices: Download the agent as a binary from the Amazon S3 release bucket. Use the AWS IoT Greengrass V2 console or the AWS CLI to deploy aws.greengrass.SageMakerEdgeManager. Monitoring deployments across fleets SageMaker Edge Manager also collects prediction data and sends a sample of the data to the cloud for monitoring, labeling, and retraining. All data can be viewed in the SageMaker Edge Manager dashboard which reports on the operation of deployed models. The dashboard is useful to understand the performance of models running on each device across your fleet, understand overall fleet health and identify problematic models and particular devices. If quality declines are detected, you can quickly spot them in the dashboard and also configure alerts through Amazon CloudWatch. Signed and Verifiable ML deployments SageMaker Edge Manager also cryptographically signs your models so you can verify that it was not tampered with as it moves from the cloud to edge devices. Integration with device applications SageMaker Edge Manager supports gRPC, an open source remote procedure call, which allows you to integrate SageMaker Edge Manager with your existing edge applications through APIs in common programming languages, such as Android Java, C# / .NET, Dart, Go, Java, Kotlin/JVM, Node.js, Objective-C, PHP, Python, Ruby, and Web. Manages models separately from the rest of the application, so that updates to the model and the application are independent. Multiple ML models serve on edge devices ML applications usually require hosting and running multiple models concurrently on a device. SageMaker Edge Manager will soon allow you to write simple application logic to send one or more queries (i.e. load/unload models, run inference) independently to multiple models and rebalance hardware resource utilization when you add or update a model. Model Registry and Lifecycle SageMaker Edge Manager will soon be able to automate the build-train-deploy workflow from cloud to edge devices in Amazon SageMaker Edge Manager, and trace the lifecycle of each model. Reference Sagemaker Edge Manager YouTube Developer Guide: SageMaker Edge Manager Developer Guide: Edge Manager Agent SageMaker Edge Manager Example AWS Outpost and AWS Sagemaker Edge Manager Machine Learning at the Edge with AWS Outposts and Amazon SageMaker</summary></entry><entry><title type="html">AWS cloud services extended to on-premise data centres with AWS Outpost</title><link href="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/10/AWS-Outpost.html" rel="alternate" type="text/html" title="AWS cloud services extended to on-premise data centres with AWS Outpost" /><published>2021-11-10T12:33:22+05:30</published><updated>2021-11-10T12:33:22+05:30</updated><id>http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/10/AWS-Outpost</id><content type="html" xml:base="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/10/AWS-Outpost.html">&lt;h1 id=&quot;aws-outpost&quot;&gt;AWS Outpost&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;AWS Outposts is a &lt;em&gt;&lt;u&gt;fully managed service&lt;/u&gt;&lt;/em&gt; that extends same AWS infrastructure, AWS services, APIs, and tools to virtually any datacenter or &lt;em&gt;&lt;u&gt;on-premises&lt;/u&gt;&lt;/em&gt; facility for a consistent hybrid experience.&lt;/li&gt;
-  &lt;li&gt;Ideal for workloads that require &lt;strong&gt;&lt;em&gt;&lt;u&gt;low latency&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; access to on-premises systems, &lt;strong&gt;&lt;em&gt;&lt;u&gt;local data processing&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, or &lt;strong&gt;&lt;em&gt;&lt;u&gt;local data storage&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;AWS compute, storage, database, and other services run locally on Outposts, and you can access the full range of AWS services available in the Region to build, manage, and scale your on-premises applications using familiar AWS services and tools.&lt;/li&gt;
-  &lt;li&gt;Outposts are connected to the nearest AWS Region.&lt;/li&gt;
-  &lt;li&gt;We can run following AWS Resources on AWS Outposts on premises:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Amazon EC2 instances&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Amazon EBS volumes&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Amazon EKS nodes&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Amazon ECS clusters&lt;/strong&gt; (container-based services)&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Amazon RDS DB&lt;/strong&gt; instances (database services)&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Amazon EMR clusters&lt;/strong&gt; (analytics services)&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Amazon S3&lt;/strong&gt; for AWS Outposts will be available in 2020 for local object storage on Outposts.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;AWS Outposts allows you to securely store and process customer data that needs to remain on premises or in countries where there is no AWS region.&lt;/li&gt;
-  &lt;li&gt;With AWS Outposts, we do not need to manage different APIs, manual software updates, and purchase of third-party hardware and support.&lt;/li&gt;
-  &lt;li&gt;AWS Outposts is fully managed and supported by AWS. &lt;em&gt;&lt;u&gt;Outpost is delivered, installed, monitored, patched, and updated by AWS&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;AWS Outposts address low latency application requirements and local data processing requirements.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;aws-outposts-compute--storage&quot;&gt;AWS Outposts Compute &amp;amp; Storage&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Choose from pre-validated configurations with mix of EC2, EBS, S3 capacity.&lt;/li&gt;
-  &lt;li&gt;Or contact AWS to customize configurations to meet your needs.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;compute&quot;&gt;Compute&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;General purpose&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; (M5/M5d):
-    &lt;ul&gt;
-      &lt;li&gt;a balance of compute, memory, and network resources&lt;/li&gt;
-      &lt;li&gt;can be used for general-purpose workloads, &lt;em&gt;&lt;u&gt;web and application servers&lt;/u&gt;, *&lt;u&gt;backend servers for enterprise applications&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;gaming servers&lt;/u&gt;&lt;/em&gt;, and &lt;em&gt;&lt;u&gt;caching fleets&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Compute optimized&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; (C5/C5d):
-    &lt;ul&gt;
-      &lt;li&gt;suited for compute intensive applications such as &lt;em&gt;&lt;u&gt;batch processing&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;media transcoding&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;high performance web servers&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;high performance computing (HPC)&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;scientific modeling&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;dedicated gaming servers&lt;/u&gt;&lt;/em&gt; and &lt;em&gt;&lt;u&gt;ad server engines&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;machine learning inference&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Memory optimized&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; (R5/R5d):
-    &lt;ul&gt;
-      &lt;li&gt;to deliver fast performance for workloads that &lt;em&gt;&lt;u&gt;process large data sets&lt;/u&gt;&lt;/em&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;in memory&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
-      &lt;li&gt;suited for memory intensive applications such as &lt;em&gt;&lt;u&gt;high-performance databases&lt;/u&gt;&lt;/em&gt;, distributed web scale &lt;em&gt;&lt;u&gt;in-memory caches&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;mid-size in-memory databases&lt;/u&gt;&lt;/em&gt;, real- time &lt;em&gt;&lt;u&gt;big data analytics&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Graphics optimized&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; (G4dn):
-    &lt;ul&gt;
-      &lt;li&gt;To accelerate &lt;em&gt;&lt;u&gt;machine learning inference&lt;/u&gt;&lt;/em&gt;.
-        &lt;ul&gt;
-          &lt;li&gt;For machine learning inference for applications like &lt;em&gt;&lt;u&gt;adding metadata to an image&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;object detection&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;recommender systems&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;automated speech recognition&lt;/u&gt;&lt;/em&gt;, and &lt;em&gt;&lt;u&gt;language translation&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;&lt;u&gt;graphics-intensive workloads&lt;/u&gt;&lt;/em&gt;:
-        &lt;ul&gt;
-          &lt;li&gt;For building and running graphics-intensive applications, such as &lt;em&gt;&lt;u&gt;remote graphics workstations&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;video transcoding&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;photo-realistic design&lt;/u&gt;&lt;/em&gt;, and &lt;em&gt;&lt;u&gt;game streaming&lt;/u&gt;&lt;/em&gt; in the cloud.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;I/O optimized&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; (I3en):
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Non-Volatile Memory Express (NVMe) SSD&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; instance storage optimized for &lt;em&gt;&lt;u&gt;low latency&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;high random I/O performance&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;high sequential disk throughput&lt;/u&gt;&lt;/em&gt;, and offers the lowest price per GB of SSD instance storage on Amazon EC2.&lt;/li&gt;
-      &lt;li&gt;Suited for &lt;em&gt;&lt;u&gt;NoSQL databases&lt;/u&gt;&lt;/em&gt; (Cassandra, MongoDB, Redis), &lt;em&gt;&lt;u&gt;in-memory databases&lt;/u&gt;&lt;/em&gt; (Aerospike), &lt;em&gt;&lt;u&gt;scale-out transactional databases&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;distributed file systems&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;data warehousing&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;Elasticsearch&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;analytics workloads&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;storage&quot;&gt;Storage&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Amazon EBS&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;local instance storage&lt;/em&gt;&lt;/strong&gt; - that gets vanished when EC2 instance is stopped.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;Elastic Block Store (EBS)&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;&lt;u&gt;gp2 volumes&lt;/u&gt;&lt;/em&gt; for &lt;em&gt;&lt;u&gt;persistent&lt;/u&gt;&lt;/em&gt; block storage.&lt;/li&gt;
-      &lt;li&gt;snapshot and restore capabilities&lt;/li&gt;
-      &lt;li&gt;lets you &lt;a href=&quot;/_posts/2021-06-30-Extend-EC2-EBS-Volume-size-without-downtime.md&quot;&gt;increase volume size without any performance impact&lt;/a&gt;.&lt;/li&gt;
-      &lt;li&gt;All EBS volumes and snapshots on Outposts are &lt;em&gt;&lt;u&gt;fully encrypted&lt;/u&gt;&lt;/em&gt; by default.&lt;/li&gt;
-      &lt;li&gt;EBS is offered in tiers of 11 TB, 33 TB, and 55 TB.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Amazon S3&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;Store, Retrieve Data on Outpost&lt;/li&gt;
-      &lt;li&gt;Secure Data&lt;/li&gt;
-      &lt;li&gt;Control Access&lt;/li&gt;
-      &lt;li&gt;Tags, Reports&lt;/li&gt;
-      &lt;li&gt;S3 APIs&lt;/li&gt;
-      &lt;li&gt;Add 26 TB, 48 TB, 96 TB, 240 TB, or 380 TB of S3 storage capacity&lt;/li&gt;
-      &lt;li&gt;Create &lt;em&gt;&lt;u&gt;up to 100 buckets per AWS account&lt;/u&gt;&lt;/em&gt; on each Outpost&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Amazon EBS Snapshot&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;a point-in-time copy of your EBS volumes.&lt;/li&gt;
-      &lt;li&gt;Snapshots of EBS volumes on your Outpost are stored on Amazon S3 &lt;em&gt;&lt;u&gt;in the Region&lt;/u&gt;&lt;/em&gt;
-        &lt;ul&gt;
-          &lt;li&gt;in the region means in nearest cloud region? and not on local Outpost S3 storage?
-            &lt;ul&gt;
-              &lt;li&gt;If you have S3 provisioned on your Outpost, then you can store EBS snapshot on Outpost S3 itself, it’s called &lt;em&gt;&lt;u&gt;EBS Local Snapshot&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;use EBS Local Snapshots on Outposts for &lt;strong&gt;&lt;em&gt;&lt;u&gt;disaster recovery&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;&lt;u&gt;back up&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
-      &lt;li&gt;Secure and protect data on EBS storage using &lt;em&gt;&lt;u&gt;resource-level&lt;/u&gt;&lt;/em&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;IAM policies&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;migration&quot;&gt;Migration&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/cloudendure-migration/&quot;&gt;CloudEndure Migration&lt;/a&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;allows customers to migrate workloads onto AWS Outposts from physical, virtual, or cloud-based sources, from on-premises locations, public AWS Regions, and other clouds to Outposts.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;using EBS Local Snapshots on Outposts:
-    &lt;ul&gt;
-      &lt;li&gt;migrate workloads from any source directly onto Outposts, or from one Outpost to another, without requiring the EBS snapshot data to go through the region.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/cloudendure-disaster-recovery/&quot;&gt;CloudEndure Disaster Recovery&lt;/a&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;business continuity solution for physical, virtual, and cloud-based workloads onto AWS Outposts.&lt;/li&gt;
-      &lt;li&gt;you can replicate and recover:
-        &lt;ul&gt;
-          &lt;li&gt;from on-premises to Outposts&lt;/li&gt;
-          &lt;li&gt;from AWS Regions onto Outposts&lt;/li&gt;
-          &lt;li&gt;from Outposts into AWS Regions&lt;/li&gt;
-          &lt;li&gt;and between two Outposts.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;CloudEndure Disaster Recovery improves resilience, enabling &lt;em&gt;&lt;u&gt;recovery point objectives (RPOs)&lt;/u&gt;&lt;/em&gt; of seconds and &lt;em&gt;&lt;u&gt;recovery time objectives&lt;/u&gt;&lt;/em&gt; (RTOs) of minutes.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;networking&quot;&gt;Networking&lt;/h2&gt;
-&lt;h3 id=&quot;extended-vpc&quot;&gt;Extended VPC&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Extend your existing &lt;strong&gt;&lt;em&gt;Amazon VPC&lt;/em&gt;&lt;/strong&gt; to your Outpost in your on premises location.&lt;/li&gt;
-  &lt;li&gt;Create a &lt;strong&gt;&lt;em&gt;subnet&lt;/em&gt;&lt;/strong&gt; in your &lt;em&gt;&lt;u&gt;regional VPC&lt;/u&gt;&lt;/em&gt; and associate it with an Outpost just as you associate subnets with an Availability Zone in an AWS Region.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;&lt;u&gt;Instances in Outpost subnets communicate with other instances in the AWS Region using&lt;/u&gt;&lt;/em&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;private IP addresses&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, all &lt;em&gt;&lt;u&gt;within the same VPC&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;local-gateway&quot;&gt;Local Gateway&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Each Outpost provides a new &lt;strong&gt;&lt;em&gt;local gateway (LGW)&lt;/em&gt;&lt;/strong&gt; that allows you to &lt;em&gt;&lt;u&gt;connect your Outpost resources with your on premises networks&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;LGW enables &lt;em&gt;&lt;u&gt;low latency connectivity&lt;/u&gt;&lt;/em&gt; between the Outpost and any local data sources, end users, local machinery and equipment, or local databases.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;load-balancer&quot;&gt;Load Balancer&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;You can provision an &lt;strong&gt;&lt;em&gt;&lt;u&gt;Application Load Balancer (ALB)&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; to automatically &lt;em&gt;&lt;u&gt;distribute incoming HTTP(S) traffic&lt;/u&gt;&lt;/em&gt; across &lt;em&gt;&lt;u&gt;multiple targets&lt;/u&gt;&lt;/em&gt; on your Outposts, such as &lt;em&gt;&lt;u&gt;Amazon EC2 instances, containers, and IP addresses&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;ALB on Outposts is &lt;em&gt;&lt;u&gt;fully managed&lt;/u&gt;&lt;/em&gt;, operates in a &lt;em&gt;&lt;u&gt;single subnet&lt;/u&gt;&lt;/em&gt;, and &lt;em&gt;&lt;u&gt;scales automatically&lt;/u&gt;&lt;/em&gt; up to the capacity available on the Outposts rack to meet varying levels of application load without manual intervention.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;private-connection-to-aws-cloud&quot;&gt;Private Connection to AWS Cloud&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;With AWS Outposts Private Connectivity, you can establish a service link &lt;strong&gt;&lt;em&gt;&lt;u&gt;VPN connection&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; &amp;lt;/u&amp;gt;from your Outposts to the AWS Region over&amp;lt;/u&amp;gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;AWS Direct Connect&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;Minimizes public internet exposure&lt;/li&gt;
-  &lt;li&gt;Removes the need for special firewall configurations.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;aws-services-on-outposts&quot;&gt;AWS Services on Outposts:&lt;/h2&gt;
-&lt;h3 id=&quot;containers&quot;&gt;Containers&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Amazon ECS&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;Scalable, High-performance &lt;em&gt;&lt;u&gt;container orchestration service&lt;/u&gt;&lt;/em&gt;, supports &lt;em&gt;&lt;u&gt;Docker containers&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;run and scale containerized applications.&lt;/li&gt;
-      &lt;li&gt;ECS eliminates the need for:
-        &lt;ul&gt;
-          &lt;li&gt;Install and Operate your own container orchestration software&lt;/li&gt;
-          &lt;li&gt;Manage and Scale a cluster of virtual machines&lt;/li&gt;
-          &lt;li&gt;Schedule containers on those virtual machines&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;With simple &lt;em&gt;&lt;u&gt;API calls&lt;/u&gt;&lt;/em&gt;, you can &lt;u&gt;launch and stop&lt;/u&gt; Docker-enabled applications and &lt;em&gt;&lt;u&gt;query the complete state of your application&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Amazon EKS&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;Managed Service to run Kubernetes.&lt;/li&gt;
-      &lt;li&gt;Used to run Containerized applications.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;&lt;u&gt;AWS ECS vs AWS EKS&lt;/u&gt;&lt;/em&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;/assets/docs/Amazon-ECS-vs-Amazon-EKS.pdf&quot;&gt;Amazon ECS vs Amazon EKS: making sense of AWS container services&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;databases&quot;&gt;Databases&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Amazon RDS (Relational Database Service) &lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;supports &lt;em&gt;&lt;u&gt;Microsoft SQL Server&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;MySQL&lt;/u&gt;&lt;/em&gt;, and &lt;em&gt;&lt;u&gt;PostgreSQL&lt;/u&gt;&lt;/em&gt; database engines.&lt;/li&gt;
-      &lt;li&gt;Amazon RDS provides cost-efficient and resizable capacity while automating time-consuming administration tasks including infrastructure provisioning, database setup, patching, and backups.&lt;/li&gt;
-      &lt;li&gt;fully managed databases on premises&lt;/li&gt;
-      &lt;li&gt;Amazon RDS can be managed using AWS Management Console, APIs, and CLI as if in cloud.&lt;/li&gt;
-      &lt;li&gt;Amazon RDS enables low-cost, high-availability hybrid deployments, with disaster recovery back to the AWS Region, read replica bursting to Amazon RDS in the cloud, and long-term archival in Amazon Simple Storage Service (Amazon S3) in the cloud.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Amazon ElastiCache&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;Fully managed &lt;em&gt;&lt;u&gt;in-memory data store&lt;/u&gt;&lt;/em&gt;, compatible with &lt;em&gt;&lt;u&gt;Redis&lt;/u&gt;&lt;/em&gt; or &lt;em&gt;&lt;u&gt;Memcached&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;Optimized for real-time applications with &lt;em&gt;&lt;u&gt;sub-millisecond latency&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-      &lt;li&gt;Amazon ElastiCache on Outposts enables real-time use cases like &lt;em&gt;&lt;u&gt;Caching&lt;/u&gt;&lt;/em&gt;, &lt;em&gt;&lt;u&gt;Session Stores&lt;/u&gt;&lt;/em&gt;, Gaming, Geospatial Services, &lt;em&gt;&lt;u&gt;Real-Time Analytics&lt;/u&gt;&lt;/em&gt;, and &lt;em&gt;&lt;u&gt;Queuing&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;data-analytics&quot;&gt;Data Analytics&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Amazon EMR&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;Deploys secure and managed EMR clusters.&lt;/li&gt;
-      &lt;li&gt;Deploys latest versions of &lt;strong&gt;&lt;em&gt;&lt;u&gt;Apache Spark&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;&lt;u&gt;Apache Hive&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, and &lt;strong&gt;&lt;em&gt;&lt;u&gt;Presto&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; to access critical on premises data sources and systems for big data analytics.&lt;/li&gt;
-      &lt;li&gt;Use the EMR console, SDK, or CLI to specify the subnet associated with your Outpost to launch EMR clusters.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;upgrades-to-outpost-services&quot;&gt;Upgrades to Outpost Services&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;AWS services running locally on Outposts will be upgraded automatically to the latest version as and when available.&lt;/li&gt;
-  &lt;li&gt;Amazon RDS like services also patch both OS and database engines within scheduled maintenance windows with minimum downtime.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;access-to-cloud-hosted-regional-services&quot;&gt;Access to Cloud hosted Regional Services&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;We can &lt;em&gt;&lt;u&gt;extend&lt;/u&gt;&lt;/em&gt; our &lt;strong&gt;&lt;em&gt;Amazon Virtual Private Cloud(VPC)&lt;/em&gt;&lt;/strong&gt; on premises and &lt;em&gt;&lt;u&gt;run some AWS services locally on Outposts and also connect to a broad range of services available in the local AWS Region&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;We can access all regional AWS services in your private VPC environment, for example, through Interface Endpoints, Gateway Endpoints, or their regional public endpoints.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;aws-tools&quot;&gt;AWS Tools:&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;With AWS Outposts, customers &lt;em&gt;&lt;u&gt;can access AWS tools&lt;/u&gt;&lt;/em&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;running in the region&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; such as, &lt;em&gt;&lt;u&gt;AWS CloudFormation, Amazon CloudWatch, AWS CloudTrail, Elastic BeanStalk, Cloud 9,&lt;/u&gt;&lt;/em&gt; and others to run and &lt;em&gt;&lt;u&gt;manage workloads&lt;/u&gt;&lt;/em&gt; on AWS Outposts the same way they do in the cloud.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;aws-resource-access-manager&quot;&gt;AWS Resource Access Manager&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;AWS Resource Access Manager (RAM)&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; lets customers share access to Outposts resources – EC2 instances, EBS volumes, S3 capacity, subnets, and local gateways (LGWs) – across multiple accounts under the same AWS organization.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;further-readings&quot;&gt;Further Readings&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://d1.awsstatic.com/Solutions/Outposts%20Manufacturing%20Solution%20Brief%20US%20Letter%20AWS%2009.30.20%20FINAL.pdf&quot;&gt;AWS Outpost with AWS Greengrass Sample Architecture&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://d1.awsstatic.com/re19/AWS19-0029%20Outpost%20Solution%20Brief_v7%20Final.pdf&quot;&gt;AWS Outpost Healthcare Sample Architecture&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://d1.awsstatic.com/product-marketing/Outposts/AWS%20HCLS%20eBook.pdf&quot;&gt;Cloud at the Edge for Healthcare and Life Sciences&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Yet To Read:&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/containers/deploying-containerized-application-on-aws-outposts-with-amazon-eks/&quot;&gt;Deploying Containerized Application on AWS Outposts with Amazon EKS&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/compute/building-modern-applications-with-amazon-eks-on-amazon-outposts/&quot;&gt;Building Modern Applications with Amazon EKS on Amazon Outposts&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/networking-and-content-delivery/configuring-an-application-load-balancer-on-aws-outposts/&quot;&gt;Configuring an Application Load Balancer on AWS Outposts&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/compute/managing-your-aws-outposts-capacity-using-amazon-cloudwatch-and-aws-lambda/&quot;&gt;Managing your AWS Outposts capacity using Amazon CloudWatch and AWS Lambda&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/storage/run-applications-on-premises-and-access-s3-objects-from-aws-outposts/&quot;&gt;Run applications on premises and access Amazon S3 objects from AWS Outposts&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/networking-and-content-delivery/introducing-aws-outposts-private-connectivity/&quot;&gt;Introducing AWS Outposts private connectivity&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><summary type="html">AWS Outpost AWS Outposts is a fully managed service that extends same AWS infrastructure, AWS services, APIs, and tools to virtually any datacenter or on-premises facility for a consistent hybrid experience. Ideal for workloads that require low latency access to on-premises systems, local data processing, or local data storage. AWS compute, storage, database, and other services run locally on Outposts, and you can access the full range of AWS services available in the Region to build, manage, and scale your on-premises applications using familiar AWS services and tools. Outposts are connected to the nearest AWS Region. We can run following AWS Resources on AWS Outposts on premises: Amazon EC2 instances Amazon EBS volumes Amazon EKS nodes Amazon ECS clusters (container-based services) Amazon RDS DB instances (database services) Amazon EMR clusters (analytics services) Amazon S3 for AWS Outposts will be available in 2020 for local object storage on Outposts. AWS Outposts allows you to securely store and process customer data that needs to remain on premises or in countries where there is no AWS region. With AWS Outposts, we do not need to manage different APIs, manual software updates, and purchase of third-party hardware and support. AWS Outposts is fully managed and supported by AWS. Outpost is delivered, installed, monitored, patched, and updated by AWS. AWS Outposts address low latency application requirements and local data processing requirements. AWS Outposts Compute &amp;amp; Storage Choose from pre-validated configurations with mix of EC2, EBS, S3 capacity. Or contact AWS to customize configurations to meet your needs. Compute General purpose (M5/M5d): a balance of compute, memory, and network resources can be used for general-purpose workloads, web and application servers, *backend servers for enterprise applications, gaming servers, and caching fleets. Compute optimized (C5/C5d): suited for compute intensive applications such as batch processing, media transcoding, high performance web servers, high performance computing (HPC), scientific modeling, dedicated gaming servers and ad server engines, machine learning inference. Memory optimized (R5/R5d): to deliver fast performance for workloads that process large data sets in memory. suited for memory intensive applications such as high-performance databases, distributed web scale in-memory caches, mid-size in-memory databases, real- time big data analytics. Graphics optimized (G4dn): To accelerate machine learning inference. For machine learning inference for applications like adding metadata to an image, object detection, recommender systems, automated speech recognition, and language translation. graphics-intensive workloads: For building and running graphics-intensive applications, such as remote graphics workstations, video transcoding, photo-realistic design, and game streaming in the cloud. I/O optimized (I3en): Non-Volatile Memory Express (NVMe) SSD instance storage optimized for low latency, high random I/O performance, high sequential disk throughput, and offers the lowest price per GB of SSD instance storage on Amazon EC2. Suited for NoSQL databases (Cassandra, MongoDB, Redis), in-memory databases (Aerospike), scale-out transactional databases, distributed file systems, data warehousing, Elasticsearch, analytics workloads. Storage Amazon EBS: local instance storage - that gets vanished when EC2 instance is stopped. Elastic Block Store (EBS) gp2 volumes for persistent block storage. snapshot and restore capabilities lets you increase volume size without any performance impact. All EBS volumes and snapshots on Outposts are fully encrypted by default. EBS is offered in tiers of 11 TB, 33 TB, and 55 TB. Amazon S3: Store, Retrieve Data on Outpost Secure Data Control Access Tags, Reports S3 APIs Add 26 TB, 48 TB, 96 TB, 240 TB, or 380 TB of S3 storage capacity Create up to 100 buckets per AWS account on each Outpost Amazon EBS Snapshot: a point-in-time copy of your EBS volumes. Snapshots of EBS volumes on your Outpost are stored on Amazon S3 in the Region in the region means in nearest cloud region? and not on local Outpost S3 storage? If you have S3 provisioned on your Outpost, then you can store EBS snapshot on Outpost S3 itself, it’s called EBS Local Snapshot. use EBS Local Snapshots on Outposts for disaster recovery and back up. Secure and protect data on EBS storage using resource-level IAM policies. Migration CloudEndure Migration: allows customers to migrate workloads onto AWS Outposts from physical, virtual, or cloud-based sources, from on-premises locations, public AWS Regions, and other clouds to Outposts. using EBS Local Snapshots on Outposts: migrate workloads from any source directly onto Outposts, or from one Outpost to another, without requiring the EBS snapshot data to go through the region. CloudEndure Disaster Recovery: business continuity solution for physical, virtual, and cloud-based workloads onto AWS Outposts. you can replicate and recover: from on-premises to Outposts from AWS Regions onto Outposts from Outposts into AWS Regions and between two Outposts. CloudEndure Disaster Recovery improves resilience, enabling recovery point objectives (RPOs) of seconds and recovery time objectives (RTOs) of minutes. Networking Extended VPC Extend your existing Amazon VPC to your Outpost in your on premises location. Create a subnet in your regional VPC and associate it with an Outpost just as you associate subnets with an Availability Zone in an AWS Region. Instances in Outpost subnets communicate with other instances in the AWS Region using private IP addresses, all within the same VPC. Local Gateway Each Outpost provides a new local gateway (LGW) that allows you to connect your Outpost resources with your on premises networks. LGW enables low latency connectivity between the Outpost and any local data sources, end users, local machinery and equipment, or local databases. Load Balancer You can provision an Application Load Balancer (ALB) to automatically distribute incoming HTTP(S) traffic across multiple targets on your Outposts, such as Amazon EC2 instances, containers, and IP addresses. ALB on Outposts is fully managed, operates in a single subnet, and scales automatically up to the capacity available on the Outposts rack to meet varying levels of application load without manual intervention. Private Connection to AWS Cloud With AWS Outposts Private Connectivity, you can establish a service link VPN connection &amp;lt;/u&amp;gt;from your Outposts to the AWS Region over&amp;lt;/u&amp;gt; AWS Direct Connect. Minimizes public internet exposure Removes the need for special firewall configurations. AWS Services on Outposts: Containers Amazon ECS: Scalable, High-performance container orchestration service, supports Docker containers run and scale containerized applications. ECS eliminates the need for: Install and Operate your own container orchestration software Manage and Scale a cluster of virtual machines Schedule containers on those virtual machines With simple API calls, you can launch and stop Docker-enabled applications and query the complete state of your application. Amazon EKS: Managed Service to run Kubernetes. Used to run Containerized applications. AWS ECS vs AWS EKS: Amazon ECS vs Amazon EKS: making sense of AWS container services Databases Amazon RDS (Relational Database Service) : supports Microsoft SQL Server, MySQL, and PostgreSQL database engines. Amazon RDS provides cost-efficient and resizable capacity while automating time-consuming administration tasks including infrastructure provisioning, database setup, patching, and backups. fully managed databases on premises Amazon RDS can be managed using AWS Management Console, APIs, and CLI as if in cloud. Amazon RDS enables low-cost, high-availability hybrid deployments, with disaster recovery back to the AWS Region, read replica bursting to Amazon RDS in the cloud, and long-term archival in Amazon Simple Storage Service (Amazon S3) in the cloud. Amazon ElastiCache: Fully managed in-memory data store, compatible with Redis or Memcached Optimized for real-time applications with sub-millisecond latency. Amazon ElastiCache on Outposts enables real-time use cases like Caching, Session Stores, Gaming, Geospatial Services, Real-Time Analytics, and Queuing. Data Analytics Amazon EMR: Deploys secure and managed EMR clusters. Deploys latest versions of Apache Spark, Apache Hive, and Presto to access critical on premises data sources and systems for big data analytics. Use the EMR console, SDK, or CLI to specify the subnet associated with your Outpost to launch EMR clusters. Upgrades to Outpost Services AWS services running locally on Outposts will be upgraded automatically to the latest version as and when available. Amazon RDS like services also patch both OS and database engines within scheduled maintenance windows with minimum downtime. Access to Cloud hosted Regional Services We can extend our Amazon Virtual Private Cloud(VPC) on premises and run some AWS services locally on Outposts and also connect to a broad range of services available in the local AWS Region. We can access all regional AWS services in your private VPC environment, for example, through Interface Endpoints, Gateway Endpoints, or their regional public endpoints. AWS Tools: With AWS Outposts, customers can access AWS tools running in the region such as, AWS CloudFormation, Amazon CloudWatch, AWS CloudTrail, Elastic BeanStalk, Cloud 9, and others to run and manage workloads on AWS Outposts the same way they do in the cloud. AWS Resource Access Manager AWS Resource Access Manager (RAM) lets customers share access to Outposts resources – EC2 instances, EBS volumes, S3 capacity, subnets, and local gateways (LGWs) – across multiple accounts under the same AWS organization. Further Readings AWS Outpost with AWS Greengrass Sample Architecture AWS Outpost Healthcare Sample Architecture Cloud at the Edge for Healthcare and Life Sciences Yet To Read: Deploying Containerized Application on AWS Outposts with Amazon EKS Building Modern Applications with Amazon EKS on Amazon Outposts Configuring an Application Load Balancer on AWS Outposts Managing your AWS Outposts capacity using Amazon CloudWatch and AWS Lambda Run applications on premises and access Amazon S3 objects from AWS Outposts Introducing AWS Outposts private connectivity</summary></entry><entry><title type="html">MQTT Protocol</title><link href="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/10/MQTT.html" rel="alternate" type="text/html" title="MQTT Protocol" /><published>2021-11-10T12:33:22+05:30</published><updated>2021-11-10T12:33:22+05:30</updated><id>http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/10/MQTT</id><content type="html" xml:base="http://localhost:4000/on-premise%20cloud/cloud/aws/edge%20iot/2021/11/10/MQTT.html">&lt;h1 id=&quot;mqtt-protocol&quot;&gt;MQTT Protocol&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;MQTT = Message Queuing Telemetry Transport
-  Telemetry = Tele-Metering = Remote Measurements&lt;/li&gt;
-  &lt;li&gt;Originally Developed by IBM, now Open Sourced.&lt;/li&gt;
-  &lt;li&gt;Though MQ stands for ‘Message Queuing’, actually there’s NO Messages being Queued.&lt;/li&gt;
-  &lt;li&gt;It’s a &lt;strong&gt;&lt;em&gt;&lt;u&gt;Publish/Subscribe&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; mechanism.
-    &lt;ul&gt;
-      &lt;li&gt;Sensor Devices Publish data to the Topics/Servers/Brokers.&lt;/li&gt;
-      &lt;li&gt;Topics are subscribed by other devices such as mobile devices those are looking for data from Sensors.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;&lt;u&gt;Low Bandwidth Protocol&lt;/u&gt;&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Messages being sent by devices are very small in bytes.&lt;/li&gt;
-      &lt;li&gt;e.g. Temperature sensor sending 100 degree reading.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Small Code Footprint
-    &lt;ul&gt;
-      &lt;li&gt;The code used for this is very small.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Used in:
-    &lt;ul&gt;
-      &lt;li&gt;Facebook Messenger for iOS and Android&lt;/li&gt;
-      &lt;li&gt;PubNub&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;mqtt-ports&quot;&gt;MQTT Ports&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Protocol: TCP/IP&lt;/li&gt;
-  &lt;li&gt;Ports:
-    &lt;ul&gt;
-      &lt;li&gt;1883 - non-encrypted communication&lt;/li&gt;
-      &lt;li&gt;8883 - encrypted communication&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;maximum-payload-size&quot;&gt;Maximum Payload Size&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;MQTT Protocol Max Payload - 256 MBs&lt;/li&gt;
-  &lt;li&gt;AWS IoT MQTT Max Payload - 128 KBs&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;quality-of-service&quot;&gt;Quality of Service&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Levels:&lt;br /&gt;
-    &lt;strong&gt;&lt;em&gt;&lt;u&gt;0 = At Most Once&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; (Best effort, No Ack)&lt;br /&gt;
-      - Sender does not store messages, neither the receiver sends any acknowledgement.&lt;br /&gt;
-      - This method requires only one message and once the message is sent to the broker by the client it is deleted from the message queue.&lt;br /&gt;
-      - Therefore QoS 0 nullifies the chances of duplicate messages, which is why it is also known as the &lt;strong&gt;&lt;em&gt;&lt;u&gt;fire and forget&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; method.&lt;br /&gt;
-      - It provides a minimal and most &lt;strong&gt;&lt;em&gt;&lt;u&gt;unreliable&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; message transmission level that offers the &lt;strong&gt;&lt;em&gt;&lt;u&gt;fastest delivery effort&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;br /&gt;
-      &lt;img src=&quot;/assets/images/mqtt/mqtt-qos-0.png&quot; alt=&quot;mqtt-qos-0&quot; /&gt;&lt;br /&gt;
-&lt;br /&gt;
-    &lt;strong&gt;&lt;em&gt;&lt;u&gt;1 = At Least Once&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; (Acknowledged, Retransmitted if Ack not received)&lt;br /&gt;
-      - Using QoS 1, the delivery of a message is guaranteed (at least once, but the &lt;em&gt;&lt;u&gt;message may be sent more than once&lt;/u&gt;&lt;/em&gt; , if necessary).&lt;br /&gt;
-      - This method needs two messages.&lt;br /&gt;
-      - Here, the sender sends a message and waits to receive &lt;em&gt;&lt;u&gt;an acknowledgment&lt;/u&gt;&lt;/em&gt; (&lt;strong&gt;&lt;em&gt;&lt;u&gt;PUBACK&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; message).&lt;br /&gt;
-      - If it receives an acknowledgment from the client then it deletes the message from the outward-bound queue.&lt;br /&gt;
-      - In case, it does not receive a PUBACK message, it resends the message with the &lt;em&gt;&lt;u&gt;duplicate flag (DUP flag) enabled&lt;/u&gt;&lt;/em&gt;.&lt;br /&gt;
-      &lt;img src=&quot;/assets/images/mqtt/mqtt-qos-1.png&quot; alt=&quot;mqtt-qos-1&quot; /&gt;&lt;br /&gt;
-&lt;br /&gt;
-    &lt;strong&gt;&lt;em&gt;&lt;u&gt;2 = Exactly Once&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
-      - The QoS 2 level setting guarantees exactly-once delivery of a message.&lt;br /&gt;
-      - This is the &lt;em&gt;&lt;u&gt;slowest&lt;/u&gt;&lt;/em&gt; of all the levels and needs four messages.&lt;br /&gt;
-      - In this level, the &lt;em&gt;&lt;u&gt;sender&lt;/u&gt;&lt;/em&gt; sends a message (&lt;strong&gt;&lt;em&gt;&lt;u&gt;PUBLISH&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;) and waits for an &lt;em&gt;&lt;u&gt;acknowledgment&lt;/u&gt;&lt;/em&gt; (&lt;strong&gt;&lt;em&gt;&lt;u&gt;PUBREC&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; message).&lt;br /&gt;
-      - The &lt;em&gt;&lt;u&gt;receiver&lt;/u&gt;&lt;/em&gt; also sends a PUBREC message.&lt;br /&gt;
-      - If the &lt;em&gt;&lt;u&gt;sender&lt;/u&gt;&lt;/em&gt; of the message fails to receive an acknowledgment (PUBREC), it sends the message again with the &lt;em&gt;&lt;u&gt;DUP flag enabled&lt;/u&gt;&lt;/em&gt;.&lt;br /&gt;
-      - Upon receiving the acknowledgment message PUBREC, the &lt;em&gt;&lt;u&gt;sender&lt;/u&gt;&lt;/em&gt; transmits the &lt;em&gt;&lt;u&gt;message release message&lt;/u&gt;&lt;/em&gt; (&lt;strong&gt;&lt;em&gt;&lt;u&gt;PUBREL&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;).&lt;br /&gt;
-      - If the &lt;em&gt;&lt;u&gt;receiver&lt;/u&gt;&lt;/em&gt; does not receive the PUBREL message it resends the PUBREC message.&lt;br /&gt;
-      - Once the &lt;em&gt;&lt;u&gt;receiver&lt;/u&gt;&lt;/em&gt; receives the PUBREL message, It forwards the message to all the subscribing clients.&lt;br /&gt;
-      - Note: &lt;em&gt;&lt;u&gt;For Sender Broker is the receiver and for Receiver Broker is the sender&lt;/u&gt;&lt;/em&gt;.&lt;br /&gt;
-      - Thereafter the &lt;em&gt;&lt;u&gt;receiver&lt;/u&gt;&lt;/em&gt; sends &lt;em&gt;&lt;u&gt;a publish complete&lt;/u&gt;&lt;/em&gt; (&lt;strong&gt;&lt;em&gt;&lt;u&gt;PUBCOMP&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;) message.&lt;br /&gt;
-      - In case the &lt;em&gt;&lt;u&gt;sender&lt;/u&gt;&lt;/em&gt; does not receive the PUBCOMP message, it resends the PUBREL message.&lt;br /&gt;
-      - Once the sending client receives the PUBCOMP message, the transmission process is marked as completed and the message
-can be deleted from the outbound queue.&lt;br /&gt;
-  &lt;img src=&quot;/assets/images/mqtt/mqtt-qos-2.png&quot; alt=&quot;mqtt-qos-2&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;these messages are same as used in WiFi communication.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;retained-messages&quot;&gt;Retained Messages&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Server keeps messages even after sending it to all Subscribers.&lt;/li&gt;
-  &lt;li&gt;New Subscribers get the retained messages.
-    &lt;ul&gt;
-      &lt;li&gt;We had seen this behavior in PubNub, where last message Published to Channel was retained till the next message is Published to that channel.&lt;/li&gt;
-      &lt;li&gt;This Last message was available to new subscriber.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;&lt;u&gt;Only One Message&lt;/u&gt;&lt;/em&gt; is retained per Topic.&lt;/li&gt;
-      &lt;li&gt;Usecase:
-        &lt;ul&gt;
-          &lt;li&gt;Sensor periodically sending a message on a topic. New subscriber will get the last state of the sensor with Retained message.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Reference: &lt;a href=&quot;/assets/docs/mqtt/MQTT_Retained_Messages_Explained.pdf&quot;&gt;MQTT Retained Messages Explained&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;clean-session-and-durable-session&quot;&gt;Clean Session and Durable Session&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;&lt;u&gt;Clean Session&lt;/u&gt;&lt;/em&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;Clean Session Flag = 1	[Optional]&lt;/li&gt;
-      &lt;li&gt;All of the client’s subscriptions are removed when it disconnects from the server.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;&lt;u&gt;Durable Session&lt;/u&gt;&lt;/em&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;Clean Session Flag = 0	[Optional]&lt;/li&gt;
-      &lt;li&gt;The client’s subscriptions remain in effect after any disconnection.&lt;/li&gt;
-      &lt;li&gt;In this event, subsequent messages that arrive carrying a High QoS designation are stored for delivery after the connection is reestablished.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;retained-messages-clean-session-and-qos-inter-related-behavior&quot;&gt;Retained messages, Clean Session and QoS inter-related behavior&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/images/mqtt/RetainedMessages_CleanSession_QoS.png&quot; alt=&quot;Retained messages, Clean Session and QoS inter-related behavior&quot; /&gt;&lt;br /&gt;
-  Reference: &lt;a href=&quot;http://www.steves-internet-guide.com/mqtt-retained-messages-example/&quot;&gt;MQTT Retained Messages Explained&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;wills&quot;&gt;Wills&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;A Will or a Message is informed by client with server that should be published to a specific Topic or Topics in the event of an unexpected disconnection.&lt;/li&gt;
-  &lt;li&gt;A Will is an alarm or security settings where system when a remote sensor has lost contact with the network.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;keep-alive-messages&quot;&gt;Keep Alive Messages&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Periodically sent&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;topic-trees-strings&quot;&gt;Topic Trees, Strings&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Topics are organized Hierarchically into Topic Trees, using the ‘/’ character to create subtopics in the Topic String.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;&lt;u&gt;Topic String&lt;/u&gt;&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;A character string that identifies the Topic of a publish/subscribe message.&lt;/li&gt;
-      &lt;li&gt;Topic strings can contain either of two Wildcards:&lt;/li&gt;
-      &lt;li&gt;These &lt;strong&gt;&lt;em&gt;&lt;u&gt;WildCards&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; Allows subscribers to match patterns within strings defined by message publishers&lt;/li&gt;
-      &lt;li&gt;Wildcard: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#&lt;/code&gt;:
-        &lt;ul&gt;
-          &lt;li&gt;Multilevel&lt;/li&gt;
-          &lt;li&gt;used to match any number of levels within a Topic.
-            &lt;ul&gt;
-              &lt;li&gt;e.g. subscribers to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;truck/contents/#&lt;/code&gt; receive all messages that are designated for the topics:&lt;/li&gt;
-              &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;truck/contents&lt;/code&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;truck/contents/rfid&lt;/code&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Wildcard: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt;:
-        &lt;ul&gt;
-          &lt;li&gt;Single Level&lt;/li&gt;
-          &lt;li&gt;used to match Just ONE Topic Level.
-            &lt;ul&gt;
-              &lt;li&gt;e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;truck/+&lt;/code&gt; &lt;u&gt;matches&lt;/u&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;truck/contents&lt;/code&gt; &lt;em&gt;&lt;u&gt;but not&lt;/u&gt;&lt;/em&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;truck/contents/rfid&lt;/code&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;mqtt-brokers-comparison&quot;&gt;MQTT Brokers Comparison&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/assets/docs/mqtt/Stress-Testing-MQTT-Brokers.pdf&quot;&gt;Stress-Testing MQTT Brokers: A Comparative Analysis of Performance Measurements:&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Tested Borkers:
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;https://mosquitto.org/&quot;&gt;&lt;em&gt;&lt;u&gt;Mosquitto&lt;/u&gt;&lt;/em&gt;&lt;/a&gt; - &lt;a href=&quot;https://www.bevywise.com/mqtt-broker/&quot;&gt;&lt;em&gt;&lt;u&gt;Bevywise MQTT Route&lt;/u&gt;&lt;/em&gt;&lt;/a&gt; - &lt;a href=&quot;https://activemq.apache.org/&quot;&gt;&lt;em&gt;&lt;u&gt;ActiveMQ&lt;/u&gt;&lt;/em&gt;&lt;/a&gt; - &lt;a href=&quot;https://www.hivemq.com/&quot;&gt;&lt;em&gt;&lt;u&gt;HiveMQ CE&lt;/u&gt;&lt;/em&gt;&lt;/a&gt; - &lt;a href=&quot;https://vernemq.com/&quot;&gt;&lt;em&gt;&lt;u&gt;VerneMQ&lt;/u&gt;&lt;/em&gt;&lt;/a&gt; - &lt;a href=&quot;https://www.emqx.io/&quot;&gt;&lt;em&gt;&lt;u&gt;EMQ X&lt;/u&gt;&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Mosquitto&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; outperforms the other considered solutions in most metrics;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;ActiveMQ&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; is the best performing one in terms of &lt;em&gt;&lt;u&gt;Scalability&lt;/u&gt;&lt;/em&gt; due to its multi-threaded implementation.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;Bevywise MQTT Route&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; has promising results for &lt;em&gt;&lt;u&gt;resource-constrained&lt;/u&gt;&lt;/em&gt; scenarios.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;ActiveMQ&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; scales well in distributed/multi-core environment to beat all other brokers’ performance.&lt;/li&gt;
-      &lt;li&gt;If the hardware is &lt;em&gt;&lt;u&gt;resource-constrained&lt;/u&gt;&lt;/em&gt; (CPU/Memory/IO/Performance), then &lt;strong&gt;&lt;em&gt;&lt;u&gt;Mosquitto&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;em&gt;&lt;u&gt;Bevywise MQTT Route&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; can be taken as better choices.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;running-mqtt-broker-in-containerized-mode&quot;&gt;Running MQTT broker in Containerized mode&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/_/eclipse-mosquitto?tab=description&quot;&gt;eclipse-mosquitto&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Maintained by: the Eclipse Foundation&lt;/li&gt;
-      &lt;li&gt;Supported architectures: (more info) amd64, arm32v6, arm64v8, i386, ppc64le, s390x&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><summary type="html">MQTT Protocol MQTT = Message Queuing Telemetry Transport Telemetry = Tele-Metering = Remote Measurements Originally Developed by IBM, now Open Sourced. Though MQ stands for ‘Message Queuing’, actually there’s NO Messages being Queued. It’s a Publish/Subscribe mechanism. Sensor Devices Publish data to the Topics/Servers/Brokers. Topics are subscribed by other devices such as mobile devices those are looking for data from Sensors. Low Bandwidth Protocol Messages being sent by devices are very small in bytes. e.g. Temperature sensor sending 100 degree reading. Small Code Footprint The code used for this is very small. Used in: Facebook Messenger for iOS and Android PubNub MQTT Ports Protocol: TCP/IP Ports: 1883 - non-encrypted communication 8883 - encrypted communication Maximum Payload Size MQTT Protocol Max Payload - 256 MBs AWS IoT MQTT Max Payload - 128 KBs Quality of Service Levels: 0 = At Most Once (Best effort, No Ack) - Sender does not store messages, neither the receiver sends any acknowledgement. - This method requires only one message and once the message is sent to the broker by the client it is deleted from the message queue. - Therefore QoS 0 nullifies the chances of duplicate messages, which is why it is also known as the fire and forget method. - It provides a minimal and most unreliable message transmission level that offers the fastest delivery effort. 1 = At Least Once (Acknowledged, Retransmitted if Ack not received) - Using QoS 1, the delivery of a message is guaranteed (at least once, but the message may be sent more than once , if necessary). - This method needs two messages. - Here, the sender sends a message and waits to receive an acknowledgment (PUBACK message). - If it receives an acknowledgment from the client then it deletes the message from the outward-bound queue. - In case, it does not receive a PUBACK message, it resends the message with the duplicate flag (DUP flag) enabled. 2 = Exactly Once - The QoS 2 level setting guarantees exactly-once delivery of a message. - This is the slowest of all the levels and needs four messages. - In this level, the sender sends a message (PUBLISH) and waits for an acknowledgment (PUBREC message). - The receiver also sends a PUBREC message. - If the sender of the message fails to receive an acknowledgment (PUBREC), it sends the message again with the DUP flag enabled. - Upon receiving the acknowledgment message PUBREC, the sender transmits the message release message (PUBREL). - If the receiver does not receive the PUBREL message it resends the PUBREC message. - Once the receiver receives the PUBREL message, It forwards the message to all the subscribing clients. - Note: For Sender Broker is the receiver and for Receiver Broker is the sender. - Thereafter the receiver sends a publish complete (PUBCOMP) message. - In case the sender does not receive the PUBCOMP message, it resends the PUBREL message. - Once the sending client receives the PUBCOMP message, the transmission process is marked as completed and the message can be deleted from the outbound queue. these messages are same as used in WiFi communication. Retained Messages Server keeps messages even after sending it to all Subscribers. New Subscribers get the retained messages. We had seen this behavior in PubNub, where last message Published to Channel was retained till the next message is Published to that channel. This Last message was available to new subscriber. Only One Message is retained per Topic. Usecase: Sensor periodically sending a message on a topic. New subscriber will get the last state of the sensor with Retained message. Reference: MQTT Retained Messages Explained Clean Session and Durable Session Clean Session: Clean Session Flag = 1 [Optional] All of the client’s subscriptions are removed when it disconnects from the server. Durable Session: Clean Session Flag = 0 [Optional] The client’s subscriptions remain in effect after any disconnection. In this event, subsequent messages that arrive carrying a High QoS designation are stored for delivery after the connection is reestablished. Retained messages, Clean Session and QoS inter-related behavior Reference: MQTT Retained Messages Explained Wills A Will or a Message is informed by client with server that should be published to a specific Topic or Topics in the event of an unexpected disconnection. A Will is an alarm or security settings where system when a remote sensor has lost contact with the network. Keep Alive Messages Periodically sent Topic Trees, Strings Topics are organized Hierarchically into Topic Trees, using the ‘/’ character to create subtopics in the Topic String. Topic String A character string that identifies the Topic of a publish/subscribe message. Topic strings can contain either of two Wildcards: These WildCards Allows subscribers to match patterns within strings defined by message publishers Wildcard: #: Multilevel used to match any number of levels within a Topic. e.g. subscribers to truck/contents/# receive all messages that are designated for the topics: truck/contents truck/contents/rfid Wildcard: +: Single Level used to match Just ONE Topic Level. e.g. truck/+ matches truck/contents but not truck/contents/rfid MQTT Brokers Comparison Stress-Testing MQTT Brokers: A Comparative Analysis of Performance Measurements: Tested Borkers: Mosquitto - Bevywise MQTT Route - ActiveMQ - HiveMQ CE - VerneMQ - EMQ X Mosquitto outperforms the other considered solutions in most metrics; ActiveMQ is the best performing one in terms of Scalability due to its multi-threaded implementation. Bevywise MQTT Route has promising results for resource-constrained scenarios. ActiveMQ scales well in distributed/multi-core environment to beat all other brokers’ performance. If the hardware is resource-constrained (CPU/Memory/IO/Performance), then Mosquitto or Bevywise MQTT Route can be taken as better choices. Running MQTT broker in Containerized mode eclipse-mosquitto Maintained by: the Eclipse Foundation Supported architectures: (more info) amd64, arm32v6, arm64v8, i386, ppc64le, s390x</summary></entry><entry><title type="html">C++ STL: Container Adapters and Use cases</title><link href="http://localhost:4000/c++/data%20structures/stl/2021/11/01/C++_STL_Container_Adapters.html" rel="alternate" type="text/html" title="C++ STL: Container Adapters and Use cases" /><published>2021-11-01T12:33:22+05:30</published><updated>2021-11-01T12:33:22+05:30</updated><id>http://localhost:4000/c++/data%20structures/stl/2021/11/01/C++_STL_Container_Adapters</id><content type="html" xml:base="http://localhost:4000/c++/data%20structures/stl/2021/11/01/C++_STL_Container_Adapters.html">&lt;p&gt;This write-up will explain different &lt;strong&gt;&lt;em&gt;&lt;u&gt;Container Adapters&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, like &lt;strong&gt;&lt;em&gt;&lt;u&gt;Stack&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;&lt;u&gt;Queue&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;&lt;u&gt;Priority Queue&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; their respective features and mainly their appropriate use-cases.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Container Adapters are NOT full container classes.&lt;/li&gt;
-  &lt;li&gt;But the classes that provide a &lt;em&gt;&lt;u&gt;specific interface&lt;/u&gt;&lt;/em&gt; relying on an object of one of the Container class (such as deque/list) to handle the elements.&lt;/li&gt;
-  &lt;li&gt;The underlying container is encapsulated in a way that its elements are accessed by the members of the container adapter independent of the underlying container class.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;stack&quot;&gt;Stack&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Operate in a &lt;strong&gt;&lt;em&gt;&lt;u&gt;LIFO&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; context (&lt;em&gt;&lt;u&gt;last-in first-out&lt;/u&gt;&lt;/em&gt;)&lt;/li&gt;
-  &lt;li&gt;Elements are &lt;strong&gt;Inserted/Extracted&lt;/strong&gt; &lt;em&gt;&lt;u&gt;Only from&lt;/u&gt;&lt;/em&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;ONE END&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; of the container.&lt;/li&gt;
-  &lt;li&gt;Elements are &lt;strong&gt;pushed/popped&lt;/strong&gt; from the &lt;em&gt;&lt;u&gt;back&lt;/u&gt;&lt;/em&gt; of the specific container, which is known as the &lt;em&gt;&lt;u&gt;TOP&lt;/u&gt;&lt;/em&gt; of the stack.&lt;/li&gt;
-  &lt;li&gt;By &lt;em&gt;&lt;u&gt;default&lt;/u&gt;&lt;/em&gt;, standard container &lt;strong&gt;std::deque&lt;/strong&gt; is used, if no container class is specified for a particular stack class instantiation.&lt;/li&gt;
-  &lt;li&gt;Otherwise, &lt;strong&gt;std::vector&lt;/strong&gt;, &lt;strong&gt;std::list&lt;/strong&gt; also used as underlying container.&lt;/li&gt;
-  &lt;li&gt;&lt;u&gt;Use-cases&lt;/u&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;First-In Last-Out operations&lt;/li&gt;
-      &lt;li&gt;Reversal of elements&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Example:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;std::stack&amp;lt;int&amp;gt; first;                                  // empty stack
----------------------
-    
-std::deque&amp;lt;int&amp;gt; mydeque (3,100);                        // deque with 3 elements
-std::stack&amp;lt;int&amp;gt; second (mydeque);                       // stack initialized to copy of deque
----------------------
-    
-std::stack&amp;lt;int,std::vector&amp;lt;int&amp;gt; &amp;gt; third;                // empty stack using vector
----------------------
-    
-std::vector&amp;lt;int&amp;gt; myvector (2,200);                      // vector with 2 elements
-std::stack&amp;lt;int,std::vector&amp;lt;int&amp;gt; &amp;gt; fourth (myvector);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;operations&quot;&gt;Operations:&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    * empty()
-    * size()
-    * top()
-    * pop()
-    * push()
-    ------------
-    
-    C++11:
-    * emplace()
-    * swap()
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;time-complexity-stack-operations&quot;&gt;Time Complexity Stack Operations&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Operation&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Time Complexity&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Push&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;O(1)&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Pop&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;O(1)&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Top&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;O(1)&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;stack-decision-criteria&quot;&gt;Stack Decision Criteria&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;:heavy_check_mark: &lt;strong&gt;Order&lt;/strong&gt; is Important.&lt;/li&gt;
-  &lt;li&gt;:heavy_check_mark: &lt;em&gt;&lt;u&gt;Last-in, First-out&lt;/u&gt;&lt;/em&gt; (&lt;strong&gt;LIFO&lt;/strong&gt;) accepted/required.&lt;/li&gt;
-  &lt;li&gt;:x: Size varies widely - &lt;strong&gt;Dynamic&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;:x: Need to find Nth element - &lt;strong&gt;Random Access&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;:x: &lt;strong&gt;Insert/Erase&lt;/strong&gt; at the &lt;em&gt;&lt;u&gt;Front/Back&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;:x: &lt;strong&gt;Insert/Erase&lt;/strong&gt; at &lt;em&gt;&lt;u&gt;Mid-positions&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;:x: &lt;strong&gt;Key:Value&lt;/strong&gt; pair&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&quot;references&quot;&gt;References:&lt;/h5&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.cplusplus.com/reference/stack/stack/&quot;&gt;std::stack&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;queue&quot;&gt;Queue&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Operate in &lt;strong&gt;&lt;em&gt;&lt;u&gt;FIFO&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; (&lt;em&gt;&lt;u&gt;First-in, First-out&lt;/u&gt;&lt;/em&gt;)&lt;/li&gt;
-  &lt;li&gt;Elements are &lt;strong&gt;Inserted&lt;/strong&gt; &lt;em&gt;&lt;u&gt;from one end&lt;/u&gt;&lt;/em&gt; of the container and &lt;strong&gt;Extracted&lt;/strong&gt; &lt;em&gt;&lt;u&gt;from the other end&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;Elements are &lt;strong&gt;Pushed&lt;/strong&gt; from the &lt;em&gt;&lt;u&gt;back&lt;/u&gt;&lt;/em&gt; of the specific container and &lt;strong&gt;Popped&lt;/strong&gt; from its &lt;em&gt;&lt;u&gt;front&lt;/u&gt;&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;By &lt;em&gt;&lt;u&gt;default&lt;/u&gt;&lt;/em&gt;, standard container ‘&lt;strong&gt;&lt;em&gt;std::deque&lt;/em&gt;&lt;/strong&gt;’ is used, if no container class is specified for a particular queue class instantiation.&lt;/li&gt;
-  &lt;li&gt;Otherwise, &lt;strong&gt;&lt;em&gt;std::vector&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;std::list&lt;/em&gt;&lt;/strong&gt; also used as underlying container.&lt;/li&gt;
-  &lt;li&gt;&lt;u&gt;Use-cases&lt;/u&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;First-In First-Out operations&lt;/li&gt;
-      &lt;li&gt;Simple online ordering system (first come first served)&lt;/li&gt;
-      &lt;li&gt;Semaphore queue handling&lt;/li&gt;
-      &lt;li&gt;CPU scheduling (FCFS)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Example:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;std::queue&amp;lt;int&amp;gt; first;                                // empty queue
-------------
-    
-std::deque&amp;lt;int&amp;gt; mydeck (3,100);                       // deque with 3 elements
-std::queue&amp;lt;int&amp;gt; second (mydeck);                      // queue initialized to copy of deque
-------------
-    
-std::queue&amp;lt;int,std::list&amp;lt;int&amp;gt; &amp;gt; third;                // empty queue with list as underlying container
-------------
-    
-std::list&amp;lt;int&amp;gt; mylist (2,200);                        // list with 2 elements
-std::queue&amp;lt;int,std::list&amp;lt;int&amp;gt; &amp;gt; fourth (mylist);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;operations-1&quot;&gt;Operations:&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    * empty()
-    * size()
-    * front()
-    * back()
-    * pop()
-    * push()
-    --------------
-    
-    C++11:
-    * emplace()
-    * swap()
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;time-complexity-queue-operations&quot;&gt;Time Complexity Queue Operations&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Operation&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Time Complexity&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Push&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;O(1)&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Pop&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;O(1)&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Top&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;&lt;em&gt;O(1)&lt;/em&gt;&lt;/strong&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;queue-decision-criteria&quot;&gt;Queue Decision Criteria&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;:heavy_check_mark: &lt;strong&gt;Order&lt;/strong&gt; is Important.&lt;/li&gt;
-  &lt;li&gt;:heavy_check_mark: &lt;em&gt;&lt;u&gt;First-in, First-out&lt;/u&gt;&lt;/em&gt; (&lt;strong&gt;FIFO&lt;/strong&gt;) accepted/required.&lt;/li&gt;
-  &lt;li&gt;:x: Size varies widely - &lt;strong&gt;Dynamic&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;:x: Need to find Nth element - &lt;strong&gt;Random Access&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;:x: &lt;strong&gt;Insert/Erase&lt;/strong&gt; at the &lt;em&gt;&lt;u&gt;Front/Back&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;:x: &lt;strong&gt;Insert/Erase&lt;/strong&gt; at &lt;em&gt;&lt;u&gt;Mid-positions&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;:x: &lt;strong&gt;Key:Value&lt;/strong&gt; pair&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;priority_queue&quot;&gt;Priority_Queue&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Its First element is always the “&lt;strong&gt;&lt;em&gt;&lt;u&gt;Greatest of the elements&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;” it contains, according to some “&lt;em&gt;&lt;u&gt;strict weak ordering&lt;/u&gt;&lt;/em&gt;” criterion.
-    &lt;ul&gt;
-      &lt;li&gt;Similar to a &lt;em&gt;&lt;u&gt;heap&lt;/u&gt;&lt;/em&gt;, where elements can be inserted at any moment, and &lt;em&gt;&lt;u&gt;only the&lt;/u&gt;&lt;/em&gt; &lt;strong&gt;&lt;em&gt;&lt;u&gt;max heap&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;&lt;u&gt;element&lt;/u&gt;&lt;/em&gt; can be retrieved (the one at the top in the priority queue).&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Elements are &lt;strong&gt;Popped&lt;/strong&gt; from the &lt;em&gt;&lt;u&gt;back&lt;/u&gt;&lt;/em&gt; of the specific container, which is known as the &lt;em&gt;&lt;u&gt;top&lt;/u&gt;&lt;/em&gt; of the priority queue.&lt;/li&gt;
-  &lt;li&gt;The underlying container shall be accessible through &lt;strong&gt;Random Access&lt;/strong&gt; Iterators
-    &lt;ul&gt;
-      &lt;li&gt;Support of Random Access Iterators is required to keep a “&lt;em&gt;&lt;u&gt;Heap structure&lt;/u&gt;&lt;/em&gt;” internally at all times.&lt;/li&gt;
-      &lt;li&gt;This is done automatically by the container adapter by automatically calling the algorithm functions:
-        &lt;ul&gt;
-          &lt;li&gt;make_heap,&lt;/li&gt;
-          &lt;li&gt;push_heap and&lt;/li&gt;
-          &lt;li&gt;pop_heap&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;By &lt;em&gt;&lt;u&gt;default&lt;/u&gt;&lt;/em&gt;, standard container ‘&lt;strong&gt;&lt;em&gt;std::vector&lt;/em&gt;&lt;/strong&gt;’ is used, if no container class is specified for a particular priority_queue class instantiation.&lt;/li&gt;
-  &lt;li&gt;Otherwise, ‘&lt;strong&gt;std::deque&lt;/strong&gt;’ can also be used as underlying container.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;operation&quot;&gt;Operation:&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    * empty()
-    * size()
-    * top()
-    * push()
-    * pop()
-    ------------
-    
-    C++11:
-    * emplace()
-    * swap()
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;priority-queue-decision-criteria&quot;&gt;Priority Queue Decision Criteria&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;:heavy_check_mark: &lt;strong&gt;Order&lt;/strong&gt; is Important.&lt;/li&gt;
-  &lt;li&gt;:heavy_check_mark: &lt;em&gt;&lt;u&gt;First-in, First-out&lt;/u&gt;&lt;/em&gt; (&lt;strong&gt;FIFO&lt;/strong&gt;) accepted/required.&lt;/li&gt;
-  &lt;li&gt;:x: Size varies widely - &lt;strong&gt;Dynamic&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;:x: Need to find Nth element - &lt;strong&gt;Random Access&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;:x: &lt;strong&gt;Insert/Erase&lt;/strong&gt; at the &lt;em&gt;&lt;u&gt;Front/Back&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;:x: &lt;strong&gt;Insert/Erase&lt;/strong&gt; at &lt;em&gt;&lt;u&gt;Mid-positions&lt;/u&gt;&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;:x: &lt;strong&gt;Key:Value&lt;/strong&gt; pair&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&quot;reference&quot;&gt;Reference&lt;/h5&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.cplusplus.com/reference/stack/stack/&quot;&gt;std::stack&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.cplusplus.com/reference/queue/queue/&quot;&gt;std::queue&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.cplusplus.com/reference/queue/priority_queue/&quot;&gt;std::priority_queue&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="C++" /><category term="Data Structures" /><category term="STL" /><category term="C++" /><category term="Data Structures" /><category term="STL" /><summary type="html">This write-up will explain different Container Adapters, like Stack, Queue, Priority Queue their respective features and mainly their appropriate use-cases. Container Adapters are NOT full container classes. But the classes that provide a specific interface relying on an object of one of the Container class (such as deque/list) to handle the elements. The underlying container is encapsulated in a way that its elements are accessed by the members of the container adapter independent of the underlying container class. Stack Operate in a LIFO context (last-in first-out) Elements are Inserted/Extracted Only from ONE END of the container. Elements are pushed/popped from the back of the specific container, which is known as the TOP of the stack. By default, standard container std::deque is used, if no container class is specified for a particular stack class instantiation. Otherwise, std::vector, std::list also used as underlying container. Use-cases: First-In Last-Out operations Reversal of elements Example: std::stack&amp;lt;int&amp;gt; first; // empty stack --------------------- std::deque&amp;lt;int&amp;gt; mydeque (3,100); // deque with 3 elements std::stack&amp;lt;int&amp;gt; second (mydeque); // stack initialized to copy of deque --------------------- std::stack&amp;lt;int,std::vector&amp;lt;int&amp;gt; &amp;gt; third; // empty stack using vector --------------------- std::vector&amp;lt;int&amp;gt; myvector (2,200); // vector with 2 elements std::stack&amp;lt;int,std::vector&amp;lt;int&amp;gt; &amp;gt; fourth (myvector); Operations: * empty() * size() * top() * pop() * push() ------------ C++11: * emplace() * swap() Time Complexity Stack Operations Operation Time Complexity Push O(1) Pop O(1) Top O(1) Stack Decision Criteria :heavy_check_mark: Order is Important. :heavy_check_mark: Last-in, First-out (LIFO) accepted/required. :x: Size varies widely - Dynamic :x: Need to find Nth element - Random Access :x: Insert/Erase at the Front/Back :x: Insert/Erase at Mid-positions :x: Key:Value pair References: std::stack Queue Operate in FIFO (First-in, First-out) Elements are Inserted from one end of the container and Extracted from the other end. Elements are Pushed from the back of the specific container and Popped from its front. By default, standard container ‘std::deque’ is used, if no container class is specified for a particular queue class instantiation. Otherwise, std::vector, std::list also used as underlying container. Use-cases: First-In First-Out operations Simple online ordering system (first come first served) Semaphore queue handling CPU scheduling (FCFS) Example: std::queue&amp;lt;int&amp;gt; first; // empty queue ------------ std::deque&amp;lt;int&amp;gt; mydeck (3,100); // deque with 3 elements std::queue&amp;lt;int&amp;gt; second (mydeck); // queue initialized to copy of deque ------------ std::queue&amp;lt;int,std::list&amp;lt;int&amp;gt; &amp;gt; third; // empty queue with list as underlying container ------------ std::list&amp;lt;int&amp;gt; mylist (2,200); // list with 2 elements std::queue&amp;lt;int,std::list&amp;lt;int&amp;gt; &amp;gt; fourth (mylist); Operations: * empty() * size() * front() * back() * pop() * push() -------------- C++11: * emplace() * swap() Time Complexity Queue Operations Operation Time Complexity Push O(1) Pop O(1) Top O(1) Queue Decision Criteria :heavy_check_mark: Order is Important. :heavy_check_mark: First-in, First-out (FIFO) accepted/required. :x: Size varies widely - Dynamic :x: Need to find Nth element - Random Access :x: Insert/Erase at the Front/Back :x: Insert/Erase at Mid-positions :x: Key:Value pair Priority_Queue Its First element is always the “Greatest of the elements” it contains, according to some “strict weak ordering” criterion. Similar to a heap, where elements can be inserted at any moment, and only the max heap element can be retrieved (the one at the top in the priority queue). Elements are Popped from the back of the specific container, which is known as the top of the priority queue. The underlying container shall be accessible through Random Access Iterators Support of Random Access Iterators is required to keep a “Heap structure” internally at all times. This is done automatically by the container adapter by automatically calling the algorithm functions: make_heap, push_heap and pop_heap By default, standard container ‘std::vector’ is used, if no container class is specified for a particular priority_queue class instantiation. Otherwise, ‘std::deque’ can also be used as underlying container. Operation: * empty() * size() * top() * push() * pop() ------------ C++11: * emplace() * swap() Priority Queue Decision Criteria :heavy_check_mark: Order is Important. :heavy_check_mark: First-in, First-out (FIFO) accepted/required. :x: Size varies widely - Dynamic :x: Need to find Nth element - Random Access :x: Insert/Erase at the Front/Back :x: Insert/Erase at Mid-positions :x: Key:Value pair Reference std::stack std::queue std::priority_queue</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Akhilesh Moghe</name></author><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><category term="ML" /><category term="On-Premise Cloud" /><category term="Cloud" /><category term="AWS" /><category term="Edge IoT" /><category term="ML" /><summary type="html">This write-up will only focus on AWS Sagemaker ML service with respect to ML model deployment to Edge devices and Cloud. AWS Sagemaker Neo Amazon SageMaker Neo enables developers to optimize machine learning (ML) models for inference on SageMaker in the cloud and supported devices at the edge for the specific underlying hardware. Optimizes machine learning models for inference on cloud instances and edge devices to run faster with no loss in accuracy. Amazon SageMaker Neo runtime is supported on Android, iOS, Linux, and Windows operating systems. Sagemaker neo can optimize the ML model to run on target hardware platform of Edge devices based on processors from Ambarella, Apple, ARM, Intel, MediaTek, Nvidia, NXP, Qualcomm, RockChip, Texas Instruments, or Xilinx. Compiles it into an executable. For inference in the cloud, SageMaker Neo speeds up inference and saves cost by creating an inference optimized container that include MXNet, PyTorch, and TensorFlow integrated with Neo runtime for SageMaker hosting. Amazon SageMaker Neo supports optimization for a model from the framework-specific format of DarkNet, Keras, MXNet, PyTorch, TensorFlow, TensorFlow-Lite, ONNX, or XGBoost. Amazon SageMaker Neo runtime occupies 1MB of storage and 2MB of memory, which is many times smaller than the storage and memory footprint of a framework, while providing a simple common API to run a compiled model originating in any framework. Amazon SageMaker Neo takes advantage of partner-provided accelerator libraries to deliver the best available performance for a deep learning model on heterogeneous hardware platforms with a hardware accelerator as well as a CPU. Acceleration libraries such as Ambarella CV Tools, Nvidia Tensor RT, and Texas Instruments TIDL each support a specific set of functions and operators. SageMaker Neo automatically partitions your model so that the part with operators supported by the accelerator can run on the accelerator while the rest of the model runs on the CPU. Amazon SageMaker Neo now compiles models for Amazon SageMaker INF1 instance targets. SageMaker hosting provides a managed service for inference on the INF1 instances, which are based on the AWS Inferentia chip. References Amazon SageMaker Neo AWS Sagemaker Edge Manager AWS Sagemaker Edge Manager consists of a Service running in AWS cloud and an Agent running on Edge devices. Sagemaker Edge Manager deploys a ML model optimized with SageMaker Neo automatically so you don’t need to have Neo runtime installed on your devices in order to take advantage of the model optimizations. Agent Use the agent to make predictions with models loaded onto your edge devices. The agent also collects model metrics and *captures data at specific intervals. Sample data is stored in your Amazon S3 bucket. 2 methods of installing and deploying the Edge Manager agent onto your edge devices: Download the agent as a binary from the Amazon S3 release bucket. Use the AWS IoT Greengrass V2 console or the AWS CLI to deploy aws.greengrass.SageMakerEdgeManager. Monitoring deployments across fleets SageMaker Edge Manager also collects prediction data and sends a sample of the data to the cloud for monitoring, labeling, and retraining. All data can be viewed in the SageMaker Edge Manager dashboard which reports on the operation of deployed models. The dashboard is useful to understand the performance of models running on each device across your fleet, understand overall fleet health and identify problematic models and particular devices. If quality declines are detected, you can quickly spot them in the dashboard and also configure alerts through Amazon CloudWatch. Signed and Verifiable ML deployments SageMaker Edge Manager also cryptographically signs your models so you can verify that it was not tampered with as it moves from the cloud to edge devices. Integration with device applications SageMaker Edge Manager supports gRPC, an open source remote procedure call, which allows you to integrate SageMaker Edge Manager with your existing edge applications through APIs in common programming languages, such as Android Java, C# / .NET, Dart, Go, Java, Kotlin/JVM, Node.js, Objective-C, PHP, Python, Ruby, and Web. Manages models separately from the rest of the application, so that updates to the model and the application are independent. Multiple ML models serve on edge devices ML applications usually require hosting and running multiple models concurrently on a device. SageMaker Edge Manager will soon allow you to write simple application logic to send one or more queries (i.e. load/unload models, run inference) independently to multiple models and rebalance hardware resource utilization when you add or update a model. Model Registry and Lifecycle SageMaker Edge Manager will soon be able to automate the build-train-deploy workflow from cloud to edge devices in Amazon SageMaker Edge Manager, and trace the lifecycle of each model. Reference Sagemaker Edge Manager YouTube Developer Guide: SageMaker Edge Manager Developer Guide: Edge Manager Agent SageMaker Edge Manager Example AWS Outpost and AWS Sagemaker Edge Manager Machine Learning at the Edge with AWS Outposts and Amazon SageMaker</summary></entry></feed>

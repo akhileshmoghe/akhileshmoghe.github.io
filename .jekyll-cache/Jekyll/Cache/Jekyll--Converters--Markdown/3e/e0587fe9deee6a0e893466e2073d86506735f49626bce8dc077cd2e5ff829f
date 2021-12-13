@@ -1,0 +1,104 @@
+I"�<p>This article will focus on different stages of boot process in Linux &amp; Embedded Linux.
+There are 6 distinct stages of boot process, each explained in brief as below:</p>
+
+<h2 id="1-bios-basic-inputoutput-system">1. BIOS (Basic Input/Output System)</h2>
+<ul>
+  <li>BIOS is a program that controls computer’s hardware from the time the computer is started until the main operating system takes over.</li>
+  <li>BIOS first performs some <em><u>integrity checks</u></em>, i.e. <em><u>power on self test</u></em> (POST) of the <strong>HDD</strong> or <strong>SSD</strong>.</li>
+  <li>BIOS acts as an intermediary between the CPU and the input and output devices. This eliminates the need for the operating system to be aware of the hardware addresses of the input and output devices.</li>
+  <li>When there’s a change in device details, only the BIOS Configuration needs to be updated. (accomplished by pressing a specified key as soon as the computer begins to start up).</li>
+  <li>BIOS program, written in the <em><u>assembly language</u></em> of the CPU used, is stored on <strong><em>Electrically Erasable Programmable ROM (EEPROM)</em></strong> or <strong><em>flash</em></strong> memory.</li>
+  <li>BIOS searches for, loads, and executes the boot loader program.</li>
+  <li>BIOS loads and executes the <strong><em>Master Boot Record (MBR)</em></strong> boot loader.</li>
+  <li>BIOSs permit the user to select the order in which the system searches for <em><u>bootable media</u></em>.</li>
+  <li>MBR is usually on HDD or SSD, but sometimes on a USB stick or CD-ROM such as with a live installation of Linux.</li>
+  <li>Once the boot loader is loaded into memory and the BIOS gives control of the system to it.</li>
+</ul>
+
+<h2 id="2-master-boot-record-mbr">2. Master Boot Record (MBR)</h2>
+<ul>
+  <li>MBR is responsible for loading and executing the <strong><em>GRUB</em></strong> boot loader.</li>
+  <li>MBR is located in the <em><u>1st sector</u></em> of the bootable disk, which is typically <code class="language-plaintext highlighter-rouge">/dev/hda</code>, or <code class="language-plaintext highlighter-rouge">/dev/sda</code>.</li>
+</ul>
+
+<h2 id="3-gnu-grand-unified-bootloader-grub">3. GNU GRand Unified Bootloader (GRUB)</h2>
+<ul>
+  <li>GRUB is the typical boot loader for most modern Linux systems.</li>
+  <li>GRUB Splash Screen is the first to appear on screen. If you have multiple kernel images installed, you can use your keyboard to select the one you want your system to boot with.</li>
+  <li>GRUB configuration file is usually at <code class="language-plaintext highlighter-rouge">/boot/grub/grub.conf</code> or <code class="language-plaintext highlighter-rouge">/etc/grub.conf</code>.</li>
+</ul>
+
+<h2 id="4-kernel">4. Kernel</h2>
+<ul>
+  <li>The Kernel that was selected by GRUB first mounts the <strong><em>root file system</em></strong> that’s specified in the <code class="language-plaintext highlighter-rouge">grub.conf</code> file.</li>
+  <li>Then Kernel executes the <code class="language-plaintext highlighter-rouge">/sbin/init</code> program, which is *<u>always the first program to be executed</u>. You can confirm this with its *<u>process id (PID)</u>, which should always be <strong>1</strong>.</li>
+  <li>The kernel then establishes <em><u>a temporary root file system</u></em> using <strong><em>Initial RAM Disk (initrd)</em></strong> until the real file system is mounted.</li>
+</ul>
+
+<h2 id="5-init">5. Init</h2>
+<ul>
+  <li>With Init stage, system executes runlevel programs. System looks for an init file <code class="language-plaintext highlighter-rouge">/etc/inittab</code> to decide the Linux run level.</li>
+</ul>
+
+<h3 id="runlevels">Runlevels</h3>
+<ul>
+  <li>A runlevel is a mode of operation in the computer operating systems that implements Unix System V-style initialization.</li>
+  <li>Conventionally, <em><u>seven runlevels</u></em> exist, numbered from zero to six.</li>
+  <li><em><u>Only one runlevel is executed on startup</u></em>; run levels are <em><u>not executed one after another</u></em>.</li>
+  <li><strong><em>A runlevel defines the state of the machine after boot</em></strong>.</li>
+  <li>Standard runlevels:</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>Off</td>
+      <td>Turns off the device.</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Single User mode</td>
+      <td>Mode for administrative tasks.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Multi-user mode</td>
+      <td>Does not configure network interfaces and does not export networks services.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Multi-user mode with networking</td>
+      <td>Starts the system normally.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Not used/user-definable</td>
+      <td>For special purposes.</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Full mode</td>
+      <td>Same as runlevel 3 + display manager.</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Reboot</td>
+      <td>Reboots the device.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="references">References:</h5>
+<ul>
+  <li><a href="http://www.linfo.org/bios.html">BIOS</a></li>
+</ul>
+
+:ET

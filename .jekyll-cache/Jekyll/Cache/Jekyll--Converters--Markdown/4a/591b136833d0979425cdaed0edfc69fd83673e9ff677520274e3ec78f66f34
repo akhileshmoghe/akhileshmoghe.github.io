@@ -1,0 +1,17 @@
+I"Ç<p>Usually, there are 6 distinct stages of boot process, each explained in brief in <a href="">Linux Boot Process</a> article.
+This article will focus on different stages of boot process Specifically in Embedded Linux.
+Though the content and screenshots in this article are for BeagleBone board, the boot process is almost similar in general.</p>
+
+<h2 id="embedded-linux-boot-process">Embedded Linux Boot Process:</h2>
+
+<p><img src="/assets/embedded/boot/embedded_linux_boot_process.png" alt="Embedded Linux Boot Process" /></p>
+
+<h5 id="references">References:</h5>
+<ul>
+  <li><a href="http://www.linfo.org/bios.html">BIOS</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Runlevel">Runlevels</a></li>
+  <li><a href="https://www.geeksforgeeks.org/run-levels-linux/">Runlevels</a></li>
+  <li><a href="https://www.freecodecamp.org/news/the-linux-booting-process-6-steps-described-in-detail/">The Linux Booting Process - 6 Steps Described in Detail</a></li>
+</ul>
+
+:ET

@@ -1,0 +1,78 @@
+I"<h2 id="jetson-nano-bootloader-functionalities">Jetson Nano Bootloader functionalities:</h2>
+<ul>
+  <li>The primary function of the NVIDIA® Jetson Nano™ boot software is to initialize the SoC (System on a Chip), including:</li>
+  <li>Initializing MC/EMC/CPU</li>
+  <li>Setting up security parameters</li>
+  <li>Loading different firmware</li>
+  <li>Maintaining Chain of Trust</li>
+  <li>Setting memory carveouts for different firmware</li>
+  <li>Flashing the device</li>
+  <li>Booting to the operating system
+  Additionally, the Jetson Nano boot software also performs other operations defined by product requirements, including but not limited to:</li>
+  <li>Initialization of HDMI™/DSI</li>
+  <li>Displaying the boot logo</li>
+</ul>
+
+<p><img src="/assets/images/embedded/boot/jetson_nano_boot_sequence.png" alt="jetson_nano_boot_sequence" /></p>
+
+<ul>
+  <li><strong><em>BPMP???</em></strong>
+    <ul>
+      <li>BPMP is NVIDIA Tegra <em><u>Boot and Power Management Processor</u></em></li>
+      <li>The BPMP is a specific processor in Tegra chip, which is designed for booting process handling and offloading the power management, clock management, and reset control tasks from the CPU.</li>
+      <li>The BPMP firmware driver, which can create the interprocessor communication (IPC) between the CPU and BPMP.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="bootrom">BootROM</h2>
+<ul>
+  <li>Jetson Nano BootROM (BR) is <em><u>hard-wired in the SoC</u></em>.</li>
+  <li>It initializes the Boot Media and loads bootloaders and firmware from the Boot Media.</li>
+  <li><strong><em>Boot Configuration Table (BCT)</em></strong>
+    <ul>
+      <li>Multiple copies of the BootROM Boot Configuration Table (BCT) may be stored <em><u>at the start of the Boot-Media</u></em>.</li>
+      <li>The BCT contains configuration parameters used by the BootROM for hardware initialization.</li>
+      <li>Bootloader info in BCT:
+        <ul>
+          <li>Size</li>
+          <li>Entry point</li>
+          <li>Load address</li>
+          <li>Hash
+<img src="/assets/images/embedded/boot/bootrom-boot-flow.jpg" alt="bootrom-boot-flow" /></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="tegraboot-bootloader-components">TegraBoot [Bootloader Components]</h2>
+<ul>
+  <li>TegraBoot (NVTBoot) is the <em><u>first boot software</u></em> component loaded by BootROM in <em><u>SysRAM (Internal RAM)</u></em>, and runs on BPMP.</li>
+  <li>2 Types:
+    <ul>
+      <li>One used for <em><u>cold boot</u></em></li>
+      <li>One for <em><u>recovery boot/flashing</u></em></li>
+    </ul>
+  </li>
+  <li>Responsibilities:
+    <ul>
+      <li>Loading and initializing firmware (FW) components such as TOS</li>
+      <li>Creating carveouts</li>
+      <li>Completing CPU initialization</li>
+      <li>Loading the next stage bootloader</li>
+      <li>Supporting flashing</li>
+      <li>Supporting RCM boot</li>
+      <li>Reading PMIC reset reason</li>
+      <li>Loading the bootloader device tree and passing the device tree load address to CBoot</li>
+      <li>Stops execution when the CCPLEX is booted</li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="references">References:</h5>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=DV5S_ZSdK0s&amp;t=6s&amp;ab_channel=PentesterAcademyTV">Embedded Linux Booting Process (Multi-Stage Bootloaders, Kernel, Filesystem)</a></li>
+</ul>
+
+:ET
