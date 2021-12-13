@@ -186,8 +186,8 @@ __3.__ __*<u>User Partition</u>*__:
   
 
   
-##### References:
-  - [Embedded Linux Booting Process (Multi-Stage Bootloaders, Kernel, Filesystem)](https://www.youtube.com/watch?v=DV5S_ZSdK0s&t=6s&ab_channel=PentesterAcademyTV)
+###### References:
+  - [NVIDIA L4T Jetson Nano Documentation](https://docs.nvidia.com/jetson/l4t/Tegra%20Linux%20Driver%20Package%20Development%20Guide/bootloader_setup.html#)
   
   
   

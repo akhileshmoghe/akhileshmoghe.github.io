@@ -12,14 +12,16 @@ header:
 personal-info:
   - title:      About Me
     children:
-      - title:  CV
-        url:    cv
+      - title:  Projects
+        url:    projects
       - title:  Skills
         url:    technical-skills
       - title:  Experience
         url:    experience
       - title:  Recognitions
         url:    awards
+      - title:  CV
+        url:    cv
 
 docs-hz:
   - title:      Start-hz
