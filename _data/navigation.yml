@@ -20,55 +20,7 @@ personal-info:
         url:    experience
       - title:  Recognitions
         url:    awards
+      - title:  Certifications
+        url:    certifications
       - title:  CV
         url:    cv
-
-docs-hz:
-  - title:      Start-hz
-    children:
-      - title:  Quick Start
-        url:    /docs/en/quick-start
-      - title:  Structure
-        url:    /docs/en/structure
-  - title:      Customization
-    children:
-      - title:  Configuration-hz
-        url:    /docs/en/configuration
-      - title:  Navigation
-        url:    /docs/en/navigation
-  - title:      Start-hz
-    children:
-      - title:  Quick Start
-        url:    /docs/en/quick-start
-      - title:  Structure
-        url:    /docs/en/structure
-  - title:      Customization
-    children:
-      - title:  Configuration-hz
-        url:    /docs/en/configuration
-      - title:  Navigation
-        url:    /docs/en/navigation
-  - title:      Start-hz
-    children:
-      - title:  Quick Start
-        url:    /docs/en/quick-start
-      - title:  Structure
-        url:    /docs/en/structure
-  - title:      Customization
-    children:
-      - title:  Configuration-hz
-        url:    /docs/en/configuration
-      - title:  Navigation
-        url:    /docs/en/navigation
-  - title:      Start-hz
-    children:
-      - title:  Quick Start
-        url:    /docs/en/quick-start
-      - title:  Structure
-        url:    /docs/en/structure
-  - title:      Customization
-    children:
-      - title:  Configuration-hz
-        url:    /docs/en/configuration
-      - title:  Navigation
-        url:    /docs/en/navigation
