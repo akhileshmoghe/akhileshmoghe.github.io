@@ -1,6 +1,6 @@
 ---
 title:  "C++ STL: Sequence Containers and Use cases"
-date:   2021-11-1 12:33:22 +0530
+date:   2018-11-1 12:33:22 +0530
 categories:
   - C++
   - Data Structures

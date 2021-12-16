@@ -1,7 +1,7 @@
 ---
 title:  "Typical Embedded Linux Boot Process"
 permalink: /_post/embedded/linux/boot_process
-date:   2021-12-12 1:33:22 +0530
+date:   2021-06-12 1:33:22 +0530
 categories:
   - Linux
   - Embedded Linux

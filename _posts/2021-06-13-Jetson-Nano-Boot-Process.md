@@ -1,7 +1,7 @@
 ---
 title:  "NVIDIA L4T Embedded Linux Boot Process for Jetson Nano"
 permalink: /_post/embedded/linux/boot_process/jetson_nano
-date:   2021-12-12 1:33:22 +0530
+date:   2021-06-13 1:33:22 +0530
 categories:
   - Linux
   - Embedded Linux

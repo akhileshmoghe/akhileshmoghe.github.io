@@ -1,6 +1,6 @@
 ---
 title:  "C++ OOPs: Why prefer Composition over Inheritance?"
-date:   2021-03-25 12:33:22 +0530
+date:   2018-03-25 12:33:22 +0530
 categories:
   - C++
   - OOPs
