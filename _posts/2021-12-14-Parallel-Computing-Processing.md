@@ -82,11 +82,15 @@ show_author_profile: true
 
 #### Design
 - OpenMP is an implementation of __*multithreading*__, a method of parallelizing whereby a primary thread (a series of instructions executed consecutively) forks a specified *<u>number of sub-threads</u>* and the system divides a task among them. The threads then *<u>run concurrently</u>*, with the runtime environment *<u>allocating threads to different processors</u>*.
-- The *<u>section of code that is meant to run in parallel is marked accordingly</u>*, with a __*compiler directive*__ that will cause the threads to form before the section is executed.[3] Each thread has an id attached to it which can be obtained using a function (called omp_get_thread_num()). The thread id is an integer, and the primary thread has an id of 0. After the execution of the parallelized code, the threads join back into the primary thread, which continues onward to the end of the program.
-
-By default, each thread executes the parallelized section of code independently. Work-sharing constructs can be used to divide a task among the threads so that each thread executes its allocated part of the code. Both task parallelism and data parallelism can be achieved using OpenMP in this way.
-
-The runtime environment allocates threads to processors depending on usage, machine load and other factors. The runtime environment can assign the number of threads based on environment variables, or the code can do so using functions. The OpenMP functions are included in a header file labelled omp.h in C/C++.
+- The *<u>section of code that is meant to run in parallel is marked accordingly</u>*, with a __*compiler directive*__ that will cause the threads to form before the section is executed.
+- Each __*thread*__ has an __*id*__ attached to it which can be obtained using a function (called __*omp_get_thread_num()*__).
+- The thread id is an integer, and the primary thread has an id of 0.
+- After the execution of the parallelized code, the threads *<u>join back</u>* into the primary thread, which continues onward to the end of the program.
+- By default, *<u>each thread executes the parallelized section of code independently</u>*.
+- Work-sharing constructs can be used to divide a task among the threads so that each thread executes its allocated part of the code.
+- Both __*task parallelism*__ and __*data parallelism*__ can be achieved using __*<u>OpenMP</u>*__ in this way.
+- The runtime environment allocates threads to processors depending on usage, machine load and other factors. The runtime environment can assign the number of threads based on environment variables, or the code can do so using functions.
+- The OpenMP functions are included in a header file labelled __*omp.h*__ in C/C++.
 
 
 ## Distributed Shared Memory (DSM) 
