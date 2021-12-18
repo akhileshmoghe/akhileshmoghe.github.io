@@ -145,6 +145,7 @@ show_author_profile: true
   ---
   
 ### Ternary Search
+- Time Complexity: __*O(Log3(n))*__
 
 <script src="https://gist.github.com/akhileshmoghe/97831d0578fb9e3947506fa0bbf74ea0.js"></script>
 

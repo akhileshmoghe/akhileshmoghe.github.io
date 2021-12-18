@@ -92,6 +92,32 @@ show_author_profile: true
 - The runtime environment allocates threads to processors depending on usage, machine load and other factors. The runtime environment can assign the number of threads based on environment variables, or the code can do so using functions.
 - The OpenMP functions are included in a header file labelled __*omp.h*__ in C/C++.
 
+#### Thread Creation
+- __*pragma omp parallel*__ is used to fork additional threads to carry out the work enclosed in the construct in parallel.
+
+<script src="https://gist.github.com/akhileshmoghe/a9bced02aa95891204b9b32d4bee672c.js"></script>
+
+#### Work-sharing constructs
+- Used to specify how to assign independent work to one or all of the threads.
+  - __*omp for*__ or __*omp do*__: used to split up loop iterations among the threads, also called loop constructs.
+  - __*sections*__: assigning consecutive but independent code blocks to different threads
+  - __*single*__: specifying a code block that is executed by only one thread, a barrier is implied in the end
+  - __*master*__: similar to single, but the code block will be executed by the master thread only and no barrier implied in the end.
+
+<script src="https://gist.github.com/akhileshmoghe/dd8203d73b9f367fcbbdf486ed44fe8a.js"></script>
+
+
+### OpenCL
+- __*OpenCL (Open Computing Language)*__ is a framework for writing programs that execute across heterogeneous platforms consisting of __*central processing units*__ (CPUs), __*graphics processing units*__ (GPUs), __*digital signal processors*__ (DSPs), __*field-programmable gate arrays*__ (FPGAs) and other processors or hardware accelerators.
+- OpenCL specifies programming languages (based on __*C99*__, __*C++14*__ and __*C++17*__) for programming these devices and application programming interfaces (APIs) to control the platform and execute programs on the compute devices.
+- OpenCL provides a standard interface for __*parallel computing*__ using __*task-parallelism*__ and __*data-parallelism*__.
+- Functions executed on an OpenCL device are called "__*kernels*__".
+- A single compute device typically consists of several compute units, which in turn comprise multiple *<u>processing elements (PEs)</u>*. A single *<u>kernel execution can run on all or many of the PEs in parallel</u>*. How a compute device is subdivided into compute units and PEs is up to the vendor; a compute unit can be thought of as a "__core__".
+- OpenCL defines APIs that allows programs running on the host to launch kernels on the compute devices and manage device memory, which is (at least conceptually) separate from host memory.
+- Programs in the OpenCL language are intended to be __*compiled at run-time*__, so that OpenCL-using applications are portable between implementations for various host devices.
+- *<u>Languages supported</u>*:
+  - Primarily: C, C++
+  - with third-party: Python, Java, Perl, .Net
 
 ## Distributed Shared Memory (DSM) 
 - [Distributed Shared Memory (DSM)](https://en.wikipedia.org/wiki/Distributed_shared_memory) is a form of memory architecture where *<u>physically separated memories</u>* can be addressed as *<u>one logically shared address space</u>*.
@@ -100,7 +126,8 @@ show_author_profile: true
 
 
 ###### References:
-  - 
+  - [OpenMP](https://en.wikipedia.org/wiki/OpenMP)
+  - [OpenCL](https://en.wikipedia.org/wiki/OpenCL)
   
   
   
