@@ -1,6 +1,6 @@
 ---
 title:  "Parallel Processing/Computing Paradigm"
-# permalink: /_post/
+permalink: /_post/parallel_computing
 date:   2021-12-14 1:33:22 +0530
 categories:
   - Parallel Processing
@@ -73,6 +73,87 @@ show_author_profile: true
 - A single complete “CPU” may be replicated onto a chip die, with each replication called a “core”. so a “CPU chip” with 2 such replications is said to have 2 cores. furthermore, each core has at least 1 “thread” = instruction stream (program), but it may have 2 or more threads. “2 cores and 4 threads” would usually mean each of the 2 CPU cores has 2 threads each. “threads” are the modern way of improving performance through parallel code execution (>=2 programs running concurrently).
 
 
+## Task Parallelism
+- Also known as __*function parallelism*__ and __*control parallelism*__
+- It is a form of parallelization of computer code *<u>across multiple processors</u>* in parallel computing environments.
+- Task parallelism focuses on distributing tasks—concurrently performed by processes or threads—across different processors.
+- In contrast to __*Data parallelism*__ which involves *<u>running the</u>* __*<u>same task</u>*__ *<u>on different components of data</u>*,
+- __*Task parallelism*__ is distinguished by *<u>running</u>* __*<u>many different tasks</u>*__ *<u>at the same time on the same data</u>*.
+- A common type of task parallelism is __*pipelining*__ which consists of *<u>moving a single set of data through a series of separate tasks</u>* where each task can execute independently of the others.
+- In a multiprocessor system, task parallelism is achieved when each processor executes a different thread (or process) on the same or different data.
+- The threads may execute the same or different code.
+- In the general case, different execution threads communicate with one another as they work, but this is not a requirement. Communication usually takes place by passing data from one thread to the next as part of a workflow.
+- Task parallelism emphasizes the distributed (parallelized) nature of the processing (i.e. threads), as opposed to the data (data parallelism).
+- Language support:
+  - C++ (Intel): Threading Building Blocks
+  - C++ (Intel): Cilk Plus
+  - C++ (Open Source/Apache 2.0): RaftLib
+  - Go: goroutines
+  - Java: Java concurrency
+  - .NET: Task Parallel Library
+
+## Data Parallelism
+- It focuses on distributing the data across different nodes, which operate on the data in parallel.
+- It can be applied on regular data structures like arrays and matrices by working on each element in parallel.
+- A data parallel job on an array of n elements can be divided equally among all the processors.
+  - Let us assume we want to sum all the elements of the given array and the time for a single addition operation is `Ta` time units. In the case of *<u>sequential execution</u>*, the time taken by the process will be `n×Ta` time units as it sums up all the elements of an array.
+  - On the other hand, if we <u>execute this job as a data parallel job on 4 processors</u> the time taken would reduce to `(n/4)×Ta + merging overhead` time units.
+  - Parallel execution results in a speedup of 4 over sequential execution.
+- One important thing to note is that the __*locality of data references*__ plays an important part in evaluating the performance of a data parallel programming model.
+  - Locality of data depends on the *<u>memory accesses</u>* performed by the program as well as the *<u>size of the cache</u>*.
+- In a multiprocessor system, executing a single set of instructions (SIMD), *<u>data parallelism is achieved when each processor performs</u>* __*<u>the same task</u>*__ *<u>on</u>* __*<u>different distributed data</u>*__.
+- In some situations, a single execution thread controls operations on all the data. In others, *<u>different threads</u>* control the operation, but they *<u>execute the same code</u>*.
+
+
+
+## Fork-Join Model
+- Parallel Computing Design Pattern
+- A way of setting up and executing parallel programs, such that execution branches off in parallel at designated points in the program, to "join" (merge) at a subsequent point and resume sequential execution.
+- Implementations of the fork–join model will typically fork tasks, fibers or lightweight threads, not operating-system-level "heavyweight" threads or processes.
+- Fork–join is the main model of parallel execution in the __*OpenMP*__ framework.
+- Also supported by the __*Java concurrency framework*__, and the __*Task Parallel Library for .NET*__.
+
+  ![Fork-Join](/assets/images/miscellaneous/Parallei_Computing_Fork_Join.png){:.shadow}
+
+- Example:
+  
+  mergesort(A, lo, hi):\
+  &nbsp;&nbsp;&nbsp;&nbsp; __if__ lo < hi: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // at least one element of input\
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mid = ⌊lo + (hi - lo) / 2⌋\
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; __fork__ mergesort(A, lo, mid) &nbsp;&nbsp;&nbsp;&nbsp; // process (potentially) in parallel with main task\
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mergesort(A, mid, hi) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // main task handles second recursion\
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; __join__\
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; merge(A, lo, mid, hi)
+  {:.success}
+
+## Map
+- Map is an idiom in parallel computing where a simple operation is applied to all elements of a sequence, potentially in parallel.
+- It is used to solve the problems that can be decomposed into independent subtasks, requiring no communication/synchronization between the subtasks except a join or barrier at the end.
+- When applying the map pattern, one formulates an elemental function that captures the operation to be performed on a data item that represents a part of the problem, then applies this elemental function in one or more threads of execution, hyperthreads, SIMD lanes or on multiple computers.
+- __*OpenMP*__ has language support for the map pattern in the form of a *<u>parallel for loop</u>*.
+- languages such as __*OpenCL*__ and __*CUDA*__ support elemental functions (as "kernels") at the language level.
+- The map pattern is typically combined with other parallel design patterns. For example, map combined with category reduction gives the MapReduce pattern.
+
+## Reduce
+- The reduction operator is a type of operator that is commonly used in parallel programming to *<u>reduce the elements of an array into a single result</u>*.
+- Reduction operators are *<u>associative</u>* and often (but not necessarily) *<u>commutative</u>*.
+- The reduction of sets of elements is an integral part of programming models such as Map Reduce, where a *<u>reduction operator is applied (mapped) to all elements before they are reduced</u>*.
+- Other parallel algorithms use reduction operators as primary operations to solve more complex problems.
+- Many reduction operators can be used for broadcasting to distribute data to all processors.
+
+## MapReduce
+- A programming model for processing and generating big data sets with a parallel, distributed algorithm on a cluster.
+- A MapReduce program is composed of:
+  - a __*map*__ procedure, which performs *<u>filtering</u>* and *<u>sorting</u>*.
+    - such as sorting students by first name into queues, one queue for each name.
+  - a __*reduce*__ method, which performs a *<u>summary operation</u>*.
+    - such as counting the number of students in each queue, yielding name frequencies.
+- The "MapReduce System/framework" orchestrates the processing by marshalling the distributed servers, running the various tasks in parallel, managing all communications and data transfers between the various parts of the system, and providing for redundancy and fault tolerance.
+- MapReduce specializes in the *<u>split-apply-combine strategy</u>* for data analysis.
+- A popular open-source implementation of MapReduce that has support for distributed shuffles is part of __*Apache Hadoop*__.
+
+
+
 ## Tools/APIs/Libraries for Parallel Processing
 ### OpenMP
 - OpenMP (Open Multi-Processing) are APIs that support multi-platform __*shared-memory multiprocessing*__ programming in __*C*__, __*C++*__ on many platforms, *<u>instruction-set architectures</u>* and *<u>operating systems</u>*, including *Solaris*, *AIX*, *FreeBSD*, *HP-UX*, *Linux*, *macOS*, and *Windows*.
@@ -128,6 +209,12 @@ show_author_profile: true
 ###### References:
   - [OpenMP](https://en.wikipedia.org/wiki/OpenMP)
   - [OpenCL](https://en.wikipedia.org/wiki/OpenCL)
+  - [Fork-Join model](https://en.wikipedia.org/wiki/Fork%E2%80%93join_model)
+  - [Map-parallel-pattern](https://en.wikipedia.org/wiki/Map_(parallel_pattern))
+  - [Reduce](https://en.wikipedia.org/wiki/Reduction_operator)
+  - [MapReduce](https://en.wikipedia.org/wiki/MapReduce)
+  - [Task parallelism](https://en.wikipedia.org/wiki/Task_parallelism)
+  - [Data parallelism](https://en.wikipedia.org/wiki/Data_parallelism)
   
   
   
