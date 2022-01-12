@@ -12,7 +12,7 @@ sidebar:
 
 An Agile-Result-oriented software engineer focused on the Architecture, Design and implementation of IoT/Edge device/Cloud applications for devices updates & data management. Successfully delivered 2 IoT projects in last 3.5 years with AWS IoT, Azure IoT, Ayla IoT, Mender.io platforms on ARM, x86 & STM32 devices. Overall, 10 years of IT services & Product development experience in IoT, Cloud & Multimedia domains.
 
-<a class="button button--default button--rounded button--lg" href="/assets/docs/resume/Resume-Akhilesh_Moghe_2021.pdf"><i class="fas fa-download"></i> Download as PDF</a>
+<a class="button button--default button--rounded button--lg" href="/assets/docs/resume/Resume-Akhilesh_Moghe_2022.pdf"><i class="fas fa-download"></i> Download as PDF</a>
 
 ### *<u>Projects</u>*
   - [Edge IoT Framework primarily for Life Sciences Use-cases](projects#edge-iot-framework-primarily-for-life-sciences-use-cases)
