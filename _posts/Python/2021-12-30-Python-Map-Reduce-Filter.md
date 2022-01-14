@@ -1,7 +1,7 @@
 ---
 title: "Python, C++: Map, Reduce, Filter functions"
 permalink: /_post/python/map_reduce_filter
-date:   2019-08-19 1:33:22 +0530
+date:   2021-12-30 1:33:22 +0530
 categories:
   - Python
   - C++11
@@ -16,8 +16,8 @@ tags:
   - C++14
 author: Akhilesh Moghe
 show_author_profile: true
-sidebar:
-  nav: parallel-computing
+#sidebar:
+#  nav: parallel-computing
 ---
 
 ## Higher-order-functions
