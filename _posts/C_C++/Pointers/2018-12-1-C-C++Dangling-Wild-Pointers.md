@@ -7,6 +7,7 @@ categories:
   - C++
   - Embedded
   - Pointers
+  - Secure Coding
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
@@ -16,6 +17,7 @@ tags:
   - C++
   - Embedded
   - Pointers
+  - Secure Coding
 author: Akhilesh Moghe
 show_author_profile: true
 ---

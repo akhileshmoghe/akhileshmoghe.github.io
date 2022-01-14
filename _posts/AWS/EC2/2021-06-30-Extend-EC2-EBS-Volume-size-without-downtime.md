@@ -1,5 +1,6 @@
 ---
 title:  "Extend EC2 EBS Volume size without downtime"
+permalink: /_posts/aws/ec2/extend_ec2_ebs_volume_size
 date:   2021-06-30 12:33:22 +0530
 categories:
   - AWS

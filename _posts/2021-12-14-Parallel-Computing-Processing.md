@@ -2,6 +2,7 @@
 title:  "Parallel Processing/Computing Paradigm"
 permalink: /_post/parallel_computing
 date:   2021-12-14 1:33:22 +0530
+modify_date: 2021-12-31
 categories:
   - Parallel Processing
 toc: true
@@ -12,6 +13,8 @@ tags:
   - Parallel Processing
 author: Akhilesh Moghe
 show_author_profile: true
+#sidebar:
+#  nav: parallel-computing
 ---
 
 ## Parallel Computing
@@ -127,8 +130,8 @@ show_author_profile: true
   {:.success}
 
 ## Map
-- Map is an idiom in parallel computing where a simple operation is applied to all elements of a sequence, potentially in parallel.
-- It is used to solve the problems that can be decomposed into independent subtasks, requiring no communication/synchronization between the subtasks except a join or barrier at the end.
+- Map is an idiom in parallel computing where a *<u>simple operation is applied to all elements of a sequence</u>*, potentially __*<u>in parallel</u>*__.
+- It is used to solve the problems that can be decomposed into *<u>independent subtasks</u>*, requiring *<u>no communication/synchronization</u>* between the subtasks except a join or barrier at the end.
 - When applying the map pattern, one formulates an elemental function that captures the operation to be performed on a data item that represents a part of the problem, then applies this elemental function in one or more threads of execution, hyperthreads, SIMD lanes or on multiple computers.
 - __*OpenMP*__ has language support for the map pattern in the form of a *<u>parallel for loop</u>*.
 - languages such as __*OpenCL*__ and __*CUDA*__ support elemental functions (as "kernels") at the language level.
@@ -199,6 +202,10 @@ show_author_profile: true
 - *<u>Languages supported</u>*:
   - Primarily: C, C++
   - with third-party: Python, Java, Perl, .Net
+
+### Pallelism in Python
+- [multiprocessing — Process-based parallelism](https://docs.python.org/3/library/multiprocessing.html)
+- [threading — Thread-based parallelism](https://docs.python.org/3/library/threading.html)
 
 ## Distributed Shared Memory (DSM) 
 - [Distributed Shared Memory (DSM)](https://en.wikipedia.org/wiki/Distributed_shared_memory) is a form of memory architecture where *<u>physically separated memories</u>* can be addressed as *<u>one logically shared address space</u>*.

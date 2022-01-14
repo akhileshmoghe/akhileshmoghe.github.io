@@ -1,6 +1,6 @@
 ---
-title:  "AWS IoT Twinmaker: "
-permalink: /posts/aws/iot/twinmaker
+title:  "AWS IoT Twinmaker"
+permalink: /_posts/aws/iot/twinmaker
 date:   2021-12-7
 categories:
   - AWS IoT

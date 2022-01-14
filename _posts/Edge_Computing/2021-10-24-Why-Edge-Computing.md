@@ -6,7 +6,6 @@ categories:
   - IoT
   - Cloud
   - Edge Computing
-  - Edge
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
@@ -15,7 +14,6 @@ tags:
   - IoT
   - Cloud
   - Edge Computing
-  - Edge
 author: Akhilesh Moghe
 show_author_profile: true
 ---
@@ -91,5 +89,11 @@ This article highlights the key factors that will drive the need of Edge Compute
 
 These challenges have created a pressing need to move information and analytical models closer to the source of data, in order to provide compute capability inside an environment where connectivity and response times can be controlled.
 That's where Edge Computing comes into picture.
+
+
+## LF EDGE - Open Edge
+- Linux Foundation Umbrella Project
+- [LF EDGE Overview Doc](/assets/docs/edge-computing/open-source-projects/LF-Edge-web-July2021-1.pdf)
+- [EdgeX Foundry Vertical Solutions Doc](/assets/docs/edge-computing/open-source-projects/EdgeX Vertical Solutions WG 20200714.pdf)
 
 
