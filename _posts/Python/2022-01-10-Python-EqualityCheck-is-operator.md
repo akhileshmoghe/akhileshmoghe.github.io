@@ -1,6 +1,6 @@
 ---
 title:  "Python Caching: == operator Vs is-operator"
-permalink: /_post/python/memory_management_garbage_collection
+permalink: /_post/python/python_caching
 date:   2022-01-10 1:33:22 +0530
 #modify_date: 2021-12-31
 categories:
