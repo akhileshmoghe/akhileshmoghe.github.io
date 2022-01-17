@@ -1,6 +1,6 @@
 ---
 title:  "C++ OOPs: Inheritance"
-date:   2018-03-24 12:33:22 +0530
+date:   2018-01-16 12:33:22 +0530
 permalink: /_posts/c-c++/oops/inheritance
 categories:
   - C++
@@ -18,10 +18,10 @@ show_author_profile: true
 
 ## Inheritance
 
-  <object data="/assets/docs/c-cpp/oops/inheritance/C++ Inheritance.pdf" type="application/pdf" width="1000px" height="1000px">
-    <embed src="/assets/docs/c-cpp/oops/inheritance/C++ Inheritance.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/assets/docs/c-cpp/oops/inheritance/C++ Inheritance.pdf">Download PDF</a>.</p>
-    </embed>
+<object data="/assets/docs/c-cpp/oops/inheritance/C++ Inheritance.pdf" type="application/pdf" width="1000px" height="1000px">
+  <embed src="/assets/docs/c-cpp/oops/inheritance/C++ Inheritance.pdf">
+      <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/assets/docs/c-cpp/oops/inheritance/C++ Inheritance.pdf">Download PDF</a>.</p>
+  </embed>
 </object>
 
 ## Class Keyword vs Struct Keyword w.r.t. Inheritance
