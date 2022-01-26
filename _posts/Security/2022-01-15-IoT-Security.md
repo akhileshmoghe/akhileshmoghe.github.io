@@ -84,4 +84,9 @@ show_author_profile: true
   </embed>
 </object>
 
+###### References
+- [AWS IoT Security Primer - Module-1]()
+- [Ten-security-golden-rules-for-IoT-solutions-AWS-IoT-Official-Blog](https://aws.amazon.com/blogs/iot/ten-security-golden-rules-for-iot-solutions/)
+- [OWASP-IoT-Top-10-2018](https://wiki.owasp.org/index.php/OWASP_Internet_of_Things_Project#tab=Main)
+
 

@@ -1,8 +1,8 @@
 ---
-title:  "AWS Training Links and Ramp Up Guides"
+title:  "AWS Links: Training, Materials, Guides"
+permalink: /_posts/aws_training
 date:   2021-10-27 12:33:22 +0530
 categories:
-  - IoT
   - Cloud
   - AWS
 toc: true
@@ -10,7 +10,6 @@ toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - IoT
   - Cloud
   - AWS
 author: Akhilesh Moghe
@@ -19,5 +18,7 @@ show_author_profile: true
 
 
 ### AWS Training Links
-[AWS IoT Ramp-up Guide](/assets/docs/Ramp-Up_Guide_IoT.pdf)\
-[AWS Cloud Practictioner Ramp-up Guide](/assets/docs/Ramp-Up_Guide_CloudPractitioner.pdf)
+- [AWS IoT Ramp-up Guide](/assets/docs/Ramp-Up_Guide_IoT.pdf)
+- [AWS Cloud Practictioner Ramp-up Guide](/assets/docs/Ramp-Up_Guide_CloudPractitioner.pdf)
+- [AWS DevOps Practictioner Ramp-up Guide](/assets/docs/Ramp-Up_Guide_DevOps.pdf)
+- [AWS Architectures](https://aws.amazon.com/architecture/)

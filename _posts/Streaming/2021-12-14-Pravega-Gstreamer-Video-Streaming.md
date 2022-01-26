@@ -93,7 +93,9 @@ $ gst-launch v4l2src ! x264enc ! filesink location=myvideo.h264
 
 
 ###### References:
-  - [Video in Pravega with GStreamer](https://www.youtube.com/watch?v=8MWexheVnHc&t=6s&ab_channel=PravegaIO)
-  
+- [Video in Pravega with GStreamer](https://www.youtube.com/watch?v=8MWexheVnHc&t=6s&ab_channel=PravegaIO)
+- [pravega/video-samples](https://github.com/pravega/video-samples)
+  - This project demonstrates methods to store, process, and read video with *<u>Pravega</u> and *<u>Flink</u>* which are key components of Dell EMC Streaming Data Platform (SDP).
+  - It also includes an application that performs *<u>object detection</u>* using *<u>TensorFlow</u>* and *<u>YOLO</u>*.
   
   

@@ -64,6 +64,7 @@ This article highlights the key factors that will drive the need of Edge Compute
 * In these cases, Routers or the mobiles acting as hotspots can be Edge devices.
 
 ### On-premise AI, ML Inference scenarios:
+* The *<u>volume of data</u>* involved and the *<u>speed of automated decision making</u>* required in applications involving __*Augmented/Virtual/Mixed Reality*__ will require complex and sophisticated systems to help us manage and decipher what is going on, that's where Edge in any form will be the only solution.
 * Allows you to deploy models built and trained in the cloud and run them on edge devices.
 * Edge computing uses this model to process data locally and respond to the event rapidly.
 

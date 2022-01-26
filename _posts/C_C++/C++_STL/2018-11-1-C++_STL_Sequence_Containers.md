@@ -119,7 +119,7 @@ This write-up will explain different __*<u>Sequence containers</u>*__, their res
       - :warning: Inserting or Deleting an element *<u>in the middle</u>* of a vector INVALIDATES all iterators.
       - :heavy_check_mark: Insertion/Deletion *<u>at the end</u>* of the vector, prevents vector iterators from being invalidated.
         - i.e. vectors are designed to be expanded at 'END'
-    - Vectors more efficient in accessing Random elements, than 'deque'/'lists'/'forward_lists'
+    - Vectors more efficient in accessing Random elements, than `deque` / `lists` / `forward_lists`
 
 ### Time Complexity Vector Operations
 

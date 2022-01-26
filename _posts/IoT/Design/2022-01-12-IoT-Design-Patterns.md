@@ -105,5 +105,46 @@ This article is just a reference guide for various IoT design patterns which are
   - [Retaining the device state while the device is offline](https://docs.aws.amazon.com/iot/latest/developerguide/iot-shadows-tutorial.html)
   - [Video: How to Get Started with Device Shadows for AWS IoT Core](https://www.youtube.com/watch?v=XsKGRA5FhiE&ab_channel=AmazonWebServices)
 
+  ---
+
+## Gateway
+<object data="/assets/docs/iot/design/iot-atlas/Gateway-IoT-Design-Pattern.pdf" type="application/pdf" width="875px" height="1000px">
+  <embed src="/assets/docs/iot/design/iot-atlas/Gateway-IoT-Design-Pattern.pdf">
+      <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/assets/docs/iot/design/iot-atlas/Gateway-IoT-Design-Pattern.pdf">Download PDF</a>.</p>
+  </embed>
+</object>
+
+  ---
+
+## Model-View-Controller Device Software Design Pattern
+- Model–view–controller (MVC) is a software design pattern commonly used for developing *<u>user interfaces</u>* that divide the related program logic into three interconnected elements.
+- Traditionally used for *<u>desktop graphical user interfaces (GUIs)</u>*, this pattern is popular for designing *<u>web applications</u>*. Popular programming languages like, Objective-C, Java have MVC frameworks that facilitate implementation of the pattern.
+- Model–View–Controller design divides the application into the components, and defines the interactions between them.
+- <u>Components</u>:
+  - __*Model*__:
+    - This is the central component of the pattern.
+    - It is the application's *<u>dynamic data structure</u>*, independent of the user interface.
+    - It directly manages the __*<u>data</u>*__, __*<u>logic</u>*__ and __*<u>rules</u>*__ of the application.
+    - The model is responsible for managing the data of the application. It receives user input from the controller.
+  - __*View*__:
+    - Any representation of information such as a *<u>chart</u>*, *<u>diagram</u>* or *<u>table</u>*.
+    - The view renders presentation of the model in a particular format.
+  - __*Controller*__:
+    - Accepts *<u>input</u>* and converts it to *<u>commands for the model or view</u>*.
+    - The controller responds to the user input and performs interactions on the data model objects.
+    - The controller optionally *<u>validates user inputs</u>* and then passes the input to the model.
+
+<object data="/assets/docs/iot/design/iot-atlas/Model-View-Controller-Device-Software-Design-Pattern-IoT-Design-Pattern.pdf" type="application/pdf" width="875px" height="1000px">
+  <embed src="/assets/docs/iot/design/iot-atlas/Model-View-Controller-Device-Software-Design-Pattern-IoT-Design-Pattern.pdf">
+      <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/assets/docs/iot/design/iot-atlas/Model-View-Controller-Device-Software-Design-Pattern-IoT-Design-Pattern.pdf">Download PDF</a>.</p>
+  </embed>
+</object>
+
+  ---
 
 ###### References
+- [IoT Atlas](https://iotatlas.net/en/)
+- [Wiki: Model–view–controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
+
+
+
