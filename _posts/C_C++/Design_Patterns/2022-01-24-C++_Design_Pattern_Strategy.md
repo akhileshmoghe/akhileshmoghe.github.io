@@ -122,5 +122,149 @@ if __name__ == "__main__":
     main()
 {% endhighlight %}
 
+  ---
+
+## C++ Reference Implementation
+{% highlight python linenos %}
+#include <iostream.h>
+#include <fstream.h>
+#include <string.h>
+
+class Strategy;
+
+class Context
+{
+  public:
+    enum StrategyType
+    {
+        Dummy, LeftFormating, RightFormating, CenterFormating
+    };
+    Context()
+    {
+        strategy_ = NULL;
+    }
+    void setStrategy(int type, int width);
+    void format_operation();
+  private:
+    Strategy *strategy_;
+};
+
+class Strategy
+{
+  public:
+    Strategy(int width): width_(width){}
+    void pre_formating_algorithm()
+    {
+        char line[80], word[30];
+        ifstream inFile("quote.txt", ios::in);
+        line[0] = '\0';
+
+        inFile >> word;
+        strcat(line, word);
+        while (inFile >> word)
+        {
+            if (strlen(line) + strlen(word) + 1 > width_)
+              formating_algorithm(line);
+            else
+              strcat(line, " ");
+            strcat(line, word);
+        }
+        formating_algorithm(line);
+    }
+  protected:
+    int width_;
+  private:
+    virtual void formating_algorithm(char *line) = 0;
+};
+
+class LeftStrategy: public Strategy
+{
+  public:
+    LeftStrategy(int width): Strategy(width){}
+  private:
+     /* virtual */void formating_algorithm(char *line)
+    {
+        cout << line << endl;
+        line[0] = '\0';
+    }
+};
+
+class RightStrategy: public Strategy
+{
+  public:
+    RightStrategy(int width): Strategy(width){}
+  private:
+     /* virtual */void formating_algorithm(char *line)
+    {
+        char buf[80];
+        int offset = width_ - strlen(line);
+        memset(buf, ' ', 80);
+        strcpy(&(buf[offset]), line);
+        cout << buf << endl;
+        line[0] = '\0';
+    }
+};
+
+class CenterStrategy: public Strategy
+{
+  public:
+    CenterStrategy(int width): Strategy(width){}
+  private:
+     /* virtual */void formating_algorithm(char *line)
+    {
+        char buf[80];
+        int offset = (width_ - strlen(line)) / 2;
+        memset(buf, ' ', 80);
+        strcpy(&(buf[offset]), line);
+        cout << buf << endl;
+        line[0] = '\0';
+    }
+};
+
+void Context::setStrategy(int type, int width)
+{
+  delete strategy_;
+  if (type == LeftFormating)
+    strategy_ = new LeftStrategy(width);
+  else if (type == RightFormating)
+    strategy_ = new RightStrategy(width);
+  else if (type == CenterFormating)
+    strategy_ = new CenterStrategy(width);
+}
+
+void Context::format_operation()
+{
+  strategy_->pre_formating_algorithm();
+}
+
+int main()
+{
+  Context test;
+  int answer, width;
+  cout << "Exit(0) LeftFormating(1) RightFormating(2) CenterFormating(3): ";
+  cin >> answer;
+  while (answer)
+  {
+    cout << "Width: ";
+    cin >> width;
+    test.setStrategy(answer, width);
+    test.format_operation();
+    cout << "Exit(0) LeftFormating(1) RightFormating(2) CenterFormating(3): ";
+    cin >> answer;
+  }
+  return 0;
+}
+
+Output
+  Exit(0) LeftFormating(1) RightFormating(2) CenterFormating(3): 2
+  Width: 75
+  Exit(0) LeftFormating(1) RightFormating(2) CenterFormating(3): 3
+  Width: 75
+{% endhighlight %}
+
 ###### References:
-- 
+- [Wiki: Strategy Pattern](https://en.wikipedia.org/wiki/Strategy_pattern)
+- [Sourcemaking: Strategy Pattern](https://sourcemaking.com/design_patterns/strategy)
+- [Vincehuston: Strategy Pattern](http://www.vincehuston.org/dp/strategy.html)
+
+
