@@ -18,7 +18,7 @@ sidebar:
 </figure>
 
 I’m an *Agile, Result-oriented* Engineer from Pune, India. I have completed my graduation in __Electronics and Telecommunications *(B.E.)*__ from *YCCE, RTMNU Nagpur University*. After graduation, I completed a __Post Graduate Diploma program in *Embedded Systems*__ from *CDAC, Hyderabad*, before joining the IT industry with *__Persistent Systems__*.\
-In my career, spanning over a decade now with Persistent Systems I am steadily progressing from being a Software Engineer in 2011, to __*<u>Senior Engineering Lead</u>*__ *in 2021*, gathering experiences in technology domains like __Telecom-Multimedia__, *Enterprise Content Management*, __*Embedded Systems*__, __*<u>Internet of Things</u>*__, __Cloud__.
+In my career, spanning over a decade now, with Persistent Systems, I am steadily progressing from being a Software Engineer in 2011, to __*<u>Senior Engineering Lead</u>*__ *in 2021*, gathering experiences in technology domains like __Telecom-Multimedia__, *Enterprise Content Management*, __*Embedded Systems*__, __*<u>Internet of Things</u>*__, __Cloud__.
 
 #### *Why do I do, Whatever I do?*
 

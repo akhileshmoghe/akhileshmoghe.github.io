@@ -131,6 +131,10 @@ show_author_profile: true
   - Used for one-way notifications to the device app.
 - [Further detailed comparison of the various cloud-to-device communication options](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-c2d-guidance)
 
+## Azure IoT Hub on Premise:
+- [Running your Azure IoT Hub based solution on-premises!](https://techcommunity.microsoft.com/t5/internet-of-things/running-your-azure-iot-hub-based-solution-on-premises/ba-p/1835867)
+- [Bring your whole IoT Solution on premises](https://www.youtube.com/watch?v=8jm6RvCGkaE&list=PL1ljc761XCiYVaDEfS4X-f493capyL-cL&index=41&ab_channel=MicrosoftIoTDevelopers)
+
 ## Lambda/Serverless Architecture few points to note:
 - The Lambda architecture of Azure IoT enables multiple paths for data storage and processing.
 - Possible issues with Lambda architecture:
@@ -140,5 +144,10 @@ show_author_profile: true
   - Costs:
     - Fast services tend to be the more expensive, slower services cheaper.
     - There's usually a compromise to be made.
+
+###### References
+- [Azure IoT Samples](https://github.com/orgs/Azure-Samples/repositories?q=iot&type=&language=&sort=)
+
+
 
 

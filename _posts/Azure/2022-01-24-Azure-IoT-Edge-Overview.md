@@ -137,20 +137,6 @@ show_author_profile: true
 - Further Reference:
   [Azure-Samples/azure-iotedge-blobstorage-sample](https://github.com/Azure-Samples/azure-iotedge-blobstorage-sample)
 
-## Firmware Update for MCUs (non-RTOS) connected to IoT/Edge devices:
-- For MCUs, that can run [Azure RTOS](https://docs.microsoft.com/en-us/azure/rtos/), [Device Update for IoT Hub]() service provides *<u>OS image-based updates</u>*.
-  - [Azure RTOS for STM32, Renesas](https://github.com/azure-rtos/samples)
-- MCUs which do not run RTOS will usually be categorized as the devices which cannot be connected and cannot have an identity in IoT Hub. 
-- Such MCUs will use IOT Edge devices in __*Translational Gateway Pattern*__ and in turn can be configured in *<u>Protocol translational pattern*</u> or *<u>Identity translational pattern</u>*.
-- Such MCUs are usually connected to Edge/IoT devices over __*serial protocol*__.
-- If *<u>Identity translational pattern</u>* is used, *<u>each such MCU will have its own identity and Device Twin in IoT Hub</u>*.
-- As MCU has its own Device Twin, a standard firmware update flow can be established. Just the difference will be that, the *<u>parent IoT/Edge device will have to own the responsibility of Device Twin interaction, Download, verify, apply firmware images</u>*.
-- __*<u>firmware update flow</u>*__:
-
-  ![azure-iot-firmware-update-overview](/assets/images/azure/iot/firmware-update/azure-iot-firmware-update-overview.png)
-- Reference:
-  - [Implement a device firmware update process](https://docs.microsoft.com/en-us/azure/iot-hub/tutorial-firmware-update)
-
 ## ML model deployment to Edge Gateway:
 - In Azure framework, *<u>trained ML model</u>* is deployed as a *<u>container image</u>*.
 - So, the ML model deployment to IoT Edge Gateway is almost like pulling any container image from repository. 
@@ -189,9 +175,6 @@ show_author_profile: true
     - HTTP extension module has a Python Flask framework webserver running in container.
     - Readme shows webserver supporting HTTPS, But I did not understand how it’s serving HTTPS. But nevertheless, I guess, we can do HTTPS.
 - [Workload API certificate can be used to connect to IoT Hub, other modules, or start a server](https://docs.microsoft.com/en-us/azure/iot-edge/iot-edge-security-manager?view=iotedge-2020-11#workload-api).
-
-## Video Analytics on Azure IoT Edge:
-- [Azure-Samples/Custom-vision-service-iot-edge-raspberry-pi](https://github.com/Azure-Samples/Custom-vision-service-iot-edge-raspberry-pi)
 
 ## Azure IoT Edge MQTT Broker:
 - [IoT Edge Local Communication](https://docs.microsoft.com/en-us/azure/iot-edge/iot-edge-runtime?view=iotedge-2020-11#local-communication)
@@ -233,9 +216,9 @@ show_author_profile: true
   - [Event Hub Vs Event Grid Vs Service Bus (in Azure Cloud)](https://docs.microsoft.com/en-us/azure/event-grid/compare-messaging-services)
 
 ## Monitoring and Troubleshooting for Azure IoT Edge (metrics-collector module):
-- Measure metrics like *<u>message latencies</u> and *<u>throughput</u>; both between local modules and Upstream communication.
+- Measure metrics like *<u>message latencies</u>* and *<u>throughput</u>*; both between local modules and Upstream communication.
   - *<u>Upstream can be</u>* ingestion into the __*Azure IoT cloud*__ or the __*parent IoT Edge device*__ in a nested configuration.
-- right-size your hardware by analyzing *<u>resource consumption</u>* data at both workload and host level. 
+- Right-size your hardware by analyzing *<u>resource consumption</u>* data at both workload and host level. 
 - Integrate information from custom modules.
   - [Add custom metrics (Preview)](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-add-custom-metrics?view=iotedge-2020-11)
 - Monitor *<u>locked-down/nested gateway assets/devices</u>*
@@ -281,5 +264,6 @@ show_author_profile: true
 ###### References
 - [Azure IoT Edge: Documentation](https://docs.microsoft.com/en-in/azure/iot-edge/?view=iotedge-2020-11)
 - [IoT Edge device as a gateway](https://docs.microsoft.com/en-us/azure/iot-edge/iot-edge-as-gateway?view=iotedge-2020-11)
-
+- [Azure-Samples/azure-intelligent-edge-patterns](https://github.com/Azure-Samples/azure-intelligent-edge-patterns)
+- [Azure IoT Samples](https://github.com/orgs/Azure-Samples/repositories?q=iot&type=&language=&sort=)
 

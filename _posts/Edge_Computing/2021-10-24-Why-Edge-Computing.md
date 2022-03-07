@@ -20,7 +20,7 @@ show_author_profile: true
 
 
 ## Introduction
-This article highlights the key factors that will drive the need of Edge Compute in ever growing field of IoT.
+This article highlights the key factors that will drive the need of Edge Compute in ever growing field of IoT. We will also see few Open-source LF-Edge projects, which are gaining traction in this area.
 
 
 ## Why Edge Compute?
@@ -74,7 +74,19 @@ This article highlights the key factors that will drive the need of Edge Compute
 * Though internet connectivity is intermittent, we can have local uninterrupted connectivity to IoT devices.
 * Having Edge processing, we can have AI, ML inferences on Edge devices, without bothering about internet cloud connectivity.
 
- 
+## The Power of Edge Computing:
+- [The global market for Edge Computing is expected to reach US$18.7 billion by 2027](https://www.businesswire.com/news/home/20201208005881/en/Global-Edge-Computing-Market-2020-2027---As-the-World-Searches-for-a-Solution-to-Latency-in-IoT-Devices-Edge-Computing-Will-Receive-a-27.7-Growth-Boost---ResearchAndMarkets.com).
+
+## Types of Edges & Considerations:
+- All Edge Is Not the Same. User and Network Edge variations as per LF-Edge foundation.
+![LF_Edge_s_definition_of_edge_locations](/assets/images/edge-computing/LF_Edge_s_definition_of_edge_locations.png)
+
+- [5G Americas whitepaper](https://www.5gamericas.org/wp-content/uploads/2019/10/5G-Americas-EDGE-White-Paper-FINAL.pdf) on Edge provides a network-centric view of where Edge can live.
+![AI_ML_Decision_Layers_over_Edge_Nodes](/assets/images/edge-computing/AI_ML_Decision_Layers_over_Edge_Nodes.png)
+
+- Cross-Layer Concerns for Different Edge Implementations (By European Edge Computing Consortium, EECC)
+![Cross_Layer_Concerns](/assets/images/edge-computing/Cross_Layer_Concerns.png)
+
 ## IoT Architecture Limitations:
 ### Today’s IoT Approach:
 * In today’s prevailing IoT architecture, sensor data is transmitted over a wide area network to be centralized, processed and analyzed — which creates an additional supply of enriched data.

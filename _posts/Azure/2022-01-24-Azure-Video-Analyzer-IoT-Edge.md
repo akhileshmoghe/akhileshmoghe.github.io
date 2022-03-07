@@ -136,13 +136,11 @@ show_author_profile: true
 
 &nbsp;
 
-- <u>References</u>:
-  - [Video Analyzer Pipeline](https://docs.microsoft.com/en-us/azure/azure-video-analyzer/video-analyzer-docs/pipeline)
-  - [Pipeline extension](https://docs.microsoft.com/en-us/azure/azure-video-analyzer/video-analyzer-docs/pipeline-extension)
-  - [Video Sink - Video Recording to Azure Storage with Intermittent Connectivity](https://docs.microsoft.com/en-us/azure/azure-video-analyzer/video-analyzer-docs/continuous-video-recording)
-
-
 ###### References:
-
+- [Video Analyzer Pipeline](https://docs.microsoft.com/en-us/azure/azure-video-analyzer/video-analyzer-docs/pipeline)
+- [Pipeline extension](https://docs.microsoft.com/en-us/azure/azure-video-analyzer/video-analyzer-docs/pipeline-extension)
+- [Video Sink - Video Recording to Azure Storage with Intermittent Connectivity](https://docs.microsoft.com/en-us/azure/azure-video-analyzer/video-analyzer-docs/continuous-video-recording)
+- __Video Analytics on Azure IoT Edge__:
+  - [Azure-Samples/Custom-vision-service-iot-edge-raspberry-pi](https://github.com/Azure-Samples/Custom-vision-service-iot-edge-raspberry-pi)
 
 

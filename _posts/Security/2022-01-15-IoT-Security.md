@@ -1,7 +1,7 @@
 ---
 title:  "IoT Security: Do's & Don'ts"
 date:   2022-01-15 12:33:22 +0530
-permalink: /_posts/iot/security
+permalink: /_posts/iot/security/do's-&-don'ts
 categories:
   - IoT
   - Cloud

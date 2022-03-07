@@ -22,8 +22,8 @@ show_author_profile: true
 AWS IoT Device Management makes it easy to securely onboard, organize, monitor, and remotely manage IoT devices at scale. In this blog we will explore AWS IoT Device management in details.
 
 ## On-Boarding & Provisioning of Devices:
-* onboard connected devices in bulk.
-* onboard new devices by using:
+* Onboard connected devices in bulk.
+* Onboard new devices by using:
   * the IoT management console or
   * APIs to upload templates that you populate with information like:
     * device manufacturer
@@ -32,21 +32,21 @@ AWS IoT Device Management makes it easy to securely onboard, organize, monitor, 
     * security policies
 * Devices may either connect directly to IoT Core or connect indirectly via an AWS Greengrass powered gateway.
 * AWS IoT provides four ways to provision devices:
-  * single-thing provisioning
-  * bulk provisioning
-  * just-in-time provisioning (JITP)
-  * just-in-time registration (JITR)
+  * Single-thing provisioning
+  * Bulk provisioning
+  * Just-In-Time Provisioning (JITP)
+  * just-In-Time Registration (JITR)
 
 ### Single device provisioning:
 * <u>Ideal use-cases</u>:
-  * when your IoT solution requires you to provision either one device or a small number of devices at a time.
+  * When your IoT solution requires you to provision either one device or a small number of devices at a time.
   * If your company only has a handful of devices and you expect this number to grow slowly.
 * <u>Ways</u>:
   * Using Management Console
   * Using AWS CLI Commandline interface
   ![AWS CLI: IoT Thing creation](/assets/images/aws/aws-cli-iot-thing-create.jpg)
   ![AWS CLI: IoT Thing Certs and Policy creation](/assets/images/aws/aws-cli-iot-cert-policy-create-attach.jpg)
-  * Using register-thing API call
+  * Using [register-thing](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterThing.html) API call
 
   ---
 
@@ -69,20 +69,20 @@ AWS IoT Device Management makes it easy to securely onboard, organize, monitor, 
   * When you have a reached a point where it makes sense to consider provisioning in advance!
     * Like in cases of Consumer Products, which are produced in bulk but for a long time are not purchased.
     * Such products need activation whenever they connect for the first time to cloud.
-    * the manufacturer cannot predict when a device will be used first-time and act on provisioning process.
+    * The manufacturer cannot predict when a device will be used first-time and act on provisioning process.
     * So, in such situations JITP is an ideal way.
 * Just-In-Time Provisioning (JITP) allows you to register devices dynamically.
 * In order to use JITP:
-  * you register your own CA with AWS IoT,
-  * *<u>enable automatic registration</u>* within AWS IoT
-  * *<u>associate the provisioning template to your CA</u>*.
+  * You register your own CA with AWS IoT,
+  * *<u>Enable automatic registration</u>* within AWS IoT
+  * *<u>Associate the provisioning template to your CA</u>*.
     * __*Provisioning Template*__
-      * There are two types of provisioning templates in AWS IoT.
-      * One is used for just-in-time provisioning (JITP) and bulk registration and
-      * the second is used for fleet provisioning.
+      * There are *<u>two types of provisioning templates</u>* in AWS IoT.
+        * One is used for just-in-time provisioning (JITP) and bulk registration and
+        * The second is used for fleet provisioning.
       * [Template example for JITP and bulk registration](https://docs.aws.amazon.com/iot/latest/developerguide/provision-template.html#bulk-template-example)
   * You will also generate your own public key infrastructure (PKI) keys and certificates
-  * and then copy them to your devices.
+  * And then copy them to your devices.
 
   #### Register your CA certificate, to create your own client/device certificates:
   * AWS IoT supports client/device certificates signed by other root certificate authorities (CA).
@@ -94,7 +94,7 @@ AWS IoT Device Management makes it easy to securely onboard, organize, monitor, 
       * [Deactivate a CA certificate](https://docs.aws.amazon.com/iot/latest/developerguide/deactivate-ca-cert.html)
     * [Create a client/device certificate using your CA certificate](https://docs.aws.amazon.com/iot/latest/developerguide/create-device-cert.html)
 
-* When your device connects to AWS IoT for the first time, AWS IoT automatically calls the __*RegisterThing*__ API, its certificate is registered, and a notification is published to an internal topic (*$aws/events/certificates/registered/certificateID*).
+* When your device connects to AWS IoT for the first time, AWS IoT automatically calls the __*RegisterThing*__ API, its certificate is registered, and a notification is published to an internal topic `$aws/events/certificates/registered/certificateID`.
 * By using the __*AWS IoT Rules engine*__, the registration event can trigger an __*AWS Lambda*__ function that takes the appropriate steps you need to meet your workflow requirements—for example, merging content from other resources (such as an on-premises database).
 * Detail Steps for JITP:
   * [AWS IoT Device Management Workshop: JITP - Just-in-Time Provisioning](https://github.com/aws-samples/aws-iot-device-management-workshop/blob/master/AWS_IoT_Device_Management_Workshop.md#JITP)

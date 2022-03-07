@@ -9,6 +9,72 @@ header:
       en      : &EN       About Me
     url: /about.html
     
+topics:
+  - title:      Edge-IoT
+    children:
+      - title:  IoT
+        url:    /_posts/iot_topics
+      - title:  Edge Computing
+        url:    /_posts/edge_computing_topics
+      - title:  Embedded
+        url:    /_posts/embedded_topics
+  - title:      Cloud
+    children:
+      - title:  AWS
+        url:    /_posts/aws_topics
+      - title:  Azure
+        url:    /_posts/azure_topics
+  - title:      AI-ML
+    children:
+      - title:  Machine Learning
+        url:    /_posts/ml_topics
+      - title:  Artificial Intelligence
+        url:    /_posts/ai_topics
+  - title:      DevOps
+    children:
+#      - title:  Git
+#        url:    /_posts/git_topics
+      - title:  Containerization
+        url:    /_posts/containers_topics
+      - title:  Orchestration
+        url:    /_posts/Orchestration_topics
+#  - title:      Data-Analytics
+#    children:
+#      - title:  Streaming Data
+#        url:    /_posts/streaming-data_topics
+#      - title:  Databases
+#        url:    /_posts/databases_topics
+  - title:      Networking
+    children:
+      - title:  5G
+        url:    /_posts/5g_topics
+  - title:      Computer Science
+    children:
+      - title:  C-C++
+        url:    /_posts/c_c++_topics
+      - title:  Python
+        url:    /_posts/python_topics
+      - title:  Algorithms
+        url:    /_posts/algorithms_topics
+      - title:  Data Structures
+        url:    /_posts/data_structures_topics
+#      - title:  OS
+#        url:    /_posts/os_topics
+  - title:      Architecture & System Design
+    children:
+      - title:  Design Patterns
+        url:    /_posts/design_patterns_topics
+#      - title:  Microservices
+#        url:    /_posts/microservices_topics
+#  - title:      Security
+#    children:
+#      - title:  Network Security
+#        url:    /_posts/network-security_topics
+#      - title:  Cloud Security
+#        url:    /_posts/cloud-security_topics
+#      - title:  Device Security
+#        url:    /_posts/network-security_topics
+
 personal-info:
   - title:      About Me
     children:
@@ -24,3 +90,15 @@ personal-info:
         url:    certifications
       - title:  CV
         url:    cv
+
+parallel-computing:
+  - title:      Parallel Computing
+    children:
+      - title:  Parallel Processing
+        url:    /_post/parallel_computing
+      - title:  Map-Reduce-Filter
+        url:    /_post/python/map_reduce_filter
+  - title:  
+    children:
+      - title:  
+        url:    

@@ -3,18 +3,14 @@ title:  "MQTT Protocol"
 date:   2021-11-10 12:33:22 +0530
 permalink: /_posts/iot/protocols/mqtt
 categories:
-  - On-Premise Cloud
-  - Cloud
-  - AWS
+  - IoT
   - Edge IoT
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - On-Premise Cloud
-  - Cloud
-  - AWS
+  - IoT
   - Edge IoT
 author: Akhilesh Moghe
 show_author_profile: true
@@ -128,6 +124,13 @@ can be deleted from the outbound queue.\
       - Single Level
       - used to match Just ONE Topic Level.
         - e.g. `truck/+` <u>matches</u> `truck/contents` *<u>but not</u>* `truck/contents/rfid`
+
+## MQTT Essentials - All key features of MQTT
+<object data="/assets/docs/iot/protocols/mqtt/hivemq-ebook-mqtt-essentials.pdf" type="application/pdf" width="850px" height="1200px">
+  <embed src="/assets/docs/iot/protocols/mqtt/hivemq-ebook-mqtt-essentials.pdf">
+      <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/assets/docs/iot/protocols/mqtt/hivemq-ebook-mqtt-essentials.pdf">Download PDF</a>.</p>
+  </embed>
+</object>
 
 ## MQTT Brokers Comparison
 - [Stress-Testing MQTT Brokers: A Comparative Analysis of Performance Measurements:](/assets/docs/mqtt/Stress-Testing-MQTT-Brokers.pdf)
