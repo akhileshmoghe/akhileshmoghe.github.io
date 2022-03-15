@@ -63,7 +63,7 @@ gr { color: grey}
 - Beyond object-oriented design, ISP is also a key principle in the *<u><o>design of distributed systems</o></u>* in general and *<u><o>microservices</o></u>* in particular. ISP is one of the six IDEALS principles for microservice design.
 - Within object-oriented design, interfaces provide layers of abstraction that simplify code and create a barrier preventing coupling to dependencies. A system may become so coupled at multiple levels that it is no longer possible to make a change in one place without necessitating many additional changes. Using an *<u>interface</u>* or *<u>an abstract class</u>* can prevent this side effect.
 
-## Dependency Inversion Principle
+## [*<u>Dependency Inversion Principle</u>*](https://en.wikipedia.org/wiki/Dependency_inversion_principle)
 - In object-oriented design, the __*Dependency Inversion Principle*__ is a specific methodology for *<u>loosely coupling software modules</u>*.
 - The principle states:
   - *<u><r>High-level modules should not import anything from low-level modules</r></u>*. *<u>Both should depend on abstractions (e.g., interfaces)</u>*.
@@ -90,6 +90,6 @@ gr { color: grey}
 &nbsp;
 ###### References:
 - [Wiki: SOLID](https://en.wikipedia.org/wiki/SOLID)
-
+- [A very good explaination of SOLID Principles in simple examples](https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/)
 
 
