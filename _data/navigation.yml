@@ -86,10 +86,19 @@ personal-info:
         url:    experience
       - title:  Recognitions
         url:    awards
-      - title:  Certifications
-        url:    certifications
       - title:  CV
         url:    cv
+  - title:  Certifications
+    children:
+      - title: PG Diploma in Embedded Systems & Design
+        url:    certifications#post-graduate-diploma-in-embedded-systems-and-design
+      - title: AI on Jetson Nano
+        url:    certifications#ai-on-jetson-nano
+      - title: MongoDB Basics
+        url:    certifications#mongodb-basics
+      - title: Docker Essentials
+        url:    certifications#docker-essentials
+
 
 parallel-computing:
   - title:      Parallel Computing

@@ -78,6 +78,12 @@ This write-up will only focus on AWS Sagemaker ML service with respect to ML mod
   - [Machine Learning at the Edge with AWS Outposts and Amazon SageMaker](https://aws.amazon.com/blogs/machine-learning/machine-learning-at-the-edge-with-aws-outposts-and-amazon-sagemaker/)
   ![aws-outpost-sagemaker-edge-manager](/assets/images/aws/aws-outpost-sagemaker-edge-manager.png)
 
+  ---
+
+###### Further References:
+- [Amazon SageMaker Neo makes it easier to get faster inference for more ML models with NVIDIA TensorRT](https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-neo-makes-it-easier-to-get-faster-inference-for-more-ml-models-with-nvidia-tensorrt/)
+
+
 ###### Reference
 - [Amazon SageMaker Neo](https://aws.amazon.com/sagemaker/neo/)
 - [Sagemaker Edge Manager YouTube](https://www.youtube.com/watch?v=zS0Q3bdsLiU&t=3s&ab_channel=AmazonWebServices)

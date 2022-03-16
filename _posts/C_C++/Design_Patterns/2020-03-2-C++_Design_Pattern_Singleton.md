@@ -4,6 +4,7 @@ date:   2020-03-2 5:33:22 +0530
 permalink: /_posts/c-c++/design_patterns/singleton
 categories:
   - C++
+  - C++11
   - OOPs
   - Design Patterns
 toc: true
@@ -12,6 +13,7 @@ toc_icon: "file-alt"
 toc_sticky : true
 tags:
   - C++
+  - C++11
   - OOPs
   - Design Patterns
 author: Akhilesh Moghe

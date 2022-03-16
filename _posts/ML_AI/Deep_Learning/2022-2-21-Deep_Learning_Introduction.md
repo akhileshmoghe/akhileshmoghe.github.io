@@ -18,6 +18,18 @@ author: Akhilesh Moghe
 show_author_profile: true
 ---
 
+## AI and Deep Learning Evolution
+- As humans, we generalize what we see based on our experience. In a similar way, we can use a branch of AI called __*Machine Learning*__ to generalize and *<u>classify images</u>* based on experience in the form of lots of example data.
+- In particular, we will use deep neural network models, or __*Deep Learning*__ to recognize relevant patterns in an image dataset, and ultimately match new images to correct answers.
+![ai-ml-dl-evolution](/assets/images/ml_ai_dl/ai-ml-dl-evolution.png)
+
+## Deep Learning Models
+- A Deep Learning model consists of a *<u>neural network</u>* with internal parameters, or __*<u>weights</u>*__, configured to map inputs to outputs. In [*<u>Image Classification</u>*](), the inputs are the pixels from a camera image and the outputs are the possible categories, or __*<u>classes</u>*__ that the model is trained to recognize. The choices might be 1000 different objects, or only two. Multiple labeled examples must be provided to the model over and over to __*<u>train</u>*__ it to recognize the images. Once the model is trained, it can be run on live data and provide results in real time. This is called __*<u>inference</u>*__.
+- Before training, the model cannot accurately determine the correct class from an image input, because the weights are wrong.
+- Labeled examples of images are iteratively submitted to the network with a learning algorithm. If the network gets the "wrong" answer (the label doesn't match), the learning algorithm adjusts the weights a little bit. Each iteration of training is supposed to improve the model's performance, it is termed as __*<u>epoch</u>*__.
+- Over many computationally intensive iterations, the accuracy improves to the point that the model can reliably determine the class for an input image.
+![ai_difference_between_deep_learning_training_inference](/assets/images/ml_ai_dl/dl/ai_difference_between_deep_learning_training_inference.jpg)
+
 ## Neural Networks:
 - Deep Learning is all about __*<u>Neural Networks</u>*__.
 - The structure of a neural network is an interconnected web of __*Nodes/Neurons*__, and the __*Edges*__ that join them together.
@@ -46,4 +58,5 @@ show_author_profile: true
   - The process of improving a neural net’s accuracy is called __*training*__, just like with other machine learning methods.
   - To train the net, the output from forward prop is compared to the output that is known to be correct, and the *<u>cost</u>* is the difference of the two. The point of training is to make that cost as small as possible, across millions of training examples. To do this, the net tweaks the weights and biases step by step until the prediction closely matches the correct output.
   - Once trained well, a neural net has the potential to make accurate predictions each time.
+
 
