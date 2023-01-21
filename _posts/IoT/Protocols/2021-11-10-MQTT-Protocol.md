@@ -142,6 +142,12 @@ can be deleted from the outbound queue.\
   - __*<u>ActiveMQ</u>*__ scales well in distributed/multi-core environment to beat all other brokers’ performance.
   - If the hardware is *<u>resource-constrained</u>* (CPU/Memory/IO/Performance), then __*<u>Mosquitto</u>*__ or __*<u>Bevywise MQTT Route</u>*__ can be taken as better choices.
 
+## Testing Scenarios for an MQTT Broker
+- [Top 10 IoT Scalability Tests for an MQTT Broker](https://www.hivemq.com/blog/mqtt-broker-scalability-tests/)
+
+## MQTT Broker Selection Criteria:
+- [MQTT Broker Comparison – Which is the Best for Your IoT Application?](https://www.hivemq.com/blog/mqtt-broker-comparison-iot-application/)
+
 ## Running MQTT broker in Containerized mode
   - [eclipse-mosquitto](https://hub.docker.com/_/eclipse-mosquitto?tab=description)
     - Maintained by: the Eclipse Foundation
