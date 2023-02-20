@@ -38,9 +38,9 @@ article_header:
     - text: Machine Learning
       type: outline-theme-dark
       url: /_posts/ml_topics
-    - text: Artificial Intelligence
-      type: outline-theme-dark
-      url: /_posts/ai_topics
+#    - text: Artificial Intelligence
+#      type: outline-theme-dark
+#      url: /_posts/ai_topics
     - text: Containers
       type: outline-theme-dark
       url: /_posts/containers_topics
@@ -76,18 +76,20 @@ article_header:
   background_image:
     gradient: "linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .6))"
     src: /assets/images/iot-background-mage.png
-#data:
-#  sections:
-#    - title: Topics of My Interest & Experience
-#      excerpt: >
-#        Click on the topic of your interest to see my study articles.
-#      height: 200vh
-#      theme: dark
-#      background_color: "#000000"
-#      background_image:
-#        gradient: "linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .6))"
-#        src: /docs/assets/images/cover4.jpg
-#      actions:
-#        - text: IoT
-#          url: /_posts/iot_topics
+data:
+  sections:
+    - title: Recent Articles
+      children:
+        - excerpt: Ways of managing data in Docker Containers
+          actions:
+            - text: Learn More
+              url: /_post/devops/containers/docker-container-storage-volumes
+        - excerpt: Securing MQTT Communication with Username-Password & TLS/SSL Certificates using Mosquitto MQTT Broker
+          actions:
+            - text: Learn More
+              url: /_posts/iot/protocols/secure-mqtt
+        - excerpt: Complete tutorial to create a Debian Minimal RootFS
+          actions:
+            - text: Learn More
+              url: /_post/linux/debian_minimal_rootfs
 ---
