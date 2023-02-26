@@ -3,14 +3,14 @@ title:  "Why prefer Static memory allocation over Dynamic in Embedded Firmmware"
 date:   2021-11-12 12:33:22 +0530
 permalink: /_posts/embedded/firmware/memory_allocation
 categories:
-  - Embedded
+  - Embedded Systems
   - Memory Management
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - Embedded
+  - Embedded Systems
   - Memory Management
 author: Akhilesh Moghe
 show_author_profile: true

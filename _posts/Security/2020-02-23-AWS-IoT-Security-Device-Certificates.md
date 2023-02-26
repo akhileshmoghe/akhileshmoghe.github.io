@@ -4,16 +4,20 @@ date:   2020-02-23 12:33:22 +0530
 permalink: /_posts/aws/iot/security/device_certificates
 categories:
   - IoT
-  - AWS IoT
-  - Security
+  - AWS
+  - Cloud Couputing
+  - IoT Security
+  - Secure Communication
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
   - IoT
-  - AWS IoT
-  - Security
+  - AWS
+  - Cloud Couputing
+  - IoT Security
+  - Secure Communication
 author: Akhilesh Moghe
 show_author_profile: true
 ---

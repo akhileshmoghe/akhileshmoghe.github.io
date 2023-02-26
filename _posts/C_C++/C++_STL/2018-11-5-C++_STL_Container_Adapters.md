@@ -5,7 +5,6 @@ permalink: /_posts/c-c++/stl/container_adapters
 categories:
   - C++
   - Data Structures
-  - STL
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
@@ -13,7 +12,6 @@ toc_sticky : true
 tags:
   - C++
   - Data Structures
-  - STL
 author: Akhilesh Moghe
 show_author_profile: true
 ---

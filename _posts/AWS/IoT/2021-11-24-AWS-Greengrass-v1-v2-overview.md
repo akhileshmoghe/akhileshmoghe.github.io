@@ -3,19 +3,19 @@ title:  "AWS IoT Greengrass v2 Overview"
 date:   2021-11-24 12:33:22 +0530
 permalink: /_posts/aws/ml/iot/greengrass-v2-overview
 categories:
-  - AWS IoT
-  - Edge IoT
+  - Cloud Computing
+  - AWS
+  - Edge Computing
   - IoT
-  - Machine Learning
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - AWS IoT
-  - Edge IoT
+  - Cloud Computing
+  - AWS
+  - Edge Computing
   - IoT
-  - Machine Learning
 author: Akhilesh Moghe
 show_author_profile: true
 ---

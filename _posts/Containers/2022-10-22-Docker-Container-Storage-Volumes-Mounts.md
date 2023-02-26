@@ -3,7 +3,6 @@ title:  "Ways of managing data in Docker Containers"
 permalink: /_post/devops/containers/docker-container-storage-volumes
 date:   2022-10-22 1:33:22 +0530
 categories:
-  - DevOps
   - Containers
   - Docker
 toc: true
@@ -11,7 +10,6 @@ toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - DevOps
   - Containers
   - Docker
 author: Akhilesh Moghe

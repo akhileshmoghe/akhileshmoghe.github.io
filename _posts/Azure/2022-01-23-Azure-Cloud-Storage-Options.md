@@ -3,17 +3,17 @@ title:  "Azure Cloud Storage options for IoT scenarios"
 date:   2022-01-23 12:33:22 +0530
 permalink: /_posts/azure/storage/azure-cloud-storage-options-for-iot-scenarios
 categories:
-  - Azure IoT
+  - Cloud Computing
+  - Azure
   - IoT
-  - Cloud
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - Azure IoT
+  - Cloud Computing
+  - Azure
   - IoT
-  - Cloud
 author: Akhilesh Moghe
 show_author_profile: true
 ---

@@ -6,7 +6,8 @@ categories:
   - 5G
   - IoT
   - Edge Computing
-  - AWS IoT
+  - Cloud Computing
+  - AWS
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
@@ -15,7 +16,8 @@ tags:
   - 5G
   - IoT
   - Edge Computing
-  - AWS IoT
+  - Cloud Computing
+  - AWS
 author: Akhilesh Moghe
 show_author_profile: true
 ---

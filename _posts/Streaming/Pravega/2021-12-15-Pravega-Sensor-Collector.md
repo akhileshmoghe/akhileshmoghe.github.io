@@ -4,18 +4,18 @@ permalink: /_post/streaming_data/pravega_sensor_collector
 date:   2021-12-15 1:33:22 +0530
 categories:
   - Pravega
-  - Streming Data
+  - Streaming Data
   - IoT
-  - Edge IoT
+  - Edge Computing
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
   - Pravega
-  - Streming Data
+  - Streaming Data
   - IoT
-  - Edge IoT
+  - Edge Computing
 author: Akhilesh Moghe
 show_author_profile: true
 ---

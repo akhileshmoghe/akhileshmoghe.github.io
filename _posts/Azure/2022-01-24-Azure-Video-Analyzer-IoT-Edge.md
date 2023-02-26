@@ -3,21 +3,21 @@ title:  "Azure Video Analyzer for IoT Edge"
 date:   2022-01-24 12:33:22 +0530
 permalink: /_posts/azure/iot/azure-video-analyzer-iot-edge
 categories:
-  - Azure IoT
+  - Cloud Computing
+  - Azure
   - IoT
-  - Edge IoT
-  - Cloud
-  - Video Analytics
+  - Edge Computing
+  - Streaming Data
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - Azure IoT
+  - Cloud Computing
+  - Azure
   - IoT
-  - Edge IoT
-  - Cloud
-  - Video Analytics
+  - Edge Computing
+  - Streaming Data
 author: Akhilesh Moghe
 show_author_profile: true
 ---

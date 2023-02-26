@@ -3,7 +3,6 @@ title:  "Docker Containers Essentials"
 permalink: /_post/devops/containers/docker-container-essentials
 date:   2019-11-28 1:33:22 +0530
 categories:
-  - DevOps
   - Containers
   - Docker
 toc: true
@@ -11,7 +10,6 @@ toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - DevOps
   - Containers
   - Docker
 author: Akhilesh Moghe

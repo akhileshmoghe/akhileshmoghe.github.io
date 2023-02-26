@@ -5,7 +5,6 @@ permalink: /_posts/linux/processes/limit_process_to_cpu_cores
 categories:
   - Linux
   - Systems Engineering
-  - OS
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
@@ -13,7 +12,6 @@ toc_sticky : true
 tags:
   - Linux
   - Systems Engineering
-  - OS
 author: Akhilesh Moghe
 show_author_profile: true
 ---

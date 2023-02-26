@@ -3,20 +3,20 @@ title:  "Differences between AWS Greengrass v1 & v2"
 permalink: /_posts/aws/iot/aws-greengrass-v1-v2
 date:   2021-11-24 12:33:22 +0530
 categories:
-  - AWS
-  - IoT
-  - Edge Computing
   - Cloud Computing
+  - AWS
+  - Edge Computing
+  - IoT
 #toc: true
 #toc_label: "Contents"
 #toc_icon: "file-alt"
 #toc_sticky : true
 full_width: true
 tags:
-  - AWS
-  - IoT
-  - Edge Computing
   - Cloud Computing
+  - AWS
+  - Edge Computing
+  - IoT
 author: Akhilesh Moghe
 show_author_profile: true
 ---

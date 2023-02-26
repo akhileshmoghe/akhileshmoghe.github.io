@@ -4,16 +4,14 @@ permalink: /_posts/aws/ec2/extend_ec2_ebs_volume_size
 date:   2021-06-30 12:33:22 +0530
 categories:
   - AWS
-  - EC2
-  - EBS
+  - Cloud Computing
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
   - AWS
-  - EC2
-  - EBS
+  - Cloud Computing
 author: Akhilesh Moghe
 show_author_profile: true
 ---

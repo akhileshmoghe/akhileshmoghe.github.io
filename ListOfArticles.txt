@@ -1,0 +1,140 @@
+Oct 22 🟢 Ways of managing data in Docker Containers
+Jul 26 🟢 Brief Introduction to U-Boot - the Universal Bootloader
+Jun 30 🟡 Securing MQTT Communication with Username-Password & TLS/SSL Certificates using Mosquitto MQTT Broker
+Jun 14 🟢 Complete tutorial to create a Debian Minimal RootFS
+Jun 03 🟢 Frequently used commands while creating a Linux Disk Image
+Apr 12 🟡 Azure Functions Overview
+Apr 04 ⚫️ OPC-UA Protocol
+Mar 31 ⚫️ Hands On with Azure Services
+Mar 24 ⚫️ Azure Event Grid Overview
+Mar 21 ⚫️ LPWA and LoRaWAN Introduction
+Mar 14 🟢 AI on Jetson Nano
+Mar 01 ⚫️ Azure Digital Twins (ADT) Overview
+Mar 01 🟡 Azure IoT Hub Device Provisioning Service Overview
+Mar 01 ⚫️ Azure Maps Overview
+Mar 01 ⚫️ Azure Sphere Overview
+Mar 01 ⚫️ Azure Time Series Insights Overview
+Mar 01 🟡 Azure Machine Learning Overview
+Feb 28 🟡 5G Radio Frequencies Overview
+Feb 21 🟢 Deep Learning Introduction
+Feb 10 🟡 Apache Flink: A Distributed, Stream Processing Framework
+Jan 28 🟡 IBM Edge Application Manager Overview
+Jan 27 ⚫️ Kubernetes Overview
+Jan 24 🟡 OTA Update for Edge and IoT devices in Azure
+Jan 24 🟡 Azure IoT Edge Overview
+Jan 24 🟡 Azure Video Analyzer for IoT Edge
+Jan 24 🟡 Design Patterns: Strategy
+Jan 24 🟡 Design Patterns: SOLID Principles of designing an application or module
+Jan 23 🟡 Azure Cloud Storage options for IoT scenarios
+Jan 21 🟡 Design Patterns: Observer
+Jan 20 🟡 Azure IoT Hub Overview
+Jan 18 🟡 5G Introduction: Features, Terminologies an Overview
+Jan 18 🟡 Architecting a Secure IoT Solution
+Jan 16 🟡 Pointers for Secure IoT Firmware Analysis & Testing
+Jan 16 🟡 Vulnerabilities & Attack Surfaces in IoT Ecosystem
+Jan 16 ⚫️ System Design Overview
+Jan 15 🟡 IoT Security: Do's & Don'ts
+Jan 14 🟡 Container Orchestration
+Jan 12 ⚫️ IoT Design Patterns
+Jan 11  Microservices Introduction
+Jan 10  Python Automatic Memory Management & Garbage Collection
+Jan 10  Python Caching: == operator Vs is-operator
+Jan 04 ⚫️ Python Secure Coding Guidelines
+Dec 30  Python, C++: Map, Reduce, Filter functions
+Dec 21 ⚫️ AWS Chime: Real-time Audio-Video-Messaging Service
+Dec 15  Pravega Sensor Collector: A Pravega Agent for IoT devices
+Dec 14  Parallel Processing/Computing Paradigm
+Dec 14  Pravega: A Distributed Streaming, Messaging System
+Dec 14  Pravega + GStreamer Video Streaming Solution
+Dec 07  Design Patterns: GRASP Patterns of designing an application or module
+Dec 07 🟢 AWS IoT Twinmaker
+Dec 06 🟢 How to limit a process to run on One CPU core in Linux
+Dec 04  5G: Private 5G Networks for IoT Use cases
+Nov 24 🟢 AWS IoT Greengrass v2 Overview
+Nov 24 🟡 Differences between AWS Greengrass v1 & v2
+Nov 12  AWS IoT Greengrass & AWS Sagemaker for ML deployment & inference on Edge devices
+Nov 12  Why prefer Static memory allocation over Dynamic in Embedded Firmmware
+Nov 11  AWS Sagemaker Machine Learning Service, Sagemaker Neo, Sagemaker Edge Manager
+Nov 10  AWS cloud services extended to on-premise data centres with AWS Outpost
+Nov 10  MQTT Protocol
+Oct 27 ⚫️ AWS Links: Training, Materials, Guides
+Oct 27 ⚫️ AWS IoT Sitewise Edge
+Oct 23  Why IoT Edge Computing?
+Oct 07  Container Security
+Jun 30  Extend EC2 EBS Volume size without downtime
+Jun 13  NVIDIA L4T Embedded Linux Boot Process for Jetson Nano
+Jun 12  Linux Boot Process
+Jun 12  Typical Embedded Linux Boot Process
+Apr 10  Linux Process Creation: fork, vfork, execv, clone
+Mar 26  SSL TLS Explained
+Mar 26  SSL TLS: Public Key Cryptography
+Mar 02  Design Patterns: Singleton
+Feb 23  AWS IoT Security: Device x.509, CA Certificates
+Feb 21  AWS IoT: Device Management
+Nov 28 🟢 Docker Containers Essentials
+Aug 19  C, C++ Pointers: Function Pointers, Callbacks, Functors
+Aug 19 🟢 C, C++ Qualifiers: Volatile
+Dec 14  Search Algorithms
+Dec 14  Sorting Algorithms
+Nov 05  C++ STL: Associative Containers and Use cases
+Nov 05  C++ STL: Container Adapters and Use cases
+Nov 01  C++ STL Containers Selection Criteria
+Nov 01  C++ STL: Sequence Containers and Use cases
+Nov 01  C, C++ Pointers: Reading & declaring the Pointer declarations the right way
+Nov 01  C, C++ Pointers: Dangling & Wild Pointers
+Jan 21  C++ OOPs: Polymorphism
+Jan 20  C++ OOPs: Dependencies
+Jan 19  C++ OOPs: Association
+Jan 18  C++ OOPs: Aggregation
+Jan 17  C++ OOPs: Composition
+Jan 16  C++ OOPs: Inheritance
+Jan 16  C++ OOPs: Why prefer Composition over Inheritance?
+
+
+
+
+Tags:
+
+5G
+AWS
+Azure
+IoT
+Apache Flink
+Artificial Intelligence
+Bootloader
+C
+C++
+C++11
+C++14
+Containers
+Cloud Computing
+Data Structures
+Deep Learning
+Design Patterns
+DevOps
+Digital Twin
+Docker
+Edge Computing
+Embedded Systems
+Embedded Linux
+HTTPS
+IoT Security
+Jetson Nano
+Kubernetes
+Linux
+Machine Learning
+MLOps
+Memory Management
+Microservices
+MQTT
+OOPs
+On-Premise Cloud Computing
+Parallel Computing
+Pointers
+Pravega
+Python
+Secure Communication
+Streaming Data
+System Design & Architecture
+Systems Engineering
+Serverless

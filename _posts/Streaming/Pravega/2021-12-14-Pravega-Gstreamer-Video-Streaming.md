@@ -4,16 +4,14 @@ permalink: /_post/streaming_data/pravega_video_streaming
 date:   2021-12-14 1:33:22 +0530
 categories:
   - Pravega
-  - Streming Data
-  - Video Streaming
+  - Streaming Data
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
   - Pravega
-  - Streming Data
-  - Video Streaming
+  - Streaming Data
 author: Akhilesh Moghe
 show_author_profile: true
 ---

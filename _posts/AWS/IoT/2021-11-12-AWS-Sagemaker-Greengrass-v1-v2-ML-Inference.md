@@ -3,10 +3,9 @@ title:  "AWS IoT Greengrass & AWS Sagemaker for ML deployment & inference on Edg
 date:   2021-11-12 12:33:22 +0530
 permalink: /_posts/aws/ml/iot/sagemaker-greengrass-v1-v2-ml-inference
 categories:
-  - Cloud
+  - Cloud Computing
   - AWS
-  - AWS IoT
-  - Edge IoT
+  - Edge Computing
   - IoT
   - Machine Learning
 toc: true
@@ -14,10 +13,9 @@ toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - Cloud
+  - Cloud Computing
   - AWS
-  - AWS IoT
-  - Edge IoT
+  - Edge Computing
   - IoT
   - Machine Learning
 author: Akhilesh Moghe

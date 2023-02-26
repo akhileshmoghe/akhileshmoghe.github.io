@@ -6,8 +6,8 @@ categories:
   - Microservices
   - Docker
   - Containers
-  - System_Design & Architecture
-  - Cloud
+  - System Design & Architecture
+  - Cloud Computing
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
@@ -16,8 +16,8 @@ tags:
   - Microservices
   - Docker
   - Containers
-  - System_Design & Architecture
-  - Cloud
+  - System Design & Architecture
+  - Cloud Computing
 author: Akhilesh Moghe
 show_author_profile: true
 ---

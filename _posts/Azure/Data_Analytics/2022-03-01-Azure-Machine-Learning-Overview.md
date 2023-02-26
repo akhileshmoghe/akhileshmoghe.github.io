@@ -3,17 +3,17 @@ title:  "Azure Machine Learning Overview"
 date:   2022-03-01 12:33:22 +0530
 permalink: /_posts/azure/data-analytics/azure-machine-learning
 categories:
-  - Azure IoT
-  - IoT
-  - Edge IoT
+  - Cloud Computing
+  - Azure
+  - Edge Computing
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - Azure IoT
-  - IoT
-  - Edge IoT
+  - Cloud Computing
+  - Azure
+  - Edge Computing
 author: Akhilesh Moghe
 show_author_profile: true
 ---

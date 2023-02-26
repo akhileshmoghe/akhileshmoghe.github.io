@@ -3,19 +3,19 @@ title:  "Azure IoT Edge Overview"
 date:   2022-01-24 12:33:22 +0530
 permalink: /_posts/azure/iot/azure-iot-edge-overview
 categories:
-  - Azure IoT
+  - Cloud Computing
+  - Azure
   - IoT
-  - Edge IoT
-  - Cloud
+  - Edge Computing
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - Azure IoT
+  - Cloud Computing
+  - Azure
   - IoT
-  - Edge IoT
-  - Cloud
+  - Edge Computing
 author: Akhilesh Moghe
 show_author_profile: true
 ---

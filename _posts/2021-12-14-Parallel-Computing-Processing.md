@@ -4,13 +4,13 @@ permalink: /_post/parallel_computing
 date:   2021-12-14 1:33:22 +0530
 modify_date: 2021-12-31
 categories:
-  - Parallel Processing
+  - Parallel Computing
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - Parallel Processing
+  - Parallel Computing
 author: Akhilesh Moghe
 show_author_profile: true
 #sidebar:

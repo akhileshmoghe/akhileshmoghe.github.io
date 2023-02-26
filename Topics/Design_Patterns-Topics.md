@@ -10,3 +10,4 @@ sidebar:
 - [Design Patterns: GRASP Patterns of designing an application or module](/_posts/c-c++/design_patterns/grasp_pattern)
 - [Design Patterns: Strategy](/_posts/c-c++/design_patterns/strategy)
 - [Design Patterns: Observer](/_posts/c-c++/design_patterns/observer)
+- [Design Patterns: Singleton](/_posts/c-c++/design_patterns/singleton)

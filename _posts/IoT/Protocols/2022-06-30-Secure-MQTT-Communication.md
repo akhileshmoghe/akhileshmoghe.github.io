@@ -4,16 +4,16 @@ date:   2022-06-30 12:33:22 +0530
 permalink: /_posts/iot/protocols/secure-mqtt
 categories:
   - IoT
-  - Edge Computing
   - IoT Security
+  - MQTT
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
   - IoT
-  - Edge Computing
   - IoT Security
+  - MQTT
 author: Akhilesh Moghe
 #show_author_profile: true
 ---

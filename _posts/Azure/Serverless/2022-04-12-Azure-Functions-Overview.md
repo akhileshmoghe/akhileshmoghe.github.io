@@ -3,15 +3,17 @@ title:  "Azure Functions Overview"
 date:   2022-04-12 12:33:22 +0530
 permalink: /_posts/azure/azure-functions-overview
 categories:
-  - Azure IoT
-  - IoT
+  - Cloud Computing
+  - Azure
+  - Serverless
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - Azure IoT
-  - IoT
+  - Cloud Computing
+  - Azure
+  - Serverless
 author: Akhilesh Moghe
 show_author_profile: true
 ---

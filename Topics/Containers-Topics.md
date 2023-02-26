@@ -1,15 +1,18 @@
 ---
 layout: article
-title:  "Containerization"
+title:  "Containers"
 permalink: /_posts/containers_topics
 sidebar:
   nav: topics
 ---
 
-- [Container Orchestration](/_posts/containers/container_orchestration)
-- [Container Security](/_posts/containers/container_security)
-- __*<u>Docker Containers</u>*__:
+- __*<u>Docker Containers</u>*__
   - [Docker Containers Essentials](/_post/devops/containers/docker-container-essentials)
+  - [Ways of managing data in Docker Containers](/_post/devops/containers/docker-container-storage-volumes)
+- __*<u>Container Security</u>*__:
+  - [Container Security](/_posts/containers/container_security)
+- __*<u>Container Orchestration</u>*__
+  - [Container Orchestration](/_posts/containers/container_orchestration)
 - __*<u>Microservices</u>*__:
   - [Microservices Introduction](/_posts/system_design_architecture/microservices)
 

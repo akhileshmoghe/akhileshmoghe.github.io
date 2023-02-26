@@ -3,17 +3,17 @@ title:  "Azure IoT Hub Overview"
 date:   2022-01-20 12:33:22 +0530
 permalink: /_posts/azure/iot/azure-iot-hub-overview
 categories:
-  - Azure IoT
+  - Cloud Computing
+  - Azure
   - IoT
-  - Cloud
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - Azure IoT
+  - Cloud Computing
+  - Azure
   - IoT
-  - Cloud
 author: Akhilesh Moghe
 show_author_profile: true
 ---

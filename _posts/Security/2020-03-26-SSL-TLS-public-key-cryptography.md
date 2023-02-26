@@ -3,19 +3,15 @@ title:  "SSL TLS: Public Key Cryptography"
 date:   2020-03-26 12:33:22 +0530
 permalink: /_posts/security/tls_pkc
 categories:
-  - Security
-  - SSL
-  - TLS
   - HTTPS
+  - Secure Communication
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - Security
-  - SSL
-  - TLS
   - HTTPS
+  - Secure Communication
 author: Akhilesh Moghe
 show_author_profile: true
 ---

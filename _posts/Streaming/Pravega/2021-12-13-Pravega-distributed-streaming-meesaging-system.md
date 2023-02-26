@@ -4,20 +4,18 @@ permalink: /_post/streaming_data/pravega_distributed_streaming_messaging_system
 date:   2021-12-14 1:33:22 +0530
 categories:
   - Pravega
-  - Streming Data
-  - Video Streaming
+  - Streaming Data
   - IoT
-  - Edge IoT
+  - Edge Computing
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
   - Pravega
-  - Streming Data
-  - Video Streaming
+  - Streaming Data
   - IoT
-  - Edge IoT
+  - Edge Computing
 author: Akhilesh Moghe
 show_author_profile: true
 ---

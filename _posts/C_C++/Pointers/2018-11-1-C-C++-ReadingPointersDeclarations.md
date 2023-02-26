@@ -5,7 +5,7 @@ permalink: /_posts/c-c++/pointers/declaring_pointers_the_right_way
 categories:
   - C
   - C++
-  - Embedded
+  - Embedded Systems
   - Pointers
 toc: true
 toc_label: "Contents"
@@ -14,7 +14,7 @@ toc_sticky : true
 tags:
   - C
   - C++
-  - Embedded
+  - Embedded Systems
   - Pointers
 author: Akhilesh Moghe
 show_author_profile: true

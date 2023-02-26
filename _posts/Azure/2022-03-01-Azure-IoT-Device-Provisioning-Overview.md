@@ -3,17 +3,17 @@ title:  "Azure IoT Hub Device Provisioning Service Overview"
 date:   2022-03-01 12:33:22 +0530
 permalink: /_posts/azure/iot/azure-iot-hub-device-provisioning
 categories:
-  - Azure IoT
+  - Cloud Computing
+  - Azure
   - IoT
-  - Edge IoT
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - Azure IoT
+  - Cloud Computing
+  - Azure
   - IoT
-  - Edge IoT
 author: Akhilesh Moghe
 show_author_profile: true
 ---

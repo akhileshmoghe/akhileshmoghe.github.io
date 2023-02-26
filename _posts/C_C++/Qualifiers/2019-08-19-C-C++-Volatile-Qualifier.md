@@ -5,7 +5,7 @@ permalink: /_posts/c-c++/qualifiers/volatile
 categories:
   - C
   - C++
-  - Embedded
+  - Embedded Systems
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
@@ -13,7 +13,7 @@ toc_sticky : true
 tags:
   - C
   - C++
-  - Embedded
+  - Embedded Systems
 author: Akhilesh Moghe
 show_author_profile: true
 ---

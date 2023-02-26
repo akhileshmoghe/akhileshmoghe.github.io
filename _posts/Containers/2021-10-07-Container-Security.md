@@ -6,7 +6,6 @@ categories:
   - Containers
   - Docker
   - Kubernetes
-  - DevOps
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
@@ -15,7 +14,6 @@ tags:
   - Containers
   - Docker
   - Kubernetes
-  - DevOps
 author: Akhilesh Moghe
 show_author_profile: true
 ---

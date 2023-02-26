@@ -3,14 +3,18 @@ title:  "AWS IoT Twinmaker"
 permalink: /_posts/aws/iot/twinmaker
 date:   2021-12-7
 categories:
-  - AWS IoT
+  - AWS
+  - Cloud Computing
+  - IoT
   - Digital Twin
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - AWS IoT
+  - AWS
+  - Cloud Computing
+  - IoT
   - Digital Twin
 author: Akhilesh Moghe
 show_author_profile: true

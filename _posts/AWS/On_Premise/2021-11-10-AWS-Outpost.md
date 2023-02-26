@@ -3,19 +3,19 @@ title:  "AWS cloud services extended to on-premise data centres with AWS Outpost
 date:   2021-11-10 12:33:22 +0530
 permalink: /_posts/aws/on-premise/outpost
 categories:
-  - On-Premise Cloud
-  - Cloud
+  - On-Premise Cloud Computing
+  - Cloud Computing
   - AWS
-  - Edge IoT
+  - Edge Computing
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - On-Premise Cloud
-  - Cloud
+  - On-Premise Cloud Computing
+  - Cloud Computing
   - AWS
-  - Edge IoT
+  - Edge Computing
 author: Akhilesh Moghe
 show_author_profile: true
 ---

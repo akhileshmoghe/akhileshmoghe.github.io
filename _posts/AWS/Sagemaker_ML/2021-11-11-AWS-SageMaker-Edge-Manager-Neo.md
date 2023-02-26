@@ -3,25 +3,23 @@ title:  "AWS Sagemaker Machine Learning Service, Sagemaker Neo, Sagemaker Edge M
 date:   2021-11-11 12:33:22 +0530
 permalink: /_posts/aws/ml/sagemaker/edge
 categories:
-  - On-Premise Cloud
-  - Cloud
+  - Cloud Computing
   - AWS
-  - AWS IoT
-  - Edge IoT
   - IoT
+  - Edge Computing
   - Machine Learning
+  - MLOps
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - On-Premise Cloud
-  - Cloud
+  - Cloud Computing
   - AWS
-  - AWS IoT
-  - Edge IoT
   - IoT
+  - Edge Computing
   - Machine Learning
+  - MLOps
 author: Akhilesh Moghe
 show_author_profile: true
 ---

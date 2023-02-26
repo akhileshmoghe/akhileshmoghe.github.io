@@ -4,14 +4,14 @@ date:   2022-01-16 12:33:22 +0530
 permalink: /_posts/iot/firmware_analysis
 categories:
   - IoT
-  - Security
+  - IoT Security
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
   - IoT
-  - Security
+  - IoT Security
 author: Akhilesh Moghe
 show_author_profile: true
 ---

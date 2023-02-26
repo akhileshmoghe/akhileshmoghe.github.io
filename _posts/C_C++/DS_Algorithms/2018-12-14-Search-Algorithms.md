@@ -4,14 +4,12 @@ date:   2018-12-14 1:33:22 +0530
 permalink: /_posts/c-c++/ds_algorithms/search
 categories:
   - C++
-  - Algorithms
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
   - C++
-  - Algorithms
 author: Akhilesh Moghe
 show_author_profile: true
 ---

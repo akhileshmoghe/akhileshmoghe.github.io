@@ -3,18 +3,16 @@ title:  "IBM Edge Application Manager Overview"
 permalink: /_posts/edge-computing/ibm-edge-manager
 date:   2022-01-28 12:33:22 +0530
 categories:
-  - Edge IoT
-  - Microservices
   - Edge Computing
+  - IoT
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 #full_width: true
 tags:
-  - Edge IoT
-  - Microservices
   - Edge Computing
+  - IoT
 author: Akhilesh Moghe
 show_author_profile: true
 ---

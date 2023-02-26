@@ -5,9 +5,8 @@ permalink: /_posts/c-c++/pointers/dangling_wild_pointers
 categories:
   - C
   - C++
-  - Embedded
+  - Embedded Systems
   - Pointers
-  - Secure Coding
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
@@ -15,9 +14,8 @@ toc_sticky : true
 tags:
   - C
   - C++
-  - Embedded
+  - Embedded Systems
   - Pointers
-  - Secure Coding
 author: Akhilesh Moghe
 show_author_profile: true
 ---

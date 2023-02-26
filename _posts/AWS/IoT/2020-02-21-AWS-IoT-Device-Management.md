@@ -4,16 +4,16 @@ date:   2020-02-21 12:33:22 +0530
 permalink: /_posts/aws/iot/device_management
 categories:
   - IoT
-  - Cloud
-  - AWS IoT
+  - Cloud Computing
+  - AWS
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
   - IoT
-  - Cloud
-  - AWS IoT
+  - Cloud Computing
+  - AWS
 author: Akhilesh Moghe
 show_author_profile: true
 ---

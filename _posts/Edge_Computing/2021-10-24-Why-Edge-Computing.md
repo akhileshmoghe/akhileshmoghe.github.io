@@ -4,7 +4,7 @@ date:   2021-10-23 12:33:22 +0530
 permalink: /_posts/edge/why_edge_computing
 categories:
   - IoT
-  - Cloud
+  - Cloud Computing
   - Edge Computing
 toc: true
 toc_label: "Contents"
@@ -12,7 +12,7 @@ toc_icon: "file-alt"
 toc_sticky : true
 tags:
   - IoT
-  - Cloud
+  - Cloud Computing
   - Edge Computing
 author: Akhilesh Moghe
 show_author_profile: true

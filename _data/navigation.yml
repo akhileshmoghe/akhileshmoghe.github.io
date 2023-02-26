@@ -34,9 +34,9 @@ topics:
     children:
 #      - title:  Git
 #        url:    /_posts/git_topics
-      - title:  Containerization
+      - title:  Containers
         url:    /_posts/containers_topics
-      - title:  Orchestration
+      - title:  Container Orchestration
         url:    /_posts/Orchestration_topics
 #  - title:      Data-Analytics
 #    children:
@@ -54,8 +54,8 @@ topics:
         url:    /_posts/c_c++_topics
       - title:  Python
         url:    /_posts/python_topics
-      - title:  Algorithms
-        url:    /_posts/algorithms_topics
+#      - title:  Algorithms
+#        url:    /_posts/algorithms_topics
       - title:  Data Structures
         url:    /_posts/data_structures_topics
 #      - title:  OS

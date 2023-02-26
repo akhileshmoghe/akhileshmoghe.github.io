@@ -1,7 +1,7 @@
 ---
 title:  "AWS IoT Sitewise Edge"
 date:   2021-10-27 12:33:22 +0530
-permalink: /_posts/aws/iot/sitewise
+#permalink: /_posts/aws/iot/sitewise
 categories:
   - IoT
   - AWS

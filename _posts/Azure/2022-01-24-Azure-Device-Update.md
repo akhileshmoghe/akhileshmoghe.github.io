@@ -3,21 +3,19 @@ title:  "OTA Update for Edge and IoT devices in Azure"
 date:   2022-01-24 12:33:22 +0530
 permalink: /_posts/azure/iot/azure-device-update
 categories:
-  - Azure IoT
+  - Cloud Computing
+  - Azure
   - IoT
-  - Edge IoT
-  - Cloud
-  - Video Analytics
+  - Edge Computing
 toc: true
 toc_label: "Contents"
 toc_icon: "file-alt"
 toc_sticky : true
 tags:
-  - Azure IoT
+  - Cloud Computing
+  - Azure
   - IoT
-  - Edge IoT
-  - Cloud
-  - Video Analytics
+  - Edge Computing
 author: Akhilesh Moghe
 show_author_profile: true
 ---
