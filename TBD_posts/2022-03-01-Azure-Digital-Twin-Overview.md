@@ -1,7 +1,7 @@
 ---
 title:  "Azure Digital Twins (ADT) Overview"
 date:   2022-03-01 12:33:22 +0530
-permalink: /_posts/azure/iot/azure-digital-twins
+#permalink: /_posts/azure/iot/azure-digital-twins
 categories:
   - Azure IoT
   - IoT

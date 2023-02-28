@@ -37,15 +37,15 @@ Jan 15 🟡 IoT Security: Do's & Don'ts
 Jan 14 🟡 Container Orchestration
 Jan 12 ⚫️ IoT Design Patterns
 Jan 11  Microservices Introduction
-Jan 10  Python Automatic Memory Management & Garbage Collection
-Jan 10  Python Caching: == operator Vs is-operator
+Jan 10 🟡 Python Automatic Memory Management & Garbage Collection
+Jan 10 🟡 Python Caching: == operator Vs is-operator
 Jan 04 ⚫️ Python Secure Coding Guidelines
-Dec 30  Python, C++: Map, Reduce, Filter functions
+Dec 30 🟡 Python, C++: Map, Reduce, Filter functions
 Dec 21 ⚫️ AWS Chime: Real-time Audio-Video-Messaging Service
-Dec 15  Pravega Sensor Collector: A Pravega Agent for IoT devices
+Dec 15 🟡 Pravega Sensor Collector: A Pravega Agent for IoT devices
 Dec 14  Parallel Processing/Computing Paradigm
-Dec 14  Pravega: A Distributed Streaming, Messaging System
-Dec 14  Pravega + GStreamer Video Streaming Solution
+Dec 14 🟡 Pravega: A Distributed Streaming, Messaging System
+Dec 14 🟡 Pravega + GStreamer Video Streaming Solution
 Dec 07  Design Patterns: GRASP Patterns of designing an application or module
 Dec 07 🟢 AWS IoT Twinmaker
 Dec 06 🟢 How to limit a process to run on One CPU core in Linux

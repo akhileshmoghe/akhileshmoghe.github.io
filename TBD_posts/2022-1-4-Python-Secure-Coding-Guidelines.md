@@ -1,6 +1,6 @@
 ---
 title:  "Python Secure Coding Guidelines"
-permalink: /_post/security/secure_coding/python
+#permalink: /_post/security/secure_coding/python
 date:   2022-1-4 1:33:22 +0530
 modify_date: 2021-12-31
 categories:

@@ -1,6 +1,6 @@
 ---
 title:  "AWS Links: Training, Materials, Guides"
-permalink: /_posts/aws_training
+#permalink: /_posts/aws_training
 date:   2021-10-27 12:33:22 +0530
 categories:
   - Cloud
@@ -14,6 +14,7 @@ tags:
   - AWS
 author: Akhilesh Moghe
 show_author_profile: true
+sitemap: false
 ---
 
 

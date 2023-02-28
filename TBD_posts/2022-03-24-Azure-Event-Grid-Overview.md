@@ -1,7 +1,7 @@
 ---
 title:  "Azure Event Grid Overview"
 date:   2022-03-24 12:33:22 +0530
-permalink: /_posts/azure/iot/azure-event-grid
+#permalink: /_posts/azure/iot/azure-event-grid
 categories:
   - Azure IoT
   - IoT

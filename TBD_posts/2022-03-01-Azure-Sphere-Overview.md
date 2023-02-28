@@ -1,7 +1,7 @@
 ---
 title:  "Azure Sphere Overview"
 date:   2022-03-01 12:33:22 +0530
-permalink: /_posts/azure/iot/azure-sphere
+#permalink: /_posts/azure/iot/azure-sphere
 categories:
   - Azure IoT
   - IoT

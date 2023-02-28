@@ -214,6 +214,21 @@ defaults:
       show_edit_on_github: true
       show_subscribe: true
       pageview: true
+  -
+    scope:
+      path: "TBD_posts"
+    values:
+      sitemap: false
+  -
+    scope:
+      path: "Topics"
+    values:
+      sitemap: false
+  -
+    scope:
+      path: "assets"
+    values:
+      sitemap: false
 
 
 ## => Plugins

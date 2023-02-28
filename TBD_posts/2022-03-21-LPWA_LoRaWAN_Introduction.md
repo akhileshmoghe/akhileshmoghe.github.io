@@ -1,7 +1,7 @@
 ---
 title: "LPWA and LoRaWAN Introduction"
 date: 2022-03-21 12:33:22 +0530
-permalink: /_posts/networking/lpwa_lorawan_intro
+#permalink: /_posts/networking/lpwa_lorawan_intro
 categories:
   - IoT
   - Edge IoT

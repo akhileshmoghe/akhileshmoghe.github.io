@@ -1,7 +1,7 @@
 ---
 title:  "OPC-UA Protocol"
 date:   2022-04-04 12:33:22 +0530
-permalink: /_posts/iot/protocols/opc-ua
+#permalink: /_posts/iot/protocols/opc-ua
 categories:
   - IoT
   - Edge IoT

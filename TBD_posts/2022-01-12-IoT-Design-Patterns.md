@@ -1,7 +1,7 @@
 ---
 title:  "IoT Design Patterns"
 date:   2022-01-12 12:33:22 +0530
-permalink: /_posts/iot/design/iot_design_patterns
+#permalink: /_posts/iot/design/iot_design_patterns
 categories:
   - Cloud
   - IoT

@@ -1,6 +1,6 @@
 ---
 title:  "Kubernetes Overview"
-permalink: /_posts/kubernetes/kubernetes-overview
+#permalink: /_posts/kubernetes/kubernetes-overview
 date:   2022-01-27 12:33:22 +0530
 categories:
   - DevOps

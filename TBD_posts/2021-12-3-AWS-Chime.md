@@ -1,6 +1,6 @@
 ---
 title:  "AWS Chime: Real-time Audio-Video-Messaging Service"
-permalink: /_post/aws/chime/video-audio-conferencing
+#permalink: /_post/aws/chime/video-audio-conferencing
 date:   2021-12-21 1:33:22 +0530
 categories:
   - AWS

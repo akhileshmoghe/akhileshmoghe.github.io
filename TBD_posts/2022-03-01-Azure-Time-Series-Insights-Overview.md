@@ -1,7 +1,7 @@
 ---
 title:  "Azure Time Series Insights Overview"
 date:   2022-03-01 12:33:22 +0530
-permalink: /_posts/azure/iot/time-series-insights
+#permalink: /_posts/azure/iot/time-series-insights
 categories:
   - Azure IoT
   - Cloud

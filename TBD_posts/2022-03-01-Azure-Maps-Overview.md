@@ -1,7 +1,7 @@
 ---
 title:  "Azure Maps Overview"
 date:   2022-03-01 12:33:22 +0530
-permalink: /_posts/azure/iot/azure-maps
+#permalink: /_posts/azure/iot/azure-maps
 categories:
   - Azure IoT
   - IoT

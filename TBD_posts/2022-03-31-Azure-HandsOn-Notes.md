@@ -1,7 +1,7 @@
 ---
 title:  "Hands On with Azure Services"
 date:   2022-03-31 12:33:22 +0530
-permalink: /_posts/azure/azure-services-hands-on-notes
+#permalink: /_posts/azure/azure-services-hands-on-notes
 categories:
   - Azure IoT
   - IoT

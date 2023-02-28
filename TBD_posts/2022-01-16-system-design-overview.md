@@ -1,7 +1,7 @@
 ---
 title:  "System Design Overview"
 date:   2022-01-16 12:33:22 +0530
-permalink: /_posts/system_design
+#permalink: /_posts/system_design
 categories:
   - System_Design & Architecture
 toc: true
