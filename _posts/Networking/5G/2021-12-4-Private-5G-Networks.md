@@ -20,6 +20,8 @@ tags:
   - AWS
 author: Akhilesh Moghe
 show_author_profile: true
+sidebar:
+ nav: IoT
 ---
 
 This write-up explains different use cases of Private 5G Networks, specifically in IoT & Edge-Computing domains.

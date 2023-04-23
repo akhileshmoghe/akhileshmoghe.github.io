@@ -16,6 +16,8 @@ tags:
   - IoT
 author: Akhilesh Moghe
 show_author_profile: true
+sidebar:
+ nav: IoT
 ---
 
 ## Data Storage requirements overview in IoT scenarios:

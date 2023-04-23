@@ -14,6 +14,8 @@ tags:
   - IoT Security
 author: Akhilesh Moghe
 show_author_profile: true
+sidebar:
+ nav: IoT
 ---
 
 This article is from Firmware Analysis Project that provides:

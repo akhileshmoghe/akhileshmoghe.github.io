@@ -19,11 +19,14 @@ tags:
   - IoT
 author: Akhilesh Moghe
 show_author_profile: true
+sidebar:
+ nav: IoT
 ---
 
-- AWS IoT Greengrass is an Edge Computing IoT Service from AWS. AWS IoT Greengrass helps you build, deploy and manage IoT applications on devices by providing an IoT Edge Runtime and a corresponding Cloud Service.
-- AWS released updated version of Greengrass in Q1-2021 & has been supporting both AWS Greengrass V1 & V2 Edge device softwares since then. But Greengrass V1 is now nearing it's End of Life, will stop being supported by AWS in Q2-2023. So it's time for us to understand the differences between the two versions of Greengrass.
-- Both these versions are mutually exclusive and their working is quite a different. Greengrass V1 was Monolithic in nature, whereas Greengrass V2 follows the Micro-Services approach.
+  - AWS IoT Greengrass is an Edge Computing IoT Service from AWS. AWS IoT Greengrass helps you build, deploy and manage IoT applications on devices by providing an IoT Edge Runtime and a corresponding Cloud Service.
+  - AWS released updated version of Greengrass in Q1-2021 & has been supporting both AWS Greengrass V1 & V2 Edge device softwares since then. But Greengrass V1 is now nearing it's End of Life, will stop being supported by AWS in Q2-2023. So it's time for us to understand the differences between the two versions of Greengrass.
+  - Both these versions are mutually exclusive and their working is quite a different. Greengrass V1 was Monolithic in nature, whereas Greengrass V2 follows the Micro-Services approach.\
+&nbsp;
 - Following are few notable differences of various features in Greengrass V1 & V2:
 
   |---

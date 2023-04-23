@@ -16,6 +16,8 @@ tags:
   - IoT Security
 author: Akhilesh Moghe
 show_author_profile: true
+sidebar:
+ nav: IoT
 ---
 
 This article provides reasons for the top IoT Vulnerabilities, the attack surface of these vulnerabilities.

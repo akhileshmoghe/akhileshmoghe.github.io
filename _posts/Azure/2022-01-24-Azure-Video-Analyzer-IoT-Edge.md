@@ -20,6 +20,8 @@ tags:
   - Streaming Data
 author: Akhilesh Moghe
 show_author_profile: true
+sidebar:
+ nav: IoT
 ---
 
 ## Azure Video Analyzer on IoT Edge:

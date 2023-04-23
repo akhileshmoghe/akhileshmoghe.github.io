@@ -18,6 +18,8 @@ tags:
   - Digital Twin
 author: Akhilesh Moghe
 show_author_profile: true
+sidebar:
+ nav: IoT
 ---
 
 This write-up will focus on newly launched AWS IoT Twinmaker service.

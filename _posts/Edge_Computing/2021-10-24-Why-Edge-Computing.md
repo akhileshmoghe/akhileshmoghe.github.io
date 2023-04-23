@@ -16,6 +16,8 @@ tags:
   - Edge Computing
 author: Akhilesh Moghe
 show_author_profile: true
+sidebar:
+ nav: IoT
 ---
 
 

@@ -107,7 +107,87 @@ parallel-computing:
         url:    /_post/parallel_computing
       - title:  Map-Reduce-Filter
         url:    /_post/python/map_reduce_filter
-  - title:  
+        
+Containers:
+  - title:      Docker Containers
     children:
-      - title:  
-        url:    
+      - title:  Docker Containers Essentials
+        url:    /_post/devops/containers/docker-container-essentials
+      - title:  Ways of managing data in Docker Containers
+        url:    /_post/devops/containers/docker-container-storage-volumes
+  - title:      Container Security
+    children:
+      - title:  Container Security
+        url:    /_posts/containers/container_security
+      - title:  "Enhancing Container Security: A Guide to Runtime Privileges and Linux Capabilities in Docker Containers"
+        url:    /_posts/devops/containers/docker-container-runtime-privileges-linux-capabilities
+  - title:      Container Orchestration
+    children:
+      - title:  Container Orchestration
+        url:    /_posts/containers/container_orchestration
+  - title:      Microservices
+    children:
+      - title:  Microservices Introduction
+        url:    /_posts/system_design_architecture/microservices
+
+IoT:
+  - title:      IoT Protocols
+    children:
+      - title:  MQTT Protocol
+        url:    /_posts/iot/protocols/mqtt
+  - title:      AWS IoT
+    children:
+      - title:  "AWS IoT: Device Management"
+        url:    /_posts/aws/iot/device_management
+      - title:  AWS IoT Twinmaker
+        url:    /_posts/aws/iot/twinmaker
+      - title:  AWS IoT Greengrass v2 Overview
+        url:    /_posts/aws/ml/iot/greengrass-v2-overview
+      - title:  Differences between AWS Greengrass v1 & v2
+        url:    /_posts/aws/iot/aws-greengrass-v1-v2
+      - title:  AWS IoT Greengrass & AWS Sagemaker for ML deployment & inference on Edge devices
+        url:    /_posts/aws/ml/iot/sagemaker-greengrass-v1-v2-ml-inference
+  - title:      Azure IoT
+    children:
+      - title:  Azure IoT Edge Overview
+        url:    /_posts/azure/iot/azure-iot-edge-overview
+      - title:  Azure Video Analyzer for IoT Edge
+        url:    /_posts/azure/iot/azure-video-analyzer-iot-edge
+      - title:  Azure Cloud Storage options for IoT scenarios
+        url:    /_posts/azure/storage/azure-cloud-storage-options-for-iot-scenarios
+      - title:  Azure IoT Hub Overview
+        url:    /_posts/azure/iot/azure-iot-hub-overview
+      - title:  Azure IoT Hub Device Provisioning Service Overview
+        url:    /_posts/azure/iot/azure-iot-hub-device-provisioning
+      - title:  OTA Update for Edge and IoT devices in Azure
+        url:    /_posts/azure/iot/azure-device-update
+  - title:      5G-IoT
+    children:
+      - title:  "5G Introduction: Features, Terminologies an Overview"
+        url:    /_posts/5g/5g_intro_features_terms_overview
+      - title:  "5G: Private 5G Networks for IoT Use cases"
+        url:    /_posts/networking/5g
+  - title:      Security
+    children:
+      - title:  Architecting a Secure IoT Solution
+        url:    /_posts/iot/security/architecture
+      - title:  Pointers for Secure IoT Firmware Analysis & Testing
+        url:    /_posts/iot/firmware_analysis
+      - title:  Vulnerabilities & Attack Surfaces in IoT Ecosystem
+        url:    /_posts/iot/vulnerabilities
+      - title:  "IoT Security: Do’s & Don’ts"
+        url:    /_posts/iot/security/do's-&-don'ts
+      - title:  "AWS IoT Security: Device x.509, CA Certificates"
+        url:    /_posts/aws/iot/security/device_certificates
+      - title:  Securing MQTT Communication with Username-Password & TLS/SSL Certificates using Mosquitto MQTT Broker
+        url:    /_posts/iot/protocols/secure-mqtt
+  - title:      IoT Streaming Data
+    children:
+      - title:  "Pravega Sensor Collector: A Pravega Agent for IoT devices"
+        url:    /_post/streaming_data/pravega_sensor_collector
+      - title:  "Pravega: A Distributed Streaming, Messaging System"
+        url:    /_post/streaming_data/pravega_distributed_streaming_messaging_system
+  - title:      Edge IoT
+    children:
+      - title:  Why IoT Edge Computing?
+        url:    /_posts/edge/why_edge_computing

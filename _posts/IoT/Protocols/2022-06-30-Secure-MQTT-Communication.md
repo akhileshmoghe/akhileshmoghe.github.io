@@ -1,5 +1,5 @@
 ---
-title:  "Securing MQTT Communication with Username-Password & TLS/SSL Certificates using Mosquitto MQTT Broker"
+title:  "Securing MQTT Communication using Mosquitto MQTT Broker"
 date:   2022-06-30 12:33:22 +0530
 permalink: /_posts/iot/protocols/secure-mqtt
 categories:
@@ -16,6 +16,8 @@ tags:
   - MQTT
 author: Akhilesh Moghe
 #show_author_profile: true
+sidebar:
+ nav: IoT
 ---
 
 

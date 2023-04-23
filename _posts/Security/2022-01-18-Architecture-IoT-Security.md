@@ -16,6 +16,8 @@ tags:
   - IoT Security
 author: Akhilesh Moghe
 show_author_profile: true
+sidebar:
+ nav: IoT
 ---
 
 The goal of every IoT solution is to create an infrastructure that will enable ease of use, flexibility, automated patching, and security. Security should be built into the fabric of each layer of your design.

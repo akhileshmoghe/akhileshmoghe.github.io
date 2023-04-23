@@ -6,7 +6,7 @@ categories:
   - Microservices
   - Docker
   - Containers
-  - System Design & Architecture
+  - Architecture & System Design
   - Cloud Computing
 toc: true
 toc_label: "Contents"
@@ -16,10 +16,12 @@ tags:
   - Microservices
   - Docker
   - Containers
-  - System Design & Architecture
+  - Architecture & System Design
   - Cloud Computing
 author: Akhilesh Moghe
 show_author_profile: true
+sidebar:
+ nav: Containers
 ---
 
 ## Monolithic Applications

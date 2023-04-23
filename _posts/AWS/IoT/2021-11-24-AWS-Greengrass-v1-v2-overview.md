@@ -18,14 +18,17 @@ tags:
   - IoT
 author: Akhilesh Moghe
 show_author_profile: true
+sidebar:
+ nav: IoT
 ---
 
-- AWS IoT Greengrass is an Open-source IoT Edge Runtime and Cloud Service to build, deploy and manage IoT applications on edge devices.
+- AWS IoT Greengrass is an Open-source IoT Edge Runtime and Cloud Service used to build, deploy and manage IoT applications on edge devices.
 - AWS IoT Greengrass enables devices to *<u>act locally on the data</u>*, *<u>run predictions based on machine learning models</u>*, and *<u>collect, analyze, filter and aggregate data</u>*, closer to where that data is generated, react autonomously to *<u>local events</u>*, *<u>communicate securely with other devices</u>* on the local network and with AWS IoT Core.
 - AWS IoT Greengrass provides pre-built software components to connect edge devices to AWS or third-party services.
 - AWS IoT Greengrass can package and run your software using *<u>Lambda functions</u>*, Docker *<u>containers</u>*, as a *<u>native OS Processes</u>*, or *<u>custom runtimes</u>* of your choice.
 
-## Greengrass Core Device: 
+## Key terminologies in AWS IoT Greengrass V2:
+### *<u>Greengrass Core Device</u>*:
 - A device that runs the AWS IoT Greengrass Core software.
 - *<u>A Greengrass Core device is an AWS </u>*__*<u>IoT thing</u>*__.
 - You can add multiple Core devices to AWS IoT thing groups to create groups of Greengrass Core devices.
@@ -34,13 +37,17 @@ show_author_profile: true
 ### *<u>Greengrass Core device Discovery</u>*:
 - *<u>Cloud Discovery</u>*:
   - To connect to a core device, client devices can use cloud discovery.
-  - *<u>Client devices connect to the AWS IoT Greengrass cloud service to retrieve information about core devices to which they can connect</u>*.
-  - Then, they can connect to a core device to process their messages and sync their data with the AWS IoT Core cloud service.
+  - *<u>Client devices connect to the AWS IoT Greengrass cloud service to retrieve information about core devices to which they can connect</u>*. The information includes the IP addresses and th Port number of the Greengrass Core devices.
+  - Using this information, client devices can connect to a core device to process their messages and sync their data with the AWS IoT Core cloud service.
+
 - *<u>Local Discovery</u>*:
+
+<!---
   - :x: Greengrass does not provide any way for Local discovery of Greengrass Core device.
   - :x: This limits the use of Greengrass in total offline, behind firewall, air-gap deployment scenarios.
   - :warning: Workaround for this is to hard-code the Greengrass Core device IP and make sure that IP of the Greengrass device never changes.
   - :warning: Also, Greengrass Core device has TLS certificates for local MQTT communication, which needs to be rotated periodically (7-30 days). In order to use Greengrass core device in total offline, air-gap scenarios, this rotation policy for TLS certificates needs to be disabled from AWS cloud backend, contact AWS support for this.
+-->
 
 ## Greengrass Client Devices: 
 - A device that connects to and communicates with a Greengrass core device over MQTT.

@@ -14,7 +14,6 @@ sidebar:
 - __*<u>AWS IoT</u>*__
   - [AWS IoT: Device Management](/_posts/aws/iot/device_management)
   - [AWS IoT Twinmaker](/_posts/aws/iot/twinmaker)
-  - [Why IoT Edge Computing?](/_posts/edge/why_edge_computing)
   - [AWS IoT: Device Management](/_posts/aws/iot/device_management)
   - [AWS IoT Greengrass v2 Overview](/_posts/aws/ml/iot/greengrass-v2-overview)
   - [Differences between AWS Greengrass v1 & v2](/_posts/aws/iot/aws-greengrass-v1-v2)
@@ -36,7 +35,7 @@ sidebar:
   - [IoT Security: Do's & Don'ts](/_posts/iot/security/do's-&-don'ts)
   - [AWS IoT Security: Device x.509, CA Certificates](/_posts/aws/iot/security/device_certificates)
   - [Securing MQTT Communication with Username-Password & TLS/SSL Certificates using Mosquitto MQTT Broker](/_posts/iot/protocols/secure-mqtt)
-- __*<u>IoT Streaming</u>*__
+- __*<u>IoT Streaming Data</u>*__
   - [Pravega Sensor Collector: A Pravega Agent for IoT devices](/_post/streaming_data/pravega_sensor_collector)
   - [Pravega: A Distributed Streaming, Messaging System](/_post/streaming_data/pravega_distributed_streaming_messaging_system)
 - __*<u>Edge IoT</u>*__

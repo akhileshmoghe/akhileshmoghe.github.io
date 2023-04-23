@@ -5,7 +5,7 @@ permalink: /_posts/aws/iot/security/device_certificates
 categories:
   - IoT
   - AWS
-  - Cloud Couputing
+  - Cloud Computing
   - IoT Security
   - Secure Communication
 toc: true
@@ -15,11 +15,13 @@ toc_sticky : true
 tags:
   - IoT
   - AWS
-  - Cloud Couputing
+  - Cloud Computing
   - IoT Security
   - Secure Communication
 author: Akhilesh Moghe
 show_author_profile: true
+sidebar:
+ nav: IoT
 ---
 
 ## Understanding the AWS IoT Security Model

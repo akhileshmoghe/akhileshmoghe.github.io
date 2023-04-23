@@ -20,6 +20,8 @@ tags:
   - Machine Learning
 author: Akhilesh Moghe
 show_author_profile: true
+sidebar:
+ nav: IoT
 ---
 
 - This write-up will only focus on AWS Sagemaker & AWS Greengrass Services with respect to ML model deployment to Edge devices.

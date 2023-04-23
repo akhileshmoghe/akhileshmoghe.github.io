@@ -16,6 +16,8 @@ tags:
   - IoT
 author: Akhilesh Moghe
 show_author_profile: true
+sidebar:
+ nav: IoT
 ---
 
 - The Azure IoT Hub Device Provisioning Service is a *<u>helper service for IoT Hub</u>*. The device provisioning service enables customers to *<u>provision millions of devices in a secure and scalable manner</u>*.

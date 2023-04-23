@@ -11,6 +11,7 @@ sidebar:
   - [Ways of managing data in Docker Containers](/_post/devops/containers/docker-container-storage-volumes)
 - __*<u>Container Security</u>*__:
   - [Container Security](/_posts/containers/container_security)
+  - [Enhancing Container Security: A Guide to Runtime Privileges and Linux Capabilities in Docker Containers](/_posts/devops/containers/docker-container-runtime-privileges-linux-capabilities)
 - __*<u>Container Orchestration</u>*__
   - [Container Orchestration](/_posts/containers/container_orchestration)
 - __*<u>Microservices</u>*__:

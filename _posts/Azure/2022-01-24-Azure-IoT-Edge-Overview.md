@@ -18,6 +18,8 @@ tags:
   - Edge Computing
 author: Akhilesh Moghe
 show_author_profile: true
+sidebar:
+ nav: IoT
 ---
 
 - Azure IoT Edge runtime operates as Gateways, providing a connection between other IoT devices on the network and IoT Hub.

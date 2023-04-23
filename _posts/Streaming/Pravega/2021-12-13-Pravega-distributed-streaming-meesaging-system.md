@@ -18,6 +18,8 @@ tags:
   - Edge Computing
 author: Akhilesh Moghe
 show_author_profile: true
+sidebar:
+ nav: IoT
 ---
 
 - Pravega is a __*Distributed messaging systems*__ such as __*Kafka*__ and __*Pulsar*__ which provide modern *<u>Pub/Sub infrastructure</u>* suitable for *<u>data-intensive applications</u>*.

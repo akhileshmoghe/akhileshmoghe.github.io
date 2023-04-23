@@ -18,6 +18,8 @@ tags:
   - Secure Communication
 author: Akhilesh Moghe
 show_author_profile: true
+sidebar:
+ nav: IoT
 ---
 
 ## Challenges or Aspects of IoT Security

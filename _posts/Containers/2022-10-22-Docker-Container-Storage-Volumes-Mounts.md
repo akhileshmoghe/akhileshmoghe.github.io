@@ -14,6 +14,8 @@ tags:
   - Docker
 author: Akhilesh Moghe
 show_author_profile: true
+sidebar:
+ nav: Containers
 ---
 
 In Microservices and container orchestrators world, all Containers are essentially *<u>ephemeral</u>* in nature, that means the are not suppose to last long and even if they lasted long, they are not suppose to retain or hold the data in their life cycles. Container orchestrators like *<u>Kubernetes</u>* replaces the crashed or exited container service with just another instance of it. Even if that's how the containers are used, applications themselves needs to maintain it's own state & preserve some kind of application data across the life cycles of the containers either in some databases or on the host file systems. That's where managing the data in and out-side container comes into picture.
