@@ -22,10 +22,9 @@ sidebar:
  nav: Containers
 ---
 
-## Introduction
-- Docker containers are a popular way to package and deploy applications, but they can also pose security risks if not properly configured. One important aspect of container security is managing runtime privileges - that is, controlling the level of access and permissions that a container has when it is running.
-- In Linux, one way to manage runtime privileges is through the use of Linux Capabilities. Capabilities are a granular way of assigning privileges to processes, allowing them to perform certain privileged operations without needing to run as the root user. This helps to reduce the attack surface of a system and improve security.
-- In this blog, we'll explore the concept of runtime privileges and Linux capabilities in the context of Docker containers. We'll look at some common capabilities and how they can be used to enhance container security. We'll provide guidance on how to use Linux capabilities to grant additional privileges to Docker containers in a secure and controlled manner. Whether you're new to Docker security or an experienced user, this blog will provide valuable insights into managing runtime privileges and permissions in containerized environments.
+Docker containers are a popular way to package and deploy applications, but they can also pose security risks if not properly configured. One important aspect of container security is managing runtime privileges - that is, controlling the level of access and permissions that a container has when it is running.\
+In Linux, one way to manage runtime privileges is through the use of Linux Capabilities. Capabilities are a granular way of assigning privileges to processes, allowing them to perform certain privileged operations without needing to run as the root user. This helps to reduce the attack surface of a system and improve security.\
+In this blog, we'll explore the concept of runtime privileges and Linux capabilities in the context of Docker containers. We'll look at some common capabilities and how they can be used to enhance container security. We'll provide guidance on how to use Linux capabilities to grant additional privileges to Docker containers in a secure and controlled manner. Whether you're new to Docker security or an experienced user, this blog will provide valuable insights into managing runtime privileges and permissions in containerized environments.
 
 ## Options to run containers with priviliged access
 - By default, Docker containers run as "__<u>unprivileged</u>__", which means they lack device access, preventing certain processes like Docker daemon from running within them.
@@ -199,9 +198,10 @@ drwxrwxr-x 1 1000 1000   4096 Dec  4 06:11 .git
 ....
 ```
 
-## Conclusion
-- Managing runtime privileges and Linux capabilities is an essential part of container security in Docker. By default, Docker containers run as unprivileged, which limits their device access and prevents certain processes from running inside them. However, by understanding Linux capabilities and how to use them, it is possible to grant additional privileges to containers and enhance their functionality.
-- In this blog, we explored the use of Linux capabilities for managing runtime privileges in Docker containers. We discussed some common capabilities and how we can grant these privileged capabilities to containers, as well as the potential security risks of granting too many privileges.
-- Remember, managing runtime privileges and Linux capabilities is just one aspect of container security. It's important to take a comprehensive approach to container security, including using *<u>secure images</u>*, implementing *<u>network security</u>*, and following other best practices.
+---
+
+So that's it for this topic, in this blog, we explored the use of Linux capabilities for managing runtime privileges in Docker containers. We discussed some common capabilities and how we can grant these privileged capabilities to containers, as well as the potential security risks of granting too many privileges.\
+Managing runtime privileges and Linux capabilities is an essential part of container security in Docker. By default, Docker containers run as unprivileged, which limits their device access and prevents certain processes from running inside them. However, by understanding Linux capabilities and how to use them, it is possible to grant additional privileges to containers and enhance their functionality.\
+Remember, managing runtime privileges and Linux capabilities is just one aspect of container security. It's important to take a comprehensive approach to container security, including using *<u>secure images</u>*, implementing *<u>network security</u>*, and following other best practices.
 
 ---
