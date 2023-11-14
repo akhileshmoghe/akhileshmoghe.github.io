@@ -18,8 +18,8 @@ tags:
   - DevOps
 author: Akhilesh Moghe
 show_author_profile: true
-# sidebar:
-#  nav: Containers
+sidebar:
+ nav: Containers
 ---
 
 In the container's lifecycle, a container undergoes various stages from creation to deletion, mainly __*Created*__, __*Running*__, __*Paused*__, __*Stopped*__, and __*Deleted*__. Managing containers involves considering different conditions for creation/recreation, restarting, or deletion based on specific requirements & conditions. In a microservices architecture, where multiple containers coexist, the decision to recreate a running container or simply restarting it can significantly impact the overall performance of the deployment or application.\
