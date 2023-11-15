@@ -14,6 +14,7 @@ sidebar:
   - [Enhancing Container Security: A Guide to Runtime Privileges and Linux Capabilities in Docker Containers](/_posts/devops/containers/docker-container-runtime-privileges-linux-capabilities)
 - __*<u>Container Orchestration</u>*__
   - [Container Orchestration](/_posts/containers/container_orchestration)
+  - [Why Docker Compose Safeguards Container Runtime Changes Through Host Reboots: A Comprehensive Exploration](/_posts/containers/container_lifecycle_with_docker_compose)
 - __*<u>Microservices</u>*__:
   - [Microservices Introduction](/_posts/system_design_architecture/microservices)
 

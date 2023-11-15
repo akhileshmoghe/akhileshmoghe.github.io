@@ -6,8 +6,14 @@ sidebar:
   nav: topics
 ---
 
-- __*<u>Bootloader</u>*__
+- __*<u>Bootloader</u>*__:
   - [Brief Introduction to U-Boot - the Universal Bootloader](/_post/embedded/linux/bootloader/u-boot)
+- __*<u>Embedded Linux</u>*__:
+  - [Complete tutorial to create a Debian Minimal RootFS](/_post/linux/debian_minimal_rootfs)
+  - [Frequently used commands while creating a Linux Disk Image](/_post/linux/disk_img_creation_process)
+  - [NVIDIA L4T Embedded Linux Boot Process for Jetson Nano](/_post/embedded/linux/boot_process/jetson_nano)
+  - [Linux Boot Process](/_post/linux/boot_process)
+  - [Typical Embedded Linux Boot Process](/_post/embedded/linux/boot_process)
 - __*<u>Memory Management</u>*__:
   - [Why prefer Static memory allocation over Dynamic in Embedded Firmmware](/_posts/embedded/firmware/memory_allocation)
 - __*<u>Miscellaneous</u>*__:
