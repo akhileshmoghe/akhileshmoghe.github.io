@@ -20,7 +20,7 @@ sidebar:
 
 # MQTT Protocol
   - MQTT = Message Queuing Telemetry Transport
-	  Telemetry = Tele-Metering = Remote Measurements
+	- Telemetry = Tele-Metering = Remote Measurements
   - Originally Developed by IBM, now Open Sourced.
   - Though MQ stands for 'Message Queuing', actually there's NO Messages being Queued.
   - It's a __*<u>Publish/Subscribe</u>*__ mechanism.
